@@ -216,9 +216,9 @@ body{
     font-size: var(--font-normal);
 }
 /*responsivnes for solutions part*/
-@media(max-width: 610px){
+@media(max-width: 764px){
     #headingV1{
-        font-size: 2.75em;
+        font-size: 2.5em;
     }
     #cards-container{
         flex-direction: column;

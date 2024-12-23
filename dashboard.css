@@ -1,0 +1,65 @@
+/*generic*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    /*white mode*/
+    --main:#F5F5F5;
+    --alt:#757575;
+    --text: #333333;
+    
+    /*main color pallette*/
+    --main: #FFF ;
+    --alt: #181818 ;
+    --accent: rgb(47, 216, 56);
+
+
+    /*--fonts--*/
+    --font-extrasmall: 0.75em;
+    --font-small: 1em;
+    --font-normal: 1.2em;
+    --font--meduim: 1.5em;
+    --font--big: 2em;
+    --font--large: 3em;
+    --font--mega: 6em;
+
+    background-color: var(--main);
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    /*-------*/
+
+    width: 100%;
+}
+
+/*------MAIN------*/
+#dashboard{
+    width: 100%;
+    height: fit-content;
+
+    background-color: var(--main);
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+#heading{
+    font-size: 6em;
+    margin-left: 20px;
+    font-weight: 400;
+}
+/*resposnive* for */
+@media(max-width: 480px){
+
+}
+@media(max-width: 768px){
+    
+}
+/*----------------*/

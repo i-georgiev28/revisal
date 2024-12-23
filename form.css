@@ -143,7 +143,7 @@ form{
 }
 
 /*responsive*/
-@media(max-width: 610px){
+@media(max-width: 764px){
     #message{
         font-size: 2.5em;
     }
