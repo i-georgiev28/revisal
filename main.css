@@ -231,10 +231,10 @@ i{
 /*responsive for tablet*/
 @media (min-width: 765px) and (max-width: 1024px) {
     .row{
-        width: 50%;
+        width: 100%;
     }
     .row-heading{
-        font-size: 1em;
+        font-size: 2em;
     }
 }
 /*-----------------*/

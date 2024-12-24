@@ -55,6 +55,34 @@ body{
     margin-left: 20px;
     font-weight: 400;
 }
+
+
+#section{
+    display: flex;
+    flex-direction: column;
+}
+
+/*welcoming part*/
+#tasks{
+    width: 95%;
+    height: fit-content;
+    background-color:#d4d4d4;
+    padding: 20px;
+    border-radius: 50px;
+    color: var(--main);
+    margin-top: 50px;
+    align-self: center;
+}
+#section-heading{
+    font-size: 2em;
+}
+/*-------------*/
+
+
+
+
+
+
 /*resposnive* for */
 @media(max-width: 480px){
 

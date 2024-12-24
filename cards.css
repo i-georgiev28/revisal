@@ -1,0 +1,147 @@
+/*GENERAL*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    /*white mode*/
+    --main:#F5F5F5;
+    --alt:#757575;
+    --text: #333333;
+    
+    /*main color pallette*/
+    --main: #FFF ;
+    --alt: #181818 ;
+    --accent: rgb(47, 216, 56);
+
+
+    /*--fonts--*/
+    --font-extrasmall: 0.75em;
+    --font-small: 1em;
+    --font-normal: 1.2em;
+    --font--meduim: 1.5em;
+    --font--big: 2em;
+    --font--large: 3em;
+    --font--mega: 6em;
+
+    background-color: var(--main);
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    /*-------*/
+
+    width: 100%;
+}
+
+/*-----------------------*/
+
+
+
+/*----------MAIN---------*/
+
+#welcoming{
+    display: flex;
+    flex-direction: column;
+}
+
+#welcoming p {
+    font-size: 4em;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: var(--text)
+}
+
+#welcoming p span{
+    color: var(--accent);
+}
+
+/*create cards section*/
+#create_pack{
+    margin-left: 105px;
+}
+
+#create_pack i {
+    color: var(--accent);
+    font-size: 1em;
+    margin-left: 10px;
+}
+#create_pack p{
+    font-size: 2em;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#create_pack a{
+    text-decoration: none;
+    color: var(--accent)
+}
+
+/*--------------------*/
+
+/*responsive*/
+@media (max-width: 768px){
+    #welcoming p{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 3em;
+        margin-left: 60px;
+    }   
+
+    #create_pack{
+        margin-left: 65px;
+    }
+    #create_pack p{
+        font-size: 1.5em;
+    }
+    #create_pack i{
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    #welcoming p{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-size: 3em;
+        margin-left: 80px;
+    } 
+
+    #create_pack{
+        margin-left: 85px;
+    }
+}
+/*---------------------*/
+
+
+
+/*---BOXES AND CONATINERS---*/
+#container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+.box{
+    width: 20%;
+    height: 30vh;
+    border-radius: 50px;
+    background-color: #bebebe;
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    
+}
+/*--------------------------*/
