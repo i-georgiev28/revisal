@@ -37,6 +37,15 @@ body{
     --font--big: 2em;
     --font--large: 3em;
     --font--mega: 6em;
+
+    /* common  margins and paddings*/
+    --offset-extrasmall: 10px;
+    --offset-small: 20px;
+    --offset-normal: 40px;
+    --offset-medium: 50px;
+
+    --offset-left: 3%;
+    /*-----------------*/
 }
 
 .text{
@@ -50,201 +59,162 @@ body{
     line-height: 1.5em;
     color: white;
 }
+/*-----------------------END OF GENERIC--------------------------*/
 
 
 
-
-/*---------------------MAIN CONTENT-------------------*/
-
-/*------welcoming part------*/
-#welcoming-section{
-    width: 100%;
-    max-height: 60vh;
-
-    margin-bottom: 25vh;
-    margin-left: 3%;
-}
-.heading{
-    display: flex;
-    width: 100%;
-}
-#text-container{
-    margin-left: 3%;
-}
+/*headings and text for current document*/
 #heading{
-    font-size: 12em;
-    margin-top: 50px;
+    font-size: 8em;
+    font-weight: 400;
 }
 #slogan{
-    font-size: var(--font--large);
-    font-weight: 300;
-}
-#blob{
-    aspect-ratio: 1/1;
-    width: 40%;
-    margin-left: auto;
-}
-#buttons button{
-    border: none;
-    padding: 8px 18px;
-    border-radius: 20px;
-    
-    font-size: 1.8em;
-    font-family: "Rubik", serif;
-    font-weight: 300;
-    
-    background: var(--accent);
-    border-radius: 999px;
-    box-shadow: rgb(137, 236, 142) 0 10px 20px -10px;
-    
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-
-    outline: 0 solid transparent;
-    user-select: none;
-
-    -webkit-user-select: none;
-    width: fit-content;
-    word-break: break-word;
-
-    margin-top: 30px;
-    margin-right: 30px;
-
+    font-size: 2em;
 }
 
-/*responsive for current parts*/
-@media(max-width: 610px){
-    #welcoming-part{
-        margin-bottom: 5vh;
-        margin-left: 2%;
-    }
-    #blob{
-        display: none;
-    }
-    #heading{
-        font-size: var(--font--large);
-    }
-    #slogan{
-        font-size: var(--font--meduim);
-    }
-    #buttons button{
-        font-size: 0.75em;
-        padding: 10px;
-    }
-}
-/*----------------------------*/
-
-
-
-/*--------Description---------*/
-
-#description{
-    margin-left: 4%;
-    margin-bottom: 10vh;
-}
-/*----------------------------*/
-
-
-
-
-/*------Solutiions part------*/
-#solutions{
-    width: 100%;
-    margin-left: 4%;
-}
-#headingV1{
-    font-size: var(--font--mega);
+.headingV1{
+    font-size: 6em;
+    margin-left: var(--offset-left);
     margin-bottom: 50px;
 }
 
-#cards-container{
-    display: flex;
-    width: 100%;
-    height: 50vh;
-
-    padding: 10px;
-
-    justify-content: space-evenly;
+.headingV2{
+    font-size: 3em;
 }
 
-.card{
+.text-box-regular{
+    font-size: 2.4em;
+    line-height: 1.15em;
+    width: 90%;
+    margin-left: var(--offset-left);
+    margin-top: var(--font--meduim);
+}
+#highlighted{
+    background-color: var(--accent);
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 5px;
     color: white;
-    margin-right: 2em;
-    background-color: #c7c7c7;
-    padding: 30px;
-    width: 25%;
+}
+#subheading{
+    margin-left: var(--offset-left);
+}
 
-    border-radius: 20px;  
+/*--------------------------------------*/
+
+
+/*---------------------MAIN-CONTENT-------------------*/
+
+/*welcoming part*/
+#welcoming{
+    display: flex;
+    padding: var(--offset-left);
+    width: 100%;
+    height: 92vh;
+}
+#container{
+    display: flex;
+    align-items: center;
+}
+#logo{
+    aspect-ratio: 1/1;
+    height: auto;
+    width: auto;
+    margin-left: var(--offset-medium);
+}
+#graphic{
+    margin-left: auto;
+}
+/*responsive*/
+@media (max-width: 768px){
+    #heading{
+        font-size: 5em;
+        margin: var(--offset-normal);
+    }
+    #slogan{
+        margin: var(--offset-normal)
+    }
+    #graphic{
+        display: none;
+    }
+    #logo{
+        margin-right: auto;
+    }
+}
+/*----------*/
+
+
+
+/*description part*/
+#description{
+    margin-bottom: 20vh;
+}
+#description i {
+    color:#181818;
+    font-size: 8em;
+    margin-left: 60px;
+}
+/*----------------*/
+
+/*functions part*/
+#boxes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+.box{
+    width: 30%;
+    height: 45vh;
+    border-radius: 50px;
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
 
     display: flex;
     flex-direction: column;
+    gap: 40px;
 
-    justify-items: space-evenly;
-
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    color: white;
 }
-/*цветове за картите*/
-#cards-container .card:nth-child(1) {
-    background-color: lightblue;
-}
-
-#cards-container .card:nth-child(2) {
-    background-color: lightgreen;
-}
-
-#cards-container .card:nth-child(3) {
-    background-color: lightcoral;
-}
-
-/*------------------*/
-
-#zaglavie{
-    font-size: var(--font--large);
-    text-align: center;
-    margin-bottom: 50px;
-}
-#zaglavie i {
-    margin-left: 10px;
-    font-size: var(--font-normal);
-}
-#text{
+.box p:nth-child(2){
+    font-size: 2em;
     align-self: center;
-    justify-self: center;
-    text-align: center;
-
-    font-size: var(--font-normal);
+    width: 80%;
 }
-/*responsivnes for solutions part*/
-@media(max-width: 764px){
-    #headingV1{
-        font-size: 2.5em;
-    }
-    #cards-container{
-        flex-direction: column;
-        height: fit-content;
-        justify-items: center;
 
-    }
-    .card{
-        width: 90%;
-        margin-bottom: 5vh;
-    }
-    #zaglavie{
-        font-size: 3.75em;
-    }
-    #zaglavie i {
-        font-size: var(--font-extrasmall);
-    }
-    #text{
-        font-size: 0.8em;
-    }
+.box:nth-child(1){
+    background-color: #f6511d;
+    box-shadow: #f6511d 0px 2px 8px 0px;;
 }
-/*----------------------------*/
+
+.box:nth-child(2){
+    background-color: #ffb400;
+}
+.box:nth-child(3){
+    background-color: #00a6ed;
+}
+@media(max-width: 768px){
+
+}
+/*--------------*/
+
+/*-------------------END OF MAIN CONTENT----------------*/
+
+
+
+
+
+
+
+
+
+
+
 
 /*------stats part------*/
 #stats{
-    margin-left: 4%;
     margin-top: 10vh;
 }
 
@@ -310,17 +280,17 @@ body{
 /*проценти*/
 .progress-bar1::before{
     content: "90%";
-    font-size: var(--font--large);
+    font-size: 3.2em;
 }
 
 .progress-bar2::before{
     content: "75%";
-    font-size: var(--font--large);
+    font-size: 3.2em;
 }
 
 .progress-bar3::before{
     content: "54%";
-    font-size: var(--font--large);
+    font-size: 3.2em;
 }
 
 /*responsive*/
@@ -356,20 +326,6 @@ body{
     }
 }
 
-/*---------------------------------*/
+/*----------------*/
 
-
-/*------Compatibility section------*/
-#compatability{
-    width: 100%;
-    height: 100vh;
-    background-color: #121212;
-    margin: 50px 0;
-    padding: 20px;
-}
-#compatibility, #headingV1w{
-    font-size: 6em;
-    color: white;
-    margin-bottom: 50px;
-}
-/*---------------------------------*/
+/*---------------------END-OF-MAIN----------------------*/
