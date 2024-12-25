@@ -143,63 +143,6 @@ body{
 }
 /*----------*/
 
-
-
-/*description part*/
-#description{
-    margin-bottom: 20vh;
-}
-#description i {
-    color:#181818;
-    font-size: 8em;
-    margin-left: 60px;
-}
-/*----------------*/
-
-/*functions part*/
-#boxes{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-}
-.box{
-    width: 30%;
-    height: 45vh;
-    border-radius: 50px;
-    background-color: #e0e0e0;
-    text-align: center;
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-
-    color: white;
-}
-.box p:nth-child(2){
-    font-size: 2em;
-    align-self: center;
-    width: 80%;
-}
-
-.box:nth-child(1){
-    background-color: #f6511d;
-    box-shadow: #f6511d 0px 2px 8px 0px;;
-}
-
-.box:nth-child(2){
-    background-color: #ffb400;
-}
-.box:nth-child(3){
-    background-color: #00a6ed;
-}
-@media(max-width: 768px){
-
-}
-/*--------------*/
-
 /*-------------------END OF MAIN CONTENT----------------*/
 
 
