@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /*---------------------GENERAL---------------------*/
 *{
@@ -59,6 +59,10 @@ body{
     line-height: 1.5em;
     color: white;
 }
+
+section:nto{
+    margin-bottom: 20vh;
+}
 /*-----------------------END OF GENERIC--------------------------*/
 
 
@@ -88,6 +92,8 @@ body{
     width: 90%;
     margin-left: var(--offset-left);
     margin-top: var(--font--meduim);
+
+    font-family: "Jost", serif;
 }
 #highlighted{
     background-color: var(--accent);
@@ -115,6 +121,38 @@ body{
 #container{
     display: flex;
     align-items: center;
+}
+#button{
+
+    margin-left: var(--offset-left);
+
+    margin-right: 30px;
+
+    margin-top: 100px;
+    background: var(--accent);
+    border-radius: 999px;
+    box-shadow: var(--accent) 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 10px 20px;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+}
+
+#button a{
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    font-weight: 300;
+
+    font-family: "Rubik", serif;
 }
 #logo{
     aspect-ratio: 1/1;
@@ -163,7 +201,7 @@ body{
 
 #stats #subheading{
     font-size: var(--font--meduim);
-    margin-left: 1%;
+    margin-left: 3.2%;
     margin-bottom: 50px;
     color: var(--accent);
 }
@@ -185,7 +223,7 @@ body{
     text-align: center;
     gap: 30px;
     aspect-ratio: 1/1;
-    width: 30%;
+    width: 20%;
 }
 .wrapper p{
     font-size: 2em;

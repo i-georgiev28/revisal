@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footerpages.css">
+
+    <!--boxicon icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!--navigation-->
+    <section>
+        <header>
+            
+            <nav>
+                
+                <ul id='nav-bar'>
+                    
+                    <li class='logo'><a href='#'><img src='logo.png' alt = "logo"/></a></li>
+                    <input type='checkbox' id='check' />
+                    
+                    <span class="menu">
+                        
+                        <li>
+                            <a href="index.html">
+                                <i class='bx bx-home-alt-2'></i> 
+                                <p>Начало</p>
+                            </a>
+                            
+                        </li>
+                        
+                        <li>
+                            <a href="index.html">
+                                <i class='bx bx-card' ></i></i> 
+                                <p>Карти</p>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="index.html">
+                                <i class='bx bx-task' ></i></i> 
+                                <p>Задачи</p>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="login.html">
+                                <i class='bx bxs-user' ></i></i> 
+                                <p>Акаунт</p>
+                            </a>
+                        </li>
+                        
+                        <label for="check" class="close-menu">
+                            <i class='bx bxs-x-circle bx-flip-horizontal'></i>
+                        </label>
+                    
+                    </span>
+                    
+                    <label for="check" class="open-menu">
+                        <i class='bx bx-menu bx-flip-horizontal'></i>
+                    </label>
+                
+                </ul>
+            
+            </nav>
+            
+        </header>
+    </section> 
+
+    <!--content-->
+    <section>
+        
+        <div>
+            <p id="header">Технологии</p>
+        </div>
+
+        <div id="sections">
+
+            <!--Frontend section-->
+            <div id="section">
+                
+                <p id="section-header">
+                    Frontend
+                </p>
+
+                <p id="section-text">
+                    HTML <i class='bx bxl-html5' ></i>
+                    
+                    <ul class ="point">
+                        <li>
+                            Използвахме HTML, защото той беше основният език за 
+                            структурирането на съдържанието в уеб страниците. 
+                            Чрез HTML създадохме основни елементи като заглавия, 
+                            параграфи, списъци, изображения, линкове и други.
+                            Той предостави логическа структура на документа,
+                            което беше необходимо за правилното му показване в 
+                            браузъра и за по-добро разбиране от търсачките. 
+                            Без HTML нямаше да можем да организираме съдържанието 
+                            на страницата по начин, който да бъде полезен и 
+                            достъпен за потребителите.
+                        </li>
+                    </ul>
+                </p>
+
+                <p id="section-text">
+                    CSS <i class='bx bxl-css3'></i>
+                    
+                    <ul class ="point">
+                        <li>
+                            Използвахме CSS, за да стилизираме HTML елементите и 
+                            да оформим външния вид на уеб страницата. 
+                            Чрез CSS променихме цветовете, шрифтовете, размерите, 
+                            разстоянията и други визуални характеристики на 
+                            елементите. Това ни даде възможността да направим 
+                            сайта по-привлекателен и лесен за използване. 
+                            CSS също така ни позволи да управляваме 
+                            разположението на елементите на страницата, 
+                            така че тя да изглежда добре на различни 
+                            устройства и екрани. С помощта на CSS добавихме 
+                            анимации и ефекти, които направиха сайта 
+                            по-динамичен и интересен за потребителите.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+
+            <!--Frontend section-->
+            <div id="section">
+                
+                <p id="section-header">
+                    Backend
+                </p>
+
+                <p id="section-text">
+                    Java <i class='bx bxl-java' ></i>
+                    
+                    <ul class ="point">
+                        <li>
+                            [text]
+                        </li>
+                    </ul>
+                </p>
+
+                <p id="section-text">
+                    Scala
+                    
+                    <ul class ="point">
+                        <li>
+                            [text]
+                        </li>
+                    </ul>
+                </p>
+            </div>
+
+            <!--Misc section-->
+            <div id="section">
+                
+                <p id="section-header">
+                    Други
+                </p>
+
+                <p id="section-text">
+                    Hotwire Turbo
+                    
+                    <ul class ="point">
+                        <li>
+                            [text]
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    
+    </section>
+    <!--contnt-->
+    <!----FOOeOTER---->
+    <section>
+        <div id="footer">
+            <p id = "footer-heading">Вижте също: </p>
+            
+            <div id="rows-container">
+                <a href = "technologies.html" class="row">
+                    
+                    <p class="row-heading">Технологии <i class='bx bx-code-curly'></i></p>
+    
+                    <p class="row-text">
+                        Разгледайте изпозлваните технологии, <br>с които
+                        сме реализирали приложението
+                    </p>
+                    
+                </a>
+                
+                <a href = "developers.html" class="row">
+                    <p class="row-heading">Разработчици <i class='bx bx-group' ></i></p>
+
+                    <p class="row-text">
+                        Научете повече за разработчиците
+                        <br>на приложение
+                    </p>
+                </a>
+                
+                <a href = "materials.html" class="row">
+                    <p class="row-heading">Материали <i class='bx bxs-book-content' ></i></p>
+
+                    <p class="row-text">
+                        Научете повече за разработчиците
+                        <br>на приложение
+                    </p>
+                </a>
+            
+            </div>
+
+            <p id = "footer-heading">Свържете с нас: </p>
+                    
+                <p class="contacts-text">
+                    +359********* <i class='bx bx-phone' ></i>
+                </p>
+                    
+                <p class="contacts-text">
+                    example@mail.com  <i class='bx bx-envelope' ></i>
+                </p>
+
+            <p id = "copyright">Revisal app, work of Ivan Georgiev and Iliyan Georgiev (ПГКМКС "Акад.Благовест Сендов", гр. Варна), НОИТ 2024-2025г., All rights reserved</p>
+
+        </div>
+    </section>
+    <!--FOOTER--END-->
+</body>
+</html>
