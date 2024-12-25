@@ -45,15 +45,25 @@ body{
 #header{
     text-align: center;
     color: var(--accent);
-    font-size: 8em;
+    font-size: 7em;
     margin-bottom: 10vh;
     margin-top: 5vh;
+
+    display: flex;
+    margin-left: 3%;
+}
+
+#header i{
+    color: var(--accent);
+    font-size: 0.9em;
+    align-self: center;
+    margin-left: 20px;
 }
 
 #sections{
     display: flex;
     flex-direction: column;
-    padding-left: 2em;
+    padding-left: 3%;
 }
 
 #section{
@@ -86,6 +96,12 @@ body{
 
     width: 80%;
     line-height: 1.4EM;
+}
+.point li{
+    margin-bottom: 20px;
+}
+.colored{
+    color: var(--accent);
 }
 
 /*-----RESPONSIVE-----*/
