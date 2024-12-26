@@ -263,11 +263,47 @@ section:nto{
 
 
 
-/*---CALENDAR-SECTION---*/
-
-/*----------------------*/
+/*--CALENDAR-SECTION--*/
 
 
+
+/*--------------------*/
+
+
+
+/*--DOWNLOAD-SECTION--*/
+
+#download{
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+#download .headingV1{
+    text-align: center;
+}
+#download p:nth-of-type(2){
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Jost", sans-serif;
+}
+#download button{
+    padding: 20px;
+    border: none;
+    background-color: transparent;
+    font-size: 2em;
+    font-weight: 400;
+    font-family: "Jost", sans-serif;
+    margin-top: 10vh;
+    align-self: center;
+    width: 20%;
+    border: var(--accent) 3px solid;
+    border-radius: 20px;
+}
+/*--------------------*/
 
 /*------STATS-SECTION------*/
 #stats{
@@ -279,6 +315,7 @@ section:nto{
     margin-left: 3.2%;
     margin-bottom: 50px;
     color: var(--accent);
+    margin-bottom: 8vh;
 }
 
 #progress-bars{
