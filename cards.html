@@ -97,30 +97,79 @@
         <div id="container">
             
             <div class="box">
+                
                 <p class = "title" >Pack #1</p>
-                <p id = "bullet">
-                    Предмет: <span id = "subject">История</span>
-                </p id = "bullet">
-
-                <p id = "bullet">
-                    Трудност: <span id = "subject">История</span>
-                </p>
-
-                <p id = "bullet">
-                    Предмет: <span id = "subject">История</span>
-                </p>
+                
+                <div>
+                    <p id = "bullet">
+                        Предмет: <span id = "subject">История</span>
+                    </p id = "bullet">
+    
+                    <p id = "bullet">
+                        Трудност: <span id = "subject" class="difficulty-rating">5/10</span>
+                    </p>
+    
+                    <p id = "bullet">
+                        Брой карти: <span id = "subject">N</span>
+                    </p>
+                </div>
             </div>
 
             <div class="box">
-
+                
+                <p class = "title" >Pack #2</p>
+                
+                <div>
+                    <p id = "bullet">
+                        Предмет: <span id = "subject">История</span>
+                    </p id = "bullet">
+    
+                    <p id = "bullet">
+                        Трудност: <span id = "subject" class="difficulty-rating">7/10</span>
+                    </p>
+    
+                    <p id = "bullet">
+                        Брой карти: <span id = "subject">N</span>
+                    </p>
+                </div>
             </div>
 
             <div class="box">
-
+                
+                <p class = "title" >Pack #3</p>
+                
+                <div>
+                    <p id = "bullet">
+                        Предмет: <span id = "subject">История</span>
+                    </p id = "bullet">
+    
+                    <p id = "bullet">
+                        Трудност: <span id = "subject" class="difficulty-rating">2/10</span>
+                    </p>
+    
+                    <p id = "bullet">
+                        Брой карти: <span id = "subject">N</span>
+                    </p>
+                </div>
             </div>
 
             <div class="box">
-
+                
+                <p class = "title" >Pack #4</p>
+                
+                <div>
+                    <p id = "bullet">
+                        Предмет: <span id = "subject">История</span>
+                    </p id = "bullet">
+    
+                    <p id = "bullet" class="difficulty-rating">
+                        Трудност: <span id = "subject" class="difficulty-rating">10/10</span>
+                    </p>
+    
+                    <p id = "bullet">
+                        Брой карти: <span id = "subject">N</span>
+                    </p>
+                </div>
             </div>
 
         
@@ -182,6 +231,37 @@
         </div>
     </section>
     <!--FOOTER--END-->
+
+    <!--javascript for changing diffuculty colours-->
+    <script>
+        // Function to change color based on the difficulty rating
+        function updateDifficultyColors() {
+            const spans = document.querySelectorAll('span.difficulty-rating');
+            
+            spans.forEach(span => {
+                const ratingText = span.textContent;
+                
+                const ratingValue = parseInt(ratingText.split('/')[0]);
+                
+                if (ratingValue <= 3) 
+                {
+                    span.style.color = 'rgb(47, 216, 56)';
+                } 
+                else if (ratingValue <= 6) 
+                {
+                    span.style.color = 'rgb(253, 194, 0)';
+                } 
+                else 
+                {
+                    span.style.color = '#d12a00';
+                }
+            });
+        }
+
+
+        updateDifficultyColors();
+    </script>
+    <!--javascript-->
 
 </body>
 </html>
