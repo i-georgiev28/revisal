@@ -77,10 +77,11 @@ section:nto{
 }
 
 .headingV1{
-    font-size: 6em;
+    font-size: 4.5em;
     margin-left: var(--offset-left);
     margin-bottom: 50px;
     margin-top: 20vh;
+    font-weight: 400;
 }
 
 .headingV2{
@@ -95,6 +96,9 @@ section:nto{
     margin-top: var(--font--meduim);
 
     font-family: "Jost", serif;
+}
+.text-box-regular span{
+    font-weight: 400;
 }
 #highlighted{
     background-color: var(--accent);
@@ -121,7 +125,12 @@ section:nto{
 }
 #container{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+}
+#container p:nth-child(2){
+    margin-left: var(--offset-left);
+    font-size: 2em;
+    color: var(--accent);
 }
 #button{
 
@@ -183,26 +192,140 @@ section:nto{
 /*----------------*/
 
 
-/*---horizontally scrolable div---*/
+/*---features section---*/
+#features{
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+}
+#boxes{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.feature-box{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 45vh;
+    border-radius: 20px;
+    gap: 30PX;
+}
+.text_icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.text_icon p{
+    font-size: 4em;
+}
+.text_icon i{
+    color: #181818;
+    font-size: 4em;
+}
+.text-box{
+    font-size: 1.4em;
+    font-family: "Jost", serif;
+}
+@media(max-width: 768px){
+    #boxes{
+        flex-direction: column;
+    }
+    .feature-box{
+        width: 80%;
+    }
+    .text_icon p{
+        font-size: 3em;
+    }
+    .text_icon i{
+        font-size: 3em;
+    }
+}
+@media (max-width: 1500px) and (min-width: 768px) {
+    .text_icon p{
+        font-size: 2em;
+    }
+    .text_icon i{
+        font-size: 2em;
+    }
+    .text-box{
+        font-size: 1.2em;
+    }
+}
 
-/*--------------------------*/
+/*----------------------*/
 
 
 
+/*---CALENDAR-SECTION---*/
+#calendar{
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#calendar .headingV1{
+    margin-bottom: 15vh;
+}
+#calendar-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    width: 100%;
+    height: fit-content;
+}
+
+.calendar-box{
+    width: 80%;
+    height: 40vh;
+    background-color: #b4b4b4;
+    align-self: center;
+    border-radius: 20px;
+    padding-left: 25px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.image-box img{
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.calendar-text-box{
+    width: 50%;
+    height: fit-content;
+}
+
+.calendar-text-box p:nth-child(1){
+    font-size: 3em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+}
+
+.calendar-text-box p:nth-child(2){
+    font-size: 1.4em;
+    color: var(--text);
+}
+.calendar-text-box p:nth-child(1) i{
+    font-size: 1em;
+    color: var(--text);
+}
+/*----------------------*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-/*------stats part------*/
+/*------STATS-SECTION------*/
 #stats{
     margin-top: 10vh;
 }
@@ -320,66 +443,3 @@ section:nto{
 
 
 /*-------------------END OF MAIN CONTENT----------------*/
-
-
-#features{
-    margin-top: 20vh;
-    margin-bottom: 20vh;
-}
-#boxes{
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-.feature-box{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    height: 45vh;
-    border-radius: 20px;
-    gap: 30PX;
-}
-.text_icon{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-}
-.text_icon p{
-    font-size: 4em;
-}
-.text_icon i{
-    color: #181818;
-    font-size: 4em;
-}
-.text-box{
-    font-size: 1.4em;
-}
-@media(max-width: 768px){
-    #boxes{
-        flex-direction: column;
-    }
-    .feature-box{
-        width: 80%;
-    }
-    .text_icon p{
-        font-size: 3em;
-    }
-    .text_icon i{
-        font-size: 3em;
-    }
-}
-@media (max-width: 1500px) and (min-width: 768px) {
-    .text_icon p{
-        font-size: 2em;
-    }
-    .text_icon i{
-        font-size: 2em;
-    }
-    .text-box{
-        font-size: 1.2em;
-    }
-}
