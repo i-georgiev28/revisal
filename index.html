@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="index.css">
 
+    <!--script
+    <script src = "script.js"></script>-->
+
     <!--boxicon icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -138,15 +141,28 @@
 
 
     <!--functions-->
-
-    <section>
-        <div id="functions">
-            <div>
-                <p class="headingV1">Учи лесно с Revisal</p>
-            </div>
+    <div class="items">
+        
+        <div class="item item1">
+            01
         </div>
-    </section>
-    <!-----  ------->
+        
+        <div class="item item2">
+            02
+        </div>
+        
+        <div class="item item3">
+            03
+        </div>
+        
+        <div class="item item4">
+            04
+        </div>
+        
+        <div class="item item25">
+            25
+        </div>
+    </div>
 
 
     <!--------------------------------------->
@@ -237,5 +253,42 @@
         </div>
     </section>
     <!--FOOTER--END-->
+
+    
+    <!--JavaScript-->
+    <script>
+    const slider = document.querySelector('.items');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        console.log(startX);
+        scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;  // stop the fn from running
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 3;
+        slider.scrollLeft = scrollLeft - walk;
+    });
+    </script>
+    <!--JavaScript-->
+
 </body>
 </html>
