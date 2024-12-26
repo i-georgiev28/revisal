@@ -141,31 +141,9 @@
 
 
     <!--functions-->
-    <div class="items">
-        
-        <div class="item item1">
-            01
-        </div>
-        
-        <div class="item item2">
-            02
-        </div>
-        
-        <div class="item item3">
-            03
-        </div>
-        
-        <div class="item item4">
-            04
-        </div>
-        
-        <div class="item item25">
-            25
-        </div>
-    </div>
-
-
-    <!--------------------------------------->
+    <section>
+    </section>
+    <!------------->
 
     <section>
         <div id="stats">
@@ -175,21 +153,21 @@
 
                 <div id="progress-bars">
                     
-                    <div class="wrapper">
+                    <div class="wrapperV1">
                         <div class="progress-bar1">
                             <progress value="90" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
                         </div>
                         <p>Се затрудняват да учат</p>
                     </div>
 
-                    <div class="wrapper">
+                    <div class="wrapperV1">
                         <div class="progress-bar2">
                             <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
                         </div>
                         <p>Харесват идеята</p>
                     </div>
 
-                    <div class="wrapper">
+                    <div class="wrapperV1">
                         <div class="progress-bar3">
                             <progress value="54" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
                         </div>
@@ -257,36 +235,7 @@
     
     <!--JavaScript-->
     <script>
-    const slider = document.querySelector('.items');
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.classList.add('active');
-        startX = e.pageX - slider.offsetLeft;
-        console.log(startX);
-        scrollLeft = slider.scrollLeft;
-    });
-
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
-
-    slider.addEventListener('mousemove', (e) => {
-      if (!isDown) return;  // stop the fn from running
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 3;
-        slider.scrollLeft = scrollLeft - walk;
-    });
+        
     </script>
     <!--JavaScript-->
 
