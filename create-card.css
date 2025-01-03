@@ -6,19 +6,29 @@
     padding: 0;
 }
 body{
+    font-family: "Rubik", serif;
+    font-weight: 300;
 
+    background-color: var(--main);
+    
     /*white mode*/
     --main:#F5F5F5;
     --alt:#757575;
     --text: #333333;
+
+    /*dark mode*/
+    /*
+    --main:;
+    --alt:;
+    --text:;
+    */
     
     /*main color pallette*/
     --main: #FFF ;
     --alt: #181818 ;
     --accent: rgb(47, 216, 56);
 
-
-    /*--fonts--*/
+    /*fonts*/
     --font-extrasmall: 0.75em;
     --font-small: 1em;
     --font-normal: 1.2em;
@@ -27,24 +37,24 @@ body{
     --font--large: 3em;
     --font--mega: 6em;
 
-    background-color: var(--main);
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    /*-------*/
+    /* common  margins and paddings*/
+    --offset-extrasmall: 10px;
+    --offset-small: 20px;
+    --offset-normal: 40px;
+    --offset-medium: 50px;
 
-    width: 100%;
+    --offset-left: 3%;
+    /*-----------------*/
 }
 
 /*-----------------------*/
 
 /*----------MAIN---------*/
 #mainheading{
-    text-align: center;
     color: var(--accent);
     font-size: 6em;
     margin: 100px 0px;
+    margin-left: var(--offset-left);
 }
 /*resposnive*/
 @media (max-width: 768px){
@@ -56,102 +66,63 @@ body{
 /*----------*/
 
 
-
-
-
-
-
-
 #linkcolored{
     color: var(--accent);
 }
-.container p {
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
 
-.container{
+#create-pack-form{
     display: flex;
     flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    margin-top: 50px;
-}
-
-form{
-    background-color:var(--altmisc);
-    border-radius: 50px;
-    padding: 50px 0px;
-    width: 25%;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: space-around;
-    gap: 2em;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    align-self: center;
-    justify-self: center;
-
-    aspect-ratio: 2/1;
-}
-
-
-#createButton{
-    border: none;
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-
-    align-self: center;
-    justify-self: center;
-    width: 50%;
-
-    font-size: 1.1em;
-
-    border-radius: 50px;
-    padding: 20px 15px;
-
-    background-color: var(--accent);
-    color: white;
-}
-
-/*for icons wrapping*/
-.input-wrapper {
-    position: relative;
-    width: 70%;
-    margin: 0 auto;
-}
-
-.input-wrapper input {
     width: 100%;
-    padding: 20px 40px 20px 15px;
-    border-radius: 50px;
-    font-size: 1.1em;
-    font-family: "Rubik", serif;
+    padding: 20px;
+    gap: 50px;
+    padding-left: var(--offset-left);
+}
+#create-pack-form input{
     border: none;
+    background-color: #dfdfdf;
+    width: auto;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    font-size: 1.4em;
+    font-family: "Rubik" sans-serif;
+    font-weight: 200;
+    width: 20vw;
 }
 
-.input-wrapper select{
-    border: none;
-    width: 50%;
-    padding: 20px 40px 20px 10px;
-    border-radius: 50px;
-    font-size: 1.1em;
-    font-family: "Rubik", serif;
-    opacity: 0.7;;
+
+#create-pack-form input[type="submit"]{
+    background-color: var(--accent);
+    color: var(--main);
 }
 
-.input-wrapper i {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2em;
-    color: var(--text);
-    font-size: 1.5em;
+
+#create-pack-form div:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+    gap: 20px;;
+}
+
+#notice{
+    margin-left: 10px;
+    color: #D22B2B;
+    opacity: .7;
+    display: none;
+}
+
+#create-pack-form select{
+    border: none;
+    background-color: #dfdfdf;
+    width: auto;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    font-size: 1.4em;
+    font-family: "Rubik" sans-serif;
+    font-weight: 200;
+    width: 20vw;
 }
 /*----------MAIN---------*/

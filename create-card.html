@@ -79,42 +79,30 @@
     <!-----MAIN----->
     <section>
         <p id = "mainheading">Нов пакет с карти</p>
-    </section>
-
-    <!--form-->
-    <section>
-        <div class="container">
-            <form action="#" method="#">
-                
-                <div class="input-wrapper">
-                    <input type="text" placeholder="Име на пакет" id="usernameInput">
-                    <i class='bx bx-rename' ></i>
-                </div>
-                
-                <div class="input-wrapper">
-                    
-                    <select id="selectDiffDropMenu" name="diffculty select">
-                        <option value="Easy">Лесно</option>
-                        <option value="Meduim">Средно</option>
-                        <option value="Hard">Трудно</option>
+    
+        <div id="container">
+            <form id = "create-pack-form">
+                <!--pack-name-->
+                <input type="text" id = "packName" max="30" min="3" required placeholder="Име на пакет с карти">
+                <!--difficulty, require needed???-->
+                <div>
+                    <select id = "difficultySelect" >
+                        <option>Лесно</option>
+                        <option>Средно</option>
+                        <option>Трудно</option>
                     </select>
-                    
-                    <i class='bx bx-select-multiple' ></i>
-                
+                    <p id="notice">*трудността на картите служи само за сортиране</p>
                 </div>
-                
-                <div class="input-wrapper">
-                    <input type="password" placeholder="Парола" id="passwordInput" required>
-                    <i class='bx bx-lock-alt' ></i>
-                </div>
-                
-        
-                <input type="submit" id="createButton" value="Създай пакет">
-            </form>
+                <!--number-of-cards-->
+                <input type ="number" id = "numOfQuestions" max="30" min="5" required placeholder="Брой въпроси">
             
-            <br>
+                <input type="submit" value="Създай">
+            </form>
         </div>
+    
     </section>
+    <!--form-->
+    
     <!-----MAIN----->
 
 
@@ -170,6 +158,20 @@
         </div>
     </section>
     <!--FOOTER--END-->
+
+    
+    <!--JAVASCRIPT-->
+    <script>
+        const selectElement = document.getElementById('difficultySelect');
+        const infoParagraph = document.getElementById('notice');
+    
+        selectElement.addEventListener('change', function() {
+        if (this.value) {
+            infoParagraph.style.display = 'block';  // Show the paragraph
+        }
+        });
+    </script>
+    <!--JAVASCRIPT-->
 
 </body>
 </html>
