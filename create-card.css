@@ -88,28 +88,15 @@ body{
     padding: 20px;
     font-size: 1.4em;
     font-family: "Rubik" sans-serif;
+    color: var(--text);
     font-weight: 200;
     width: 20vw;
 }
-
-
-#create-pack-form input[type="submit"]{
-    background-color: var(--accent);
-    color: var(--main);
-}
-
 
 #create-pack-form div:nth-of-type(1){
     display: flex;
     flex-direction: column;
     gap: 20px;;
-}
-
-#notice{
-    margin-left: 10px;
-    color: #D22B2B;
-    opacity: .7;
-    display: none;
 }
 
 #create-pack-form select{
@@ -125,4 +112,27 @@ body{
     font-weight: 200;
     width: 20vw;
 }
+
+#create-pack-form input[type="submit"] {
+    background-color: var(--accent);
+    color: var(--main);
+    font-size: 2em;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+
+
+#notice{
+    margin-left: 10px;
+    color: #D22B2B;
+    opacity: .7;
+    display: none;
+}
+
+
 /*----------MAIN---------*/
