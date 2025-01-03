@@ -27,6 +27,7 @@ body{
     --main: #FFF ;
     --alt: #181818 ;
     --accent: rgb(47, 216, 56);
+    --accent-light:rgb(166, 228, 170);
 
     /*fonts*/
     --font-extrasmall: 0.75em;
@@ -50,11 +51,98 @@ body{
 /*-----------------------*/
 
 /*----------MAIN---------*/
+#section-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+/*progress-bar*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 400px;
+    width: 100%;
+}
+.container .steps {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.steps .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    color: #999;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid #e0e0e0;
+    transition: all 200ms ease;
+    transition-delay: 0s;
+}
+.steps .circle.active {
+    transition-delay: 100ms;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+.steps .progress-bar {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #e0e0e0;
+    z-index: -1;
+}
+.progress-bar .indicator {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    transition: all 300ms ease;
+}
+.container .buttons {
+    display: flex;
+    gap: 20px;
+}
+.buttons button {
+    padding: 8px 25px;
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: all 200ms linear;
+}
+.buttons button:active {
+    transform: scale(0.97);
+}
+.buttons button:disabled {
+    background: var(--accent-light);
+    cursor: not-allowed;
+}
+
+
+/*------------*/
+
+/*--heading--*/
 #mainheading{
     color: var(--accent);
     font-size: 6em;
     margin: 100px 0px;
     margin-left: var(--offset-left);
+    text-align: center;
 }
 /*resposnive*/
 @media (max-width: 768px){
@@ -66,6 +154,8 @@ body{
 /*----------*/
 
 
+
+/*--forms--*/
 #linkcolored{
     color: var(--accent);
 }
@@ -124,15 +214,12 @@ body{
     display: inline-block;
 }
 
-
-
-
 #notice{
     margin-left: 10px;
     color: #D22B2B;
     opacity: .7;
     display: none;
 }
-
+/*-------*/
 
 /*----------MAIN---------*/
