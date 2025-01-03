@@ -78,52 +78,55 @@
 
     <!-----MAIN----->
     <section id="section-flex">
-        <p id = "mainheading">Нов пакет с карти</p>
+        <p id="mainheading">Нов пакет с карти</p>
 
         <div class="container">
-            
             <div class="steps">
-                
                 <span class="circle active">1</span>
                 <span class="circle">2</span>
                 <span class="circle">3</span>
-                
                 <div class="progress-bar">
                     <span class="indicator"></span>
                 </div>
-            
             </div>
-            
+
             <div class="buttons">
                 <button id="prev" disabled>Назад</button>
-                <button id="next">Напред</button>
+                <button id="next" disabled>Напред</button>
             </div>
         </div>
-    
+
+        <!-- Form Container -->
         <div id="container">
-            <form id = "create-pack-form">
-                <!--pack-name-->
-                <input type="text" id = "packName" max="30" min="3" required placeholder="Име на пакет с карти">
-                <!--difficulty, require needed???-->
-                <div>
-                    <select id = "difficultySelect" >
-                        <option>Лесно</option>
-                        <option>Средно</option>
-                        <option>Трудно</option>
-                    </select>
-                    <p id="notice">*трудността на картите служи само за сортиране</p>
+            <form id="create-pack-form">
+                <!-- Step 1: Pack Name -->
+                <div class="step">
+                    <input type="text" id="packName" max="30" min="3" required placeholder="Име на пакет с карти">
                 </div>
-                <!--number-of-cards-->
-                <input type ="number" id = "numOfQuestions" max="30" min="5" required placeholder="Брой въпроси">
-            
-                <input type="submit" value="Създай">
 
-                <!--!!!Идеята ми е събмит бутона да отвежда до отеделна страница,-->
-                <!--!!!която ти позволява да създадеш всяка карта по отделно    -->
+                <!-- Step 2: Difficulty Selection -->
+                <div class="step">
+                    <div>
+                        <select id="difficultySelect" required>
+                            <option>Лесно</option>
+                            <option>Средно</option>
+                            <option>Трудно</option>
+                        </select>
+                        <p id="notice">*трудността на картите служи само за сортиране</p>
+                    </div>
+                </div>
 
+                <!-- Step 3: Number of Questions -->
+                <div class="step">
+                    <input type="number" id="numOfQuestions" max="30" min="5" required placeholder="Брой въпроси">
+                </div>
+
+                <!-- Submit Button (final step) -->
+                <div class="step">
+                    <input type="submit" value="Създай">
+                </div>
             </form>
         </div>
-    
     </section>
     <!--form-->
     
@@ -198,52 +201,10 @@
         });
     </script>
 
-    <!--fomrs progress script-->
-    <script>
-         //DOM Elements
-    const circles = document.querySelectorAll(".circle"),
-    progressBar = document.querySelector(".indicator"),
-    buttons = document.querySelectorAll("button");
-
-    let currentStep = 1;
-
-    // function that updates the current step and updates the DOM
-    const updateSteps = (e) => {
-    // update current step based on the button clicked
-    currentStep = e.target.id === "next" ? ++currentStep : --currentStep;
-
-    // loop through all circles and add/remove "active" class based on their index and current step
-    circles.forEach((circle, index) => {
-    circle.classList[`${index < currentStep ? "add" : "remove"}`]("active");
-    });
-
-    // update progress bar width based on current step
-    progressBar.style.width = `${((currentStep - 1) / (circles.length - 1)) * 100}%`;
-
-  // check if current step is last step or first step and disable corresponding buttons
     
-    if (currentStep === circles.length) 
-    {
-        buttons[1].disabled = true;
-    } 
 
-    else if (currentStep === 1) 
-    {
-    buttons[0].disabled = true;
-    } 
-
-    else 
-    {
-    buttons.forEach((button) => (button.disabled = false));
-    }
-};
-
-    // add click event listeners to all buttons
-    buttons.forEach((button) => {
-    button.addEventListener("click", updateSteps);
-});
-    </script>
-
+    <!--fomrs progress script-->
+    <script src="progress.js"></script>
     <!--------JAVASCRIPT----->
 
 </body>
