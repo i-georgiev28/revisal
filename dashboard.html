@@ -74,17 +74,88 @@
 
 
     <!---MAIN---->
-    <section>
-        <div class="welcoming">
-            <p id="heading">
-                Здравей, [user]!
-            </p>
-        </div>
-    </section>
 
+    <!--task-->
     <section>
+            <div id = "dashboard">
+                
+                <div id="welcoming">
+                    <p class="headingV1">
+                        Здравей, [user]!
+                    </p>
+                </div>
+
+                <div id="container">
+                    
+                    <div class="window">
+                        <p class="window-heading">Предстоящи събития</p>
+    
+                        <ul class="list">
+                            <li>[task #1] </li>
+                            <li>[task #2]</li>
+                            <li>[task #3]</li>
+                        </ul>
+                    </div>
+
+                    <div class="window">
+                    
+                        <p class="window-heading">Прогрес на преговор</p>
+    
+                        <div id="progress-wrapper">
+
+                            <div class="skill-box">
+
+                                <span class="title">Thing 1</span>
+                                <div class="skill-bar">
+                                    <span class="skill-per css">
+                                        <span class="tooltip">70%</span>
+                                    </span>
+                                </div>
+
+                            </div>
+    
+                            <div class="skill-box">
+
+                                <span class="title">Thing 2</span>
+                                <div class="skill-bar">
+                                    <span class="skill-per css">
+                                        <span class="tooltip">50%</span>
+                                    </span>
+                                </div>
+
+                            </div>
+    
+                            <div class="skill-box">
+
+                                <span class="title">Thing 3</span>
+                                <div class="skill-bar">
+                                    <span class="skill-per css">
+                                        <span class="tooltip">35%</span>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="window">
+                    
+                        <p class="window-heading">Прогрес на преговор</p>
+    
+                        <ul class="list">
+                            <li>[subject #1]: <span class="grade">5</span></li>
+                            <li>[subject #2]: <span class="grade">6</span></li>
+                            <li>[subject #3]: <span class="grade">2</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+                
             
+            </div>
     </section>
+    
+    
     <!--MAIN END-->
 
     <!----FOOOTER---->
@@ -139,6 +210,86 @@
         </div>
     </section>
     <!--FOOTER--END-->
+
+    <!--JAVASCRIPT-->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    // Progress bar functionality
+    const progressBars = document.querySelectorAll(".skill-bar .skill-per");
+
+    progressBars.forEach((bar) => {
+        const tooltip = bar.querySelector(".tooltip");
+        let percentage;
+
+        // Extract percentage from the tooltip text or set default to 0
+        if (tooltip) {
+            percentage = parseInt(tooltip.textContent, 10) || 0;
+        } else {
+            percentage = 0;
+            const newTooltip = document.createElement("span");
+            newTooltip.className = "tooltip";
+            newTooltip.textContent = `${percentage}%`;
+            bar.appendChild(newTooltip);
+        }
+
+        // Adjust width and color based on percentage
+        bar.style.width = `${percentage}%`;
+        let barColor;
+
+        if (percentage < 40) {
+            barColor = "#ff4d4d"; // Red for low progress
+        } else if (percentage < 70) {
+            barColor = "#ffcc00"; // Yellow for medium progress
+        } else {
+            barColor = "#4caf50"; // Green for high progress
+        }
+
+        // Apply color to progress bar and tooltip
+        bar.style.backgroundColor = barColor;
+        if (tooltip) {
+            tooltip.style.backgroundColor = barColor;
+            tooltip.setAttribute("data-color", barColor); // Set color for arrow
+        }
+    });
+
+    // Grade functionality
+    const grades = document.querySelectorAll(".list .grade");
+
+    grades.forEach((grade) => {
+        const gradeValue = parseInt(grade.textContent, 10);
+
+        let gradeColor;
+        if (gradeValue == 2) 
+        {
+            gradeColor = "#e74c3c"; // Red for low grades
+        } 
+        else if (gradeValue == 3) 
+        {
+            gradeColor = "#e67e22"; // Yellow for average grades
+        } 
+        else if (gradeValue == 4){
+            gradeColor = "#ffcc00";
+        }
+        else if (gradeValue == 5)
+        {
+            gradeColor = "#3498db"
+        }
+        else 
+        {
+            gradeColor = "#4caf50"; // Green for high grades
+        }
+
+        // Apply color to grade
+        grade.style.color = gradeColor;
+        grade.style.fontWeight = "bold"; // Optional: Make grades bold for emphasis
+    });
+});
+
+
+
+
+    </script>
+    <!--JAVASCRIPT-->
 
 </body>
 </html>
