@@ -127,18 +127,19 @@ body{
     overflow: hidden;
     gap: 50px;
     padding: 20px;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .box{
     width: 20%;
     height: 30vh;
     border-radius: 30px;
-    background-color: #e7e7e7;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     height: fit-content;
     padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    min-width: 250px;
 }
 .box div{
     display: flex;
