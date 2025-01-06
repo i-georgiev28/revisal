@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 /*---------------------GENERAL---------------------*/
 *{
     box-sizing: border-box;
@@ -7,7 +6,7 @@
     padding: 0;
 }
 body{
-    font-family: "Rubik", serif;
+    font-family: "Mulish", serif;
     font-weight: 300;
 
     background-color: var(--main);
@@ -59,256 +58,62 @@ body{
     line-height: 1.5em;
     color: white;
 }
-
-section:nto{
-    margin-bottom: 20vh;
-}
 /*-----------------------END OF GENERIC--------------------------*/
 
-
-
-/*headings and text for current document*/
-#heading{
-    font-size: 8em;
-    font-weight: 400;
-}
-#slogan{
-    font-size: 2em;
-}
+/*------fonts------*/
 
 .headingV1{
-    font-size: 4.5em;
-    margin-left: var(--offset-left);
-    margin-bottom: 50px;
-    margin-top: 20vh;
-    font-weight: 400;
+    font-size: 4em;
+    font-family: "Arimo", serif;
 }
-
-.headingV2{
-    font-size: 3em;
-}
-
-.text-box-regular{
-    font-size: 2.4em;
-    line-height: 1.15em;
-    width: 90%;
-    margin-left: var(--offset-left);
-    margin-top: var(--font--meduim);
-
-    font-family: "Jost", serif;
-}
-.text-box-regular span{
-    font-weight: 400;
-}
-#highlighted{
-    background-color: var(--accent);
-    padding-left: 8px;
-    padding-right: 8px;
-    margin-right: 5px;
-    color: white;
-}
-#subheading{
-    margin-left: var(--offset-left);
-}
-
-/*--------------------------------------*/
-
-
-/*---------------------MAIN-CONTENT-------------------*/
-
-/*welcoming part*/
-#welcoming{
-    display: flex;
-    padding: var(--offset-left);
-    width: 100%;
-    height: 92vh;
-}
-#container{
-    display: flex;
-    flex-direction: column;
-}
-#container p:nth-child(2){
-    margin-left: var(--offset-left);
+.subheading{
+    margin-left: 10px;
     font-size: 2em;
-    color: var(--accent);
-}
-#button{
-
-    margin-left: var(--offset-left);
-
-    margin-right: 30px;
-
-    margin-top: 100px;
-    background: var(--accent);
-    border-radius: 999px;
-    box-shadow: var(--accent) 0 10px 20px -10px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    opacity: 1;
-    outline: 0 solid transparent;
-    padding: 10px 20px;
-    width: fit-content;
-    word-break: break-word;
-    border: 0;
-}
-
-#button a{
-    text-decoration: none;
-    color: white;
-    font-size: 2em;
-    font-weight: 300;
-
-    font-family: "Rubik", serif;
-}
-#logo{
-    aspect-ratio: 1/1;
-    height: auto;
-    width: auto;
-    margin-left: var(--offset-medium);
-}
-#graphic{
-    margin-left: auto;
-}
-/*responsive*/
-@media (max-width: 768px){
-    #heading{
-        font-size: 5em;
-        margin: var(--offset-normal);
-    }
-    #slogan{
-        margin: var(--offset-normal)
-    }
-    #graphic{
-        display: none;
-    }
-    #logo{
-        margin-right: auto;
-    }
 }
 /*----------------*/
 
-
-/*---features section---*/
-#features{
-    margin-top: 15vh;
-    margin-bottom: 15vh;
-    display: flex;
-    flex-direction: column;
-    gap: 10vh;
-}
-#boxes{
+/*welcoming sesion*/
+#welcoming{
     display: flex;
     flex-direction: row;
-    gap: 50px;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    margin-left: var(--offset-left);
 }
-.feature-box{
+#welcoming-text-box{
     display: flex;
     flex-direction: column;
-    width: 20%;
-    height: 45vh;
-    border-radius: 20px;
-    gap: 30PX;
-}
-.text_icon{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     gap: 10px;
 }
-.text_icon p{
-    font-size: 4em;
-}
-.text_icon i{
-    color: #181818;
-    font-size: 4em;
-}
-.text-box{
-    font-size: 1.4em;
-    font-family: "Jost", serif;
-}
-@media(max-width: 768px){
-    #boxes{
-        flex-direction: column;
-    }
-    .feature-box{
-        width: 80%;
-    }
-    .text_icon p{
-        font-size: 3em;
-    }
-    .text_icon i{
-        font-size: 3em;
-    }
-}
-@media (max-width: 1500px) and (min-width: 768px) {
-    .text_icon p{
-        font-size: 2em;
-    }
-    .text_icon i{
-        font-size: 2em;
-    }
-    .text-box{
-        font-size: 1.2em;
-    }
-}
-
-/*----------------------*/
-
-
-
-/*--CALENDAR-SECTION--*/
-
-
-
-/*--------------------*/
-
-
-
-/*--DOWNLOAD-SECTION--*/
-
-#download{
-    margin-top: 15vh;
-    margin-bottom: 10vh;
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-}
-#download .headingV1{
-    text-align: center;
-}
-#download p:nth-of-type(2){
-    font-size: 2em;
-    text-align: center;
-    margin-top: 20px;
-    font-family: "Jost", sans-serif;
-}
-#download button{
-    padding: 20px;
-    border: none;
-    background-color: transparent;
-    font-size: 2em;
+#welcoming-heading{
+    font-size: 10em;
+    font-family: "Arimo", serif;
     font-weight: 400;
-    font-family: "Jost", sans-serif;
-    margin-top: 10vh;
-    align-self: center;
-    width: 20%;
-    border: var(--accent) 3px solid;
-    border-radius: 20px;
 }
-/*--------------------*/
+#welcoming-text-box .subheading{
+    color: var(--accent);
+}
+
+/*img*/
+#graphics{
+    margin-left: auto;
+    width: 50%;
+    background-color: aliceblue;
+    display: flex;
+    padding: 10px;
+}
+#graphic{
+    margin-left: auto;
+    width: 50%;
+    aspect-ratio: 1/1;
+    
+}
+/*----------------*/
+
 
 /*------STATS-SECTION------*/
 #stats{
     margin-top: 10vh;
 }
+
 
 #stats #subheading{
     font-size: var(--font--meduim);
@@ -330,12 +135,14 @@ section:nto{
 .wrapperV1{
     display: flex;
     flex-direction: column;
+    
     align-items: center;
     justify-content: flex-start;
     text-align: center;
     gap: 30px;
     aspect-ratio: 1/1;
     width: 20%;
+    min-width: 250px;
 }
 .wrapperV1 p{
     font-size: 2em;
@@ -387,7 +194,7 @@ section:nto{
 }
 
 /*responsive*/
-@media(max-width: 610px){
+@media(max-width: 768px){
     #stats #headingV1{
         text-align: center;
         font-size: 8em;
@@ -403,7 +210,7 @@ section:nto{
     }
     
     .wrapperV1{
-        width: 100%; 
+        width: 80%; 
         margin-bottom: 100px;
     }
     
@@ -415,7 +222,7 @@ section:nto{
     .progress-bar1::before,
     .progress-bar2::before,
     .progress-bar3::before {
-        font-size: 5em;
+        font-size: 4em;
     }
 }
 
