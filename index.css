@@ -73,16 +73,6 @@ body{
     font-size: 1.2em;
 }
 
-
-@media(max-width: 768px){
-    .headingV1{
-        font-size: 2.2em;
-        gap: 5px;
-    }
-    .headingV1 i {
-        font-size: 1em;
-    }
-}
 .headingV2{
     font-size: 2.8em;
     font-family: "Noto Sans", serif;
@@ -122,6 +112,40 @@ body{
     margin-left: var(--offset-left);
 }
 
+@media (max-width: 480px) {
+    .text{
+        font-size: 1.25em;
+    }
+
+    .headingV1{
+        font-size: 2.4em;
+        gap: 5px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .text{
+        font-size: 1.3em;
+    }
+
+    .headingV1{
+        font-size: 3em;
+        gap: 5px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .text{
+        font-size: 1.4em;
+    }
+
+    .headingV1{
+        font-size: 3.2em;
+        gap: 5px;
+    }
+
+}
+
 #light{
     opacity: .55;
     font-weight: 300;
@@ -132,7 +156,8 @@ body{
 #welcoming{
     display: flex;
     flex-direction: row;
-    margin-bottom: 15vh
+    margin-bottom: 15vh;
+    margin-left: var(--offset-left);
 }
 #welcoming-text-box{
     display: flex;
@@ -144,11 +169,9 @@ body{
     font-family: "Noto Sans", serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    margin-left: var(--offset-left);
 }
 #welcoming-text-box .subheading{
     color: var(--accent);
-    margin-left: var(--offset-left);
 }
 
 /*img*/
@@ -164,6 +187,33 @@ body{
     width: 50%;
     aspect-ratio: 1/1;
     
+}
+
+@media (max-width: 480px) {
+    #welcoming-heading{
+        font-size: 4em;
+    }
+    #graphics{
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #welcoming-heading{
+        font-size: 6em;
+    }
+    #graphics{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #welcoming-heading{
+        font-size: 8em;
+    }
+    #graphics{
+        display: none;
+    }
 }
 /*----------------*/
 
@@ -195,13 +245,24 @@ body{
 #solution-list{
     display: flex;
     flex-direction: row;
+
     gap: 20px;
     width: 100%;
+    height: auto;
+
     align-items: center;
     justify-content: space-around;
-    height: auto;
+    
     margin-top: 150px;
     margin-bottom: 25vh;
+
+    flex-wrap: wrap;
+}
+@media(max-width: 1024px) {
+    #solution-list{
+        flex-direction: column;
+        gap: 100px;
+    }
 }
 /*--------*/
 
@@ -322,7 +383,7 @@ body{
     .progress-bar1::before,
     .progress-bar2::before,
     .progress-bar3::before {
-        font-size: 4em;
+        font-size: 3.8em;
     }
 }
 

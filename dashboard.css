@@ -56,6 +56,16 @@ body{
     margin-left: var(--offset-left);
 }
 
+/*common heading*/
+.headingV1{
+    font-size: 4em;
+    margin-left: var(--offset-left);
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-weight: 400;
+    color: var(--text);
+    font-weight: 500;
+}
 
 #container{
     display: flex;
@@ -65,24 +75,12 @@ body{
     gap: 0;
     width: 100%;
 }
-
 .window{
     width: 30%;
-    height: 40vh;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 50px;
     border-radius: 20px;
     margin-bottom: 50px;
-}
-
-.headingV1{
-    font-size: 4.5em;
-    margin-left: var(--offset-left);
-    margin-bottom: 50px;
-    margin-top: 50px;
-    font-weight: 400;
-    color: var(--text);
-    font-weight: 500;
 }
 .window-heading{
     font-size: 2.4em;
@@ -90,25 +88,30 @@ body{
     margin-left: var(--offset-left);
     color: var(--accent);
     font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .list{
     list-style: none;
     font-size: 2em;
     margin-left: var(--offset-left);
 }
-
 .list li{
     margin-bottom: 30px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
 }
 
 @media(max-width: 768px){
-    #container{
+    #container {
         flex-direction: column;
         width: 100%;
     }
     .window{
         width: 80%;
-        height: 45vh;
         align-self: center;
     }
     .window-heading{
@@ -118,14 +121,14 @@ body{
         font-size: 1.8em;
     }
 }
-@media (max-width: 1024px) and (min-width: 768px) {
+
+@media (max-width: 1065px) and (min-width: 768px) {
     #container{
         flex-direction: column;
         width: 100%;
     }
     .window{
         width: 90%;
-        height: 35vh;
         align-self: center;
     }
     .window-heading{
@@ -135,16 +138,15 @@ body{
         font-size: 2.4em;
     }
 }
-@media(max-width: 480px){
-    .window{
+@media(max-width: 480px) {
+    .window {
         width: 90%;
-        height: 65vh;
         align-self: center;
     }
-    .window-heading{
+    .window-heading {
         font-size: 2.4em;
     }
-    .list{
+    .list {
         font-size: 1.8em;
     }
 }
@@ -189,7 +191,7 @@ body{
     width: 90%;
     border-radius: 6px;
     background: #4070f4;
-    animation: progress 0.4s ease-in-out forwards;
+    animation: progress 1s ease-in-out forwards;
     opacity: 0;
 }
 .skill-per.css{

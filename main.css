@@ -1,23 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/*Mulish and Nunito Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/*---GENERAL---*/
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 body{
+    /*default assigned fonts*/
+    font-family: "Nunito", serif;
 
-    /*white mode*/
-    --main:#F5F5F5;
-    --alt:#757575;
-    --text: #333333;
-    
-    /*main color pallette*/
-    --main: #FFF ;
-    --alt: #181818 ;
+    /*--colors--*/
+    --background-main:#F3F4F6;
+    --background-alt: #F2F2F2;
+    --background-main-dark:#181818 ;
+
+    --text-main:#222222;
+    --text-white: #F3F4F6;;
+    /*----------*/
+
     --accent: rgb(47, 216, 56);
 
-
-    /*--fonts--*/
+    /*fonts*/
     --font-extrasmall: 0.75em;
     --font-small: 1em;
     --font-normal: 1.2em;
@@ -26,128 +31,163 @@ body{
     --font--large: 3em;
     --font--mega: 6em;
 
-    background-color: var(--main);
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    /*-------*/
+    /* common  margins and paddings*/
+    --offset-extrasmall: 10px;
+    --offset-small: 20px;
+    --offset-normal: 40px;
+    --offset-medium: 50px;
 
-    width: 100%;
-}
-
-/*dark mode*/
-.darkmode{
-    --main:#121212;
-    --alt:#333333;
-    --text: #e7e7e7; 
+    --offset-left: 3%;
+    /*-----------------*/
 }
 
 
-/*icons*/
-.iconS{
-    aspect-ratio: 1/1;
-    width: 0.8em;
-    height: auto;
-}
-.iconM{
-    aspect-ratio: 1/1;
-    width: 1.5em;
-    height: auto;
-}
-i{
-    font-size: 1.5em;
-    color: white;
-}
 
-/*------NAVIGATION------*/
-#nav-bar{
+/*--NAVIGATION--*/
+.nav-bar{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     position: relative;
-    background-color: var(--alt);
+    
+    background-color: var(--background-main-dark);
+    color: var(--text-white);
+    
     padding: 12px 20px;
-
     margin-bottom: 20px;
 }
-
 .logo img{
     width: 40px;
 }
-
 .menu{
     display: flex;
 }
-
 .menu li{
     padding-left: 30px;
-    display: flex;
-    gap: 10px;
 }
 
 .menu li a {
     display: inline-block;
     text-decoration: none;
-    color: var(--main);
+    color: var(--text-white);
     text-align: center;
     transition: 0.15s ease-in-out;
     position: relative;
     text-transform: uppercase;
-
-    display: flex;
-    align-items: center;
-    gap: 20px;
 }
-
 .menu li a::after{
     content: "";
     position: absolute;
     bottom: 0;
-    left: 2;
+    left: 0;
     width: 0;
     height: 1px;
-    background-color: var(--main);
+    background-color: var(--background-main-dark);
     transition: 0.15s ease-in-out;
 }
-
 .menu li a:hover:after{
     width: 100%;
 }
-
 .open-menu , .close-menu{
     position: absolute;
-    color: var(--main);
+    color: var(--text-white);
     cursor: pointer;
     font-size: 1.5rem;
     display: none;
 }
-
 .open-menu{
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
 }
-
 .close-menu{
     top: 20px;
     right: 20px;
 }
-
 #check{
     display: none;
 }
-/*------------------*/
+/*responsive nav*/
+@media(max-width: 768px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--background-main-dark);
+        transition: all 0.3s ease-in-out;
+    }
+    .menu li{margin-top: 40px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
 
+/*reponsive*/
+@media(max-width: 768px){
+    .nav-bar{
+        padding: 30px;
+    }
 
-/*------FOOTER------*/
+    .menu li a::after{
+        display: none;
+    }
+
+    /* Hide text*/
+    .menu li a p {
+        display: none;
+    }
+
+    .menu li a i {
+        font-size: 3em;
+        margin-right: 5px;
+        background-color: #303030;
+        padding: 10px;
+        border-radius: 50px;
+    }
+    
+    .menu li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+
+        padding: 10px;
+    }
+    
+    .menu{
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .menu li{
+        padding: 10px;
+    }
+
+    .logo{
+        display: none;
+    }
+}
+/*----------------------------*/
+
+/*--FOOTER--*/
 #footer{
     width: 100%;
     height: fit-content;
-    background-color: #181818;
-    color: var(--main);
+    background-color: var(--background-main-dark);
+    color: var(--text-white);
     padding: 1.5em;
 }
 #footer a{
@@ -159,8 +199,14 @@ i{
     font-size: 3em;
     margin-bottom: 50px;
 }
+
+.row-heading{
+    font-size: 3em;
+    margin-bottom: 30px;
+}
 .row-heading i{
     font-size: 1em;
+    transform: translateY(3.75px);
 }
 
 #rows-container{
@@ -184,10 +230,6 @@ i{
 .row:hover{
     background-color: #303030;
 }
-.row-heading{
-    font-size: 3em;
-    margin-bottom: 30px;
-}
 
 .row-text, .contacts-text{
     font-size: 1em
@@ -195,10 +237,11 @@ i{
 .contacts-text{
     margin-left:5%;
 }
-
 #copyright{
     margin-top: 50px;
 }
+
+/*--responsive--*/
 @media (max-width: 764px){
     #footer{
         padding: 1em;
@@ -228,8 +271,8 @@ i{
     }
 }
 
-/*responsive for tablet*/
-@media (min-width: 765px) and (max-width: 1024px) {
+/*tablet*/
+@media (min-width: 764px) and (max-width: 1024px) {
     .row{
         width: 100%;
     }
@@ -237,13 +280,16 @@ i{
         font-size: 2em;
     }
 }
+
+/*само за заглавия за footer*/
+@media (min-width: 1024px) and (max-width: 1460px) {
+    .row-heading{
+        font-size: 1.8em;
+    }
+}
 /*-----------------*/
 
 
-
-
-
-/*i need to fix dimensions logic*/
 @media(max-width: 746px){
     .coloumn{
         width: 50%;
@@ -255,96 +301,18 @@ i{
         width: 100%;
     }
 }
+/* !Common css responsive sizes
 
-@media(max-width: 746px){
+@media (max-width: 480px) {
 
-    #nav-bar {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: fit-content;
-        z-index: 1000;
-
-        border-radius: 50px;
-        margin:  10px 0px;
-
-        display: flex;
-        flex-direction: row;
-    }
-    
-
-    .menu li a::after{
-        display: none;
-    }
-
-    /* Hide text*/
-    .menu li a p {
-        display: none;
-    }
-
-    .menu li a i {
-        font-size: 3em;
-        margin-right: 5px;
-        background-color: #303030;
-        padding: 10px;
-        border-radius: 50px;
-    }
-    
-    .menu li a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-    }
-    
-    .menu{
-        align-self: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .menu li{
-        padding: 10px;
-    }
-
-    .logo{
-        display: none;
-    }
-    /*.menu {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        right: -100%;
-        background-color: var(--alt);
-        transition: all 0.3s ease-in-out;
-    }
-
-    .menu li{
-        margin-top: 20px;
-    }
-
-    .menu li a{
-        padding: 10px;
-        font-size: 1.5em;
-    }
-
-    .open-menu , .close-menu {
-        display: block;
-    }
-
-    #check:checked ~ .menu {
-        right: 0;
-    }
-
-    .menu li a i{
-        font-size: 2em;
-    }*/
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+*/

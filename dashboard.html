@@ -88,7 +88,7 @@
                 <div id="container">
                     
                     <div class="window">
-                        <p class="window-heading">Предстоящи събития</p>
+                        <p class="window-heading">Предстоящи събития <i class='bx bx-calendar-alt' ></i></p>
     
                         <ul class="list">
                             <li>[task #1] </li>
@@ -99,7 +99,7 @@
 
                     <div class="window">
                     
-                        <p class="window-heading">Прогрес на преговор</p>
+                        <p class="window-heading">Прогрес на преговор <i class='bx bx-stats'></i></p>
     
                         <div id="progress-wrapper">
 
@@ -140,7 +140,7 @@
 
                     <div class="window">
                     
-                        <p class="window-heading">Прогрес на преговор</p>
+                        <p class="window-heading">Оценки <i class='bx bx-edit-alt' ></i></p>
     
                         <ul class="list">
                             <li>[subject #1]: <span class="grade">5</span></li>
@@ -289,7 +289,34 @@
 
 
     </script>
+
+    <!--JS за автоматична височина на прозорец-->
+    <script>
+    window.addEventListener('load', function() {
+    const windows = document.querySelectorAll('.window');
+
+    let maxHeight = 0;
+
+    //цикъл
+    windows.forEach(window => {
+        //взимане на стойност
+        const windowHeight = window.offsetHeight;
+
+        //проверка за височина
+        if (windowHeight > maxHeight) {
+            maxHeight = windowHeight;
+        }
+    });
+
+    //прилагане на промени
+    windows.forEach(window => {
+        window.style.height = `${maxHeight}px`;
+    });
+});
+
+    </script>
     <!--JAVASCRIPT-->
+
 
 </body>
 </html>
