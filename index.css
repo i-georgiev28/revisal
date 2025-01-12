@@ -5,9 +5,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
     /*animations*/
-    transition: opacity 2s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 body{
     font-family: "Inter", serif;
