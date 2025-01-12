@@ -1,6 +1,5 @@
 /*Mulish and Nunito Sans*/
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
 /*---GENERAL---*/
 *{
     box-sizing: border-box;
@@ -9,7 +8,9 @@
 }
 body{
     /*default assigned fonts*/
-    font-family: "Nunito", serif;
+    font-family: "Inter", serif;
+    font-weight: 300;
+    font-style: normal;
 
     /*--colors--*/
     --background-main:#F3F4F6;
