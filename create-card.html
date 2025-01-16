@@ -19,61 +19,22 @@
     <!--navigation-->
     <section>
         <header>
-            
             <nav>
-                
-                <ul id='nav-bar'>
-                    
-                    <li class='logo'><a href='#'><img src='logo.png' alt = "logo"/></a></li>
+                <ul class='nav-bar'>
+                    <li class='logo'><a href='#'><img src='logo.png'/></a></li>
                     <input type='checkbox' id='check' />
-                    
                     <span class="menu">
-                        
-                        <li>
-                            <a href="index.html">
-                                <i class='bx bx-home-alt-2'></i> 
-                                <p>Начало</p>
-                            </a>
-                            
-                        </li>
-                        
-                        <li>
-                            <a href="cards.html">
-                                <i class='bx bx-card' ></i></i> 
-                                <p>Карти</p>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="dashboard.css">
-                                <i class='bx bx-task' ></i></i> 
-                                <p>Задачи</p>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="login.html">
-                                <i class='bx bxs-user' ></i></i> 
-                                <p>Акаунт</p>
-                            </a>
-                        </li>
-                        
-                        <label for="check" class="close-menu">
-                            <i class='bx bxs-x-circle bx-flip-horizontal'></i>
-                        </label>
-                    
+                        <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Начало</a></li>
+                        <li><a href="dashboard.html"><i class='bx bx-task' ></i></i>Табло</a></li>
+                        <li><a href="cards.html"><i class='bx bx-task' ></i></i>Карти</a></li>
+                        <li><a href="login.html"><i class='bx bxs-user' ></i></i>Акаунт</a></li>
+                        <label for="check" class="close-menu"><i class='bx bxs-x-circle bx-flip-horizontal' ></i></label>
                     </span>
-                    
-                    <label for="check" class="open-menu">
-                        <i class='bx bx-menu bx-flip-horizontal'></i>
-                    </label>
-                
+                    <label for="check" class="open-menu"><i class='bx bx-menu bx-flip-horizontal'></i></label>
                 </ul>
-            
             </nav>
-            
-        </header>
-    </section> 
+            </header>
+    </section>
     <!--navigation-->
 
     <!-----MAIN----->
@@ -120,15 +81,46 @@
                 <div class="step">
                     <input type="number" id="numOfQuestions" max="30" min="5" required placeholder="Брой въпроси">
                 </div>
-                
+
+                <div class="step">
+                    <div>
+                        <select id="difficultySelect" required>
+                            <option>Напиши...</option>
+                            <option>Математика</option>
+                            <option>Български език</option>
+                            <option>Литература</option>
+                            <option>История</option>
+                            <option>География</option>
+                            <option>Физика</option>
+                            <option>Химия</option>
+                            <option>Философия</option>
+                            <option>ИТ</option>
+                            <option>Програмиране</option>
+                            <option>Биология</option>
+                            <option>Предприемачество</option>
+                        </select>
+                        <p id="notice">*трудността на картите служи само за сортиране</p>
+                    </div>
+                </div>
+
                 <!-- Submit Button
                 <div class="step">
                     <input type="submit" value="Създай">
                 </div>
                 -->
             </form>
+
         </div>
     </section>
+
+    <div id="myModal" style="display:none;">
+        <div class="modal-content">
+            <span id="closeBtn">&times;</span>
+            <h2>Напишете вашия текст:</h2>
+            <textarea id="userInput" rows="4" cols="50"></textarea><br><br>
+            <button onclick="submitText()">Изпрати</button>
+        </div>
+    </div>
     <!--form-->
     
     <!-----MAIN----->
@@ -206,6 +198,38 @@
 
     <!--fomrs progress script-->
     <script src="progress.js"></script>
+    
+    <script>
+    // Modal elements
+    var modal = document.getElementById("myModal");
+        var closeBtn = document.getElementById("closeBtn");
+
+        // Open modal when "Напиши..." is selected
+        document.getElementById("subjectSelect").addEventListener("change", function() {
+            if (this.value === "Напиши...") {
+                modal.style.display = "block";
+            }
+        });
+
+        // Close modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Submit the input from the modal
+        function submitText() {
+            var userText = document.getElementById("userInput").value;
+            alert("Въведен текст: " + userText);
+            modal.style.display = "none"; // Close the modal
+        }
+    </script>
     <!--------JAVASCRIPT----->
 
 </body>

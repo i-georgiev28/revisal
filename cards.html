@@ -16,60 +16,21 @@
     <!--navigation-->
     <section>
         <header>
-            
             <nav>
-                
-                <ul id='nav-bar'>
-                    
-                    <li class='logo'><a href='#'><img src='logo.png' alt = "logo"/></a></li>
+                <ul class='nav-bar'>
+                    <li class='logo'><a href='#'><img src='logo.png'/></a></li>
                     <input type='checkbox' id='check' />
-                    
                     <span class="menu">
-                        
-                        <li>
-                            <a href="index.html">
-                                <i class='bx bx-home-alt-2'></i> 
-                                <p>Начало</p>
-                            </a>
-                            
-                        </li>
-                        
-                        <li>
-                            <a href="cards.html">
-                                <i class='bx bx-card' ></i></i> 
-                                <p>Карти</p>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="dashboard.html">
-                                <i class='bx bx-task' ></i></i> 
-                                <p>Задачи</p>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="login.html">
-                                <i class='bx bxs-user' ></i></i> 
-                                <p>Акаунт</p>
-                            </a>
-                        </li>
-                        
-                        <label for="check" class="close-menu">
-                            <i class='bx bxs-x-circle bx-flip-horizontal'></i>
-                        </label>
-                    
+                        <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Начало</a></li>
+                        <li><a href="dashboard.html"><i class='bx bx-task' ></i></i>Табло</a></li>
+                        <li><a href="cards.html"><i class='bx bx-task' ></i></i>Карти</a></li>
+                        <li><a href="login.html"><i class='bx bxs-user' ></i></i>Акаунт</a></li>
+                        <label for="check" class="close-menu"><i class='bx bxs-x-circle bx-flip-horizontal' ></i></label>
                     </span>
-                    
-                    <label for="check" class="open-menu">
-                        <i class='bx bx-menu bx-flip-horizontal'></i>
-                    </label>
-                
+                    <label for="check" class="open-menu"><i class='bx bx-menu bx-flip-horizontal'></i></label>
                 </ul>
-            
             </nav>
-            
-        </header>
+            </header>
     </section>
 
 
@@ -94,94 +55,130 @@
 
     <!--cards-->
     <section>
-        <div id="container">
-            
-            <div class="box">
-                
-                <p class = "title">
-                    Pack #1 <i class='bx bxs-backpack' ></i>
-                </p>
-                
-                <div>
-                    <p id = "bullet">
-                        Предмет: <span id = "subject">История</span>
-                    </p id = "bullet">
-    
-                    <p id = "bullet">
-                        Трудност: <span id = "subject" class="difficulty-rating">5/10</span>
-                    </p>
-    
-                    <p id = "bullet">
-                        Брой карти: <span id = "subject">N</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="box">
-                
-                <p class = "title">
-                    Pack #2 <i class='bx bxs-backpack' ></i>
-                </p>
-                
-                <div>
-                    <p id = "bullet">
-                        Предмет: <span id = "subject">История</span>
-                    </p id = "bullet">
-    
-                    <p id = "bullet">
-                        Трудност: <span id = "subject" class="difficulty-rating">7/10</span>
-                    </p>
-    
-                    <p id = "bullet">
-                        Брой карти: <span id = "subject">N</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="box">
-                
-                <p class = "title">
-                    Pack #3 <i class='bx bxs-backpack' ></i>
-                </p>
-                
-                <div>
-                    <p id = "bullet">
-                        Предмет: <span id = "subject">История</span>
-                    </p id = "bullet">
-    
-                    <p id = "bullet">
-                        Трудност: <span id = "subject" class="difficulty-rating">2/10</span>
-                    </p>
-    
-                    <p id = "bullet">
-                        Брой карти: <span id = "subject">N</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="box">
-                
-                <p class = "title">
-                    Pack #4 <i class='bx bxs-backpack' ></i>
-                </p>
-                
-                <div>
-                    <p id = "bullet">
-                        Предмет: <span id = "subject">История</span>
-                    </p id = "bullet">
-    
-                    <p id = "bullet" class="difficulty-rating">
-                        Трудност: <span id = "subject" class="difficulty-rating">10/10</span>
-                    </p>
-    
-                    <p id = "bullet">
-                        Брой карти: <span id = "subject">N</span>
-                    </p>
-                </div>
-            </div>
-
         
+        <div class="container">
+            
+            <div id="card-div">
+                <div class="color-band"></div>
+                <div class="box">
+    
+                    <div class="box-text-area">
+                        <h3 class="headingV3">Пакет #1</h3>
+                        <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
+                        <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
+                        <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
+                    </div>
+                
+                </div>
+            
+            </div>
+
+            <div id="card-div">
+                <div class="color-band"></div>
+                <div class="box">
+    
+                    <div class="box-text-area">
+                        <h3 class="headingV3">Пакет #2</h3>
+                        <p class="box-property-label">Предмет: <span class="property-value">Георграфия</span></p>
+                        <p class="box-property-label">Трудност: <span class="property-difficulty-value">6/10</span></p>
+                        <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
+                    </div>
+                
+                </div>
+            
+            </div>
+
+            <div id="card-div">
+                <div class="color-band"></div>
+                <div class="box">
+    
+                    <div class="box-text-area">
+                        <h3 class="headingV3">Пакет #3</h3>
+                        <p class="box-property-label">Предмет: <span class="property-value">Химия</span></p>
+                        <p class="box-property-label">Трудност: <span class="property-difficulty-value">2/10</span></p>
+                        <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
+                    </div>
+                
+                </div>
+            
+            </div>
+
+            <div id="card-div">
+                <div class="color-band"></div>
+                <div class="box">
+    
+                    <div class="box-text-area">
+                        <h3 class="headingV3">Пакет #4</h3>
+                        <p class="box-property-label">Предмет: <span class="property-value">Биология</span></p>
+                        <p class="box-property-label">Трудност: <span class="property-difficulty-value">9/10</span></p>
+                        <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
+                    </div>
+                
+                </div>
+            
+            </div>
+
+            <div id="card-div">
+                <div class="color-band"></div>
+                <div class="box">
+    
+                    <div class="box-text-area">
+                        <h3 class="headingV3">Пакет #1</h3>
+                        <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
+                        <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
+                        <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
+                    </div>
+                
+                </div>
+            
+            </div>
+
+            <div id="card-div">
+                <div class="color-band"></div>
+                <div class="box">
+    
+                    <div class="box-text-area">
+                        <h3 class="headingV3">Пакет #2</h3>
+                        <p class="box-property-label">Предмет: <span class="property-value">Георграфия</span></p>
+                        <p class="box-property-label">Трудност: <span class="property-difficulty-value">6/10</span></p>
+                        <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
+                    </div>
+                
+                </div>
+            
+            </div>
+
+            <div id="card-div">
+                <div class="color-band"></div>
+                <div class="box">
+    
+                    <div class="box-text-area">
+                        <h3 class="headingV3">Пакет #3</h3>
+                        <p class="box-property-label">Предмет: <span class="property-value">Химия</span></p>
+                        <p class="box-property-label">Трудност: <span class="property-difficulty-value">2/10</span></p>
+                        <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
+                    </div>
+                
+                </div>
+            
+            </div>
+
+            <div id="card-div">
+                <div class="color-band"></div>
+                <div class="box">
+    
+                    <div class="box-text-area">
+                        <h3 class="headingV3">Пакет #4</h3>
+                        <p class="box-property-label">Предмет: <span class="property-value">Биология</span></p>
+                        <p class="box-property-label">Трудност: <span class="property-difficulty-value">9/10</span></p>
+                        <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
+                    </div>
+                
+                </div>
+            
+            </div>
         </div>
+
     </section>
 
 
@@ -240,34 +237,51 @@
     </section>
     <!--FOOTER--END-->
 
-    <!--javascript for changing diffuculty colours-->
+    <!--diffuculty colours-->
+    <script src="cards-difficulty.js"></script>
+
+    <!--auto-window-resizing-->
     <script>
-        // Function to change color based on the difficulty rating
-        function updateDifficultyColors() {
-            const spans = document.querySelectorAll('span.difficulty-rating');
-            
-            spans.forEach(span => {
-                const ratingText = span.textContent;
-                
-                const ratingValue = parseInt(ratingText.split('/')[0]);
-                
-                if (ratingValue <= 3) 
-                {
-                    span.style.color = '#4caf50';
-                } 
-                else if (ratingValue <= 6) 
-                {
-                    span.style.color = '#ffcc00';
-                } 
-                else 
-                {
-                    span.style.color = '#ff4d4d';
-                }
-            });
-        }
 
+    </script>
 
-        updateDifficultyColors();
+    
+    
+    <script>
+    window.addEventListener('load', () => {
+    // Array of color variables
+    const colors = [
+    'var(--blue)',
+    'var(--red)',
+    'var(--orange)',
+    'var(--yellow)',
+    'var(--green)',
+    'var(--purple)'
+    ];
+
+    // Select all elements with the .color-band class
+    const colorBands = document.querySelectorAll('.color-band');
+
+    // Function to shuffle an array randomly
+    function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    }
+
+    // Shuffle the colors initially
+    shuffleArray(colors);
+
+    // Loop through each .color-band element and assign a random color
+    colorBands.forEach((colorBand, index) => {
+    // Re-shuffle the colors when all have been used
+    if (index >= colors.length) {
+        shuffleArray(colors);
+    }
+    colorBand.style.backgroundColor = colors[index % colors.length];
+    });
+    });
     </script>
     <!--javascript-->
 

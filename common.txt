@@ -1,0 +1,32 @@
+***!Слагам неща, който използвам из страници, идей, като цяло - чернова!***
+
+
+/*common colours*/
+    --blue:#007BFF;
+    --red:#FF4136;
+    --yellow:#FFDC00;
+    --orange:#FF851B;
+    --green:#28A745;
+
+
+
+
+
+
+
+
+/* !Common css responsive sizes
+
+@media (max-width: 480px) {
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+*/

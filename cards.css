@@ -17,6 +17,14 @@ body{
     --alt: #181818 ;
     --accent: rgb(47, 216, 56);
 
+    /*common colors*/
+    --blue:#007BFF;
+    --red:#FF4136;
+    --yellow:#FFDC00;
+    --orange:#FF851B;
+    --green:#28A745;
+    --purple: #6F42C1;
+
 
     /*--fonts--*/
     --font-extrasmall: 0.75em;
@@ -119,61 +127,93 @@ body{
 
 
 /*---BOXES AND CONATINERS---*/
-#container{
+
+.container{
     width: 100%;
-    height: fit-content;
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
-    gap: 50px;
-    padding: 20px;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+#card-div{
+    width: 22%;
+    margin: 20px;
+    height: auto;
+    background-color: var(--main);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
 }
 .box{
-    width: 20%;
-    height: 30vh;
-    border-radius: 30px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    height: fit-content;
-    padding: 30px;
+    height: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    min-width: 250px;
+    gap: 20px;
+    padding: 20px;
 }
-.box div{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.color-band{
+    width: 100%;
+    height: 3vh;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: var(--blue);
+    box-sizing: border-box;
 }
-#bullet{
-    font-size: 1.4em;
-    color: var(--text);
-    font-family: "Jost", sans-serif;
-}
-.title{
-    font-size: 3em;
-    color: var(--accent);
-}
-#subject{
-    color: var(--accent);
+
+/*card fonts*/
+.headingV3{
     font-weight: 400;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+.box-property-label{
+    margin-bottom: 10px;
+    font-size: 1.2em;
 }
 
-@media (max-width: 768px){
-    #container{
+
+
+
+
+@media (max-width: 480px) {
+    #card-div {
+        width: 100%;
+    }
+    .container {
         flex-direction: column;
-        gap: 60px;
-    }
-    .box{
-        width: 80%;
-        align-self: center;
+        align-items: center;
+        justify-content: center;
     }
 }
 
-@media (max-width: 1024px) and (min-width: 768px) {
-    .box{
-        width: 40%;
+@media (min-width: 481px) and (max-width: 767px) {
+    #card-div {
+        width: 100%;
+    }
+    .container {
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #card-div {
+        width: 44%;
+    }
+    .container {
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        justify-content: space-evenly;
+    }
+}
+
+
+
+
 /*--------------------------*/

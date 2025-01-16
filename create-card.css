@@ -6,28 +6,21 @@
     padding: 0;
 }
 body{
-    font-family: "Rubik", serif;
+    /*default assigned fonts*/
+    font-family: "Inter", serif;
     font-weight: 300;
+    font-style: normal;
 
-    background-color: var(--main);
-    
-    /*white mode*/
-    --main:#F5F5F5;
-    --alt:#757575;
-    --text: #333333;
+    /*--colors--*/
+    --background-main:#F3F4F6;
+    --background-alt: #F2F2F2;
+    --background-main-dark:#181818 ;
 
-    /*dark mode*/
-    /*
-    --main:;
-    --alt:;
-    --text:;
-    */
-    
-    /*main color pallette*/
-    --main: #FFF ;
-    --alt: #181818 ;
+    --text-main:#222222;
+    --text-white: #F3F4F6;;
+    /*----------*/
+
     --accent: rgb(47, 216, 56);
-    --accent-light:rgb(166, 228, 170);
 
     /*fonts*/
     --font-extrasmall: 0.75em;
@@ -37,6 +30,8 @@ body{
     --font--big: 2em;
     --font--large: 3em;
     --font--mega: 6em;
+
+    color: var(--text-main);
 
     /* common  margins and paddings*/
     --offset-extrasmall: 10px;
@@ -90,11 +85,14 @@ body{
     transition: all 200ms ease;
     transition-delay: 0s;
 }
+
+/*animation*/
 .steps .circle.active {
     transition-delay: 100ms;
     border-color: var(--accent);
     color: var(--accent);
 }
+
 .steps .progress-bar {
     position: absolute;
     height: 4px;
@@ -113,18 +111,19 @@ body{
     display: flex;
     gap: 20px;
 }
-.buttons button {
+.buttons #prev, .buttons #next {
     padding: 8px 25px;
-    background: var(--accent);
     border: none;
     border-radius: 8px;
-    color: #fff;
+    color: var(--text-white);
+    background-color: var(--accent);
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     transition: all 200ms linear;
 }
+
 .buttons button:active {
     transform: scale(0.97);
 }
@@ -132,6 +131,7 @@ body{
     background: var(--accent-light);
     cursor: not-allowed;
 }
+
 
 
 /*------------*/
@@ -221,5 +221,24 @@ body{
     display: none;
 }
 /*-------*/
+
+
+@media (max-width: 480px) {
+    #mainheading{
+        font-size: 2.8em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #mainheading{
+        font-size: 4em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #mainheading{
+        font-size: 5em;
+    }
+}
 
 /*----------MAIN---------*/

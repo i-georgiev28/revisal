@@ -32,6 +32,8 @@ body{
     --alt: #181818 ;
     --accent: rgb(47, 216, 56);
 
+    /*common 
+
     /*fonts*/
     --font-extrasmall: 0.75em;
     --font-small: 1em;
