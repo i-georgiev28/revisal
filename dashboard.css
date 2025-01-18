@@ -262,6 +262,13 @@ body{
     display: inline-block;
     padding: 10px;
     margin-left: var(--offset-left);
+    
+    width: 70%;
+    max-width: 70%;
+    min-width: 70%;
+
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 .header{
     margin-bottom: 10px;
@@ -290,13 +297,14 @@ body{
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 50px;
+    row-gap: 50px;
+    column-gap: 50px;
     font-size: 1.5em;
     padding: 10px;
     text-align: center;
 }
 
-.day{
+.day, .day-header{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,22 +314,21 @@ body{
     border-radius: 50%;
     box-sizing: border-box;
 }
-
-
+.day-header{
+    font-weight: 600;
+}
 .day:hover {
     background-color: #f0f0f0;
 }
 
 .current-day {
     background-color: #4CAF50;
-    border-radius: 50%;
     color: white;
 }
 
 .selected-day {
     background-color: #2196F3;
     color: white;
-    border-radius: 50%;
 }
 
 .next-month-day {

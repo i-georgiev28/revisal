@@ -26,7 +26,7 @@ function generateCalendar(month, year) {
 
     // Handle leap year for February
     if (month === 1 && year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
-    numDaysInMonth = 29;
+        numDaysInMonth = 29;
     }
 
     const calendarDaysElement = document.getElementById("calendar-days");
@@ -37,44 +37,43 @@ function generateCalendar(month, year) {
 
     let daysDisplayed = 0;
 
-    // Fill the calendar with days, ensuring we only show 28 days (4 weeks)
+    // Fill the calendar with days, ensuring we show exactly 35 days (5 weeks)
     for (let i = 0; i < adjustedFirstDay; i++) {
-    const emptyCell = document.createElement("div");
-    emptyCell.classList.add("day");
-    calendarDaysElement.appendChild(emptyCell);
-    daysDisplayed++;
+        const emptyCell = document.createElement("div");
+        emptyCell.classList.add("day");
+        calendarDaysElement.appendChild(emptyCell);
+        daysDisplayed++;
     }
 
-  // Add the days of the month (max 28 days)
-    for (let day = 1; day <= numDaysInMonth && daysDisplayed < 28; day++) {
-    const dayElement = document.createElement("div");
-    dayElement.classList.add("day");
-    dayElement.textContent = day;
+    for (let day = 1; day <= numDaysInMonth; day++) {
+        const dayElement = document.createElement("div");
+        dayElement.classList.add("day");
+        dayElement.textContent = day;
 
-    // Highlight current day
-    if (day === currentDate.getDate() && month === currentMonth && year === currentYear) {
-        dayElement.classList.add("current-day");
-    }
-
-    // Add click event for day selection
-    dayElement.addEventListener("click", () => {
-        if (selectedDay) {
-            selectedDay.classList.remove("selected-day");
+        // Highlight current day
+        if (day === currentDate.getDate() && month === currentMonth && year === currentYear) {
+            dayElement.classList.add("current-day");
         }
-        dayElement.classList.add("selected-day");
-        selectedDay = dayElement;
-    });
 
-    calendarDaysElement.appendChild(dayElement);
-    daysDisplayed++;
+        // Add click event for day selection
+        dayElement.addEventListener("click", () => {
+            if (selectedDay) {
+                selectedDay.classList.remove("selected-day");
+            }
+            dayElement.classList.add("selected-day");
+            selectedDay = dayElement;
+        });
+
+        calendarDaysElement.appendChild(dayElement);
+        daysDisplayed++;
     }
 
-    // Fill remaining spots (if necessary) to make exactly 28 days
-    while (daysDisplayed < 28) {
-    const emptyCell = document.createElement("div");
-    emptyCell.classList.add("day");
-    calendarDaysElement.appendChild(emptyCell);
-    daysDisplayed++;
+    // Fill remaining spots (if necessary) to make exactly 35 days
+    while (daysDisplayed < 35) {
+        const emptyCell = document.createElement("div");
+        emptyCell.classList.add("day");
+        calendarDaysElement.appendChild(emptyCell);
+        daysDisplayed++;
     }
 }
 
@@ -85,10 +84,10 @@ function updateMonthYearDisplay() {
 
 document.getElementById("prev-month").addEventListener("click", () => {
     if (currentMonth === 0) {
-    currentMonth = 11;
-    currentYear--;
+        currentMonth = 11;
+        currentYear--;
     } else {
-    currentMonth--;
+        currentMonth--;
     }
     generateCalendar(currentMonth, currentYear);
     updateMonthYearDisplay();
@@ -96,10 +95,10 @@ document.getElementById("prev-month").addEventListener("click", () => {
 
 document.getElementById("next-month").addEventListener("click", () => {
     if (currentMonth === 11) {
-    currentMonth = 0;
-    currentYear++;
+        currentMonth = 0;
+        currentYear++;
     } else {
-    currentMonth++;
+        currentMonth++;
     }
     generateCalendar(currentMonth, currentYear);
     updateMonthYearDisplay();
