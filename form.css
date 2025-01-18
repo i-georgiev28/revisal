@@ -1,6 +1,6 @@
-/*--fonts--*/
+/*fonts - Poppins, Raleway*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
-/*--generic--*/
+/*---------------------GENERAL---------------------*/
 *{
     box-sizing: border-box;
     margin: 0;
@@ -11,18 +11,28 @@ body{
     font-weight: 300;
     font-style: normal;
 
+    background-color: var(--main);
+    
     /*white mode*/
     --main:#F5F5F5;
     --alt:#757575;
     --text: #333333;
+
+    /*dark mode*/
+    /*
+    --main:;
+    --alt:;
+    --text:;
+    */
     
     /*main color pallette*/
     --main: #FFF ;
     --alt: #181818 ;
     --accent: rgb(47, 216, 56);
 
+    /*common 
 
-    /*--fonts--*/
+    /*fonts*/
     --font-extrasmall: 0.75em;
     --font-small: 1em;
     --font-normal: 1.2em;
@@ -31,14 +41,14 @@ body{
     --font--large: 3em;
     --font--mega: 6em;
 
-    background-color: var(--main);
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    /*-------*/
+    /* common  margins and paddings*/
+    --offset-extrasmall: 10px;
+    --offset-small: 20px;
+    --offset-normal: 40px;
+    --offset-medium: 50px;
 
-    width: 100%;
+    --offset-left: 3%;
+    /*-----------------*/
 }
 
 /*--MAIN--*/
@@ -46,10 +56,15 @@ body{
     color: var(--accent);
 }
 .container p {
-    font-family: "Rubik", serif;
+    font-family: "Onest", serif;
+
+    font-size: 1.4em;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    margin-top: 20px;
+
+    margin-bottom: 10vh;
 }
 
 .container{
@@ -81,7 +96,9 @@ form{
 
 #registerButton{
     border: none;
-    font-family: "Rubik", serif;
+    
+    font-family: "Onest", serif;
+
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -104,6 +121,12 @@ form{
     position: relative;
     width: 70%;
     margin: 0 auto;
+    border-radius: 20px;
+
+    
+
+    /*box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;*/
+
 }
 
 .input-wrapper input {
@@ -111,7 +134,9 @@ form{
     padding: 20px 40px 20px 15px;
     border-radius: 50px;
     font-size: 1.1em;
-    font-family: "Rubik", serif;
+    
+    font-family: "Onest", serif;
+    
     border: none;
 }
 
@@ -132,9 +157,7 @@ form{
 }
 #message{
     margin: 50px 4%;
-
     font-size: 4em;
-    font-family: "Rubik", serif;
     text-align: center;
 }
 #heading{
@@ -142,7 +165,7 @@ form{
     margin-top: 50px;
     font-size: 3em;
     color: var(--accent);
-    font-family: "Rubik", serif;
+    font-family: "Onest", serif;
 }
 
 /*responsive*/
