@@ -1,4 +1,18 @@
-const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const monthNames = 
+[
+    "Януари",
+    "Февруари",
+    "Март",
+    "Април",
+    "Май",
+    "Юни",
+    "Юли",
+    "Август",
+    "Септември",
+    "Октомври",
+    "Ноември",
+    "Декември"
+];
 const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 let currentDate = new Date();

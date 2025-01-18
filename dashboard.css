@@ -252,27 +252,18 @@ body{
     }
 }
 /*-----------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-.calendar {
-    display: inline-block;
-    border: 2px solid #333;
-    border-radius: 10px;
-    padding: 10px;
+#month-year{
+    font-size: 8em;
+    font-family: 'Onest';
+    font-weight: 500;
 }
 
-.header {
-    font-size: 24px;
+.calendar{
+    display: inline-block;
+    padding: 10px;
+    margin-left: var(--offset-left);
+}
+.header{
     margin-bottom: 10px;
 }
 
@@ -284,19 +275,38 @@ body{
     padding: 5px 10px;
     margin: 0 5px;
     cursor: pointer;
+    background-color: #222;
+    border-radius: 4px;
+    border-style: none;
+    color: #fff;
+}
+
+.controls button i{
+    text-align: center;
+    transform: translateY(1px);
+    font-size: 2em;
 }
 
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    font-size: 16px;
+    gap: 50px;
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
 }
 
-.day {
-    padding: 10px;
+.day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
 }
+
 
 .day:hover {
     background-color: #f0f0f0;
@@ -304,19 +314,19 @@ body{
 
 .current-day {
     background-color: #4CAF50;
+    border-radius: 50%;
     color: white;
 }
 
 .selected-day {
     background-color: #2196F3;
     color: white;
+    border-radius: 50%;
 }
 
 .next-month-day {
-    background-color: #f0f0f0;
     color: #888;
 }
 .prev-month-day {
-    background-color: #f0f0f0;
     color: #888;
 }
