@@ -252,3 +252,71 @@ body{
     }
 }
 /*-----------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+.calendar {
+    display: inline-block;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.header {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.controls {
+    margin-bottom: 10px;
+}
+
+.controls button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    font-size: 16px;
+}
+
+.day {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.day:hover {
+    background-color: #f0f0f0;
+}
+
+.current-day {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.selected-day {
+    background-color: #2196F3;
+    color: white;
+}
+
+.next-month-day {
+    background-color: #f0f0f0;
+    color: #888;
+}
+.prev-month-day {
+    background-color: #f0f0f0;
+    color: #888;
+}

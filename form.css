@@ -16,7 +16,7 @@ body{
     /*white mode*/
     --main:#F5F5F5;
     --alt:#757575;
-    --text: #333333;
+    --text: #1d1d1d;
 
     /*dark mode*/
     /*
@@ -52,6 +52,29 @@ body{
 }
 
 /*--MAIN--*/
+
+#message{
+    margin: 50px 4%;
+    font-size: 4em;
+    text-align: center;
+}
+#heading{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3em;
+    color: var(--accent);
+    font-family: "Onest", serif;
+}
+#forgotten{
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 400;
+
+}
+
+/*already-have? button*/
 #linkcolored{
     color: var(--accent);
 }
@@ -74,6 +97,7 @@ body{
     align-items: center;
     margin-top: 50px;
 }
+/*----------*/
 
 form{
     background-color:var(--altmisc);
@@ -107,7 +131,7 @@ form{
     justify-self: center;
     width: 50%;
 
-    font-size: 1.1em;
+    font-size: 1.2em;
 
     border-radius: 50px;
     padding: 20px 15px;
@@ -123,21 +147,28 @@ form{
     margin: 0 auto;
     border-radius: 20px;
 
-    
-
     /*box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;*/
 
+}
+
+/*input field + animation elements*/
+.input-wrapper {
+    position: relative;
 }
 
 .input-wrapper input {
     width: 100%;
     padding: 20px 40px 20px 15px;
-    border-radius: 50px;
     font-size: 1.1em;
-    
     font-family: "Onest", serif;
-    
     border: none;
+    
+    outline: none;
+    position: relative;
+}
+
+.input-wrapper input:focus {
+    border-bottom: 1px solid #000;
 }
 
 .input-wrapper i {
@@ -147,28 +178,84 @@ form{
     transform: translateY(-50%);
     font-size: 1.2em;
     color: var(--text);
-    font-size: 1.5em;
-}
-/*misc*/
-#forgotten{
-    color: var(--accent);
-    margin: 0 auto;
-    text-align: center;
-}
-#message{
-    margin: 50px 4%;
-    font-size: 4em;
-    text-align: center;
-}
-#heading{
-    text-align: center;
-    margin-top: 50px;
-    font-size: 3em;
-    color: var(--accent);
-    font-family: "Onest", serif;
 }
 
+
+
+
+
 /*responsive*/
+@media (max-width: 480px) {
+
+    #message{
+        font-size: 2.2em;
+    }
+    #heading{
+        font-size: 1.4em;
+    }
+    
+    form{
+        width: 80%;
+    }
+
+    .container p{
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    #message{
+        font-size: 3em;
+    }
+    #heading{
+        font-size: 2.2em;
+    }
+
+    form{
+        width: 70%;
+    }
+
+    .container p{
+        font-size: 1.2em;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    form{
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1250px) {
+    
+    form{
+        width: 40%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*responsive
 @media(max-width: 764px){
     #message{
         font-size: 2.5em;
@@ -220,3 +307,4 @@ form{
         font-size: 0.9em;
     }
 }
+*/

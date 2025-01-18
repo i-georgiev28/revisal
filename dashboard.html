@@ -16,60 +16,21 @@
     <!--navigation-->
     <section>
         <header>
-            
             <nav>
-                
-                <ul id='nav-bar'>
-                    
-                    <li class='logo'><a href='#'><img src='logo.png' alt = "logo"/></a></li>
+                <ul class='nav-bar'>
+                    <li class='logo'><a href='#'><img src='logo.png'/></a></li>
                     <input type='checkbox' id='check' />
-                    
                     <span class="menu">
-                        
-                        <li>
-                            <a href="index.html">
-                                <i class='bx bx-home-alt-2'></i> 
-                                <p>Начало</p>
-                            </a>
-                            
-                        </li>
-                        
-                        <li>
-                            <a href="cards.html">
-                                <i class='bx bx-card' ></i></i> 
-                                <p>Карти</p>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="dashboard.html">
-                                <i class='bx bx-task' ></i></i> 
-                                <p>Задачи</p>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href="login.html">
-                                <i class='bx bxs-user' ></i></i> 
-                                <p>Акаунт</p>
-                            </a>
-                        </li>
-                        
-                        <label for="check" class="close-menu">
-                            <i class='bx bxs-x-circle bx-flip-horizontal'></i>
-                        </label>
-                    
+                        <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Начало</a></li>
+                        <li><a href="dashboard.html"><i class='bx bx-task' ></i></i>Табло</a></li>
+                        <li><a href="cards.html"><i class='bx bx-task' ></i></i>Карти</a></li>
+                        <li><a href="login.html"><i class='bx bxs-user' ></i></i>Акаунт</a></li>
+                        <label for="check" class="close-menu"><i class='bx bxs-x-circle bx-flip-horizontal' ></i></label>
                     </span>
-                    
-                    <label for="check" class="open-menu">
-                        <i class='bx bx-menu bx-flip-horizontal'></i>
-                    </label>
-                
+                    <label for="check" class="open-menu"><i class='bx bx-menu bx-flip-horizontal'></i></label>
                 </ul>
-            
             </nav>
-            
-        </header>
+            </header>
     </section>
 
 
@@ -155,6 +116,29 @@
             </div>
     </section>
     
+
+    <section>
+        <div class="calendar">
+            <div class="header">
+                <span id="month-year"></span>
+            </div>
+            <div class="controls">
+                <button id="prev-month">Prev</button>
+                <button id="next-month">Next</button>
+            </div>
+            <div class="days">
+                <!-- Days of the week header -->
+                <div class="day">Mon</div>
+                <div class="day">Tue</div>
+                <div class="day">Wed</div>
+                <div class="day">Thu</div>
+                <div class="day">Fri</div>
+                <div class="day">Sat</div>
+                <div class="day">Sun</div>
+            </div>
+            <div id="calendar-days" class="days"></div>
+        </div>
+    </section>
     
     <!--MAIN END-->
 
@@ -212,109 +196,116 @@
     <!--FOOTER--END-->
 
     <!--JAVASCRIPT-->
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-    // Progress bar functionality
-    const progressBars = document.querySelectorAll(".skill-bar .skill-per");
 
-    progressBars.forEach((bar) => {
-        const tooltip = bar.querySelector(".tooltip");
-        let percentage;
-
-        // Extract percentage from the tooltip text or set default to 0
-        if (tooltip) {
-            percentage = parseInt(tooltip.textContent, 10) || 0;
-        } else {
-            percentage = 0;
-            const newTooltip = document.createElement("span");
-            newTooltip.className = "tooltip";
-            newTooltip.textContent = `${percentage}%`;
-            bar.appendChild(newTooltip);
-        }
-
-        // Adjust width and color based on percentage
-        bar.style.width = `${percentage}%`;
-        let barColor;
-
-        if (percentage < 40) {
-            barColor = "#ff4d4d"; //Red
-        } else if (percentage < 70) {
-            barColor = "#ffcc00"; //Yellow
-        } else {
-            barColor = "#4caf50"; //Green
-        }
-
-        // Apply color to progress bar and tooltip
-        bar.style.backgroundColor = barColor;
-        if (tooltip) {
-            tooltip.style.backgroundColor = barColor;
-            tooltip.setAttribute("data-color", barColor); // Set color for arrow
-        }
-    });
-
-    // Grade functionality
-    const grades = document.querySelectorAll(".list .grade");
-
-    grades.forEach((grade) => {
-        const gradeValue = parseInt(grade.textContent, 10);
-
-        let gradeColor;
-        if (gradeValue == 2) 
-        {
-            gradeColor = "#e74c3c"; // Red for low grades
-        } 
-        else if (gradeValue == 3) 
-        {
-            gradeColor = "#e67e22"; // Yellow for average grades
-        } 
-        else if (gradeValue == 4){
-            gradeColor = "#ffcc00";
-        }
-        else if (gradeValue == 5)
-        {
-            gradeColor = "#3498db"
-        }
-        else 
-        {
-            gradeColor = "#4caf50"; // Green for high grades
-        }
-
-        // Apply color to grade
-        grade.style.color = gradeColor;
-        grade.style.fontWeight = "bold"; // Optional: Make grades bold for emphasis
-    });
-});
+    <!--calendar-->
+    <script src="calendar.js"></script>
 
 
-
-
-    </script>
 
     <!--JS за автоматична височина на прозорец-->
     <script>
-    window.addEventListener('load', function() {
-    const windows = document.querySelectorAll('.window');
-
-    let maxHeight = 0;
-
-    //цикъл
-    windows.forEach(window => {
-        //взимане на стойност
-        const windowHeight = window.offsetHeight;
-
-        //проверка за височина
-        if (windowHeight > maxHeight) {
-            maxHeight = windowHeight;
-        }
+        document.addEventListener("DOMContentLoaded", () => {
+        // Progress bar functionality
+        const progressBars = document.querySelectorAll(".skill-bar .skill-per");
+    
+        progressBars.forEach((bar) => {
+            const tooltip = bar.querySelector(".tooltip");
+            let percentage;
+    
+            // Extract percentage from the tooltip text or set default to 0
+            if (tooltip) {
+                percentage = parseInt(tooltip.textContent, 10) || 0;
+            } else {
+                percentage = 0;
+                const newTooltip = document.createElement("span");
+                newTooltip.className = "tooltip";
+                newTooltip.textContent = `${percentage}%`;
+                bar.appendChild(newTooltip);
+            }
+    
+            // Adjust width and color based on percentage
+            bar.style.width = `${percentage}%`;
+            let barColor;
+    
+            if (percentage < 40) {
+                barColor = "#ff4d4d"; //Red
+            } else if (percentage < 70) {
+                barColor = "#ffcc00"; //Yellow
+            } else {
+                barColor = "#4caf50"; //Green
+            }
+    
+            // Apply color to progress bar and tooltip
+            bar.style.backgroundColor = barColor;
+            if (tooltip) {
+                tooltip.style.backgroundColor = barColor;
+                tooltip.setAttribute("data-color", barColor); // Set color for arrow
+            }
+        });
+    
+        // Grade functionality
+        const grades = document.querySelectorAll(".list .grade");
+    
+        grades.forEach((grade) => {
+            const gradeValue = parseInt(grade.textContent, 10);
+    
+            let gradeColor;
+            if (gradeValue == 2) 
+            {
+                gradeColor = "#e74c3c"; // Red for low grades
+            } 
+            else if (gradeValue == 3) 
+            {
+                gradeColor = "#e67e22"; // Yellow for average grades
+            } 
+            else if (gradeValue == 4){
+                gradeColor = "#ffcc00";
+            }
+            else if (gradeValue == 5)
+            {
+                gradeColor = "#3498db"
+            }
+            else 
+            {
+                gradeColor = "#4caf50"; // Green for high grades
+            }
+    
+            // Apply color to grade
+            grade.style.color = gradeColor;
+            grade.style.fontWeight = "bold"; // Optional: Make grades bold for emphasis
+        });
     });
-
-    //прилагане на промени
-    windows.forEach(window => {
-        window.style.height = `${maxHeight}px`;
+    
+    
+    
+    
+        </script>
+    
+        <!--JS за автоматична височина на прозорец-->
+        <script>
+        window.addEventListener('load', function() {
+        const windows = document.querySelectorAll('.window');
+    
+        let maxHeight = 0;
+    
+        //цикъл
+        windows.forEach(window => {
+            //взимане на стойност
+            const windowHeight = window.offsetHeight;
+    
+            //проверка за височина
+            if (windowHeight > maxHeight) {
+                maxHeight = windowHeight;
+            }
+        });
+    
+        //прилагане на промени
+        windows.forEach(window => {
+            window.style.height = `${maxHeight}px`;
+        });
     });
-});
-
-    </script>
+    
+        </script>
     <!--JAVASCRIPT-->
 
 
