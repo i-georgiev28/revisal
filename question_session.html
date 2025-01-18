@@ -43,13 +43,16 @@
                 <p id="question_text">When was the USA declaration of Independence written?</p>
 
                 <div id="hint-box">
-                    <p>Need a hint?</p>
-                    
-                    <button>
-                        <i class='bx bx-down-arrow-alt'></i>
-                    </button>
+                    <div id="flexbox">
+                        <p id="need_a">Need a hint?</p>
+                        <button id="toggle-button">
+                            <i class="bx bx-down-arrow-alt" id="icon"></i>
+                        </button>
+                    </div>
                 
+                    <p id="hint" style="display: none;">It ends with 6</p>
                 </div>
+                
 
                 <p id="question_answer" style="display: none;">
                     1776
@@ -115,6 +118,29 @@
 
 
     <!--JavaScript-->
-    <script></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleButton = document.getElementById("toggle-button"); // Fix: Correct ID
+            const hint = document.getElementById("hint");
+            const icon = document.getElementById("icon");
+        
+            // Initialize the hint to be hidden
+            hint.style.display = "none";
+        
+            toggleButton.addEventListener("click", () => {
+                if (hint.style.display === "none") {
+                    hint.style.display = "block"; // Show the hint
+                    icon.classList.remove("bx-down-arrow-alt");
+                    icon.classList.add("bx-up-arrow-alt");
+                } else {
+                    hint.style.display = "none"; // Hide the hint
+                    icon.classList.remove("bx-up-arrow-alt");
+                    icon.classList.add("bx-down-arrow-alt");
+                }
+            });
+        });
+    </script>
+        
+    
 </body>
 </html>
