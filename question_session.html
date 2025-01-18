@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisal</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="questions.css">
+    <!--boxicon icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!--navigation-->
+    <section>
+        <header>
+            <nav>
+                <ul class='nav-bar'>
+                    <li class='logo'><a href='#'><img src='logo.png'/></a></li>
+                    <input type='checkbox' id='check' />
+                    <span class="menu">
+                        <li><a href="index.html"><i class='bx bx-home-alt-2'></i> Начало</a></li>
+                        <li><a href="dashboard.html"><i class='bx bx-task' ></i></i>Табло</a></li>
+                        <li><a href="cards.html"><i class='bx bx-task' ></i></i>Карти</a></li>
+                        <li><a href="login.html"><i class='bx bxs-user' ></i></i>Акаунт</a></li>
+                        <label for="check" class="close-menu"><i class='bx bxs-x-circle bx-flip-horizontal' ></i></label>
+                    </span>
+                    <label for="check" class="open-menu"><i class='bx bx-menu bx-flip-horizontal'></i></label>
+                </ul>
+            </nav>
+            </header>
+    </section>
+
+
+    <!---MAIN-START---->
+    <section>
+        <div id="question">
+            <div id="question-box">
+                
+                <!--example question-->
+                <p id="question_text">When was the USA declaration of Independence written?</p>
+
+                <div id="hint-box">
+                    <p>Need a hint?</p>
+                    
+                    <button>
+                        <i class='bx bx-down-arrow-alt'></i>
+                    </button>
+                
+                </div>
+
+                <p id="question_answer" style="display: none;">
+                    1776
+                </p>
+            
+            </div>
+        </div>
+    </section>
+    <!----MAIN--END---->
+
+    <!----FOOOTER---->
+    <section>
+        <div id="footer">
+            <p id = "footer-heading">Вижте също: </p>
+            
+            <div id="rows-container">
+                <a href = "technologies.html" class="row">
+                    
+                    <p class="row-heading">Технологии <i class='bx bx-code-curly'></i></p>
+    
+                    <p class="row-text">
+                        Разгледайте изпозлваните технологии, <br>с които
+                        сме реализирали приложението
+                    </p>
+                    
+                </a>
+                
+                <a href = "developers.html" class="row">
+                    <p class="row-heading">Разработчици <i class='bx bx-group' ></i></p>
+
+                    <p class="row-text">
+                        Научете повече за разработчиците
+                        <br>на приложението
+                    </p>
+                </a>
+                
+                <a href = "materials.html" class="row">
+                    <p class="row-heading">Материали <i class='bx bxs-book-content' ></i></p>
+
+                    <p class="row-text">
+                        Вижте изпозлваните материали
+                        <br>в приложението
+                    </p>
+                </a>
+            
+            </div>
+
+            <p id = "footer-heading">Свържете с нас: </p>
+                    
+                <p class="contacts-text">
+                    +359********* <i class='bx bx-phone' ></i>
+                </p>
+                    
+                <p class="contacts-text">
+                    example@mail.com  <i class='bx bx-envelope' ></i>
+                </p>
+
+            <p id = "copyright">Revisal app, work of Ivan Georgiev and Iliyan Georgiev (ПГКМКС "Акад.Благовест Сендов", гр. Варна), НОИТ 2024-2025г., All rights reserved</p>
+
+        </div>
+    </section>
+    <!--FOOTER--END-->
+
+
+    <!--JavaScript-->
+    <script></script>
+</body>
+</html>

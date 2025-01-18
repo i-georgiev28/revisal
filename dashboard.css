@@ -337,3 +337,40 @@ body{
 .prev-month-day {
     color: #888;
 }
+
+/*resposnsive*/
+@media (max-width: 480px) {
+    .calendar{
+        width: 90%;
+        margin-left: 0;
+    }
+    #month-year{
+        font-size: 3em;
+    }
+    .days{
+        font-size: 0.8em;
+        row-gap: 3px;
+        column-gap: 3px;
+    }
+    .day{
+        font-size: 0.8em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .calendar{
+        width: 70%;
+    }
+    #month-year{
+        font-size: 4em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .calendar{
+        width: 70%;
+    }
+    #month-year{
+        font-size: 5cm;
+    }
+}
