@@ -38,6 +38,14 @@
     <section>
         <div id="question">
             <div id="question-box">
+
+                <p id="question_info">
+                    <span id="question_number">5</span> of <span id="packet_total_questions">10</span>
+
+                    /
+
+                    <span id="packet_name">History placment test</span>
+                </p>
                 
                 <!--example question-->
                 <p id="question_text">When was the USA declaration of Independence written?</p>
@@ -57,6 +65,11 @@
                 <p id="question_answer" style="display: none;">
                     1776
                 </p>
+
+                <div id="flip">
+                    <span id="flip-help"></span>
+                    <i class='bx bx-rotate-right' id="flip-icon"></i>
+                </div>
             
             </div>
         </div>
@@ -118,6 +131,8 @@
 
 
     <!--JavaScript-->
+
+    <!--hint reveal button-->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const toggleButton = document.getElementById("toggle-button"); // Fix: Correct ID
