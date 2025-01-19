@@ -295,63 +295,99 @@ body{
 #packet_name{
     font-weight: 600;
 }
+
+/*resposnive*/
+@media (max-width: 480px) {
+
+    /*general*/
+    #question{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    /*top*/
+    #question_info{
+        font-size: 1.4em;
+    }
+    /*---*/
+
+
+    /*middle (question)*/
+    #flip{
+        margin-top: 30px;
+    }
+
+    #question_text{
+        font-size: 2.8em;
+    }
+
+    #need_a{
+        font-size: 1.5em;
+        transform: translateY(5px);
+    }
+
+    #icon{
+        font-size: 1em;
+    }
+    /*buttons*/
+    #flip-icon {
+        font-size: 1.4em;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    #question{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        height: 70vh;
+    }
+
+    #flip{
+        margin-top: 50px;
+    }
+    #flip-icon{
+        padding: 8px;
+        font-size: 1.8em;
+    }
+    #question-info{
+        font-size: 1.8em;
+    }
+    #question_text{
+        font-size: 3.2em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #question{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        height: 70vh;
+    }
+
+    #question_text{
+        font-size: 3.4em;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1250px) {
+    #question{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        height: 70vh;
+    }
+
+    #question_text{
+        font-size: 4.2em;
+    }
+}
+
+
+
+
+
+
+
+
 /*---END-OF-MAIN---*/
-
-/*--FOOTER--*/
-#footer{
-    width: 100%;
-    height: fit-content;
-    background-color: var(--background-main-dark);
-    color: var(--text-white);
-    padding: 1.5em;
-}
-#footer a{
-    color: var(--main);
-    text-decoration: none;
-}
-
-#footer-heading{
-    font-size: 3em;
-    margin-bottom: 50px;
-}
-
-.row-heading{
-    font-size: 3em;
-    margin-bottom: 30px;
-}
-.row-heading i{
-    font-size: 1em;
-    transform: translateY(3.75px);
-}
-
-#rows-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-
-    margin-bottom: 50px;
-}
-
-.row{
-    width: 30%;
-    height: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-left: 20px;
-    transition: 0.2s ease-in-out;
-}
-.row:hover{
-    background-color: #303030;
-}
-
-.row-text, .contacts-text{
-    font-size: 1em
-}
-.contacts-text{
-    margin-left:5%;
-}
-#copyright{
-    margin-top: 50px;
-}
