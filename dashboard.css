@@ -53,14 +53,9 @@ body{
 
 /*------MAIN------*/
 
-#heading{
-    font-size: 6em;
-    margin-left: 20px;
-    font-weight: 400;
-    margin-left: var(--offset-left);
-}
 
-/*common heading*/
+
+/*common headings*/
 .headingV1{
     font-size: 4em;
     margin-left: var(--offset-left);
@@ -70,6 +65,24 @@ body{
     color: var(--text);
     font-weight: 500;
 }
+
+#heading{
+    font-size: 6em;
+    margin-left: 20px;
+    font-weight: 400;
+    margin-left: var(--offset-left);
+}
+
+.headingV2{
+    font-size: 2em;
+    margin-bottom: 50px;
+    margin-top: 25px;
+    
+    font-weight: 600;
+    font-family: 'Onest';
+}
+
+/*--------------*/
 
 #container{
     display: flex;
@@ -395,9 +408,11 @@ body{
 
 /*cards*/
 .stack {
-    width: 500px;
-    height: 500px;
+    width: 50vw;
+    height:20vh;
     position: relative;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
 }
 
 .card {
@@ -407,24 +422,32 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
+
+    color: var(--text);
+    
     display: grid;
     justify-content: center;
     align-items: center;
-    border-radius: 2rem;
-    font-family: sans-serif;
-    font-size: 10rem;
-    color: #00000080;
-    box-shadow: 0 5px 10px 0 #00000040, 0 15px 20px 0#00000020;
-    transition: transform 200ms;
+    
+    border-radius: 20px;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: transform 0.2s ease-in-out;
 }
 
+.task-desc{
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+}
+
+/*allignment and offset*/
 .card:nth-last-child(n + 4) {
-    --y: calc(-50% + -30px);
+    --y: calc(-50% + -50px);
     transform: translate(-50%, var(--y)) scale(0.9);
-    box-shadow: 0 0 1px 1px #00000003;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .card:nth-last-child(3) {
-    --y: calc(-50% + -15px);
+    --y: calc(-50% + -25px);
     transform: translate(-50%, var(--y)) scale(0.95);
 }
 .card:nth-last-child(2) {
@@ -432,10 +455,12 @@ body{
     transform: translate(-50%, var(--y)) scale(1);
 }
 .card:nth-last-child(1) {
-    --y: calc(-50% + 15px);
+    --y: calc(-50% + 25px);
     transform: translate(-50%, var(--y)) scale(1.05);
 }
+/*----------------------*/
 
+/*анимации*/
 @keyframes swap {
 50% {
     transform: translate(-50%, calc(var(--y) - 250px)) scale(0.85) rotate(-5deg);
@@ -446,3 +471,4 @@ body{
     z-index: -1;
 }
 }
+/*--------*/
