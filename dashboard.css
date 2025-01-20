@@ -382,3 +382,67 @@ body{
         font-size: 5em;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+/*cards*/
+.stack {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.card {
+    width: 80%;
+    min-height: 40%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    font-family: sans-serif;
+    font-size: 10rem;
+    color: #00000080;
+    box-shadow: 0 5px 10px 0 #00000040, 0 15px 20px 0#00000020;
+    transition: transform 200ms;
+}
+
+.card:nth-last-child(n + 4) {
+    --y: calc(-50% + -30px);
+    transform: translate(-50%, var(--y)) scale(0.9);
+    box-shadow: 0 0 1px 1px #00000003;
+}
+.card:nth-last-child(3) {
+    --y: calc(-50% + -15px);
+    transform: translate(-50%, var(--y)) scale(0.95);
+}
+.card:nth-last-child(2) {
+    --y: calc(-50%);
+    transform: translate(-50%, var(--y)) scale(1);
+}
+.card:nth-last-child(1) {
+    --y: calc(-50% + 15px);
+    transform: translate(-50%, var(--y)) scale(1.05);
+}
+
+@keyframes swap {
+50% {
+    transform: translate(-50%, calc(var(--y) - 250px)) scale(0.85) rotate(-5deg);
+    animation-timing-function: ease-in;
+}
+100% {
+    transform: translate(-50%, calc(var(--y) - 15px)) scale(0.85);
+    z-index: -1;
+}
+}
