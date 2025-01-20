@@ -8,6 +8,8 @@
     <!--CSS-->
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="stylesheet" href="card_stack.css">
     <!--boxicon icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -120,21 +122,21 @@
     <section>
         <div class="calendar">
             <div class="header">
-                <span id="month-year"></span>
+                    <span id="month-year"></span>
             </div>
             <div class="controls">
-                
+                    
                 <button id="prev-month">
                     <i class='bx bx-left-arrow-alt' ></i>
                 </button>
-                
+                    
                 <button id="next-month">
                     <i class='bx bx-right-arrow-alt'></i>
                 </button>
-            
+                
             </div>
             <div class="days">
-                    <!-- Days of the week header -->
+                        <!-- Days of the week header -->
                 <div class="day-header">Пон.</div>
                 <div class="day-header">Вт.</div>
                 <div class="day-header">Ср.</div>
@@ -145,15 +147,26 @@
             </div>
             <div id="calendar-days" class="days"></div>
         </div>
-    
     </section>
+    
 
     <section>
         <h1 class="headingV1">Днес за преговор: </h1>
 
-        <div id="card-stack">
-
+        <div class="stack">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
         </div>
+
+    </section>
+
+    
+    
+    <section>
+
     </section>
     
     <!--MAIN END-->

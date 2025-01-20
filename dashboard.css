@@ -46,6 +46,9 @@ body{
 
     --offset-left: 3%;
     /*-----------------*/
+
+    min-height: 100vh;
+    user-select: none;
 }
 
 /*------MAIN------*/
@@ -123,7 +126,7 @@ body{
     }
 }
 
-@media (max-width: 1065px) and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1065px){
     #container{
         flex-direction: column;
         width: 100%;
@@ -253,6 +256,8 @@ body{
     }
 }
 /*-----------------*/
+
+
 #month-year{
     font-size: 8em;
     font-family: 'Onest';
@@ -260,7 +265,6 @@ body{
 }
 
 .calendar{
-    display: inline-block;
     padding: 10px;
     margin-left: var(--offset-left);
     
@@ -268,9 +272,12 @@ body{
     max-width: 70%;
     min-width: 70%;
 
+    height: auto;
+
     margin-top: 10vh;
     margin-bottom: 10vh;
 }
+
 .header{
     margin-bottom: 10px;
 }
@@ -372,6 +379,6 @@ body{
         width: 70%;
     }
     #month-year{
-        font-size: 5cm;
+        font-size: 5em;
     }
 }
