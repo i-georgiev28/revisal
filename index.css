@@ -106,6 +106,12 @@ body{
     margin-left: var(--offset-left);
 }
 
+.textS{
+    word-spacing: 1px;
+    line-height: 1.5em;
+    font-size: var(--font-normal);
+}
+
 .textW{
     font-size: var(--font--big);
     word-spacing: 1px;
@@ -180,15 +186,14 @@ body{
 #graphics{
     margin-left: auto;
     width: 50%;
-    background-color: aliceblue;
     display: flex;
     padding: 10px;
 }
 #graphic{
     margin-left: auto;
-    width: 50%;
+    width: 70%;
+    margin: 0;
     aspect-ratio: 1/1;
-    
 }
 
 @media (max-width: 480px) {
@@ -260,6 +265,18 @@ body{
 
     flex-wrap: wrap;
 }
+
+.solution{
+    height: auto;
+    width: 20%;
+    align-self: flex-start;
+}
+
+.solution .headingV2 i{
+    color: black;
+    font-size: .9em;
+    transform: translateY(3px);
+}
 @media(max-width: 1024px) {
     #solution-list{
         flex-direction: column;
@@ -288,7 +305,7 @@ body{
     gap: 20px;
     width: 100%;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
 }
 
 #stats, .headingV1{
@@ -420,6 +437,9 @@ body{
     cursor: pointer;
     transition: all 0.25s ease-out;
     margin-left: var(--offset-left);
+}
+#get-started:hover{
+    scale: 1.05;
 }
 
 @media(max-width: 768px){
