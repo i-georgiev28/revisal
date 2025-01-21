@@ -266,6 +266,42 @@ body{
     flex-wrap: wrap;
 }
 
+@media (max-width: 480px) {
+    #solution-list{
+        margin-left: var(--offset-left);
+    }
+    .solution{
+        width: 100%;
+    }
+    .textS{
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #solution-list{
+        margin-left: var(--offset-left);
+    }
+    .solution{
+        width: 100%;
+    }
+    .textS{
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #solution-list{
+        margin-left: var(--offset-left);
+    }
+    .solution{
+        width: 100%;
+    }
+    .textS{
+        width: 100%;
+    }
+}
+
 .solution{
     height: auto;
     width: 20%;
