@@ -37,151 +37,150 @@
     </section>
     <!--navigation-->
 
-    <!-----MAIN----->
-    <section id="section-flex">
-        <p id="mainheading">Нов пакет с карти</p>
+    <!-----MAIN----->  
+<section id="section-flex">
+    <p id="mainheading">Нов пакет с карти</p>
 
-        <div class="container">
-            <div class="steps">
-                <span class="circle active">1</span>
-                <span class="circle">2</span>
-                <span class="circle">3</span>
-                <div class="progress-bar">
-                    <span class="indicator"></span>
-                </div>
-            </div>
-
-            <div class="buttons">
-                <button id="prev" disabled>Назад</button>
-                <button id="next" disabled>Напред</button>
+    <div class="container">
+        <div class="steps">
+            <span class="circle active">1</span>
+            <span class="circle">2</span>
+            <span class="circle">3</span>
+            <div class="progress-bar">
+                <span class="indicator"></span>
             </div>
         </div>
 
-        <!-- Form Container -->
-        <div id="container">
-            <form id="create-pack-form">
-                <!-- Step 1: Pack Name -->
-                <div class="step">
-                    <input type="text" id="packName" max="30" min="3" required placeholder="Име на пакет с карти">
-                </div>
-
-                <!-- Step 2: Difficulty Selection -->
-                <div class="step">
-                    <div>
-                        <select id="difficultySelect" required>
-                            <option>Лесно</option>
-                            <option>Средно</option>
-                            <option>Трудно</option>
-                        </select>
-                        <p id="notice">*трудността на картите служи само за сортиране</p>
-                    </div>
-                </div>
-
-                <!-- Step 3: Number of Questions -->
-                <div class="step">
-                    <input type="number" id="numOfQuestions" max="30" min="5" required placeholder="Брой въпроси">
-                </div>
-
-                <div class="step">
-                    <div>
-                        <select id="difficultySelect" required>
-                            <option>Напиши...</option>
-                            <option>Математика</option>
-                            <option>Български език</option>
-                            <option>Литература</option>
-                            <option>История</option>
-                            <option>География</option>
-                            <option>Физика</option>
-                            <option>Химия</option>
-                            <option>Философия</option>
-                            <option>ИТ</option>
-                            <option>Програмиране</option>
-                            <option>Биология</option>
-                            <option>Предприемачество</option>
-                        </select>
-                        <p id="notice">*трудността на картите служи само за сортиране</p>
-                    </div>
-                </div>
-
-                <!-- Submit Button
-                <div class="step">
-                    <input type="submit" value="Създай">
-                </div>
-                -->
-            </form>
-
-        </div>
-    </section>
-
-    <div id="myModal" style="display:none;">
-        <div class="modal-content">
-            <span id="closeBtn">&times;</span>
-            <h2>Напишете вашия текст:</h2>
-            <textarea id="userInput" rows="4" cols="50"></textarea><br><br>
-            <button onclick="submitText()">Изпрати</button>
+        <div class="buttons">
+            <button id="prev" disabled>Назад</button>
+            <button id="next" disabled>Напред</button>
         </div>
     </div>
+
+    <!-- Form Container -->
+    <div id="container">
+        <form id="create-pack-form">
+            <!-- Step 1: Pack Name -->
+            <div class="step">
+                <input type="text" id="packName" max="30" min="3" required placeholder="Име на пакет с карти">
+            </div>
+
+            <!-- Step 2: Difficulty Selection -->
+            <div class="step">
+                <div>
+                    <select id="difficultySelect" required>
+                        <option>Лесно</option>
+                        <option>Средно</option>
+                        <option>Трудно</option>
+                    </select>
+                </div>
+            </div>
+
+            <p id="notice">*трудността на картите служи само за сортиране</p>
+
+            <!-- Step 3: Number of Questions -->
+            <div class="step">
+                <input type="number" id="numOfQuestions" max="30" min="5" required placeholder="Брой въпроси">
+            </div>
+
+            <!-- Subject Selection -->
+            <div class="step">
+                <div class="input-group">
+                    <select id="subjectSelect" required aria-placeholder="Избери предмет/напиши">
+                        <option value="" disabled selected>Избери предмет...</option>
+                        <option value="Математика">Математика</option>
+                        <option value="Български език">Български език</option>
+                        <option value="Литература">Литература</option>
+                        <option value="История">История</option>
+                        <option value="География">География</option>
+                        <option value="Физика">Физика</option>
+                        <option value="Химия">Химия</option>
+                        <option value="Философия">Философия</option>
+                        <option value="ИТ">ИТ</option>
+                        <option value="Програмиране">Програмиране</option>
+                        <option value="Биология">Биология</option>
+                        <option value="Предприемачество">Предприемачество</option>
+                        <option value="write_in">Напиши...</option> <!-- Write-in option -->
+                    </select>
+                    
+                    <input id="customInput" type="text" class="custom-input" 
+                    style="display: none;"
+                    placeholder="Или напишете свой предмет..." />
+                </div>
+            </div>
+
+        </form>
+    </div>
+</section>
+
     <!--form-->
     
-    <!-----MAIN----->
+    <!-----END-OF-MAIN----->
 
 
     <!----FOOOTER---->
-    
+    <footer-bar></footer-bar>
     <!--FOOTER--END-->
 
     
     <!------JAVASCRIPT-------->
 
-    <!--notice paragraph display function-->
+    <!-- Combined and Conflict-Free Script -->
     <script>
-        const selectElement = document.getElementById('difficultySelect');
+        // Get elements
+        const subjectSelect = document.getElementById('subjectSelect');
+        const customInput = document.getElementById('customInput');
         const infoParagraph = document.getElementById('notice');
+        const modal = document.getElementById("myModal");
+        const closeBtn = document.getElementById("closeBtn");
     
-        selectElement.addEventListener('change', function() {
-        if (this.value) {
-            infoParagraph.style.display = 'block';  // Show the paragraph
-        }
-        });
-    </script>
-
+        // Initially hide the custom input field and the notice paragraph
+        customInput.style.display = 'none';
+        infoParagraph.style.display = 'none';
     
-
-    <!--fomrs progress script-->
-    <script src="progress.js"></script>
+        // Handle changes in the subject selection dropdown
+        subjectSelect.addEventListener('change', function() {
+            // Show the info paragraph when a valid selection is made
+            if (this.value) {
+                infoParagraph.style.display = 'block'; // Show the notice paragraph
+            }
     
-    <script>
-    // Modal elements
-    var modal = document.getElementById("myModal");
-        var closeBtn = document.getElementById("closeBtn");
-
-        // Open modal when "Напиши..." is selected
-        document.getElementById("subjectSelect").addEventListener("change", function() {
-            if (this.value === "Напиши...") {
-                modal.style.display = "block";
+            // Show the custom input when "write_in" is selected
+            if (this.value === "write_in") {
+                customInput.style.display = 'block'; // Show the custom input
+            } else {
+                customInput.style.display = 'none'; // Hide the custom input for other selections
+            }
+    
+            // Modal behavior (Optional): Open the modal if "write_in" is selected
+            if (this.value === "write_in") {
+                modal.style.display = "block"; // Show modal
+            } else {
+                modal.style.display = "none"; // Hide modal for other options
             }
         });
-
-        // Close modal
+    
+        // Close modal when close button is clicked
         closeBtn.onclick = function() {
             modal.style.display = "none";
-        }
-
+        };
+    
         // Close modal when clicking outside of it
         window.onclick = function(event) {
             if (event.target === modal) {
                 modal.style.display = "none";
             }
-        }
-
-        // Submit the input from the modal
+        };
+    
+        // Submit the input from the modal (Optional)
         function submitText() {
             var userText = document.getElementById("userInput").value;
             alert("Въведен текст: " + userText);
-            modal.style.display = "none"; // Close the modal
+            modal.style.display = "none"; // Close the modal after submission
         }
     </script>
-    <!--------JAVASCRIPT----->
+    
+
 
 </body>
 </html>

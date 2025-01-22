@@ -167,40 +167,30 @@ body{
     padding: 20px;
     gap: 50px;
     padding-left: var(--offset-left);
+    align-items: center; /* Centers the entire form */
+    justify-content: center; /* Vertically centers the form */
 }
-#create-pack-form input{
+
+.step{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; /* Fix typo: was 'justify-items' */
+}
+
+#create-pack-form input[type="text"],
+#create-pack-form input[type="number"] {
     border: none;
     background-color: #dfdfdf;
-    width: auto;
     height: 70px;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 20px;
     font-size: 1.4em;
-    font-family: "Rubik" sans-serif;
+    font-family: "Rubik", sans-serif;
     color: var(--text);
     font-weight: 200;
-    width: 20vw;
-}
-
-#create-pack-form div:nth-of-type(1){
-    display: flex;
-    flex-direction: column;
-    gap: 20px;;
-}
-
-#create-pack-form select{
-    border: none;
-    background-color: #dfdfdf;
-    width: auto;
-    height: 70px;
-    border-radius: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 20px;
-    font-size: 1.4em;
-    font-family: "Rubik" sans-serif;
-    font-weight: 200;
-    width: 20vw;
+    width: 30vw;
+    align-self: center; 
 }
 
 #create-pack-form input[type="submit"] {
@@ -212,6 +202,49 @@ body{
     border: none;
     cursor: pointer;
     display: inline-block;
+    align-self: center;
+}
+
+#notice {
+    margin-left: 10px;
+    color: #D22B2B;
+    opacity: .7;
+    display: none;
+    align-self: center;
+    text-align: center;
+}
+
+#create-pack-form div:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#create-pack-form select{
+    border: none;
+    background-color: #dfdfdf;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    font-size: 1.4em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 200;
+    width: 30vw;
+    align-self: center;
+}
+
+#create-pack-form input[type="submit"] {
+    background-color: var(--accent);
+    color: var(--main);
+    font-size: 2em;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    align-self: center;
 }
 
 #notice{
@@ -219,13 +252,16 @@ body{
     color: #D22B2B;
     opacity: .7;
     display: none;
+    align-self: center;
 }
-/*-------*/
 
-
+/* Responsive styles */
 @media (max-width: 480px) {
     #mainheading{
         font-size: 2.8em;
+    }
+    #create-pack-form input{
+        width: 80%;
     }
 }
 
@@ -233,12 +269,19 @@ body{
     #mainheading{
         font-size: 4em;
     }
+    #create-pack-form input{
+        width: 70%;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     #mainheading{
         font-size: 5em;
     }
+    #create-pack-form input{
+        width: 70%;
+    }
 }
+
 
 /*----------MAIN---------*/
