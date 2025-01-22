@@ -11,6 +11,7 @@ body{
     --main:#F5F5F5;
     --alt:#757575;
     --text: #333333;
+    --text-white: #F3F4F6;;
     
     /*main color pallette*/
     --main: #FFF ;
@@ -99,7 +100,7 @@ body{
         margin-left: 60px;
     }   
 
-    #create_pack{
+    #d_pack{
         margin-left: 65px;
     }
     #create_pack p{
@@ -182,17 +183,53 @@ body{
     font-size: 1.6em;
     margin-bottom: 20px;
 }
+
 .box-property-label{
     margin-bottom: 10px;
     font-size: 1.2em;
+    animation-delay: 0.3s;
+    transition: 0.25s ease-in-out;
+}
+
+.box-property-label:hover{
+    padding-left: 10px;
 }
 
 
 
+/*create-card*/
+#card-div-create {
+    width: 22%;
+    margin: 20px;
+    height: auto;
+    background-color: #333;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    color: var(--text-white);
+    text-align: center;
+    display: flex;
+}
+
+#card-div-create .box {
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#card-div-create .box i {
+    font-size: 5em;
+    margin: 0;
+}
+
+/*-----------*/
+
 
 /*malki telefoni*/
 @media (max-width: 480px) {
-    .card-div{
+    .card-div, #card-div-create{
         width: 90%;
     }
     .container {
@@ -213,7 +250,7 @@ body{
 
 /*malki tableti i golemi telefoni*/
 @media (min-width: 481px) and (max-width: 700px) {
-    .card-div{
+    .card-div, #card-div-create{
         width:90%;
     }
     .container {

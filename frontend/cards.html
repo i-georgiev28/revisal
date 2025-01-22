@@ -80,7 +80,7 @@
                 <div class="box">
     
                     <div class="box-text-area">
-                        <h3 class="headingV3">Пакет #1</h3>
+                        <h3 class="headingV3">Пакет #2</h3>
                         <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
                         <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
                         <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
@@ -96,7 +96,7 @@
                 <div class="box">
     
                     <div class="box-text-area">
-                        <h3 class="headingV3">Пакет #1</h3>
+                        <h3 class="headingV3">Пакет #3</h3>
                         <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
                         <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
                         <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
@@ -112,7 +112,7 @@
                 <div class="box">
     
                     <div class="box-text-area">
-                        <h3 class="headingV3">Пакет #1</h3>
+                        <h3 class="headingV3">Пакет #4</h3>
                         <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
                         <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
                         <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
@@ -128,7 +128,7 @@
                 <div class="box">
     
                     <div class="box-text-area">
-                        <h3 class="headingV3">Пакет #1</h3>
+                        <h3 class="headingV3">Пакет #5</h3>
                         <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
                         <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
                         <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
@@ -144,7 +144,7 @@
                 <div class="box">
     
                     <div class="box-text-area">
-                        <h3 class="headingV3">Пакет #1</h3>
+                        <h3 class="headingV3">Пакет #6</h3>
                         <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
                         <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
                         <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
@@ -160,7 +160,7 @@
                 <div class="box">
     
                     <div class="box-text-area">
-                        <h3 class="headingV3">Пакет #1</h3>
+                        <h3 class="headingV3">Пакет #7</h3>
                         <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
                         <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
                         <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
@@ -170,18 +170,11 @@
                 </a>
             </div>
 
-            <div class="card-div">
-                <a href = "" class="card_link">
-                    <div class="color-band"></div>
+            <!--for phones to create cards, even if you have scrolled down-->
+            <div id="card-div-create">
+                <a href = "create-card.html" class="card_link">
                 <div class="box">
-    
-                    <div class="box-text-area">
-                        <h3 class="headingV3">Пакет #1</h3>
-                        <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
-                        <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
-                        <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
-                    </div>
-                
+                        <i class='bx bx-plus' ></i>
                 </div>
                 </a>
             </div>
@@ -250,6 +243,21 @@
 
     <!--auto-window-resizing-->
     <script>
+    window.addEventListener('load', setCardCreateHeight);
+    window.addEventListener('resize', setCardCreateHeight);
+
+    function setCardCreateHeight() {
+        const cardDiv = document.querySelector('.card-div');
+        const cardCreateDiv = document.getElementById('card-div-create');
+    
+        if (cardDiv && cardCreateDiv) {
+        // Get the height of the first .card-div (you can change this if you want to calculate based on multiple)
+        const cardDivHeight = cardDiv.offsetHeight;
+
+        // Set the height of the #card-div-create element
+        cardCreateDiv.style.height = `${cardDivHeight}px`;
+        }
+    }
 
     </script>
 
