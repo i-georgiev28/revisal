@@ -237,89 +237,52 @@ body{
 }
 /*-----------*/
 
-/*PROBLEMS*/
-#problems{
-    margin-bottom: 20vh;
-}
-.headingV2 i{
-    font-size: 1em;
-    color: var(--text);
-    align-self: center;
-}
-#book{
-    font-size: 1em;
-}
-#solution-list{
-    display: flex;
-    flex-direction: row;
+/*---------SOLUTIONS---------*/
 
-    gap: 20px;
+#solution-container{
+    display: flex;
     width: 100%;
     height: auto;
-
     align-items: center;
-    justify-content: space-around;
-    
-    margin-top: 150px;
-    margin-bottom: 25vh;
-
+    justify-content: space-evenly;
+    gap: 50px;
+    margin-bottom: 20vh;
     flex-wrap: wrap;
 }
 
-@media (max-width: 480px) {
-    #solution-list{
-        margin-left: var(--offset-left);
-    }
-    .solution{
-        width: 100%;
-    }
-    .textS{
-        width: 100%;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    #solution-list{
-        margin-left: var(--offset-left);
-    }
-    .solution{
-        width: 100%;
-    }
-    .textS{
-        width: 100%;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    #solution-list{
-        margin-left: var(--offset-left);
-    }
-    .solution{
-        width: 100%;
-    }
-    .textS{
-        width: 100%;
-    }
-}
-
 .solution{
-    height: auto;
     width: 20%;
-    align-self: flex-start;
 }
 
-.solution .headingV2 i{
-    color: black;
-    font-size: .9em;
-    transform: translateY(3px);
-}
-@media(max-width: 1024px) {
-    #solution-list{
+@media (max-width: 540px) {
+    #solution-container{
         flex-direction: column;
-        gap: 100px;
+        align-items: start;
+        margin-left: var(--offset-left);
+    }
+    .solution{
+        width: 100%;
+    }
+    .solution .headingV2{
+        font-size: 1.8em;
     }
 }
-/*--------*/
+
+@media (min-width: 541px) and (max-width: 767px) {
+    .solution{
+        width:40%;
+    }
+    #solution-heading .headingV1{
+        font-size: 2.8em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1150px) {
+    .solution{
+        width: 40%;
+    }
+}
+/*---------SOLUTIONS---------*/
 
 
 
