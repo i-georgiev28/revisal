@@ -113,17 +113,15 @@ repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
 ### Ръководител(и):
   - **г-жа Моника Желязкова** - *учител по Информационни технологии*
 
-See also the list of
-[contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
-who participated in this project.
+Проверете също, други участници и учители, помогнали с разработката:
+ - [участници](https://github.com/PurpleBooth/a-good-readme-template/contributors)
 
 
 
 ## Лиценз
 
-This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
-Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
-details
+Този проект е лицензиран под [CC0 1.0 Universal](LICENSE.md)
+Creative Commons License - отворете [LICENSE.md](LICENSE.md) за повече информация..
 
 
 

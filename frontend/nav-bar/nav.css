@@ -1,46 +1,55 @@
-/*Mulish and Nunito Sans*/
+/*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
-/*---GENERAL---*/
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
+
     user-select: none;
 }
 body{
+    /*default fonts*/
     font-family: "Inter", serif;
     font-weight: 300;
-    font-style: normal;
+
+    background-color: var(--main);
 
     /*--colors--*/
+    /*!REFERENCE ONLY*/
     --background-main:#F3F4F6;
     --background-alt: #F2F2F2;
     --background-main-dark:#181818 ;
 
     --text-main:#222222;
     --text-white: #F3F4F6;;
+
+    /*!REFERENCE ONLY*/
+    --accent-main:#FF6F61;
+    --acent-main-light: #FF9F91;
+    --acent-alt: #008080;
+    --acent-alt-light: #66B2B2;
+
     /*----------*/
 
-    --accent: rgb(47, 216, 56);
+    /*--fonts--*/
+    /*!REFERENCE ONLY*/
+    --font-extra-small:#;
+    --font-small:#;
+    --font-normal:#;
+    --font-big:#;
+    --font-large:#;
+    --font-very-large:#;
+    /*--------*/
 
-    /*fonts*/
-    --font-extrasmall: 0.75em;
-    --font-small: 1em;
-    --font-normal: 1.2em;
-    --font--meduim: 1.5em;
-    --font--big: 2em;
-    --font--large: 3em;
-    --font--mega: 6em;
+    /*--commons margins and sizes*/
+    --padding-small:#;
+    --padding-normal:#;
+    --padding-big:#;
 
-    /* common  margins and paddings*/
-    --offset-extrasmall: 10px;
-    --offset-small: 20px;
-    --offset-normal: 40px;
-    --offset-medium: 50px;
-
-    --offset-left: 3%;
-    /*-----------------*/
+    --margin-small:#;
+    --margin-normal:#;
+    --margin-big:#;
+    /*--------*/
 }
 
 
@@ -179,7 +188,6 @@ body{
     }
 
     .logo{
-        display: none;
+        display: block;
     }
 }
-/*----------------------------*/

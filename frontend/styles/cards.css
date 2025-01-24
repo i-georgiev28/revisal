@@ -274,7 +274,7 @@ body{
     .container{
         flex-direction: row;
     }
-    .card-div{
+    .card-div, #card-div-create{
         width: 40%;
     }
     .container {
@@ -291,7 +291,7 @@ body{
 }
 
 @media (min-width: 1020px) {
-    .card-div{
+    .card-div, #card-div-create{
         width: 20%;
     }
 
