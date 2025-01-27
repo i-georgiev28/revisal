@@ -21,7 +21,7 @@ body{
     /*--light-theme--*/
     --main:#F5F5F5;
     --alt:#757575;
-    --text: #0A0A0A;
+    --text: #333333;
 
     /*--dark-theme--*/
     /*
@@ -54,8 +54,7 @@ body{
     /*--offsets--*/
     --offset-left: 3%;
     --offset-left-small: 1.5%;
-
-    /*-----------------*/
+    /*-----------*/
 
 }
 /*--generic--*/
