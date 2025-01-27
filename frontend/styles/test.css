@@ -21,7 +21,7 @@ body{
     /*--light-theme--*/
     --main:#F5F5F5;
     --alt:#757575;
-    --text: #333333;
+    --text: #0A0A0A;
 
     /*--dark-theme--*/
     /*
@@ -54,11 +54,32 @@ body{
     /*--offsets--*/
     --offset-left: 3%;
     --offset-left-small: 1.5%;
-    /*-----------*/
+
+    /*-----------------*/
 
 }
 /*--generic--*/
 
-/*--MAIN--*/
+/*-------MAIN-------*/
 
-/*--MAIN--*/
+/*--heading--*/
+#welcoming{
+    display: block;
+    width: auto;
+    height: auto;
+    margin-bottom: 10vh;
+}
+#heading{
+    margin-left: var(--offset-left);
+    font-size: var(--font--mega);
+    font-weight: 500;
+    color: var(--text);
+    
+}
+#user_username{
+    color: var(--accent);
+}
+/*--heading--*/
+
+
+/*-------MAIN-------*/
