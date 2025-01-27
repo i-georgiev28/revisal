@@ -52,7 +52,13 @@ body{
     /*-----------------*/
 
     min-height: 100vh;
-    user-select: none;
+
+    /*miscs*/
+    --aqua: #00CED1;
+    --blueberry: #2575fc;
+    --grape:#6a11cb;
+    --darkcloud:#8f959a;
+
 }
 
 /*------MAIN------*/
@@ -435,115 +441,113 @@ body{
     }
 }
 
+/*--swiping-cards--*/
 
-
-/*container*/
-#bottom-container{
-    display: flex;
-    flex-direction: row;
+.container {
+    margin: 4em auto;
 }
-/*---------*/
 
-/*cards*/
-#cards{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.stack {
-    width: 50vw;
-    height:20vh;
+.inner-container {
     position: relative;
-    margin-bottom: 10vh;
-    margin-top: 15vh;
+    max-width: 20%;
+    min-width: 360px;
+    height: 300px;
+    width: 100%;
+    margin: 0 auto 100px;
+}
+
+.content {
+    position: absolute;
+    opacity: 0;
+    top: 2em;
+    left: 10%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.active {
+    display: block !important;
+    margin: 0 auto;
+    opacity: 1;
+    transition: ease-in-out 1s;
 }
 
 .card {
-    width: 60%;
-    min-height: 40%;
-    background-color: white;
-    position: absolute;
-    top: 50%;
-    left: 35%;
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    padding: 2em 0;
+    height: 300px;
+    box-sizing: border-box;
+    transition: .3s ease;
+    box-shadow: 0 3px 10px -2px rgba(0,0,0,0.35);
 
-    color: var(--text);
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    border-radius: 20px;
-
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.task-desc{
-    font-size: 1.8em;
-    margin-bottom: 50px;
-    text-align: center;
-    align-self: center;
-}
-
-/*allignment and offset*/
-.card:nth-last-child(n + 4) {
-    --y: calc(-50% + -50px);
-    transform: translate(-50%, var(--y)) scale(0.9);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.card:nth-last-child(3) {
-    --y: calc(-50% + -25px);
-    transform: translate(-50%, var(--y)) scale(0.95);
-}
-.card:nth-last-child(2) {
-    --y: calc(-50%);
-    transform: translate(-50%, var(--y)) scale(1);
-}
-.card:nth-last-child(1) {
-    --y: calc(-50% + 25px);
-    transform: translate(-50%, var(--y)) scale(1.05);
-}
-/*----------------------*/
-
-/*анимации*/
-@keyframes swap {
-50% {
-    transform: translate(-50%, calc(var(--y) - 250px)) scale(0.85) rotate(-5deg);
-    animation-timing-function: ease-in;
-}
-100% {
-    transform: translate(-50%, calc(var(--y) - 15px)) scale(0.85);
-    z-index: -1;
-}
-}
-/*--------*/
-
-
-@media (max-width: 480px) {
-    #cards .headingV1{
-        margin-bottom: 20vh;
+    &:first-child,
+    &:nth-child(2) {
+        background: darken(var(--aqua), 2%);
+        height: 8px;
+        border-radius: 5px 5px 0 0;
+        padding: 0;
+        box-shadow: none;
     }
-    .stack{
-        width: 90%;
-        height: auto;
-        margin-bottom: 25vh;
-        margin-top: 5vh;
-        align-self: center;
+
+    &:first-child {
+        margin: 0 20px;
+        background: darken(var(--aqua), 6%);
     }
-    .card{
-        width: 90%;
-        align-self: center;
-        margin-left: 15vw;
-        margin-bottom: 20vh;
+
+    &:nth-child(2) {
+        margin: 0 10px;
+    }
+
+    .progress-container {
+        background: rgba(var(--blueberry), 0.2);
+        height: 6px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 5px 5px;
+        
+        .step {
+            background-color: var(--blueberry);
+            height: 6px;
+            width: 33%;
+            border-radius: 0 0 0 5px;
+        }
     }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: darken(var(--aqua), 3%);
+    margin: 0;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-
+p {
+    margin-top: 0;
 }
-/*----------*/
+
+a {
+    color: var(--aqua);
+    text-decoration: none;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 0%;
+        border-bottom: 2px solid var(--aqua);
+        transition: 0.3s;
+    }
+
+    &:hover:before {
+        width: 80%;
+    }
+}
+
+/*--swiping-cards--*/

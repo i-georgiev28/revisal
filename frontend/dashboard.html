@@ -141,34 +141,80 @@
             <div id="calendar-days" class="days"></div>
         </div>
     </section>
+
+    <!--swiping-cards-->
+    <section>
+        
+        <div class="container">
+            
+            <div class="inner-container">          
+                
+                <div class="card inactive-1"></div>
+                
+                <div class="card inactive-2"></div>
+                
+                <div class="card">
+                    
+                    <!--card-#1-->
+                    <div class="content active">
+                        <h1>Task #1</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua <i class="em em-coffee"></i></p>
+                        <a class="button" href="#">Напред &rarr;</a>
+                    </div>
+                    
+                    <!--card-#2-->
+                    <div class="content">
+                        <h1>Step 2</h1>
+                        <p>Trip. Spill all over the place.</p>
+                        <a class="button" href="#">Напред &rarr;</a>
+                    </div>
+                    
+                    <!--card-#3-->
+                    <div class="content">
+                        <h1>Step 3</h1>
+                        <p>Repeat.</p>
+                        <a class="button" href="#">Напред &rarr;</a>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="step"></div>
+                    </div>
+                
+                </div>
+            
+            </div>
+        
+        </div>
+    
+    </section>
+    <!--swiping-cards-->
     
     <!--MAIN END-->
 
     <!----FOOOTER---->
     <footer-bar></footer-bar>
     <!--FOOTER--END-->
+    
 
-    
-    
-    
+
     <!--JAVASCRIPT-->
+
 
     <!--calendar-->
     <script src="/frontend/JavaScriptFiles/calendar.js"></script>
 
+    <!--card-stack-->
+    <script src = "/frontend/JavaScriptFiles/card_stack.js"></script>
 
-
-    <!--JS за автоматична височина на прозорец-->
+    <!--auto-window-height + grades-->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-        // Progress bar functionality
         const progressBars = document.querySelectorAll(".skill-bar .skill-per");
     
         progressBars.forEach((bar) => {
             const tooltip = bar.querySelector(".tooltip");
             let percentage;
-    
-            // Extract percentage from the tooltip text or set default to 0
+
             if (tooltip) {
                 percentage = parseInt(tooltip.textContent, 10) || 0;
             } else {
@@ -179,7 +225,6 @@
                 bar.appendChild(newTooltip);
             }
     
-            // Adjust width and color based on percentage
             bar.style.width = `${percentage}%`;
             let barColor;
     
@@ -191,15 +236,14 @@
                 barColor = "#4caf50"; //Green
             }
     
-            // Apply color to progress bar and tooltip
             bar.style.backgroundColor = barColor;
             if (tooltip) {
                 tooltip.style.backgroundColor = barColor;
-                tooltip.setAttribute("data-color", barColor); // Set color for arrow
+                tooltip.setAttribute("data-color", barColor);
             }
         });
     
-        // Grade functionality
+        //grades
         const grades = document.querySelectorAll(".list .grade");
     
         grades.forEach((grade) => {
@@ -208,62 +252,31 @@
             let gradeColor;
             if (gradeValue == 2) 
             {
-                gradeColor = "#e74c3c"; // Red for low grades
+                gradeColor = "#e74c3c"; //red
             } 
             else if (gradeValue == 3) 
             {
-                gradeColor = "#e67e22"; // Yellow for average grades
+                gradeColor = "#e67e22"; //orange
             } 
             else if (gradeValue == 4){
-                gradeColor = "#ffcc00";
+                gradeColor = "#ffcc00"; //yellow
             }
             else if (gradeValue == 5)
             {
-                gradeColor = "#3498db"
+                gradeColor = "#3498db" //blue
             }
             else 
             {
-                gradeColor = "#4caf50"; // Green for high grades
+                gradeColor = "#4caf50"; //Green
             }
     
-            // Apply color to grade
             grade.style.color = gradeColor;
-            grade.style.fontWeight = "bold"; // Optional: Make grades bold for emphasis
+            grade.style.fontWeight = "bold";
         });
     });
-    
-    
-    
-    
-        </script>
-    
-        <!--JS за автоматична височина на прозорец-->
-        <script>
-        window.addEventListener('load', function() {
-        const windows = document.querySelectorAll('.window');
-    
-        let maxHeight = 0;
-    
-        //цикъл
-        windows.forEach(window => {
-            //взимане на стойност
-            const windowHeight = window.offsetHeight;
-    
-            //проверка за височина
-            if (windowHeight > maxHeight) {
-                maxHeight = windowHeight;
-            }
-        });
-    
-        //прилагане на промени
-        windows.forEach(window => {
-            window.style.height = `${maxHeight}px`;
-        });
-    });
-    
     </script>
 
-    </script>
+
     <!--JAVASCRIPT-->
 
 
