@@ -1,36 +1,38 @@
+/*--fonts--*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
-
-/*---------------------GENERAL---------------------*/
+/*--generic--*/
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    user-select: none;
 }
 body{
     font-family: "Inter", serif;
     font-weight: 300;
-    font-style: normal;
 
     background-color: var(--main);
     
-    /*white mode*/
+    /*--light-theme--*/
     --main:#F5F5F5;
     --alt:#757575;
-    --text: #333333;
+    --text: #0A0A0A;
 
-    /*dark mode*/
+    /*--dark-theme--*/
     /*
-    --main:;
-    --alt:;
-    --text:;
+    --main: #;
+    --alt: #;
+    --text: #;
     */
     
-    /*main color pallette*/
+    /*--main-color-pallette--*/
     --main: #FFF ;
     --alt: #181818 ;
     --accent: rgb(47, 216, 56);
+    --accent-light: rgb(47, 216, 56);
 
-    /*fonts*/
+    /*--font-sizes--*/
     --font-extrasmall: 0.75em;
     --font-small: 1em;
     --font-normal: 1.2em;
@@ -38,11 +40,25 @@ body{
     --font--big: 2em;
     --font--large: 3em;
     --font--mega: 6em;
+
+    /*--common-margins-and-paddings*/
+    --offset-extrasmall: 10px;
+    --offset-small: 20px;
+    --offset-normal: 40px;
+    --offset-medium: 50px;
+
+    /*--offsets--*/
+    --offset-left: 3%;
+    --offset-left-small: 1.5%;
+
+    /*-----------------*/
+
 }
-/*-------------------------------------------------*/
+/*--generic--*/
 
 
-/*----------------------MAIN-----------------------*/
+
+/*--MAIN--*/
 #header{
     text-align: center;
     color: var(--accent);
@@ -52,6 +68,13 @@ body{
 
     display: flex;
     margin-left: 3%;
+
+    font-weight: 400;
+
+    /*allignment of icons, inside of header*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #header i{
@@ -75,12 +98,13 @@ body{
 #section-header{
     font-size: 4em;
     margin-bottom: 5vh;
+    font-weight: 500;
 }
 #section-text{
     font-size: 2em;
     color: var(--accent);
     font-weight: 400;
-    margin-left: 3em;
+    margin-left: var(--offset-left);
     display: flex;
 }
 #section-text i{
@@ -91,60 +115,44 @@ body{
 }
 .point{
     font-size: 1.5em;
-    margin-left: 4em;
+    margin-left: calc(var(--offset-left) + 1em);
     margin-top: 1em;
     margin-bottom: 2em;
 
     width: 80%;
-    line-height: 1.4EM;
+    line-height: 1.4em;
+
+    font-family: 'Onest';
+    font-style: normal;
+    font-weight: 300;
 }
 .point li{
     margin-bottom: 20px;
+    list-style: none;
 }
 .colored{
     color: var(--accent);
+    text-decoration: none;
 }
 
-/*-----RESPONSIVE-----*/
+/*--responsive--*/
 
-/*Телефони (портрет)*/
-@media (max-width: 768px){
-    #header{
-    font-size: 4em;
-    }
-    #sections{
-        padding-left: 1em;
-    }
-
-    #section-header{
-        font-size: 3em;
-    }
-    #section-text{
-        margin-left: 2em;
-        font-size: 1.5em;
-    }
-
-    #section-text i{
-        font-size: 1em;
-    }
-
-    .point{
-        width: 65%;
-    }
-
-}
-
-/*Малки телефони
 @media (max-width: 480px) {
-
+    #header{
+        font-size: 2.8em;
+        margin-right: 0;
+    }
+    #section-header{
+        font-size: 2.2em;
+    }
 }
-*/
 
-/*Таблети (потртрет)*/
-@media (max-width: 1024px) and (min-width: 768px) {
-
+@media (min-width: 481px) and (max-width: 767px) {
+    #header{
+        font-size: 3.4em;
+    }
+    #section-header{
+        font-size: 2.8em;
+    }
 }
-/*--------------------*/
-
-
-/*-------------------------------------------------*/
+/*--responsive--*/
