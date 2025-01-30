@@ -1,5 +1,6 @@
 /*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
+/*--generic--*/
 *{
     box-sizing: border-box;
     margin: 0;
@@ -126,6 +127,19 @@ body{
 #check{
     display: none;
 }
+
+#little-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+/*--black-mode--*/
+#dark-mode, #light-mode{
+    font-size: 1.4em;
+    color: var(--text-white);
+}
+/*--black-mode-*/
+
 /*responsive nav*/
 @media(max-width: 768px){
     .menu {

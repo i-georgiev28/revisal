@@ -77,6 +77,8 @@ body{
 /*already-have? button*/
 #linkcolored{
     color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
 }
 .container p {
     font-family: "Onest", serif;

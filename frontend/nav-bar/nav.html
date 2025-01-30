@@ -1,9 +1,19 @@
+<!--links-->
 <link rel="stylesheet" href = "/frontend/nav-bar/nav.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="/frontend/JavaScriptFiles/dark-light-mode.js"></script>
+<!--nav-->
 <section>
     <header>
         <nav>
             <ul class='nav-bar'>
-                <li class='logo'><a href='/frontend/index.html'><img src='/frontend/images/logos/revisal_logo_main.svg'/></a></li>
+                
+                <div id="little-container">
+                    <li class='logo'><a href='/frontend/index.html'><img src='/frontend/images/logos/revisal_logo_main_white.svg'/></a></li>
+                    <!--dark/light-mode-switch-->
+                    <i class='bx bx-moon' id="dark-mode"></i>
+                </div>
+                
                 <input type='checkbox' id='check' />
                 <span class="menu">
                     <li><a href="/frontend/index.html"> Начало <i class='bx bx-home-alt-2'></i> </a></li>
@@ -17,3 +27,4 @@
         </nav>
         </header>
 </section>
+<!--nav-->
