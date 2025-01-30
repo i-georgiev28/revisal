@@ -74,6 +74,7 @@ body{
     font-weight: 400;
     color: var(--text);
     font-weight: 500;
+    background-color: none;
 }
 
 #heading{
@@ -440,6 +441,27 @@ body{
         font-size: 5em;
     }
 }
+
+/*--current-day--*/
+.selected-day-section{
+    /*hide the selected day, until user has selected it*/
+    display: none;
+
+}
+.current-day-section .window, .selected-day-section .window{
+    margin-left: var(--offset-left);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.current-day-section .window ul, .selected-day-section .window ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 1.4em;
+}
+/*--current-day--*/
 
 /*--swiping-cards--*/
 

@@ -62,6 +62,12 @@ function generateCalendar(month, year) {
             }
             dayElement.classList.add("selected-day");
             selectedDay = dayElement;
+
+            // Toggle the "selected-day-window" visibility
+            const selectedDaySection = document.querySelector(".selected-day-section");
+            if (selectedDaySection) {
+                selectedDaySection.style.display = selectedDaySection.style.display === 'none' ? 'block' : 'none';
+            }
         });
 
         calendarDaysElement.appendChild(dayElement);
