@@ -11,35 +11,30 @@
     user-select: none;
 }
 body{
-    max-width: 100%;
 
-    /*fonts*/
-    font-family: "Inter", serif;
-    font-weight: 300;
-    font-style: normal;
-
-    background-color: var(--main);
-    
     /*white mode*/
     --main:#F5F5F5;
-    --alt:#757575;
-    --text: #333333;
+    --alt: #2d2d2d; /*for dark and light mode*/
+    --text: #181818;
+    --text-white: #F3F4F6;
+    /*--dark-mode--*/
+    --main-dark:#181818;
 
-    /*dark mode*/
-    /*
-    --main:;
-    --alt:;
-    --text:;
-    */
     
     /*main color pallette*/
     --main: #FFF ;
-    --alt: #181818 ;
     --accent: rgb(47, 216, 56);
 
-    /*common 
+    /*common colors*/
+    --blue:#007BFF;
+    --red:#FF4136;
+    --yellow:#FFDC00;
+    --orange:#FF851B;
+    --green:#28A745;
+    --purple: #6F42C1;
 
-    /*fonts*/
+
+    /*--fonts--*/
     --font-extrasmall: 0.75em;
     --font-small: 1em;
     --font-normal: 1.2em;
@@ -48,14 +43,6 @@ body{
     --font--large: 3em;
     --font--mega: 6em;
 
-    /* common  margins and paddings*/
-    --offset-extrasmall: 10px;
-    --offset-small: 20px;
-    --offset-normal: 40px;
-    --offset-medium: 50px;
-
-    --offset-left: 3%;
-    /*-----------------*/
 }
 /*-----------------------END OF GENERIC--------------------------*/
 
@@ -78,7 +65,7 @@ body{
 }
 /*for icons*/
 .headingV1 i{
-    color: black;
+    color: var(--text-black);
     font-size: 1.2em;
 }
 
@@ -119,7 +106,7 @@ body{
     font-size: var(--font--big);
     word-spacing: 1px;
     line-height: 1.5em;
-    color: white;
+    color: var(--text-white);
     width: 90%;
     margin-left: var(--offset-left);
 }
@@ -360,20 +347,23 @@ body{
 /*цветове*/
 .progress-bar1{
     background:
-    radial-gradient(closest-side, white 79%, transparent 80% 100%),
-    conic-gradient(rgb(255, 21, 32) 62%, rgb(253, 219, 226) 0);  
+    radial-gradient(closest-side, var(--main) 79%, transparent 80% 100%),
+    conic-gradient(rgb(255, 21, 32) 62%, rgb(253, 219, 226) 0);
+    color: var(--text);
 }
 
 .progress-bar2{
     background:
-    radial-gradient(closest-side, white 79%, transparent 80% 100%),
+    radial-gradient(closest-side, var(--main) 79%, transparent 80% 100%),
     conic-gradient(#ff9843 65%, #fde2c7 0);  
+    color: var(--text);
 }
 
 .progress-bar3{
     background:
-    radial-gradient(closest-side, white 79%, transparent 80% 100%),
-    conic-gradient(rgb(44, 179, 11) 73%, rgb(225, 255, 221) 0);  
+    radial-gradient(closest-side, var(--main) 79%, transparent 80% 100%),
+    conic-gradient(rgb(44, 179, 11) 73%, rgb(225, 255, 221) 0);
+    color: var(--text);  
 }
 
 
@@ -452,7 +442,7 @@ body{
     margin: 50px 0;
     padding: 15px 20px;
     outline: none;
-    background-color: #151515;
+    background-color: var(--alt);
     color: #eee;
     border-radius: 7px;
     font-weight: 600;

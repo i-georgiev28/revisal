@@ -36,11 +36,6 @@ body{
     --font--large: 3em;
     --font--mega: 6em;
 
-    background-color: var(--main);
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
     /*-------*/
 
     width: 100%;

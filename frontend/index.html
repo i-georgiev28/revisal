@@ -7,12 +7,20 @@
 
     <!--css-->
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/dark-mode.css">
 
     <!--nav and footer as elements-->
     <script src = "nav-bar/nav.js" defer></script>
     <script src= "footer/footer.js" defer></script>
 
-    <!--script-->
+    <!--dark/light-mode-script-->
+    <script>
+        function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        }
+    </script>
+    <!--dark/light-mode-script-->
 
     <!--boxicon icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>

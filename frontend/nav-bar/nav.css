@@ -12,47 +12,23 @@ body{
     /*default fonts*/
     font-family: "Inter", serif;
     font-weight: 300;
-
     background-color: var(--main);
 
     /*--colors--*/
-    /*!REFERENCE ONLY*/
-    --background-main:#F3F4F6;
-    --background-alt: #F2F2F2;
+    --main:#F5F5F5;
+    --main-dark:#181818;
+    --background-alt: #2d2d2d; /*for both modes*/
     --background-main-dark:#181818 ;
 
-    --text-main:#222222;
-    --text-white: #F3F4F6;;
-
-    /*!REFERENCE ONLY*/
-    --accent-main:#FF6F61;
-    --acent-main-light: #FF9F91;
-    --acent-alt: #008080;
-    --acent-alt-light: #66B2B2;
-
+    --text: #181818;
+    --text-white: #F3F4F6;
     /*----------*/
-
-    /*--fonts--*/
-    /*!REFERENCE ONLY*/
-    --font-extra-small:#;
-    --font-small:#;
-    --font-normal:#;
-    --font-big:#;
-    --font-large:#;
-    --font-very-large:#;
-    /*--------*/
-
-    /*--commons margins and sizes*/
-    --padding-small:#;
-    --padding-normal:#;
-    --padding-big:#;
-
-    --margin-small:#;
-    --margin-normal:#;
-    --margin-big:#;
-    /*--------*/
 }
 
+.dark{
+    color: var(--text-white);
+    color: var(--background-alt);
+}
 
 
 /*--NAVIGATION--*/
@@ -134,9 +110,9 @@ body{
     gap: 30px;
 }
 /*--black-mode--*/
-#dark-mode, #light-mode{
+#dark-mode{
     font-size: 1.4em;
-    color: var(--text-white);
+    color: var(--text-white);;
 }
 /*--black-mode-*/
 
