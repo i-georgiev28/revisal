@@ -1,3 +1,4 @@
-document.getElementById('dark-mode').addEventListener('click', function() {
-    this.classList.replace('bx-moon', 'bx-sun');
-});
+document.getElementsByClassName('bx bx-moon').addEventListener(`click`,function(){
+    this.classList.replace('bx bx-moon', 'bx bx-sun')
+}
+);

@@ -1,4 +1,4 @@
-/*Mulish and Nunito Sans*/
+/*--fonts--*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
 /*---GENERAL---*/
 *{
@@ -58,6 +58,8 @@ body{
 #footer-heading{
     font-size: 3em;
     margin-bottom: 50px;
+    font-weight: 450;
+    margin-top: 20px;
 }
 
 .row-heading{
@@ -97,8 +99,21 @@ body{
 .contacts-text{
     margin-left:5%;
 }
-#copyright{
+/*--copyright-text--*/
+.copyright{
     margin-top: 50px;
+}
+/*--language-button--*/
+#language-button{
+    font-size: 1em;
+    font-weight: 600;
+    /*--eye-wise-alligment--*/
+    margin-left: 2px;
+    transition: scale 0.2s ease-in-out;
+}
+
+#lanuage-button:hover{
+    transform: scale(1.2);
 }
 
 /*--responsive--*/
