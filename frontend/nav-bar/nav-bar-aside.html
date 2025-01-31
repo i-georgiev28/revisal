@@ -8,22 +8,74 @@
         <nav>
             <ul class="nav-bar">
                 <!--logo+dark/light mode-->
-                <div id="little-container" style="display: flex; align-items: center; gap: 10px;">
-                    <li class="logo">
-                        <a href="/frontend/index.html">
-                            <img src="/frontend/images/logos/revisal_logo_main_white.svg" alt="Logo" />
-                        </a>
-                    </li>
+                <li class="logo">
+                    <a href="/frontend/index.html">
+                        <img src="/frontend/images/logos/revisal_logo_main_white.svg" alt="Logo" />
+                    </a>
+                </li>
+                
+                <!--misc-buttons-->
+                <div id="buttons-box">
                     <i class="bx bx-moon" id="dark-mode"></i>
+                    <span id="language">BG</span>
                 </div>
 
                 <!-- Navigation Menu -->
                 <span class="menu">
-                    <li><a href="/frontend/index.html">Начало <i class="bx bx-home-alt-2"></i></a></li>
-                    <li><a href="/frontend/dashboard.html">Табло <i class="bx bxs-dashboard"></i></a></li>
-                    <li><a href="/frontend/cards.html">Карти <i class="bx bx-card"></i></a></li>
-                    <li><a href="/frontend/login.html">Акаунт <i class="bx bx-user"></i></a></li>
+                    
+                    <li>
+                        <a href = "/frontend/index.html">
+                            <span id="link-text">Начало</span>
+                            <i class="bx bx-home-alt-2" onclick="window.location='/frontend/index.html'"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href = "/frontend/index.html">
+                            <span id="link-text">Табло</span>
+                            <i class="bx bxs-dashboard" onclick="window.location='/frontend/dashboard.html'"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href = "/frontend/index.html">
+                            <span id="link-text">Карти</span>
+                            <i class="bx bx-card" onclick="window.location='/frontend/cards.html'"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href = "/frontend/index.html">
+                            <span id="link-text">Акаунт</span>
+                            <i class="bx bx-user" onclick="window.location='/frontend/login.html'"></i>
+                        </a>
+                    </li>
+                    
+                
                 </span>
+
+                <!--
+                !old
+                <li>
+                    <a href="/frontend/index.html">Начало</a> 
+                    <i class="bx bx-home-alt-2" onclick="window.location='/frontend/index.html'"></i>
+                </li>
+                
+                <li>
+                    <a href="/frontend/dashboard.html">Табло</a> 
+                    <i class="bx bxs-dashboard" onclick="window.location='/frontend/dashboard.html'"></i>
+                </li>
+                
+                <li>
+                    <a href="/frontend/cards.html">Карти </a> 
+                    <i class="bx bx-card" onclick="window.location='/frontend/cards.html'"></i>
+                </li>
+                
+                <li>
+                    <a href="/frontend/login.html">Акаунт</a> 
+                    <i class="bx bx-user" onclick="window.location='/frontend/login.html'"></i>
+                </li>
+                -->
             </ul>
         </nav>
     </header>
