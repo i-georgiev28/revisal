@@ -17,20 +17,24 @@ body{
     
     /*white mode*/
     --main:#F5F5F5;
-    --alt:#757575;
-    --text: #333333;
+    --alt: #2d2d2d; /*for dark and light mode*/
+    --text: #181818;
+    --text-white: #F3F4F6;
+    /*--dark-mode--*/
+    --main-dark:#181818;
 
-    /*dark mode*/
-    /*
-    --main:;
-    --alt:;
-    --text:;
-    */
     
     /*main color pallette*/
     --main: #FFF ;
-    --alt: #181818 ;
     --accent: rgb(47, 216, 56);
+
+    /*common colors*/
+    --blue:#007BFF;
+    --red:#FF4136;
+    --yellow:#FFDC00;
+    --orange:#FF851B;
+    --green:#28A745;
+    --purple: #6F42C1;
 
     /*fonts*/
     --font-extrasmall: 0.75em;

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+
+    <!--CSS-->
+    <!--<link rel="stylesheet" href="/frontend/styles/dashboard.css">-->
+    <link rel="stylesheet" href="/frontend/images/test.css"
+    <link rel="stylesheet" href="styles/dark-mode.css">
+
+    <!--other css
+
+    Missing file?????
+    
+    <link rel="stylesheet" href="styles/card">
+    -->
+
+    <!--nav and footer as elements-->
+    <script src = "nav-bar/nav.js" defer></script>
+    <script src= "footer/footer.js" defer></script>
+
+    <!--boxicon icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!--navigation-->
+    <nav-bar></nav-bar>
+    <!--navigation-->
+
+
+    <!---MAIN---->
+    <section>
+        <h1 id="heading">Здравей, <span>[user]</span>!</h1>
+        
+        <div class="coloumn">
+            <div class="window">
+                <h2 class="window-heading">Something #1</h2>
+                <ul class="list">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+            <div class="window">
+                <h2 class="window-heading">Stats <i class='bx bx-stats'></i> </h2>
+                <div id="progress-wrapper">
+
+                    <div class="skill-box">
+
+                        <span class="title">Thing 1</span>
+                        <div class="skill-bar">
+                            <span class="skill-per css">
+                                <span class="tooltip">70%</span>
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="skill-box">
+
+                        <span class="title">Thing 2</span>
+                        <div class="skill-bar">
+                            <span class="skill-per css">
+                                <span class="tooltip">50%</span>
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="skill-box">
+
+                        <span class="title">Thing 3</span>
+                        <div class="skill-bar">
+                            <span class="skill-per css">
+                                <span class="tooltip">35%</span>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="window">
+                    
+                <p class="window-heading">Оценки <i class='bx bx-edit-alt' ></i></p>
+
+                <ul class="list">
+                    <li>[subject #1]: <span class="grade">5</span></li>
+                    <li>[subject #2]: <span class="grade">6</span></li>
+                    <li>[subject #3]: <span class="grade">2</span></li>
+                </ul>
+            </div>
+
+            <div class="window">
+                    
+                <p class="window-heading">Бележки <i class='bx bx-edit-alt' ></i></p>
+
+                <ul class="list">
+                    <li>[thing #1]<li>
+                    <li>[thing #2]</li>
+                    <li>[thing #3]:</li>
+                </ul>
+            </div>
+        </div>
+    
+    </section>
+    <!--MAIN-->
+
+    <!----FOOOTER---->
+    <footer-bar></footer-bar>
+    <!--FOOTER--END-->
+    
+
+
+    <!--JAVASCRIPT-->
+
+
+    <!--calendar-->
+    <script src="/frontend/JavaScriptFiles/calendar.js"></script>
+
+    <!--card-stack
+    <script src = "/frontend/JavaScriptFiles/card_stack.js"></script>-->
+
+    <!--auto-height-->
+    <script>
+        window.addEventListener('load', function() {
+    // Select all the .window elements
+    const windows = document.querySelectorAll('.window');
+
+    // Find the tallest window
+    let maxHeight = 0;
+    windows.forEach(function(window) {
+        maxHeight = Math.max(maxHeight, window.offsetHeight);
+    });
+
+    // Set all windows to the tallest height
+    windows.forEach(function(window) {
+        window.style.height = `${maxHeight}px`;
+    });
+});
+    </script>
+    <!--auto-height-->
+
+
+
+    <!--grades + stats-->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const progressBars = document.querySelectorAll(".skill-bar .skill-per");
+    
+        progressBars.forEach((bar) => {
+            const tooltip = bar.querySelector(".tooltip");
+            let percentage;
+
+            if (tooltip) {
+                percentage = parseInt(tooltip.textContent, 10) || 0;
+            } else {
+                percentage = 0;
+                const newTooltip = document.createElement("span");
+                newTooltip.className = "tooltip";
+                newTooltip.textContent = `${percentage}%`;
+                bar.appendChild(newTooltip);
+            }
+    
+            bar.style.width = `${percentage}%`;
+            let barColor;
+    
+            if (percentage < 40) {
+                barColor = "#ff4d4d"; //Red
+            } else if (percentage < 70) {
+                barColor = "#ffcc00"; //Yellow
+            } else {
+                barColor = "#4caf50"; //Green
+            }
+    
+            bar.style.backgroundColor = barColor;
+            if (tooltip) {
+                tooltip.style.backgroundColor = barColor;
+                tooltip.setAttribute("data-color", barColor);
+            }
+        });
+    
+        //grades
+        const grades = document.querySelectorAll(".list .grade");
+    
+        grades.forEach((grade) => {
+            const gradeValue = parseInt(grade.textContent, 10);
+    
+            let gradeColor;
+            if (gradeValue == 2) 
+            {
+                gradeColor = "#e74c3c"; //red
+            } 
+            else if (gradeValue == 3) 
+            {
+                gradeColor = "#e67e22"; //orange
+            } 
+            else if (gradeValue == 4){
+                gradeColor = "#ffcc00"; //yellow
+            }
+            else if (gradeValue == 5)
+            {
+                gradeColor = "#3498db" //blue
+            }
+            else 
+            {
+                gradeColor = "#4caf50"; //Green
+            }
+    
+            grade.style.color = gradeColor;
+            grade.style.fontWeight = "bold";
+        });
+    });
+    </script>
+
+
+    <!--JAVASCRIPT-->
+
+
+</body>
+</html>
