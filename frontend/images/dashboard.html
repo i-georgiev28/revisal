@@ -37,7 +37,7 @@
         
         <div class="coloumn">
             <div class="window">
-                <h2 class="window-heading">Something #1</h2>
+                <h2 class="window-heading">Something <i class='bx bxs-dashboard'></i></h2>
                 <ul class="list">
                     <li>1</li>
                     <li>2</li>
@@ -95,12 +95,12 @@
 
             <div class="window">
                     
-                <p class="window-heading">Бележки <i class='bx bx-edit-alt' ></i></p>
+                <p class="window-heading">Бележки <i class='bx bx-note' ></i></p>
 
                 <ul class="list">
-                    <li>[thing #1]<li>
-                    <li>[thing #2]</li>
-                    <li>[thing #3]:</li>
+                    <li>Thing 1</li>
+                    <li>Thing 2</li>
+                    <li>Thing 3</li>
                 </ul>
             </div>
         </div>
@@ -125,21 +125,25 @@
 
     <!--auto-height-->
     <script>
-        window.addEventListener('load', function() {
-    // Select all the .window elements
+    window.addEventListener('load', function() {
     const windows = document.querySelectorAll('.window');
 
-    // Find the tallest window
     let maxHeight = 0;
     windows.forEach(function(window) {
         maxHeight = Math.max(maxHeight, window.offsetHeight);
     });
 
-    // Set all windows to the tallest height
+    let maxWidth = 0;
+    windows.forEach(function(window) {
+        maxWidth = Math.max(maxWidth, window.offsetWidth);
+    });
+
     windows.forEach(function(window) {
         window.style.height = `${maxHeight}px`;
+        window.style.width = `${maxWidth}px`;
     });
-});
+    });
+
     </script>
     <!--auto-height-->
 
