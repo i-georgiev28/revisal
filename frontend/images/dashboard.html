@@ -30,99 +30,60 @@
     <nav-bar></nav-bar>
     <!--navigation-->
 
+    <h1 class="headingV1">Hello, user !</h1>
 
-    <!---MAIN---->
+    <!--top-menu-->
     <section>
-        <h1 id="heading">Здравей, <span>[user]</span>!</h1>
-        
-        <div class="coloumn">
-            <div class="window">
-                <h2 class="window-heading">Something <i class='bx bxs-dashboard'></i></h2>
-                <ul class="list">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                </ul>
-            </div>
-            <div class="window">
-                <h2 class="window-heading">Stats <i class='bx bx-stats'></i> </h2>
-                <div id="progress-wrapper">
 
-                    <div class="skill-box">
-
-                        <span class="title">Thing 1</span>
-                        <div class="skill-bar">
-                            <span class="skill-per css">
-                                <span class="tooltip">70%</span>
-                            </span>
-                        </div>
-
-                    </div>
-
-                    <div class="skill-box">
-
-                        <span class="title">Thing 2</span>
-                        <div class="skill-bar">
-                            <span class="skill-per css">
-                                <span class="tooltip">50%</span>
-                            </span>
-                        </div>
-
-                    </div>
-
-                    <div class="skill-box">
-
-                        <span class="title">Thing 3</span>
-                        <div class="skill-bar">
-                            <span class="skill-per css">
-                                <span class="tooltip">35%</span>
-                            </span>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="window">
-                    
-                <p class="window-heading">Оценки <i class='bx bx-edit-alt' ></i></p>
-
-                <ul class="list">
-                    <li>[subject #1]: <span class="grade">5</span></li>
-                    <li>[subject #2]: <span class="grade">6</span></li>
-                    <li>[subject #3]: <span class="grade">2</span></li>
-                </ul>
-            </div>
-
-            <div class="window">
-                    
-                <p class="window-heading">Бележки <i class='bx bx-note' ></i></p>
-
-                <ul class="list">
-                    <li>Thing 1</li>
-                    <li>Thing 2</li>
-                    <li>Thing 3</li>
-                </ul>
-            </div>
-        </div>
-    
     </section>
+    <!--top-menu-->
+
+    <!--calendar-->
+    <section>
+        <div class="calendar">
+            <div class="header">
+                    <span id="month-year"></span>
+            </div>
+            <div class="controls">
+                    
+                <button id="prev-month">
+                    <i class='bx bx-left-arrow-alt' ></i>
+                </button>
+                    
+                <button id="next-month">
+                    <i class='bx bx-right-arrow-alt'></i>
+                </button>
+                
+            </div>
+            <div class="days">
+                        <!-- Days of the week header -->
+                <div class="day-header">Пон.</div>
+                <div class="day-header">Вт.</div>
+                <div class="day-header">Ср.</div>
+                <div class="day-header">Четв.</div>
+                <div class="day-header">Пет.</div>
+                <div class="day-header">Съб.</div>
+                <div class="day-header">Нед.</div>
+            </div>
+            <div id="calendar-days" class="days"></div>
+        </div>
+    </section>
+    <!--calendar-->
+
     <!--MAIN-->
 
+    
+    
     <!----FOOOTER---->
-    <footer-bar></footer-bar>
+    <!--!no footer beacuse in app mode-->
     <!--FOOTER--END-->
     
 
 
     <!--JAVASCRIPT-->
-
-
+    
     <!--calendar-->
     <script src="/frontend/JavaScriptFiles/calendar.js"></script>
-
-    <!--card-stack
-    <script src = "/frontend/JavaScriptFiles/card_stack.js"></script>-->
-
     <!--auto-height-->
     <script>
     window.addEventListener('load', function() {
@@ -146,80 +107,7 @@
 
     </script>
     <!--auto-height-->
-
-
-
-    <!--grades + stats-->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-        const progressBars = document.querySelectorAll(".skill-bar .skill-per");
     
-        progressBars.forEach((bar) => {
-            const tooltip = bar.querySelector(".tooltip");
-            let percentage;
-
-            if (tooltip) {
-                percentage = parseInt(tooltip.textContent, 10) || 0;
-            } else {
-                percentage = 0;
-                const newTooltip = document.createElement("span");
-                newTooltip.className = "tooltip";
-                newTooltip.textContent = `${percentage}%`;
-                bar.appendChild(newTooltip);
-            }
-    
-            bar.style.width = `${percentage}%`;
-            let barColor;
-    
-            if (percentage < 40) {
-                barColor = "#ff4d4d"; //Red
-            } else if (percentage < 70) {
-                barColor = "#ffcc00"; //Yellow
-            } else {
-                barColor = "#4caf50"; //Green
-            }
-    
-            bar.style.backgroundColor = barColor;
-            if (tooltip) {
-                tooltip.style.backgroundColor = barColor;
-                tooltip.setAttribute("data-color", barColor);
-            }
-        });
-    
-        //grades
-        const grades = document.querySelectorAll(".list .grade");
-    
-        grades.forEach((grade) => {
-            const gradeValue = parseInt(grade.textContent, 10);
-    
-            let gradeColor;
-            if (gradeValue == 2) 
-            {
-                gradeColor = "#e74c3c"; //red
-            } 
-            else if (gradeValue == 3) 
-            {
-                gradeColor = "#e67e22"; //orange
-            } 
-            else if (gradeValue == 4){
-                gradeColor = "#ffcc00"; //yellow
-            }
-            else if (gradeValue == 5)
-            {
-                gradeColor = "#3498db" //blue
-            }
-            else 
-            {
-                gradeColor = "#4caf50"; //Green
-            }
-    
-            grade.style.color = gradeColor;
-            grade.style.fontWeight = "bold";
-        });
-    });
-    </script>
-
-
     <!--JAVASCRIPT-->
 
 
