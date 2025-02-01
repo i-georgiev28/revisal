@@ -1,18 +1,25 @@
 <!--links-->
 <link rel="stylesheet" href="/frontend/nav-bar/nav-aside.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+<script src = "auto-width.js"></script>
 <!--nav-->
 <section>
     <header>
         <nav>
             <ul class="nav-bar">
-                <!--logo+dark/light mode-->
-                <li class="logo">
-                    <a href="/frontend/index.html">
-                        <img src="/frontend/images/logos/revisal_logo_main_white.svg" alt="Logo" />
+                <div id="logo-box">
+                    <!--logo-->
+                    <a href = "/frontend/dashboard.html">
+                        <img src = "/frontend/images/logos/revisal_logo_main_white.svg" alt="app_logo" id="logo">
+                        <span id="app-name">Revisal</span>
                     </a>
-                </li>
+                </div>
+
+                <div id="account-box">
+                    <!--!user-pfp-->
+                    <img src = "https://bitly.cx/3aNZJ" alt="user_pfp" id="user_pfp">
+                    <span id="user_username">Velinski_topki</span>
+                </div>
                 
                 <!--misc-buttons-->
                 <div id="buttons-box">
@@ -25,13 +32,6 @@
                     
                     <li>
                         <a href = "/frontend/index.html">
-                            <span id="link-text">Начало</span>
-                            <i class="bx bx-home-alt-2" onclick="window.location='/frontend/index.html'"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href = "/frontend/index.html">
                             <span id="link-text">Табло</span>
                             <i class="bx bxs-dashboard" onclick="window.location='/frontend/dashboard.html'"></i>
                         </a>
@@ -41,6 +41,13 @@
                         <a href = "/frontend/index.html">
                             <span id="link-text">Карти</span>
                             <i class="bx bx-card" onclick="window.location='/frontend/cards.html'"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href = "/frontend/index.html">
+                            <span id="link-text">Начало</span>
+                            <i class="bx bx-home-alt-2" onclick="window.location='/frontend/index.html'"></i>
                         </a>
                     </li>
 

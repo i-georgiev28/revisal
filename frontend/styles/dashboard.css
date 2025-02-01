@@ -8,6 +8,10 @@
     user-select: none;
 }
 body{
+    /*custom width for dashboard, bc of aside menu*/
+    width: 80%;
+    margin-left: 20%;
+
     font-family: "Inter", serif;
     font-weight: 300;
 
@@ -54,17 +58,14 @@ body{
     --offset-left: 3%;
     --offset-left-small: 1.5%;
     /*-----------------*/
-
-    min-height: 100vh;
-
-    /*miscs*/
-    --aqua: #00CED1;
-    --blueberry: #2575fc;
-    --grape:#6a11cb;
-    --darkcloud:#8f959a;
-
 }
 
+@media (max-width: 768px){
+    body{
+        width: 100%;
+        margin-left: 0;
+    }
+}
 /*------MAIN------*/
 
 
