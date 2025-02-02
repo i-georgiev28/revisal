@@ -1,0 +1,167 @@
+/**generic*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+body{
+    font-family: "Inter", serif;
+    font-weight: 300;
+
+    background-color: var(--main);
+
+    padding-left: 250px;
+    margin-left: 0;
+    width: 100%;
+    
+    --main:#FFF ;
+    --alt: #2d2d2d;
+    --text: #181818;
+    --text-white: #F3F4F6;
+    --main-dark:#181818;
+    --accent: rgb(47, 216, 56);
+    --blue:#007BFF;
+    --red:#FF4136;
+    --yellow:#FFDC00;
+    --orange:#FF851B;
+    --green:#28A745;
+    --purple: #6F42C1;
+
+    --font-extrasmall: 0.75em;
+    --font-small: 1em;
+    --font-normal: 1.2em;
+    --font--meduim: 1.5em;
+    --font--big: 2em;
+    --font--large: 3em;
+    --font--mega: 6em;
+
+    --offset-extrasmall: 10px;
+    --offset-small: 20px;
+    --offset-normal: 40px;
+    --offset-medium: 50px;
+
+    --offset-left: 3%;
+    --offset-left-small: 1.5%;
+}
+
+@media (min-width: 769px) {
+    body:not(footer-bar) {
+        padding-left: 250px;
+    }
+    
+}
+@media (max-width: 768px){
+    body{
+        padding-left: 0;
+    }
+    footer-bar{
+        display: none;
+    }
+}
+
+/**------MAIN------*/
+
+/*--common-heading--*/
+.headingV1{
+    font-size: 4em;
+    margin-left: var(--offset-left);
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-weight: 400;
+    color: var(--text);
+    font-weight: 400;
+    background-color: none;
+    font-family: "Inter", serif;
+}
+
+.headingV2{
+    font-family: "Inter", serif;
+    font-size: 2.2em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#heading-main{
+    font-size: 5em;
+    margin-left: var(--offset-left);
+    font-weight: 500;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+/*--common-headings--*/
+
+/*account and username*/
+#account{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 70px;
+}
+#user_pfp_big{
+    aspect-ratio: 1/1;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: var(--offset-left);
+    margin-bottom: 20px;
+}
+
+#user_username_big{
+    font-size: 2.8em;
+    font-weight: 500;
+}
+/*--------------------*/
+
+
+/*--account stats--*/
+#flex{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.window{
+    width: fit-content;
+    margin-left: var(--offset-left);
+    height: auto;
+    min-height: 50px;
+
+    margin-bottom: 50px;
+
+    font-family: 'Onest';
+
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 2px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 2px;
+}
+
+.personal-info-wrapper{
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+}
+
+.edit-button{
+    border: none;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    transform: translateY(3.2px);
+    transition: all 0.2s ease-in-out;
+}
+.property{
+    font-weight: 600;
+    opacity: 0.6;
+    font-size: 1.2em;
+}
+.value{
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+
+/*--account stats--*/
+/**------MAIN------*/

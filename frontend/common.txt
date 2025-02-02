@@ -30,3 +30,79 @@
 }
 
 */
+
+
+
+
+
+
+/**generic*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+body{
+    font-family: "Inter", serif;
+    font-weight: 300;
+
+    background-color: var(--main);
+
+    padding-left: 250px;
+    margin-left: 0;
+    width: 100%;
+    
+    --main:#FFF ;
+    --alt: #2d2d2d;
+    --text: #181818;
+    --text-white: #F3F4F6;
+    --main-dark:#181818;
+    --accent: rgb(47, 216, 56);
+    --blue:#007BFF;
+    --red:#FF4136;
+    --yellow:#FFDC00;
+    --orange:#FF851B;
+    --green:#28A745;
+    --purple: #6F42C1;
+
+    --font-extrasmall: 0.75em;
+    --font-small: 1em;
+    --font-normal: 1.2em;
+    --font--meduim: 1.5em;
+    --font--big: 2em;
+    --font--large: 3em;
+    --font--mega: 6em;
+
+    --offset-extrasmall: 10px;
+    --offset-small: 20px;
+    --offset-normal: 40px;
+    --offset-medium: 50px;
+
+    --offset-left: 3%;
+    --offset-left-small: 1.5%;
+}
+
+body:not(footer-bar) {
+    padding-left: 250px;
+}
+
+@media (max-width: 768px){
+    body{
+        width: 100%;
+        padding-left: 0;
+    }
+}
+/**------MAIN------*/
+
+.headingV1{
+    font-size: 4em;
+    margin-left: var(--offset-left);
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-weight: 400;
+    color: var(--text);
+    font-weight: 500;
+    background-color: none;
+}
