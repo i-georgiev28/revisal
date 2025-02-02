@@ -53,7 +53,7 @@ body {
     margin-left: 25px;
 }
 
-#account-box a{
+#account-box a, #account-box-bottom a{
     text-decoration: none;
     color: var(--text-white);
     display: flex;
@@ -67,6 +67,12 @@ body {
     margin-right: 12px;
 }
 
+/*!dont show when on pc:*/
+@media (min-width: 769px) {
+    #account-box-bottom{
+        display: none;
+    }
+}
 /**--NAVIGATION--*/
 .nav-bar {
     width: 250px;
@@ -87,6 +93,7 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
+    justify-items: space-evenly;
     padding-left: 0;
     gap: 5px;
 }
@@ -143,7 +150,8 @@ body {
 /**misc-buttons*/
 
 /*responsive nav*/
-@media (max-width: 768px) {
+@media (max-width: 768px){
+
     /*--Bottom-bar--*/
     .nav-bar {
         width: 100%;
@@ -195,6 +203,11 @@ body {
     #logo-box{
         display: none;
     }
+
+    #account-box{
+        display: none;
+    }
+
     #dark-mode {
         display: none;
     }
