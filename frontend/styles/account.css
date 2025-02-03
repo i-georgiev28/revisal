@@ -63,27 +63,36 @@ body{
 
 /**------MAIN------*/
 
-.headingV1{
-    font-size: 2em;
-    margin-left: var(--offset-left);
-    margin-bottom: 50px;
-    margin-top: 50px;
-    font-weight: 400;
-    color: var(--text);
-    font-weight: 500;
-    background-color: none;
-    margin-bottom: 50px;
-}
-
 #heading-main{
     font-size: 5em;
     margin-left: var(--offset-left);
     font-weight: 500;
     margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-bottom: 5vh;
 }
-
+.section-heading{
+    font-weight: 600;
+    margin-left: var(--offset-left);
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    display: flex;
+    gap: 10px;
+}
+.section-heading i{
+    transform: translateY(3px);
+}
 /**------MAIN------*/
+/*common*/
+#flex{
+    display: flex;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 120px;
+    row-gap: 40px;
+}
+/*common*/
 
 #account_wrapper{
     display: flex;
@@ -129,8 +138,17 @@ body{
     #user_username_headng{
         font-size: 1.6em;
     }
-    .headingV1{
+    .section-heading{
         font-size: 1.4em;
+    }
+
+    #grid{
+        column-gap: 50px;
+        row-gap: 25px;
+    }
+    .window{
+        width: 90%;
+        align-self: center;
     }
 }
 
@@ -147,22 +165,33 @@ body{
     #user_username_headng{
         font-size: 1.8em;
     }
-    .headingV1{
+    .section-heading{
         font-size: 1.6em;
+    }
+
+    #grid{
+        column-gap: 70px;
+        row-gap: 35px;
     }
 }
 
 
 
 .window{
-    width: 90%;
+    width: fit-content;
     height: auto;
     min-height: 50px;
     margin-bottom: 50px;
     margin-left: var(--offset-left);
+    padding: 30px;
+    border-radius: 20px;
+    
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 .window ul{
-    display: flex;
+    display: block;
     list-style: none;
 }
 .window ul li{
@@ -174,6 +203,7 @@ body{
     opacity: 0.7;
     font-weight: 300;
     font-size: 1.6em;
+    margin-bottom: 5px;
 }
 .window ul li .value{
     font-weight: 600;
