@@ -29,8 +29,7 @@ body{
     /*--main-color-pallette--*/
     --main: #FFF ;
     --alt: #181818 ;
-    --accent: rgb(47, 216, 56);
-    --accent-light: rgb(47, 216, 56);
+    --accent: #4070f4;
 
     /*--font-sizes--*/
     --font-extrasmall: 0.75em;
@@ -62,18 +61,17 @@ body{
 #header{
     text-align: center;
     color: var(--accent);
-    font-size: 7em;
+    font-size: 6em;
     margin-bottom: 10vh;
     margin-top: 5vh;
 
     display: flex;
     margin-left: 3%;
-
     font-weight: 400;
-
-    /*allignment of icons, inside of header*/
+    
+    /*allignment of icons*/
     display: flex;
-    flex-direction: row;
+    gap: 15px;
     align-items: center;
 }
 
@@ -81,7 +79,7 @@ body{
     color: var(--accent);
     font-size: 0.9em;
     align-self: center;
-    margin-left: 20px;
+    transform: translateY(3.5px);
 }
 
 #sections{
@@ -93,18 +91,19 @@ body{
 #section{
     display: flex;
     flex-direction: column;
+    padding: 20px;
 }
 
 #section-header{
-    font-size: 4em;
+    font-size: 3em;
     margin-bottom: 5vh;
     font-weight: 500;
+    font-family: "Onest", sans-serif;
 }
 #section-text{
     font-size: 2em;
     color: var(--accent);
     font-weight: 400;
-    margin-left: var(--offset-left);
     display: flex;
 }
 #section-text i{
@@ -113,9 +112,10 @@ body{
     margin-left: 10px;
     align-self: center;
 }
+
 .point{
     font-size: 1.5em;
-    margin-left: calc(var(--offset-left) + 1em);
+    margin-left: 1em;
     margin-top: 1em;
     margin-bottom: 2em;
 
