@@ -23,7 +23,7 @@ body{
     
     /*main color pallette*/
     --main: #FFF ;
-    --accent: rgb(47, 216, 56);
+    --accent: #4070f4;
 
     /*common colors*/
     --blue:#007BFF;
