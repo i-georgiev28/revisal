@@ -64,7 +64,7 @@ body{
 /**------MAIN------*/
 
 .headingV1{
-    font-size: 4em;
+    font-size: 2em;
     margin-left: var(--offset-left);
     margin-bottom: 50px;
     margin-top: 50px;
@@ -72,6 +72,7 @@ body{
     color: var(--text);
     font-weight: 500;
     background-color: none;
+    margin-bottom: 50px;
 }
 
 #heading-main{
@@ -88,10 +89,11 @@ body{
     display: flex;
     flex-direction: row;
     margin-left: var(--offset-left);
+    margin-bottom: 10VH;
 }
 #user_pfp_wrapper img{
     aspect-ratio: 1/1;
-    width: 100px;
+    width: 150px;
     border-radius: 50%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -103,15 +105,21 @@ body{
     height: auto;
     gap: 5px;
     justify-content: center;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 #user_username_heading{
     font-weight: 500;
-    font-size: 2em;
+    font-size: 2.4em;
+}
+#user_email{
+    font-size: 1.4em;
 }
 
 @media (max-width: 480px) {
+    #account_wrapper{
+        margin-bottom: 5vh;
+    }
     #heading-main{
         font-size: 3.2em;
     }
@@ -121,9 +129,15 @@ body{
     #user_username_headng{
         font-size: 1.6em;
     }
+    .headingV1{
+        font-size: 1.4em;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+    #account_wrapper{
+        margin-bottom: 5vh;
+    }
     #heading-main{
         font-size: 3.6em;
     }
@@ -133,4 +147,35 @@ body{
     #user_username_headng{
         font-size: 1.8em;
     }
+    .headingV1{
+        font-size: 1.6em;
+    }
+}
+
+
+
+.window{
+    width: 90%;
+    height: auto;
+    min-height: 50px;
+    margin-bottom: 50px;
+    margin-left: var(--offset-left);
+}
+.window ul{
+    display: flex;
+    list-style: none;
+}
+.window ul li{
+    display: flex;
+    flex-direction: column;
+
+}
+.window ul li .property{
+    opacity: 0.7;
+    font-weight: 300;
+    font-size: 1.6em;
+}
+.window ul li .value{
+    font-weight: 600;
+    font-size: 1.6em;
 }
