@@ -36,6 +36,7 @@
 
 
 
+
 /**generic*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
 *{
@@ -84,25 +85,17 @@ body{
     --offset-left-small: 1.5%;
 }
 
-body:not(footer-bar) {
-    padding-left: 250px;
+@media (min-width: 769px) {
+    body:not(footer-bar) {
+        padding-left: 250px;
+    }
 }
-
 @media (max-width: 768px){
     body{
         width: 100%;
         padding-left: 0;
     }
-}
-/**------MAIN------*/
-
-.headingV1{
-    font-size: 4em;
-    margin-left: var(--offset-left);
-    margin-bottom: 50px;
-    margin-top: 50px;
-    font-weight: 400;
-    color: var(--text);
-    font-weight: 500;
-    background-color: none;
+    footer-bar{
+        display: none;
+    }
 }

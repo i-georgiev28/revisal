@@ -50,10 +50,10 @@ body{
     body:not(footer-bar) {
         padding-left: 250px;
     }
-    
 }
 @media (max-width: 768px){
     body{
+        width: 100%;
         padding-left: 0;
     }
     footer-bar{
@@ -63,7 +63,6 @@ body{
 
 /**------MAIN------*/
 
-/*--common-heading--*/
 .headingV1{
     font-size: 4em;
     margin-left: var(--offset-left);
@@ -71,107 +70,67 @@ body{
     margin-top: 50px;
     font-weight: 400;
     color: var(--text);
-    font-weight: 400;
+    font-weight: 500;
     background-color: none;
-    font-family: "Inter", serif;
 }
 
-.headingV2{
-    font-family: "Inter", serif;
-    font-size: 2.2em;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap:10px;
-}
-.headingV2 button{
-    margin-left: auto;
-}
 #heading-main{
     font-size: 5em;
     margin-left: var(--offset-left);
     font-weight: 500;
-    margin-bottom: 50px;
-    margin-top: 20px;
-}
-/*--common-headings--*/
-
-/*account and username*/
-#account{
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    margin-bottom: 20px;
-}
-#user_pfp_big{
-    aspect-ratio: 1/1;
-    width: 150px;
-    border-radius: 50%;
-    margin-left: var(--offset-left);
-    margin-bottom: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }
 
-#user_username_big{
-    font-size: 2.8em;
-    font-weight: 500;
-}
-/*--------------------*/
+/**------MAIN------*/
 
-
-/*--account stats--*/
-
-#flex{
+#account_wrapper{
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    justify-items: space-evenly;
-}
-.window{
-    width: 28%;
     margin-left: var(--offset-left);
-    height: auto;
-    min-height: 50px;
-
-    margin-bottom: 50px;
-
-    font-family: 'Onest';
-
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 2px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 2px;
+}
+#user_pfp_wrapper img{
+    aspect-ratio: 1/1;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.personal-info-wrapper{
-    display: grid;
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 40px;
-}
-
-.edit-button{
-    border: none;
-    font-size: 0.8em;
+#user_username_wrapper{
     display: flex;
-    align-items: center;
-    transform: translateY(3.2px);
-    transition: all 0.2s ease-in-out;
-}
-.property{
-    font-weight: 600;
-    opacity: 0.6;
-    font-size: 1.2em;
-}
-.value{
-    font-weight: 400;
-    font-size: 1.2em;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 5px;
+    justify-content: center;
+    margin-left: 10px;
 }
 
-/*--BOX2--*/
-#about-me-text{
-    margin-top: 40px;
-    font-size: 1.2em;
+#user_username_heading{
+    font-weight: 500;
+    font-size: 2em;
 }
-/*--account stats--*/
-/**------MAIN------*/
+
+@media (max-width: 480px) {
+    #heading-main{
+        font-size: 3.2em;
+    }
+    #user_pfp_wrapper img{
+        width: 70px;
+    }
+    #user_username_headng{
+        font-size: 1.6em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #heading-main{
+        font-size: 3.6em;
+    }
+    #user_pfp_wrapper img{
+        width: 80px;
+    }
+    #user_username_headng{
+        font-size: 1.8em;
+    }
+}
