@@ -1,32 +1,32 @@
 /*fonts - Poppins, Raleway*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
 /*---------------------GENERAL---------------------*/
+/**generic*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 body{
     font-family: "Inter", serif;
     font-weight: 300;
-    font-style: normal;
 
     background-color: var(--main);
+
+    padding-left: 250px;
+    margin-left: 0;
+    width: 100%;
     
-    /*white mode*/
-    --main:#F5F5F5;
-    --alt: #2d2d2d; /*for dark and light mode*/
+    --main:#FFF ;
+    --alt: #2d2d2d;
     --text: #181818;
     --text-white: #F3F4F6;
-    /*--dark-mode--*/
     --main-dark:#181818;
-
     
-    /*main color pallette*/
-    --main: #FFF ;
-    --accent: rgb(47, 216, 56);
-
-    /*common colors*/
+    --accent: #4070f4;
+    
     --blue:#007BFF;
     --red:#FF4136;
     --yellow:#FFDC00;
@@ -34,7 +34,6 @@ body{
     --green:#28A745;
     --purple: #6F42C1;
 
-    /*fonts*/
     --font-extrasmall: 0.75em;
     --font-small: 1em;
     --font-normal: 1.2em;
@@ -43,15 +42,31 @@ body{
     --font--large: 3em;
     --font--mega: 6em;
 
-    /* common  margins and paddings*/
     --offset-extrasmall: 10px;
     --offset-small: 20px;
     --offset-normal: 40px;
     --offset-medium: 50px;
 
     --offset-left: 3%;
-    /*-----------------*/
+    --offset-left-small: 1.5%;
 }
+
+@media (min-width: 769px) {
+    body:not(footer-bar) {
+        padding-left: 250px;
+    }
+}
+@media (max-width: 768px){
+    body{
+        width: 100%;
+        padding-left: 0;
+    }
+    footer-bar{
+        display: none;
+    }
+}
+
+
 body.dark input {
     background-color: var(--alt);
     border-radius: 20px;
@@ -191,7 +206,7 @@ form{
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.2em;
-    color: var(--text-wh);
+    color: var(--accent);
 }
 
 
