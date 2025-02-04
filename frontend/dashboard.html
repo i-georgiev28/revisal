@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>Revisal</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="styles/dashboard.css">
@@ -31,6 +31,15 @@
 
     <!---MAIN---->
     <section>
+
+        <p id="main-header">
+            Табло за управление
+        </p>
+
+        <br><p id="welcoming-header">
+            Здравей, <span id="user_username_welcoming">[user]</span>!
+        </p>
+
         <div id="wrapper">
             <div class="container">
                 
@@ -76,40 +85,63 @@
                     
                     <div class="col col-2">
                         <div class="col-box">
-                            <span class="box-header">Оценки</span>
+                            <span class="box-header-type2">Прогрес на преговор</span>
+    
+                        <div id="progress-wrapper">
 
-                            <div id="grades-wrapper">
-                                
-                                <div class="subject-grade-wrapper">
-                                    <span class="subject" id= "subject_value_first">Биология:</span>
-                                    <span class="grade" id="grade_value_first">3</span>
-                                </div>
+                            <div class="skill-box">
 
-                                <div class="subject-grade-wrapper">
-                                    <span class="subject" id= "subject_value_first">История: </span>
-                                    <span class="grade" id="grade_value_first">6</span>
-                                </div>
-
-                                <div class="subject-grade-wrapper">
-                                    <span class="subject" id= "subject_value_first">Математика:</span>
-                                    <span class="grade" id="grade_value_first">4</span>
-                                </div>
-
-                                <div class="subject-grade-wrapper">
-                                    <span class="subject" id= "subject_value_first">Философия:</span>
-                                    <span class="grade" id="grade_value_first">5</span>
+                                <span class="title">Thing 1</span>
+                                <div class="skill-bar">
+                                    <span class="skill-per css">
+                                        <span class="tooltip">70%</span>
+                                    </span>
                                 </div>
 
                             </div>
+    
+                            <div class="skill-box">
+
+                                <span class="title">Thing 2</span>
+                                <div class="skill-bar">
+                                    <span class="skill-per css">
+                                        <span class="tooltip">50%</span>
+                                    </span>
+                                </div>
+
+                            </div>
+    
+                            <div class="skill-box">
+
+                                <span class="title">Thing 3</span>
+                                <div class="skill-bar">
+                                    <span class="skill-per css">
+                                        <span class="tooltip">35%</span>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
                         </div>
                     </div>
                 
                 </div>
                 
                 <div class="row row-2">
-                    <div class="box"></div>
-
-                    <div class="box"></div>
+                    <div class="box">
+                        
+                        <span class="box-header-type2">Предстоящи събития</span>
+                        
+                        <ul class="list">
+                            <li>Task #1</li>
+                            <li>Task #2</li>
+                            <li>Task #3</li>
+                        </ul>
+                    
+                    </div>
+                    <div class="box">
+                        
+                    </div>
                 </div>
                 
                 <div class="row row-3">
@@ -133,6 +165,8 @@
 
     <!--calendar-->
     <script src="/frontend/JavaScriptFiles/calendar.js"></script>
+
+    <script src = "/frontend/JavaScriptFiles/grade-color.js"></script>
 
     <!--grades-->
     <script>

@@ -79,11 +79,22 @@ body{
     background-color: none;
 }
 
-#heading{
-    font-size: 6em;
-    margin-left: 20px;
-    font-weight: 400;
+#main-header{
+    font-size: 5em;
     margin-left: var(--offset-left);
+    color: var(--accent);
+    font-weight: 500;
+    margin-top: 3vh;
+}
+
+#welcoming-header{
+    font-size: 4em;
+    margin-left: var(--offset-left);
+    margin-bottom: 5vh;
+}
+
+#user_username_welcoming{
+    color: var(--accent);
 }
 
 .headingV2{
@@ -96,30 +107,56 @@ body{
 }
 
 /*--------*/
-@media (max-width: 768px){
-    #heading{
+@media (max-width: 480px){
+    #main-header{
+        font-size: 3em;
+    }
+    #welcoming-header{
+        font-size: 2.6em;
+    }
+    .headingV1{
+        font-size: 2em;
+    }
+}
+@media (min-width: 769px){
+    #main-header{
         font-size: 4em;
+    }
+    #welcoming-header{
+        font-size: 3.6em;
     }
     .headingV1{
         font-size: 3em;
     }
+
 }
-/*--------*/
+/*--------------*/
+
+
+
+
+
+
+
+
+
 
 /**--DASHBOARD-BENTO-GRID--*/
 
 #wrapper{
+    margin-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .container{
     width: 80%;
-    height: 90vh;
+    height: auto;
     border-radius: 1em;
     padding: 1em;
     display: flex;
     gap: 1em;
+    margin-bottom: 10vh;
 }
 
 /*--rows--*/
@@ -165,6 +202,7 @@ body{
 
 .box{
     flex: 1;
+    padding: 20px;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -205,14 +243,17 @@ body{
 
 /**--dashboard-common-*/
 
-.box-header{
-    margin-bottom: 20px;
+.box-header,.box-header-type2{
     margin-left: var(--offset-left);
-    font-size: 3em;
     font-family: 'Onest';
     font-weight: 500;
-    margin-bottom: 10px;
     color: var(--accent);
+}
+.box-header{
+    font-size: 3em;
+}
+.box-header-type2{
+    font-size: 2em;
 }
 
 
@@ -230,45 +271,109 @@ body{
 
 
 
-/**--grades-section--*/
 
-#grades-wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-.subject-grade-wrapper{
+/**--NEXT-UP-SECTION--*/
+.list{
+    list-style: none;
+    font-family: "Onest", sans-serif;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 1em;
+    font-size: 1.8em;
+    margin-top: 40px;
+}
+/**--NEXT-UP-SECTION--*/
+
+
+/**--Progress-section--*/
+/*progress bars*/
+.col.col-2 .col-box{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-left: 1.5em;
 }
-.subject-grade-wrapper:nth-of-type(1), .subject-grade-wrapper:nth-of-type(2){
-    margin-top: 20px;
+#progress-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-self: center;
+    margin-left: var(--offset-left);
+    gap: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
-
-.subject{
-    opacity: 0.7;
-    font-family: "Onest", sans-serif;
-    font-size: 1.2em;
+.skills-container{
+    position: relative;
+    max-width: 500px;
+    width: 10%;
+    background: #fff;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 7px;
 }
-.grade{
+.skills-container .skill-box{
+    width: 70%;
+    margin: 25px 0;
+}
+.skill-box .title{
+    display: block;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #333;
+}
+.skill-box .skill-bar{
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(0,0,0,0.1);
+}
+.skill-bar .skill-per{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
+    background: #4070f4;
+    animation: progress 1s ease-in-out forwards;
+    opacity: 0;
+}
+.skill-per.css{
+    width: 70%;
+    animation-delay: 0.1s;
+}
+.skill-per.javascript{
+    width: 50%;
+    animation-delay: 0.2s;
+}
+.skill-per.nodejs{
+    width: 30%;
+    animation-delay: 0.3s;
+}
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.skill-per .tooltip{
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
     font-weight: 500;
-    font-family: "Onest", sans-serif;
-    font-size: 1.2em;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #4070f4;
+    z-index: 1;
 }
 
-@media (max-width: 480px) {
-    .subject, .grade{
-        font-size: 1em;
-    }
-}
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .subject, .grade{
-        font-size: 1em;
-    }
-}
 
 /**--CALENDAR--*/
 #month-year{
@@ -284,8 +389,8 @@ body{
     margin-left: var(--offset-left);
 
     height: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .header{
