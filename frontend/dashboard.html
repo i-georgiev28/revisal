@@ -80,6 +80,26 @@
 
                             <div id="grades-wrapper">
                                 
+                                <div class="subject-grade-wrapper">
+                                    <span class="subject" id= "subject_value_first">Биология:</span>
+                                    <span class="grade" id="grade_value_first">3</span>
+                                </div>
+
+                                <div class="subject-grade-wrapper">
+                                    <span class="subject" id= "subject_value_first">История: </span>
+                                    <span class="grade" id="grade_value_first">6</span>
+                                </div>
+
+                                <div class="subject-grade-wrapper">
+                                    <span class="subject" id= "subject_value_first">Математика:</span>
+                                    <span class="grade" id="grade_value_first">4</span>
+                                </div>
+
+                                <div class="subject-grade-wrapper">
+                                    <span class="subject" id= "subject_value_first">Философия:</span>
+                                    <span class="grade" id="grade_value_first">5</span>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -114,80 +134,34 @@
     <!--calendar-->
     <script src="/frontend/JavaScriptFiles/calendar.js"></script>
 
-    <!--card-stack-->
-    <script src = "/frontend/JavaScriptFiles/card_stack.js"></script>
-
-    <!--auto-window-height + grades-->
+    <!--grades-->
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-        const progressBars = document.querySelectorAll(".skill-bar .skill-per");
-    
-        progressBars.forEach((bar) => {
-            const tooltip = bar.querySelector(".tooltip");
-            let percentage;
+        document.addEventListener("DOMContentLoaded", function () {
+    // Select all elements with class 'grade'
+    const grades = document.querySelectorAll(".grade");
 
-            if (tooltip) {
-                percentage = parseInt(tooltip.textContent, 10) || 0;
-            } else {
-                percentage = 0;
-                const newTooltip = document.createElement("span");
-                newTooltip.className = "tooltip";
-                newTooltip.textContent = `${percentage}%`;
-                bar.appendChild(newTooltip);
-            }
-    
-            bar.style.width = `${percentage}%`;
-            let barColor;
-    
-            if (percentage < 40) {
-                barColor = "#ff4d4d"; //Red
-            } else if (percentage < 70) {
-                barColor = "#ffcc00"; //Yellow
-            } else {
-                barColor = "#4caf50"; //Green
-            }
-    
-            bar.style.backgroundColor = barColor;
-            if (tooltip) {
-                tooltip.style.backgroundColor = barColor;
-                tooltip.setAttribute("data-color", barColor);
-            }
-        });
-    
-        //grades
-        const grades = document.querySelectorAll(".list .grade");
-    
-        grades.forEach((grade) => {
-            const gradeValue = parseInt(grade.textContent, 10);
-    
-            let gradeColor;
-            if (gradeValue == 2) 
-            {
-                gradeColor = "#e74c3c"; //red
-            } 
-            else if (gradeValue == 3) 
-            {
-                gradeColor = "#e67e22"; //orange
-            } 
-            else if (gradeValue == 4){
-                gradeColor = "#ffcc00"; //yellow
-            }
-            else if (gradeValue == 5)
-            {
-                gradeColor = "#3498db" //blue
-            }
-            else 
-            {
-                gradeColor = "#4caf50"; //Green
-            }
-    
-            grade.style.color = gradeColor;
-            grade.style.fontWeight = "bold";
-        });
+    grades.forEach(gradeElement => {
+        let grade = parseInt(gradeElement.textContent.trim());
+        
+        if(grade == 2){
+            gradeElement.style.color = "var(--red)"
+        }
+        else if (grade == 3) 
+        {
+            gradeElement.style.color = "var(--orange)";
+        } 
+        else if (grade === 4) {
+            gradeElement.style.color = "var(--yellow)";
+        } 
+        else if (grade === 5) {
+            gradeElement.style.color = "var(--blue)";
+        } 
+        else if (grade === 6) {
+            gradeElement.style.color = "var(--green)";
+        }
     });
+});
     </script>
-
-
     <!--JAVASCRIPT-->
 
 

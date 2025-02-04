@@ -1,3 +1,4 @@
+//*skill bars
 document.addEventListener("DOMContentLoaded", () => {
     const progressBars = document.querySelectorAll(".skill-bar .skill-per");
 
@@ -31,36 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
             tooltip.style.backgroundColor = barColor;
             tooltip.setAttribute("data-color", barColor);
         }
-    });
-
-    //grades
-    const grades = document.querySelectorAll(".list .grade");
-
-    grades.forEach((grade) => {
-        const gradeValue = parseInt(grade.textContent, 10);
-
-        let gradeColor;
-        if (gradeValue == 2) 
-        {
-            gradeColor = "#e74c3c"; //red
-        } 
-        else if (gradeValue == 3) 
-        {
-            gradeColor = "#e67e22"; //orange
-        } 
-        else if (gradeValue == 4){
-            gradeColor = "#ffcc00"; //yellow
-        }
-        else if (gradeValue == 5)
-        {
-            gradeColor = "#3498db" //blue
-        }
-        else 
-        {
-            gradeColor = "#4caf50"; //Green
-        }
-
-        grade.style.color = gradeColor;
-        grade.style.fontWeight = "bold";
     });
 });
