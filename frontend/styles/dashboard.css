@@ -110,9 +110,11 @@ body{
 @media (max-width: 480px){
     #main-header{
         font-size: 3em;
+        margin-left: 5%;
     }
     #welcoming-header{
         font-size: 2.6em;
+        margin-left: 5%;
     }
     .headingV1{
         font-size: 2em;
@@ -216,27 +218,31 @@ body{
         flex-direction: column;
     }
     .row-2{
-        flex-direction: row;
+        flex-direction: column;
     }
     .row-3{
-        flex-direction: row;
+        flex-direction: column;
     }
     .col{
         flex: 2;
         flex-direction: column;
     }
 }
-@media(max-width: 650px){
+@media(max-width: 768px){
     .container{
-        width: 900px;
-        height: 850px;
+        padding: 0;
+        margin-left: 1%;
+        width: 100vw;
+        height: auto;
         gap: 0.5em;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .row{
-        gap: 0.5em;
+        gap: 2em;
     }
     .col{
-        gap: 0.5em;
+        gap: 2em;
         flex-direction: column;
     }
 }
@@ -465,16 +471,19 @@ body{
 /*resposnsive*/
 @media (max-width: 480px) {
     .calendar{
-        width: 90%;
         margin-left: 0;
+        padding: 0%;
+        width: 90%;
+        align-self: center;
     }
     #month-year{
         font-size: 2em;
     }
     .days{
         font-size: 1em;
-        row-gap: 3px;
-        column-gap: 3px;
+        row-gap: 2px;
+        column-gap: 2px;
+        align-items: center;
     }
     .day{
         font-size: 0.8em;
@@ -500,7 +509,7 @@ body{
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .calendar{
-        width: 70%;
+        width: 90%;
     }
     #month-year{
         font-size: 5em;
