@@ -25,7 +25,7 @@
 </head>
 <body>
     <!--navigation-->
-    <!--<nav-bar></nav-bar>-->
+    <nav-bar></nav-bar>
     <!--navigation-->
 
 
@@ -37,20 +37,58 @@
                 <div class="row row-1">
                     
                     <div class="col">
-                        <div class="col-box"></div>
-                        <div class="col-box"></div>
+                        <div class="col-box">
+                            
+                            
+                            <!--*calendar-->
+                            <div class="calendar">
+                                <div class="header">
+                                        <span id="month-year"></span>
+                                </div>
+                                <div class="controls">
+                                        
+                                    <button id="prev-month">
+                                        <i class='bx bx-left-arrow-alt' ></i>
+                                    </button>
+                                        
+                                    <button id="next-month">
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </button>
+                                    
+                                </div>
+                                <div class="days">
+                                            <!-- Days of the week header -->
+                                    <div class="day-header">Пон.</div>
+                                    <div class="day-header">Вт.</div>
+                                    <div class="day-header">Ср.</div>
+                                    <div class="day-header">Четв.</div>
+                                    <div class="day-header">Пет.</div>
+                                    <div class="day-header">Съб.</div>
+                                    <div class="day-header">Нед.</div>
+                                </div>
+                                <div id="calendar-days" class="days"></div>
+                            </div>
+                            <!--*calendar-->
+                        
+                        
+                        </div>
                     </div>
                     
                     <div class="col col-2">
-                        <div class="col-box"></div>
-                        <div class="col-box"></div>
+                        <div class="col-box">
+                            <span class="box-header">Оценки</span>
+
+                            <div id="grades-wrapper">
+                                
+                            </div>
+                        </div>
                     </div>
                 
                 </div>
                 
                 <div class="row row-2">
                     <div class="box"></div>
-                    <div class="box"></div>
+
                     <div class="box"></div>
                 </div>
                 
