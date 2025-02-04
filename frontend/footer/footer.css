@@ -60,11 +60,11 @@ body{
     margin-top: 20px;
 }
 
-.row-heading{
+.footer-row-heading{
     font-size: 3em;
     margin-bottom: 30px;
 }
-.row-heading i{
+.footer-row-heading i{
     font-size: 1em;
     transform: translateY(3.75px);
 }
@@ -79,7 +79,7 @@ body{
     margin-bottom: 50px;
 }
 
-.row{
+.footer-row{
     width: 30%;
     height: auto;
     border-radius: 20px;
@@ -87,11 +87,11 @@ body{
     margin-left: 20px;
     transition: 0.2s ease-in-out;
 }
-.row:hover{
+.footer-row:hover{
     background-color: #303030;
 }
 
-.row-text, .contacts-text{
+.footer-row-text, .contacts-text{
     font-size: 1em
 }
 .contacts-text{
@@ -128,35 +128,35 @@ body{
         width: 100%;
         height: auto;
     }
-    .row{
+    .footer-row{
         width: 90%;
         margin: 0;
         margin-bottom: 50px;
     }
-    .row-heading{
+    .footer-row-heading{
         font-size: 2em;
     }
-    .row-heading i{
+    .footer-row-heading i{
         font-size: 1em;
     }
-    .row-text{
+    .footer-row-text{
         font-size: 0.8em
     }
 }
 
 /*tablet*/
 @media (min-width: 764px) and (max-width: 1024px) {
-    .row{
+    .footer-row{
         width: 100%;
     }
-    .row-heading{
+    .footer-row-heading{
         font-size: 2em;
     }
 }
 
 /*само за заглавия за footer*/
 @media (min-width: 1024px) and (max-width: 1460px) {
-    .row-heading{
+    .footer-row-heading{
         font-size: 1.8em;
     }
 }
