@@ -140,12 +140,13 @@ body{
     margin-left: 10vh;
     margin-bottom: 20px;
     font-size: 1.2em;
+    font-family: "Onest", sans-serif;
 }
 .headingV1{
     margin-left: 10vh;
     font-weight: 400;
     font-size: 4em;
-    margin-bottom: 40px
+    margin-bottom: 50px
 }
 
 .wrapper-simple{
@@ -155,9 +156,9 @@ body{
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-    margin-bottom: 15vh;
+    margin-bottom: 20vh;
 }
-.box{
+.box-card{
     width: 20vw;
     aspect-ratio: 1/1;
     height: auto;
@@ -196,4 +197,76 @@ body{
 }
 @media (min-width: 769px){
 
+}
+
+/**section-2*/
+.text-box{
+    font-size: 1.4em;
+    margin-left: 10vh;
+    width: 50%;
+    margin-bottom: 20px;
+    line-height: 1.4em;
+    font-family: "Onest", sans-serif;
+}
+.ui-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15VH;
+}
+.ui-wrapper div:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+}
+.ui-wrapper div:nth-of-type(2){
+    margin-left: auto;
+    margin-right: 20vh;
+}
+
+
+/**--stats-section--*/
+#progress-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.container{
+    display: flex;
+    width: 420px;
+    padding: 50px 0;
+    border-radius: 8px;
+    background: #fff;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+.circular-progress, .circular-progress-2,.circular-progress-3{
+    position: relative;
+    height: 340px;
+    width: 340px;
+    border-radius: 50%;
+    background: conic-gradient(#4070f4 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress::before, .circular-progress-2::before, .circular-progress-3::before{
+    content: "";
+    position: absolute;
+    height: 275px;
+    width: 275px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.progress-value, .progress-value-2, .progress-value-3{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--accent);
+}
+.text{
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--text);
+    text-align: center;
+    font-family: "Onest", sans-serif;
 }
