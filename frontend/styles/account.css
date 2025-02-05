@@ -154,7 +154,13 @@ body{
 #user_email{
     font-size: 1.6em;
 }
-
+.window ul li .property{
+    color:var(--text);
+    opacity: 0.7;
+}
+.window ul li .value{
+    color: #959cff;;
+}
 @media (max-width: 480px) {
     #account_wrapper{
         margin-bottom: 5vh;
@@ -228,18 +234,18 @@ body{
     width: 94%;
     height: auto;
     min-height: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 15vh;
     margin-left: var(--offset-left);
     padding: 30px;
     border-radius: 20px;
     
-    display: flex;
+    display: grid;
     align-items: center;
+
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     flex-wrap: wrap;
 }
 .window ul{
-    display: block;
     list-style: none;
 }
 .window ul li{

@@ -204,7 +204,7 @@ body{
 
 .box{
     flex: 1;
-    padding: 20px;
+    padding: 50px;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -232,7 +232,7 @@ body{
     .container{
         padding: 0;
         margin-left: 1%;
-        width: 100vw;
+        width: 95vw;
         height: auto;
         gap: 0.5em;
         margin-left: 20px;
@@ -547,9 +547,14 @@ body{
 }
 
 /**round progress bar*/
+#flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .container-progress{
     display: flex;
-    width: 420px;
+    width: auto;
     padding: 50px 0;
     border-radius: 8px;
     row-gap: 30px;
@@ -557,6 +562,7 @@ body{
     align-items: center;
 }
 .circular-progress{
+    aspect-ratio: 1/1;
     position: relative;
     height: 250px;
     width: 250px;
@@ -567,6 +573,7 @@ body{
     justify-content: center;
 }
 .circular-progress::before{
+    aspect-ratio: 1/1;
     content: "";
     position: absolute;
     height: 210px;
@@ -576,13 +583,52 @@ body{
 }
 .progress-value{
     position: relative;
-    font-size: 40px;
+    font-size: 4em;
     font-weight: 600;
     color: #4070f4;
 }
 .text{
     font-size: 2.4em;
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--text);
+    font-family: "Onest", sans-serif;
+}
+
+@media (max-width: 480px) {
+    .container-progress{
+        width: 65vw;
+    }
+    .circular-progress{
+        height: 60vw;
+        width: 60vw;
+    }
+    .circular-progress::before{
+        height: calc(60vw - 40px);
+        width: calc(60vw - 40px);
+    }
+    .progress-value{
+        font-size: 2em;
+    }
+    .text{
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .container-progress{
+        width: 420px;
+        align-self: center;
+    }
+    .circular-progress{
+        height: 250px;
+        width: 250px;
+    }
+    .progress-value{
+        position: relative;
+        font-size: 3em;
+    }
+    .text{
+        font-size: 2em;
+    }
 }
