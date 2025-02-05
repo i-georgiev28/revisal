@@ -117,17 +117,48 @@ body{
     outline-offset: 2px;
 }
 
-@media (min-width: 768px) {
-    .try-button {
-    padding: .75rem 1.5rem;
-    }
-}
 
 #note{
     color: #959cff;
     margin-left: calc(10vh + 2px);
     margin-top: 10px;
     margin-bottom: 10vh;
+}
+/*responsive*/ /**-!!!needs some work*/
+@media (max-width: 480px) {
+    #heading-main{
+        font-size: 2em;
+        margin-left: 5vh;
+        margin-top: 5vh;
+    }
+    #subheading{
+        font-size: 1em;
+        margin-left: 5vh;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #heading-main{
+        font-size: 3.2em;
+        margin-left: 5vh;
+        margin-top: 5vh;
+        width: 90%;
+    }
+    #subheading{
+        margin-left: 5vh;
+        font-size: 1.6em;
+    }
+    .try-button{
+        font-size: 0.8em;
+        margin-left: 5vh;
+    }
+    #note{
+        margin-left: 5vh;
+        font-size: .8em;
+    }
+    #graphic{
+        display: none;
+    }
 }
 
 
@@ -206,9 +237,47 @@ body{
 }
 
 @media(max-width: 480px){
+    .heading-mockup{
+        margin-left: 5vh;
+        font-size: 1em;
+    }
     
+    .heading-mockup-right{
+        margin-left: 5vh;
+        font-size: 1em;
+    }
+
+    .headingV1{
+        margin-left: 5vh;
+        font-size: 2em;
+    }
+    
+    .wrapper-simple{
+        display: flex;
+        flex-direction: column;
+        padding-left: 2.5vh;
+        padding-right: 2.5vh;
+        width: 100%;
+    }
+    .box-card{
+        width: 80vw;
+        padding: 30px;
+        margin-bottom: 5vh;
+    }
+    .box-mini{
+        width: 90px;
+        font-size: 3em;
+    }
+    .box-heading{
+        font-size: 2em;
+    }
 }
-@media (min-width: 769px){
+@media (min-width: 481px) and (max-width: 1024px){
+
+    .headingV1{
+        margin-left: 5vh;
+        font-size: 2em;
+    }
 
 }
 
@@ -232,8 +301,61 @@ body{
 }
 .ui-wrapper div:nth-of-type(2){
     margin-left: auto;
-    margin-right: 20vh;
+    margin-right: 10vh;
 }
+
+/*responsive*/
+@media (max-width: 480px) {
+    .text-box{
+        font-size: 1.2em;
+        margin-left: 5vh;
+        margin-right: 5vh;
+        width: 80%;
+        margin-bottom: 20px;
+        line-height: 1.4em;
+        font-family: "Onest", sans-serif;
+    }
+    .ui-wrapper{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20vh;
+    }
+    .ui-wrapper div:nth-of-type(1){
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 5vh;
+    }
+    .ui-wrapper div:nth-of-type(2){
+        margin-right: 20vh;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .text-box{
+        font-size: 1.4em;
+        margin-left: 10vh;
+        width: 50%;
+        margin-bottom: 20px;
+        line-height: 1.4em;
+        font-family: "Onest", sans-serif;
+    }
+    .ui-wrapper{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 15VH;
+    }
+    .ui-wrapper div:nth-of-type(1){
+        display: flex;
+        flex-direction: column;
+    }
+    .ui-wrapper div:nth-of-type(2){
+        margin-left: auto;
+        margin-right: 20vh;
+    }
+}
+
+
 
 /**calendar section*/
 #calendar-block{
@@ -326,4 +448,29 @@ body{
     margin-left: auto;
     display: block;
     margin-right: 10vh;
+}
+
+@media (max-width: 480px) {
+    #app-download-wrappper{
+        display: flex;
+        flex-direction: column;
+    }
+    #app-download-wrappper{
+        margin-bottom: 5vh;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    #app-download-wrappper{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5vh;
+    }
+    #app-download-wrappper div:nth-of-type(1){
+        display: flex;
+        flex-direction: column;
+    }
+    #app-download-wrappper div:nth-of-type(2){
+        margin-right: 5dvh;
+    }
 }

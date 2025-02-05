@@ -8,7 +8,7 @@ document.querySelectorAll('.circular-progress, .circular-progress-2, .circular-p
         progressStartValue++;
         progressValue.textContent = `${progressStartValue}%`;
 
-        circularProgress.style.background = `conic-gradient(#4070f4 ${progressStartValue * 3.6}deg, #ededed 0deg)`;
+        circularProgress.style.background = `conic-gradient(#6780ff ${progressStartValue * 3.6}deg, #ededed 0deg)`;
 
         if (progressStartValue == progressEndValue) {
             clearInterval(progress);
