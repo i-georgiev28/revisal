@@ -272,11 +272,42 @@ body{
         font-size: 2em;
     }
 }
+
 @media (min-width: 481px) and (max-width: 1024px){
 
     .headingV1{
         margin-left: 5vh;
         font-size: 2em;
+    }
+
+    .heading-mockup{
+        margin-left: 5vh;
+        font-size: 1em;
+    }
+    
+    .heading-mockup-right{
+        margin-left: 5vh;
+        font-size: 1em;
+    }
+
+    .headingV1{
+        margin-left: 5vh;
+        font-size: 3em;
+    }
+    
+    .wrapper-simple{
+        flex-direction: row;
+        padding-left: 2.5vh;
+        padding-right: 2.5vh;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .box-card{
+        width: 40vw;
+        margin-bottom: 5vh;
+    }
+    .box-heading{
+        font-size: 2.4em;
     }
 
 }

@@ -20,6 +20,8 @@ body{
 
     --text-main:#222222;
     --text-white: #F3F4F6;;
+
+    --accent: #4070f4;
     /*----------*/
     
     /*fonts*/
@@ -46,7 +48,7 @@ body{
     height: fit-content;
     background-color: var(--background-main-dark);
     color: var(--text-white);
-    padding: 1.5em;
+    padding: 5vh 10vh;
 }
 #footer a{
     color: var(--main);
@@ -56,13 +58,15 @@ body{
 #footer-heading{
     font-size: 3em;
     margin-bottom: 50px;
-    font-weight: 450;
+    font-weight: 400;
     margin-top: 20px;
+    color: var(--accent);
 }
 
 .footer-row-heading{
     font-size: 3em;
     margin-bottom: 30px;
+    font-family: "Onest", sans-serif;
 }
 .footer-row-heading i{
     font-size: 1em;
@@ -92,7 +96,8 @@ body{
 }
 
 .footer-row-text, .contacts-text{
-    font-size: 1em
+    font-size: 1em;
+    font-family: "Onest", sans-serif;
 }
 .contacts-text{
     margin-left:5%;
@@ -100,6 +105,7 @@ body{
 /*--copyright-text--*/
 .copyright{
     margin-top: 50px;
+    font-family: "Onest", sans-serif;
 }
 /*--language-button--*/
 #language-button{
