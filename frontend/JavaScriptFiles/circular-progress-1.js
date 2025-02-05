@@ -2,7 +2,7 @@ document.querySelectorAll('.circular-progress, .circular-progress-2, .circular-p
     let progressValue = circularProgress.querySelector('.progress-value, .progress-value-2, .progress-value-3');
     let progressStartValue = 0;
     let progressEndValue = [77, 62, 80][index];
-    let speed = 15;
+    let speed = 20;
 
     let progress = setInterval(() => {
         progressStartValue++;

@@ -108,7 +108,7 @@ body{
 }
 
 .try-button:hover {
-    background-color: #7388f7;
+    background-color: #6780ff;
 }
 
 .try-button:focus {
@@ -124,8 +124,8 @@ body{
 }
 
 #note{
-    color: #babfff;
-    margin-left: 10vh;
+    color: #959cff;
+    margin-left: calc(10vh + 2px);
     margin-top: 10px;
     margin-bottom: 10vh;
 }
@@ -142,6 +142,19 @@ body{
     font-size: 1.2em;
     font-family: "Onest", sans-serif;
 }
+
+.heading-mockup-right{
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 10vh;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-family: "Onest", sans-serif;
+    margin-left: auto;
+    margin-right: 10vh;
+}
+
 .headingV1{
     margin-left: 10vh;
     font-weight: 400;
@@ -222,12 +235,41 @@ body{
     margin-right: 20vh;
 }
 
+/**calendar section*/
+#calendar-block{
+    width: 100%;
+    background-color: #f1f1ff;
+    height: 90vh;
+    margin-bottom: 20vh;
+    padding-top: 10vh;
+}
+#calendar-block div:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+    padding-left: auto;
+}
+#calendar-block div:nth-of-type(1) .headingV1{
+    margin-left: auto;
+    margin-right: 10vh;
+}
+
+#calendar-block div:nth-of-type(1) .text-box{
+    margin-left: auto;
+    margin-right: 10vh;
+    text-align: right;
+    width: 30%;
+}
+
+#calendar-image-div{
+    margin-left: 10vh;
+}
 
 /**--stats-section--*/
 #progress-wrapper{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-bottom: 20vh;
 }
 .container{
     display: flex;
@@ -259,14 +301,29 @@ body{
 }
 .progress-value, .progress-value-2, .progress-value-3{
     position: relative;
-    font-size: 40px;
+    font-size: 3em;
     font-weight: 600;
     color: var(--accent);
 }
 .text{
-    font-size: 30px;
+    font-size: 2em;
     font-weight: 400;
     color: var(--text);
     text-align: center;
     font-family: "Onest", sans-serif;
+}
+
+/**download app section*/
+#app-download-wrappper{
+    display: flex;
+    margin-bottom: 10vh;
+}
+#app-download-wrappper div:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+}
+#app-download-wrappper div:nth-of-type(2){
+    margin-left: auto;
+    display: block;
+    margin-right: 10vh;
 }
