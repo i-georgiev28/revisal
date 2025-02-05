@@ -50,10 +50,17 @@ function generateCalendar(month, year) {
         dayElement.classList.add("day");
         dayElement.textContent = day;
 
-        // Highlight current day
+        //днес
         if (day === currentDate.getDate() && month === currentMonth && year === currentYear) {
             dayElement.classList.add("current-day");
         }
+
+        //уикенди
+        if (new Date(year, month, day).getDay() === 6 || new Date(year, month, day).getDay() === 0) {
+            dayElement.style.color = "#4070f4";
+            dayElement.style.fontWeight = "500";
+        }
+
 
         // Add click event for day selection
         dayElement.addEventListener("click", () => {

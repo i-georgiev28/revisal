@@ -91,7 +91,7 @@
 
                             <div class="skill-box">
 
-                                <span class="title">Subject #1</span>
+                                <span class="title">Биология</span>
                                 <div class="skill-bar">
                                     <span class="skill-per css">
                                         <span class="tooltip">70%</span>
@@ -102,7 +102,7 @@
     
                             <div class="skill-box">
 
-                                <span class="title">Subject #2</span>
+                                <span class="title">Химия</span>
                                 <div class="skill-bar">
                                     <span class="skill-per css">
                                         <span class="tooltip">50%</span>
@@ -113,7 +113,7 @@
     
                             <div class="skill-box">
 
-                                <span class="title">Subject #3</span>
+                                <span class="title">БЕЛ</span>
                                 <div class="skill-bar">
                                     <span class="skill-per css">
                                         <span class="tooltip">35%</span>
@@ -133,14 +133,22 @@
                         <span class="box-header-type2">Предстоящи събития</span>
                         
                         <ul class="list">
-                            <li>Task #1</li>
-                            <li>Task #2</li>
-                            <li>Task #3</li>
+                            <li>Класно / <span id="task-2_end_date" class="date">11.02.25</span> <i class='bx bxs-bell-ring'></i></li>
+                            <li>Изпитване / <span id="task-2_end_date" class="date">17.02.25</span> <i class='bx bxs-bell-off'></i></li>
+                            <li>Тест / <span id="task-3_end_date" class="date">22.02.25</span> <i class='bx bxs-bell'></i></li>
+                            <li>Класно / <span id="task-2_end_date" class="date">23.02.25</span> <i class='bx bxs-bell-off'></i></li>
+                            <li>Изпитване / <span id="task-2_end_date" class="date">24.02.25</span> <i class='bx bxs-bell-off'></i></li>
+    
                         </ul>
                     
                     </div>
                     <div class="box">
-                        
+                        <div class="container-progress">
+                            <div class="circular-progress">
+                                <span class="progress-value">0%</span>
+                            </div>
+                            <span class="text">Правилни отговори</span>
+                        </div>
                     </div>
                 </div>
                 
@@ -165,37 +173,10 @@
 
     <!--calendar-->
     <script src="/frontend/JavaScriptFiles/calendar.js"></script>
-
+    <!--!not only for grades-->
     <script src = "/frontend/JavaScriptFiles/grade-color.js"></script>
 
-    <!--grades-->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    // Select all elements with class 'grade'
-    const grades = document.querySelectorAll(".grade");
-
-    grades.forEach(gradeElement => {
-        let grade = parseInt(gradeElement.textContent.trim());
-        
-        if(grade == 2){
-            gradeElement.style.color = "var(--red)"
-        }
-        else if (grade == 3) 
-        {
-            gradeElement.style.color = "var(--orange)";
-        } 
-        else if (grade === 4) {
-            gradeElement.style.color = "var(--yellow)";
-        } 
-        else if (grade === 5) {
-            gradeElement.style.color = "var(--blue)";
-        } 
-        else if (grade === 6) {
-            gradeElement.style.color = "var(--green)";
-        }
-    });
-});
-    </script>
+    <script src = "/frontend/JavaScriptFiles/circular-progress-2.js"></script>
     <!--JAVASCRIPT-->
 
 

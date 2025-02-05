@@ -152,7 +152,7 @@ body{
     justify-content: center;
 }
 .container{
-    width: 80%;
+    width: 92%;
     height: auto;
     border-radius: 1em;
     padding: 1em;
@@ -259,16 +259,15 @@ body{
     font-size: 3em;
 }
 .box-header-type2{
-    font-size: 2em;
+    font-size: 2.4em;
 }
 
-
+/*responsive*/
 @media (max-width: 480px) {
     .box-header{
         font-size: 1.6em;
     }
 }
-
 @media (min-width: 481px) and (max-width: 767px) {
     .box-header{
         font-size: 2em;
@@ -276,24 +275,35 @@ body{
 }
 
 
-
-
-/**--NEXT-UP-SECTION--*/
+/**--UPCOMING TASKS WINDOW--*/
 .list{
     list-style: none;
     font-family: "Onest", sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     margin-left: 1em;
-    font-size: 1.8em;
+    font-size: 2em;
     margin-top: 40px;
 }
-/**--NEXT-UP-SECTION--*/
+.list li{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+.list li i{
+    margin-left: auto;
+    color: var(--accent);
+    font-size: 0.8em;
+    margin-right: 1em;
+}
+.date{
+    color: var(--accent);
+}
 
+/**--PROGRESS WINDOW--*/
 
-/**--Progress-section--*/
-/*progress bars*/
 .col.col-2 .col-box{
     display: flex;
     flex-direction: column;
@@ -323,10 +333,10 @@ body{
     margin: 25px 0;
 }
 .skill-box .title{
-    display: block;
     font-size: 1.4em;
-    font-weight: 600;
-    color: #333;
+    font-weight: 400;
+    color: var(--text);
+    font-family: "Onest",sans-serif;
 }
 .skill-box .skill-bar{
     height: 8px;
@@ -372,7 +382,7 @@ body{
     top: -28px;
     font-size: 9px;
     font-weight: 500;
-    color: #fff;
+    color: #FFF;
     padding: 2px 6px;
     border-radius: 3px;
     background: #4070f4;
@@ -452,13 +462,13 @@ body{
 }
 
 .current-day {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--green);
+    color: var(--text-white);
 }
 
 .selected-day {
-    background-color: #2196F3;
-    color: white;
+    background-color: var(--accent);
+    color: var(--text-white);
 }
 
 .next-month-day {
@@ -534,4 +544,45 @@ body{
     flex-direction: column;
     gap: 40px;
     font-size: 1.4em;
+}
+
+/**round progress bar*/
+.container-progress{
+    display: flex;
+    width: 420px;
+    padding: 50px 0;
+    border-radius: 8px;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+.circular-progress{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#4070f4 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: var(--main);
+}
+.progress-value{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #4070f4;
+}
+.text{
+    font-size: 2.4em;
+    text-align: center;
+    font-weight: 500;
+    color: var(--text);
 }
