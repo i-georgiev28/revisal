@@ -45,15 +45,37 @@ html{
     font-weight: 600;
 }
 
+/* responsive */
+@media (max-width: 480px) {
+    .heading-main{
+        font-size: 3em;
+    }
+    .user-welcome-message{
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .heading-main{
+        font-size: 4em;
+    }
+    .user-welcome-message{
+        font-size: 3em;
+    }
+}
+
 /* ===== BENTO GRID ===== */
 
 #flex{
+    margin-top: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 95%;
     margin-bottom: 10vh;
     height: auto;
+    margin-left: var(--offset-left);
+    margin-right: var(--offset-left);
 }
 
 .container{
@@ -66,13 +88,13 @@ html{
 }
 
 .row{
-    border: 2px solid red;
     border-radius: 20px;
 }
 
 .row-1{
     flex: 2;
     display: flex;
+    gap: 20px;
     flex-direction: column;
 }
 
@@ -91,7 +113,6 @@ html{
 }
 
 .col{
-    border: 2px solid red;
     flex: 1;
     border-radius: 20px;
     display: flex;
@@ -105,18 +126,12 @@ html{
 }
 
 .col-box{
-    border-radius: 20px;
-    flex: 1;
-    border: 2px solid red;
+  border-radius: 20px;
+  background-color: #181818;
+  flex: 1;
 }
 
-.box{
-    flex: 1;
-    border-radius: 20px;
-    border: 2px solid red;
-    
-}
-
+/* resposnive */
 @media (max-width: 1024px){
     .container{
         flex-direction: column;
@@ -146,4 +161,101 @@ html{
     .col{
         gap: 20px;
     }
+}
+
+/* ===== CALENDAR ===== */
+.calendar-container {
+  background-color: #fff;
+  border-radius: 20px;
+  width: max-content
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--accent);
+  color: var(--text-white);
+  font-family: "Onest", serif;
+  border-radius: 20px 20px 0 0;
+  padding: 10px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+h2 {
+  margin: 0;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: #f4f4f4;
+}
+
+.day-name {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+}
+
+.day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/*colored*/
+.weekend{
+  color: #4070f4;
+}
+.day:hover {
+  background-color: #f0f0f0;
+}
+
+.day.disabled {
+  color: #ccc;
+}
+
+@media (max-width: 500px) {
+  .calendar-container {
+    width: 95%;
+  }
+
+  .calendar-header {
+    padding: 8px;
+  }
+
+  .day-name {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .day {
+    font-size: 14px;
+    padding: 8px;
+  }
 }

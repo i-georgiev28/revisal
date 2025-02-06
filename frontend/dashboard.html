@@ -43,8 +43,33 @@
                 
                 <div class="row row-1">
                     
-                    <div class="col">
-                        <div class="col-box"></div>
+                    <div class="col col-1">
+                        <div class="col-box">
+                            
+                            <div class="calendar-container">
+                                
+                                <script src = "/frontend/JavaScriptFiles/calendar.js"></script>
+                                <div class="calendar-header">
+                                    <button id="prevMonth" onclick="changeMonth(-1)">&#10094;</button>
+                                    <h2 id="monthYear"></h2>
+                                    <button id="nextMonth" onclick="changeMonth(1)">&#10095;</button>
+                                </div>
+                                
+                                <div class="calendar-grid">
+                                    <div class="day-name">Пон</div>
+                                    <div class="day-name">Вто</div>
+                                    <div class="day-name">Ср</div>
+                                    <div class="day-name">Четв</div>
+                                    <div class="day-name">Пет</div>
+                                    <div class="day-name">Съб</div>
+                                    <div class="day-name">Нед</div>
+                                </div>
+                                
+                                <div class="calendar-days" id="calendarDays"></div>
+                            
+                            </div>
+                        
+                        </div>
                     </div>
                     
                     <div class="col col-2">

@@ -1,122 +1,70 @@
-const monthNames = 
-[
-    "Януари",
-    "Февруари",
-    "Март",
-    "Април",
-    "Май",
-    "Юни",
-    "Юли",
-    "Август",
-    "Септември",
-    "Октомври",
-    "Ноември",
-    "Декември"
-];
-const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-let currentDate = new Date();
-let currentMonth = currentDate.getMonth();
-let currentYear = currentDate.getFullYear();
-let selectedDay = null;
+    const monthNames = [
+      "Януари", 
+      "Февруари", 
+      "Март", 
+      "Април", 
+      "Май", 
+      "Юни", 
+      "Юли", 
+      "Август", 
+      "Септрември", 
+      "Октомври", 
+      "Ноември", 
+      "Декември"
+    ];
+    let currentDate = new Date();
+    let currentMonth = currentDate.getMonth();
+    let currentYear = currentDate.getFullYear();
 
-function generateCalendar(month, year) {
-    const firstDayOfMonth = new Date(year, month, 1).getDay();
-    let numDaysInMonth = daysInMonth[month];
+    function generateCalendar(month, year) {
+        // Get the first day of the month and adjust it so Monday is 0 and Sunday is 6
+        const firstDay = (new Date(year, month, 1).getDay() + 6) % 7;
+        const lastDate = new Date(year, month + 1, 0).getDate();
+        const calendarDays = document.getElementById("calendarDays");
+        const monthYear = document.getElementById("monthYear");
 
-    // Handle leap year for February
-    if (month === 1 && year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
-        numDaysInMonth = 29;
-    }
+        calendarDays.innerHTML = "";
+        monthYear.textContent = `${monthNames[month]} ${year}`;
 
-    const calendarDaysElement = document.getElementById("calendar-days");
-    calendarDaysElement.innerHTML = '';
-
-    // Adjust the first day so that Monday is 0, Sunday is 6
-    const adjustedFirstDay = (firstDayOfMonth === 0) ? 6 : firstDayOfMonth - 1;
-
-    let daysDisplayed = 0;
-
-    // Fill the calendar with days, ensuring we show exactly 35 days (5 weeks)
-    for (let i = 0; i < adjustedFirstDay; i++) {
-        const emptyCell = document.createElement("div");
-        emptyCell.classList.add("day");
-        calendarDaysElement.appendChild(emptyCell);
-        daysDisplayed++;
-    }
-
-    for (let day = 1; day <= numDaysInMonth; day++) {
-        const dayElement = document.createElement("div");
-        dayElement.classList.add("day");
-        dayElement.textContent = day;
-
-        //днес
-        if (day === currentDate.getDate() && month === currentMonth && year === currentYear) {
-            dayElement.classList.add("current-day");
+        // Generate empty days for the first row if the month doesn't start on Monday
+        for (let i = 0; i < firstDay; i++) {
+            const emptyDay = document.createElement("div");
+            emptyDay.classList.add("day", "disabled");
+            calendarDays.appendChild(emptyDay);
         }
 
-        //уикенди
-        if (new Date(year, month, day).getDay() === 6 || new Date(year, month, day).getDay() === 0) {
-            dayElement.style.color = "#4070f4";
-            dayElement.style.fontWeight = "500";
+        for (let day = 1; day <= lastDate; day++) {
+          const dayElement = document.createElement("div");
+          dayElement.classList.add("day");
+      
+          // Calculate the day of the week for this specific day (adjusting for Monday as the first day)
+          const dayOfWeek = (firstDay + day - 1) % 7;
+      
+          // Check if the day is Saturday (5) or Sunday (6)
+          if (dayOfWeek === 5 || dayOfWeek === 6) {
+              dayElement.classList.add("weekend"); // Add the weekend class
+          }
+      
+          dayElement.textContent = day;
+          calendarDays.appendChild(dayElement);
+      }
+
+    }
+
+    function changeMonth(increment) {
+        currentMonth += increment;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        } else if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
         }
-
-
-        // Add click event for day selection
-        dayElement.addEventListener("click", () => {
-            if (selectedDay) {
-                selectedDay.classList.remove("selected-day");
-            }
-            dayElement.classList.add("selected-day");
-            selectedDay = dayElement;
-
-            // Toggle the "selected-day-window" visibility
-            const selectedDaySection = document.querySelector(".selected-day-section");
-            if (selectedDaySection) {
-                selectedDaySection.style.display = selectedDaySection.style.display === 'none' ? 'block' : 'none';
-            }
-        });
-
-        calendarDaysElement.appendChild(dayElement);
-        daysDisplayed++;
+        generateCalendar(currentMonth, currentYear);
     }
 
-    // Fill remaining spots (if necessary) to make exactly 35 days
-    while (daysDisplayed < 35) {
-        const emptyCell = document.createElement("div");
-        emptyCell.classList.add("day");
-        calendarDaysElement.appendChild(emptyCell);
-        daysDisplayed++;
-    }
-}
-
-function updateMonthYearDisplay() {
-    const monthYearElement = document.getElementById("month-year");
-    monthYearElement.textContent = `${monthNames[currentMonth]} ${currentYear}`;
-}
-
-document.getElementById("prev-month").addEventListener("click", () => {
-    if (currentMonth === 0) {
-        currentMonth = 11;
-        currentYear--;
-    } else {
-        currentMonth--;
-    }
-    generateCalendar(currentMonth, currentYear);
-    updateMonthYearDisplay();
-});
-
-document.getElementById("next-month").addEventListener("click", () => {
-    if (currentMonth === 11) {
-        currentMonth = 0;
-        currentYear++;
-    } else {
-        currentMonth++;
-    }
-    generateCalendar(currentMonth, currentYear);
-    updateMonthYearDisplay();
-});
-
-// Initial calendar setup
-generateCalendar(currentMonth, currentYear);
-updateMonthYearDisplay();
+    // Call generateCalendar() right after the page loads to display the current month
+    document.addEventListener("DOMContentLoaded", function() {
+        generateCalendar(currentMonth, currentYear);
+    });
