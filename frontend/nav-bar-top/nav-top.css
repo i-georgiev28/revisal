@@ -1,167 +1,242 @@
-/*fonts*/
+/*=============== FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3rem;
 
-/*--generic--*/
+    /*========== Colors ==========*/
+    --hue: 174;
+    --sat: 63%;
+    --first-color: #4070f4;
+    --first-color-alt: #6780ff;
+    --title-color:#181818;
+    --text-color: #181818;
+    --body-color: #FFF;
+    --container-color: #FFF;
+
+    /*========== Font and typography ==========*/
+    font-family: "Inter", serif;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+    --tiny-font-size: .625rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --h1-font-size: 2.25rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+
+/*=============== GENERAL ===============*/
 * {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
     user-select: none;
 }
+
 body {
-    font-family: "Inter", serif;
-    font-weight: 300;
-    background-color: var(--main);
-    --main: #F5F5F5;
-    --main-dark: #181818;
-    --background-alt: #2d2d2d;
-    --background-main-dark: #181818;
-    --text: #181818;
-    --text-white: #F3F4F6;
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
 }
-/*--NAVIGATION--*/
-.nav-bar {
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.section {
+    padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.section__height {
+    height: 100vh;
+}
+
+/*=============== LAYOUT ===============*/
+.container {
+    max-width: 968px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*=============== HEADER ===============*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    background-color: var(--container-color);
+    z-index: var(--z-fixed);
+    transition: .4s;
+}
+
+/*=============== NAV ===============*/
+.nav {
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    list-style: none;
-    position: relative;
-    background-color: var(--background-main-dark);
-    color: var(--text-white);
-    padding: 12px 20px;
-    margin-bottom: 20px;
 }
 
-.logo {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.logo img {
-    width: 40px;
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-
-.menu li {
-    padding-left: 30px;
-}
-
-.menu li a {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--text-white);
-    text-align: center;
-    transition: 0.15s ease-in-out;
-    position: relative;
-    text-transform: uppercase;
-}
-
-.menu li a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: var(--background-main-dark);
-    transition: 0.15s ease-in-out;
-}
-
-.menu li a:hover:after {
-    width: 100%;
-}
-
-/*--profile-box--*/
-#little-container {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.profile a img{
-    aspect-ratio: 1/1;
-    width: 40px;
+.nav__img {
+    width: 32px;
     border-radius: 50%;
 }
 
-/*--Responsive-navigation--*/
-@media(max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        z-index: 100;
-        background-color: var(--background-main-dark);
-        transition: all 0.3s ease-in-out;
-    }
+.nav__logo {
+    color: var(--title-color);
+    font-weight: 600;
+}
 
-    .menu li {
-        margin-top: 40px;
-    }
-
-    .open-menu, .close-menu {
-        display: block;
-    }
-
-    #check:checked ~ .menu {
-        right: 0;
+@media screen and (max-width: 767px) {
+    .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--container-color);
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    width: 100%;
+    height: 4rem;
+    padding: 0 1rem;
+    display: grid;
+    align-content: center;
+    transition: .4s;
     }
 }
 
-/*--Responsive-adjustments--*/
-@media(max-width: 768px) {
-    .nav-bar {
-        padding: 30px;
-    }
+.nav__list, 
+.nav__link {
+    display: flex;
+}
 
-    .menu li a::after {
-        display: none;
-    }
+.nav__link {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    color: var(--title-color);
+    font-weight: 600;
+}
 
-    /* Hide text */
-    .menu li a p {
-        display: none;
-    }
+.nav__list {
+    justify-content: space-around;
+}
 
-    .menu li a i {
-        font-size: 3em;
-        margin-right: 5px;
-        background-color: #303030;
-        padding: 10px;
-        border-radius: 50px;
-    }
+.nav__name {
+    font-family: "Onest", serif;
+    font-size: var(--tiny-font-size);
+    display: none;/*маха надписи*/
+}
 
-    .menu li a {
-        display: flex;
+.nav__icon {
+    font-size: 1.5rem;
+}
+
+/*Active link*/
+.active-link {
+    position: relative;
+    color: var(--first-color);
+    transition: .3s;
+}
+
+.active-link::before{
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    width: 4px;
+    height: 4px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+}
+
+/* Change background header */
+.scroll-header {
+    box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+}
+
+/*=============== MEDIA QUERIES ===============*/
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    .nav__list {
         justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-        padding: 10px;
+        column-gap: 3rem;
     }
+}
 
-    .menu {
-        align-self: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
+@media screen and (min-width: 767px) {
+    body {
         margin: 0;
     }
+    .section {
+        padding: 7rem 0 2rem;
+    }
+    .nav {
+        height: calc(var(--header-height) + 1.5rem); /* 4.5rem */
+}
+.nav__img {
+    display: none;
+}
+.nav__icon {
+    display: none;
+}
+.nav__name {
+    font-size: var(--normal-font-size);
+    display: block;
+}
+.nav__link:hover {
+    color: var(--first-color);
+}
 
-    .menu li {
-        padding: 10px;
+  /* First design, remove if you choose the minimalist design */
+.active-link::before {
+    content: '';
+    position: absolute;
+    bottom: -.75rem;
+    width: 4px;
+    height: 4px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+}
+
+    .active-link::before{
+        bottom: -.75rem;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

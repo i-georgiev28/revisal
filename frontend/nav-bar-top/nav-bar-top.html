@@ -4,31 +4,37 @@
 <script src="/frontend/JavaScriptFiles/dark-light-mode.js"></script>
 <!--nav-->
 <section>
-    <header>
-        
-        <nav>
-            <div class="nav-bar">
-                <div class="logo">
-                    <img src="/frontend/images/logos/revisal_logo_main_white.svg" alt="Logo">
-                </div>
-            
-                <div class="menu">
-                        <li><a href="/frontend/index.html">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
-                </div>
-            
-                <div id="little-container">
-                    <div class="profile">
-                        <a href="/frontend/login.html">
-                            <img src = "https://bitly.cx/pfp_guy_shortened" alt="user_pfp" class="user_pfp">
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo" id = "user_username_topnav">Velin</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/frontend/index.html" class="nav__link active-link">
+                            <i class='bx bx-home-alt nav__icon'></i>
+                            <span class="nav__name">Начало</span>
                         </a>
-                    </div>
-                </div>
+                    </li>
+                    
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bxs-dashboard nav__icon' ></i>
+                            <span class="nav__name">Табло</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bx-card nav__icon' ></i>
+                            <span class="nav__name">Карти</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
+
+            <img src="assets/img/perfil.png" alt="" class="nav__img">
         </nav>
-        
     </header>
 </section>
 <!--nav-->
