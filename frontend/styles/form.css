@@ -14,10 +14,6 @@ body{
     font-weight: 300;
 
     background-color: var(--main);
-
-    padding-left: 250px;
-    margin-left: 0;
-    width: 100%;
     
     --main:#FFF ;
     --alt: #2d2d2d;
@@ -49,21 +45,6 @@ body{
 
     --offset-left: 3%;
     --offset-left-small: 1.5%;
-}
-
-@media (min-width: 769px) {
-    body:not(footer-bar) {
-        padding-left: 250px;
-    }
-}
-@media (max-width: 768px){
-    body{
-        width: 100%;
-        padding-left: 0;
-    }
-    footer-bar{
-        display: none;
-    }
 }
 
 

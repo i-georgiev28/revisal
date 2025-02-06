@@ -6,11 +6,11 @@
     <title>Dashboard</title>
 
     <!--css-->
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
     <link rel="stylesheet" href="styles/dark-mode.css">
 
     <!--nav and footer as elements-->
-    <script src = "nav-bar-top/nav-top.js" defer></script>
+    <script src = "/frontend/nav-bar/nav.js" defer></script>
     <script src= "footer/footer.js" defer></script>
 
     <!--boxicon icons-->
@@ -18,7 +18,60 @@
 
 </head>
 <body>
-    <nav-bar-top></nav-bar-top>
+    <!-- ===== NAVIGATION =====-->
+    <section>
+        <!--nav-bar-->
+    </section>
+
+    <!-- ======= MAIN ======== -->
+    
+    <!--welcomign-section-->
+    <section>
+        <h1 class="heading-main">Табло</h1>
+
+        <span class="user-welcome-message">
+            Здравей, <span id="user_username">[user]</span>!
+        </span>
+    </section>
+
+    <!--dashboard-->
+    <section>
+        
+        <div id="flex">
+            
+            <div class="container">
+                
+                <div class="row row-1">
+                    
+                    <div class="col">
+                        <div class="col-box"></div>
+                    </div>
+                    
+                    <div class="col col-2">
+                        <div class="col-box"></div>
+                    </div>
+                
+                </div>
+                
+                <div class="row row-2">
+                    <div class="col-box"></div>
+                    <div class="col-box"></div>
+                </div>
+                
+                <div class="row row-3">
+                    
+                    <div class="col-box"></div>
+                    
+                    <div class="col-box"></div>
+                
+                </div>
+            
+            </div>
+        
+        </div>
+
+    </section>
+
     
 </body>
 </html>
