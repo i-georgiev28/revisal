@@ -11,9 +11,6 @@ body{
     font-weight: 300;
 
     background-color: var(--main);
-
-    padding-left: 250px;
-    margin-left: 0;
     width: 100%;
     
     --main:#FFF ;
@@ -46,21 +43,6 @@ body{
 
     --offset-left: 3%;
     --offset-left-small: 1.5%;
-}
-
-@media (min-width: 769px) {
-    body:not(footer-bar) {
-        padding-left: 250px;
-    }
-}
-@media (max-width: 768px){
-    body{
-        width: 100%;
-        padding-left: 0;
-    }
-    footer-bar{
-        display: none;
-    }
 }
 
 /*------MAIN------*/
@@ -231,12 +213,12 @@ body{
 @media(max-width: 768px){
     .container{
         padding: 0;
-        margin-left: 1%;
-        width: 100vw;
+        width: 90%;
         height: auto;
         gap: 0.5em;
         margin-left: 20px;
         margin-right: 20px;
+        align-items: center;
     }
     .row{
         gap: 2em;
@@ -254,6 +236,7 @@ body{
     font-family: 'Onest';
     font-weight: 500;
     color: var(--accent);
+    text-align: center;
 }
 .box-header{
     font-size: 3em;
@@ -525,10 +508,8 @@ body{
         font-size: 5em;
     }
 }
-
 /*--current-day--*/
 .selected-day-section{
-    /*hide the selected day, until user has selected it*/
     display: none;
 
 }
@@ -546,7 +527,9 @@ body{
     font-size: 1.4em;
 }
 
+
 /**round progress bar*/
+
 .container-progress{
     display: flex;
     width: 420px;
@@ -585,4 +568,39 @@ body{
     text-align: center;
     font-weight: 500;
     color: var(--text);
+}
+
+
+
+/** solved cards box*/
+
+.solved-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.solved-container .cards-solved{
+  background-color: var(--accent);
+  padding: 50px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  color: var(--text-white);
+  font-size: 6em;
+  font-weight: 600;
+  font-family: "Onest", serif;
+  margin-top: 50px;
+}
+.solved-container .placement{
+  font-size: 2em;
+  font-family: "Onest", serif;
+}
+
+/** cards for today */
+.cards-for-today-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
