@@ -1,138 +1,216 @@
-/* ====== FONTS ====== */
+/**generic*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
-html{
-    user-select: none;
-}
 *{
-    font-family: "Inter", serif;
-    font-weight: 300;
-    
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    user-select: none;
 }
-:root{
-    --accent: #4070f4;
-    --accent-light: #6780ff;
+body{
+    font-family: "Inter", serif;
+    font-weight: 300;
+
+    background-color: var(--main);
+
+    padding-left: 250px;
+    margin-left: 0;
+    width: 100%;
     
+    --main:#FFF ;
+    --alt: #2d2d2d;
     --text: #181818;
     --text-white: #F3F4F6;
-    
-    --main:#FFF;
-    --alt: #2d2d2d;
-    --main-dark: #181818;
+    --main-dark:#181818;
+
+    --accent: #4070f4;
+
+    --blue:#007BFF;
+    --red:#FF4136;
+    --yellow:#FFDC00;
+    --orange:#FF851B;
+    --green:#28A745;
+    --purple: #6F42C1;
+
+    --font-extrasmall: 0.75em;
+    --font-small: 1em;
+    --font-normal: 1.2em;
+    --font--meduim: 1.5em;
+    --font--big: 2em;
+    --font--large: 3em;
+    --font--mega: 6em;
+
+    --offset-extrasmall: 10px;
+    --offset-small: 20px;
+    --offset-normal: 40px;
+    --offset-medium: 50px;
 
     --offset-left: 3%;
+    --offset-left-small: 1.5%;
 }
-/* ===== MAIN ===== */
 
-.heading-main{
-    font-size: 5em;
-    color: var(--accent);
-    margin-left: var(--offset-left);
-    margin-top: var(--offset-left);
-    font-family: "Inter";
-    font-weight: 600;
-    margin-bottom: 50px;
+@media (min-width: 769px) {
+    body:not(footer-bar) {
+        padding-left: 250px;
+    }
 }
-.user-welcome-message{
-    color: var(--text);
+@media (max-width: 768px){
+    body{
+        width: 100%;
+        padding-left: 0;
+    }
+    footer-bar{
+        display: none;
+    }
+}
+
+/*------MAIN------*/
+
+
+
+/*common headings*/
+.headingV1{
     font-size: 4em;
     margin-left: var(--offset-left);
-}
-#user_username{
-    color: var(--accent);
-    font-weight: 600;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-weight: 400;
+    color: var(--text);
+    font-weight: 500;
+    background-color: none;
 }
 
-/* responsive */
-@media (max-width: 480px) {
-    .heading-main{
+#main-header{
+    font-size: 5em;
+    margin-left: var(--offset-left);
+    color: var(--accent);
+    font-weight: 500;
+    margin-top: 3vh;
+}
+
+#welcoming-header{
+    font-size: 4em;
+    margin-left: var(--offset-left);
+    margin-bottom: 5vh;
+}
+
+#user_username_welcoming{
+    color: var(--accent);
+}
+
+.headingV2{
+    font-size: 3em;
+    margin-bottom: 50px;
+    margin-top: 25px;
+    
+    font-weight: 600;
+    font-family: 'Onest';
+}
+
+/*--------*/
+@media (max-width: 480px){
+    #main-header{
         font-size: 3em;
+        margin-left: 5%;
     }
-    .user-welcome-message{
+    #welcoming-header{
+        font-size: 2.6em;
+        margin-left: 5%;
+    }
+    .headingV1{
         font-size: 2em;
     }
 }
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .heading-main{
+@media (min-width: 769px){
+    #main-header{
         font-size: 4em;
     }
-    .user-welcome-message{
+    #welcoming-header{
+        font-size: 3.6em;
+    }
+    .headingV1{
         font-size: 3em;
     }
+
 }
+/*--------------*/
 
-/* ===== BENTO GRID ===== */
 
-#flex{
-    margin-top: 10vh;
+
+
+
+
+
+
+
+
+/**--DASHBOARD-BENTO-GRID--*/
+
+#wrapper{
+    margin-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 95%;
-    margin-bottom: 10vh;
-    height: auto;
-    margin-left: var(--offset-left);
-    margin-right: var(--offset-left);
 }
-
 .container{
-    background-color: var(--main);
-    width: 100%;
+    width: 92%;
     height: auto;
-    min-height: 800px;
+    border-radius: 1em;
+    padding: 1em;
     display: flex;
-    gap: 20px;
+    gap: 1em;
+    margin-bottom: 10vh;
 }
 
+/*--rows--*/
 .row{
-    border-radius: 20px;
+    border-radius: 0;
 }
-
 .row-1{
     flex: 2;
     display: flex;
-    gap: 20px;
     flex-direction: column;
+    gap: 1em;
 }
-
 .row-2{
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1em;
 }
-
 .row-3{
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1em;
 }
 
+/*--colomns--*/
 .col{
-    flex: 1;
-    border-radius: 20px;
+    flex: 3;
     display: flex;
+    gap:1em;
 }
-
-.col .col-2{
+.col.col-2{
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
-
 .col-box{
-  border-radius: 20px;
-  background-color: #181818;
-  flex: 1;
+    flex: 1;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
 }
 
-/* resposnive */
-@media (max-width: 1024px){
+.box{
+    flex: 1;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/*--responsive--*/
+@media(max-width: 1024px){
     .container{
         flex-direction: column;
     }
@@ -150,112 +228,361 @@ html{
         flex-direction: column;
     }
 }
-@media (max-width: 768px){
+@media(max-width: 768px){
     .container{
-        max-width: 95%;
-        gap: 20px;
+        padding: 0;
+        margin-left: 1%;
+        width: 100vw;
+        height: auto;
+        gap: 0.5em;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .row{
-        gap: 20px;
+        gap: 2em;
     }
     .col{
-        gap: 20px;
+        gap: 2em;
+        flex-direction: column;
     }
 }
 
-/* ===== CALENDAR ===== */
-.calendar-container {
-  background-color: #fff;
-  border-radius: 20px;
-  width: max-content
+/**--dashboard-common-*/
+
+.box-header,.box-header-type2{
+    margin-left: var(--offset-left);
+    font-family: 'Onest';
+    font-weight: 500;
+    color: var(--accent);
+}
+.box-header{
+    font-size: 3em;
+}
+.box-header-type2{
+    font-size: 2.4em;
 }
 
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--accent);
-  color: var(--text-white);
-  font-family: "Onest", serif;
-  border-radius: 20px 20px 0 0;
-  padding: 10px;
+/*responsive*/
+@media (max-width: 480px) {
+    .box-header{
+        font-size: 1.6em;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .box-header{
+        font-size: 2em;
+    }
 }
 
-button {
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
+
+/**--UPCOMING TASKS WINDOW--*/
+.list{
+    list-style: none;
+    font-family: "Onest", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 1em;
+    font-size: 2em;
+    margin-top: 40px;
+}
+.list li{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+.list li i{
+    margin-left: auto;
+    color: var(--accent);
+    font-size: 0.8em;
+    margin-right: 1em;
+}
+.date{
+    color: var(--accent);
 }
 
-button:hover {
-  opacity: 0.7;
+/**--PROGRESS WINDOW--*/
+
+.col.col-2 .col-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#progress-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-self: center;
+    margin-left: var(--offset-left);
+    gap: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.skills-container{
+    position: relative;
+    max-width: 500px;
+    width: 10%;
+    background: #fff;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+.skills-container .skill-box{
+    width: 70%;
+    margin: 25px 0;
+}
+.skill-box .title{
+    font-size: 1.4em;
+    font-weight: 400;
+    color: var(--text);
+    font-family: "Onest",sans-serif;
+}
+.skill-box .skill-bar{
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(0,0,0,0.1);
+}
+.skill-bar .skill-per{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 90%;
+    border-radius: 6px;
+    background: #4070f4;
+    animation: progress 1s ease-in-out forwards;
+    opacity: 0;
+}
+.skill-per.css{
+    width: 70%;
+    animation-delay: 0.1s;
+}
+.skill-per.javascript{
+    width: 50%;
+    animation-delay: 0.2s;
+}
+.skill-per.nodejs{
+    width: 30%;
+    animation-delay: 0.3s;
+}
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.skill-per .tooltip{
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #FFF;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #4070f4;
+    z-index: 1;
 }
 
-h2 {
-  margin: 0;
+
+
+/**--CALENDAR--*/
+#month-year{
+    font-size: 3em;
+    font-family: 'Onest';
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--accent);
 }
 
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  background-color: #f4f4f4;
+.calendar{
+    padding: 10px;
+    margin-left: var(--offset-left);
+
+    height: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
-.day-name {
-  text-align: center;
-  font-weight: bold;
-  padding: 10px;
+.header{
+    margin-bottom: 10px;
 }
 
-.calendar-days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 5px;
-  padding: 10px;
+.controls {
+    margin-bottom: 5px;
+    display: flex;
 }
 
-.day {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  aspect-ratio: 1/1;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.controls button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #222;
+    border-radius: 4px;
+    border-style: none;
+    color: #fff;
 }
 
-/*colored*/
-.weekend{
-  color: #4070f4;
+.controls button i{
+    text-align: center;
+    transform: translateY(1px);
+    font-size: 2em;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+    font-size: 1.2em;
+    padding: 5px;
+    text-align: center;
+}
+
+.day, .day-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.day-header{
+    font-weight: 600;
 }
 .day:hover {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
-.day.disabled {
-  color: #ccc;
+.current-day {
+    background-color: var(--green);
+    color: var(--text-white);
 }
 
-@media (max-width: 500px) {
-  .calendar-container {
-    width: 95%;
-  }
+.selected-day {
+    background-color: var(--accent);
+    color: var(--text-white);
+}
 
-  .calendar-header {
-    padding: 8px;
-  }
+.next-month-day {
+    color: #888;
+}
+.prev-month-day {
+    color: #888;
+}
 
-  .day-name {
-    font-size: 14px;
-    padding: 8px;
-  }
+/*resposnsive*/
+@media (max-width: 480px) {
+    .calendar{
+        margin-left: 0;
+        padding: 0%;
+        width: 90%;
+        align-self: center;
+    }
+    #month-year{
+        font-size: 2em;
+    }
+    .days{
+        font-size: 1em;
+        row-gap: 2px;
+        column-gap: 2px;
+        align-items: center;
+    }
+    .day{
+        font-size: 0.8em;
+    }
 
-  .day {
-    font-size: 14px;
-    padding: 8px;
-  }
+    .controls button i{
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .calendar{
+        width: 90%;
+    }
+    #month-year{
+        font-size: 4em;
+    }
+
+    .controls button i{
+        font-size: 1.8em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .calendar{
+        width: 90%;
+    }
+    #month-year{
+        font-size: 5em;
+    }
+}
+
+/*--current-day--*/
+.selected-day-section{
+    /*hide the selected day, until user has selected it*/
+    display: none;
+
+}
+.current-day-section .window, .selected-day-section .window{
+    margin-left: var(--offset-left);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.current-day-section .window ul, .selected-day-section .window ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 1.4em;
+}
+
+/**round progress bar*/
+.container-progress{
+    display: flex;
+    width: 420px;
+    padding: 50px 0;
+    border-radius: 8px;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+.circular-progress{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#4070f4 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: var(--main);
+}
+.progress-value{
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #4070f4;
+}
+.text{
+    font-size: 2.4em;
+    text-align: center;
+    font-weight: 500;
+    color: var(--text);
 }
