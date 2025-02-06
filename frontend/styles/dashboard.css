@@ -237,6 +237,7 @@ body{
     font-weight: 500;
     color: var(--accent);
     text-align: center;
+    align-self: center;
 }
 .box-header{
     font-size: 3em;
@@ -251,7 +252,7 @@ body{
         font-size: 2em;
     }
     .box-header-type2{
-      font-size: 1.8em;
+        font-size: 1.8em;
     }
 }
 @media (min-width: 481px) and (max-width: 767px) {
@@ -259,14 +260,14 @@ body{
         font-size: 2.4em;
     }
     .box-header-type2{
-      font-size: 1.6em;
+        font-size: 1.6em;
     }
 }
 
 
 /**-- ====== UPCOMING TASKS WINDOW ===== --*/
 
-.list{
+.list-events{
     list-style: none;
     font-family: "Onest", sans-serif;
     display: flex;
@@ -276,13 +277,13 @@ body{
     font-size: 2em;
     margin-top: 40px;
 }
-.list li{
+.list-events li{
     display: flex;
     flex-direction: row;
     gap: 5px;
     align-items: center;
 }
-.list li i{
+.list-events li i{
     margin-left: auto;
     color: var(--accent);
     font-size: 0.8em;
@@ -290,6 +291,24 @@ body{
 }
 .date{
     color: var(--accent);
+}
+
+@media (max-width: 480px) {
+    .list-events{
+        font-size: 1.4em;
+    }
+    .list-events i{
+        margin-left: 0.25em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .list-events{
+        font-size: 1.4em;
+    }
+    .list-events i{
+        margin-left: 0.5em;
+    }
 }
 
 
@@ -540,7 +559,8 @@ body{
 }
 
 
-/** ===== round progress bar ======*/
+
+/** ===== ROUND PROGRESS BAR ======*/
 
 .container-progress{
     display: flex;
@@ -550,6 +570,7 @@ body{
     row-gap: 30px;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .circular-progress{
     position: relative;
@@ -578,8 +599,54 @@ body{
 .text{
     font-size: 2.4em;
     text-align: center;
+    align-self: center;
     font-weight: 500;
     color: var(--text);
+}
+
+/*resposnive*/
+@media (max-width: 480px) {
+    .container-progress{
+        width: auto;
+        padding: 40px 0;
+        row-gap: 20px;
+    }
+    .circular-progress{
+        height: 250px;
+        width: 250px;
+    }
+    .circular-progress::before{
+        height: 210px;
+        width: 210px;
+    }
+    .progress-value{
+        font-size: 2em;
+    }
+    .text{
+        font-size: 1.8em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .container-progress{
+        width: auto;
+        padding: 40px 0;
+        row-gap: 20px;
+    }
+    .circular-progress{
+        height: 250px;
+        width: 250px;
+    }
+    .circular-progress::before{
+        height: 210px;
+        width: 210px;
+    }
+    .progress-value{
+        font-size: 3em;
+    }
+    .text{
+        font-size: 2em;
+    }
 }
 
 
@@ -587,72 +654,72 @@ body{
 /** ===== SOLVED CARDS SECTION ===== */
 
 .solved-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
 }
 .solved-container .cards-solved{
-  background-color: var(--accent);
-  padding: 50px;
-  border-radius: 50%;
-  aspect-ratio: 1/1;
-  color: var(--text-white);
-  font-size: 6em;
-  font-weight: 600;
-  font-family: "Onest", serif;
-  margin-top: 50px;
+    background-color: var(--accent);
+    padding: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    color: var(--text-white);
+    font-size: 6em;
+    font-weight: 600;
+    font-family: "Onest", serif;
+    margin-top: 50px;
 }
 .solved-container .placement{
-  font-size: 2em;
-  font-family: "Onest", serif;
+    font-size: 2em;
+    font-family: "Onest", serif;
 }
 
 @media (max-width: 480px) {
-  .solved-container .cards-solved{
-    font-size: 3em;
-  }
+    .solved-container .cards-solved{
+        font-size: 3em;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .solved-container .cards-solved{
-    font-size: 4em;
-  }
+    .solved-container .cards-solved{
+        font-size: 4em;
+    }
 }
 
 /** ====== cards for today ===== */
 
 .cards-for-today-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .stack {
-  width: 500px;
-  height: 500px;
-  position: relative;
+    width: 500px;
+    height: 500px;
+    position: relative;
 }
 
 .card {
-  width: 80%;
-  min-height: 50%;
-  background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  font-family: sans-serif;
-  font-size: 10rem;
-  color: var(--text);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  transition: transform 0.2 ease-in-out;
+    width: 80%;
+    min-height: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-family: sans-serif;
+    font-size: 10rem;
+    color: var(--text);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: transform 0.2 ease-in-out;
 }
 
 .card:nth-last-child(n + 4) {
@@ -686,15 +753,15 @@ body{
 
 /*responsive*/
 @media (max-width: 480px) {
-  .card{
-    width: 50%;
-    min-height: 40%;
-  }
+    .card{
+        width: 50%;
+        min-height: 40%;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .card{
-    width: 70%;
-    min-height: 40%;
-  }
+    .card{
+        width: 70%;
+        min-height: 40%;
+    }
 }
