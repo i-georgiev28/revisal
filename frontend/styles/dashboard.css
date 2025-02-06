@@ -229,7 +229,7 @@ body{
     }
 }
 
-/**--dashboard-common-*/
+/**-- ===== DASHBOARD COMMON ===== -*/
 
 .box-header,.box-header-type2{
     margin-left: var(--offset-left);
@@ -248,17 +248,24 @@ body{
 /*responsive*/
 @media (max-width: 480px) {
     .box-header{
-        font-size: 1.6em;
+        font-size: 2em;
+    }
+    .box-header-type2{
+      font-size: 1.8em;
     }
 }
 @media (min-width: 481px) and (max-width: 767px) {
     .box-header{
-        font-size: 2em;
+        font-size: 2.4em;
+    }
+    .box-header-type2{
+      font-size: 1.6em;
     }
 }
 
 
-/**--UPCOMING TASKS WINDOW--*/
+/**-- ====== UPCOMING TASKS WINDOW ===== --*/
+
 .list{
     list-style: none;
     font-family: "Onest", sans-serif;
@@ -285,7 +292,10 @@ body{
     color: var(--accent);
 }
 
-/**--PROGRESS WINDOW--*/
+
+
+
+/**-- ===== PROGRESS WINDOW ====== --*/
 
 .col.col-2 .col-box{
     display: flex;
@@ -374,7 +384,9 @@ body{
 
 
 
-/**--CALENDAR--*/
+
+/**-- ===== CALENDAR ===== --*/
+
 #month-year{
     font-size: 3em;
     font-family: 'Onest';
@@ -528,7 +540,7 @@ body{
 }
 
 
-/**round progress bar*/
+/** ===== round progress bar ======*/
 
 .container-progress{
     display: flex;
@@ -572,7 +584,7 @@ body{
 
 
 
-/** solved cards box*/
+/** ===== SOLVED CARDS SECTION ===== */
 
 .solved-container{
   display: flex;
@@ -597,7 +609,19 @@ body{
   font-family: "Onest", serif;
 }
 
-/** cards for today */
+@media (max-width: 480px) {
+  .solved-container .cards-solved{
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .solved-container .cards-solved{
+    font-size: 4em;
+  }
+}
+
+/** ====== cards for today ===== */
 
 .cards-for-today-container{
   display: flex;
@@ -657,5 +681,20 @@ body{
   100% {
     transform: translate(-50%, calc(var(--y) - 15px)) scale(0.85);
     z-index: -1;
+  }
+}
+
+/*responsive*/
+@media (max-width: 480px) {
+  .card{
+    width: 50%;
+    min-height: 40%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .card{
+    width: 70%;
+    min-height: 40%;
   }
 }
