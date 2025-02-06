@@ -109,13 +109,16 @@ img {
 }
 
 .nav__img {
-    width: 32px;
+    aspect-ratio: 1/1;
+    width: 40px;
     border-radius: 50%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .nav__logo {
     color: var(--title-color);
-    font-weight: 600;
+    font-weight: 500;
+    font-family: "Onest", serif;
 }
 
 @media screen and (max-width: 767px) {
@@ -154,7 +157,7 @@ img {
 .nav__name {
     font-family: "Onest", serif;
     font-size: var(--tiny-font-size);
-    display: none;/*маха надписи*/
+    display: none;
 }
 
 .nav__icon {
@@ -184,12 +187,22 @@ img {
 }
 
 /*=============== MEDIA QUERIES ===============*/
-
+@media screen and (max-width: 576px) {
+    .nav__icon{
+        font-size: 2rem;
+    }
+    .nav__img{
+        margin-top: 5px;
+    }
+}
 /* For medium devices */
 @media screen and (min-width: 576px) {
     .nav__list {
         justify-content: center;
         column-gap: 3rem;
+    }
+    .nav__icon{
+        font-size: 2rem;
     }
 }
 
@@ -202,31 +215,31 @@ img {
     }
     .nav {
         height: calc(var(--header-height) + 1.5rem); /* 4.5rem */
-}
-.nav__img {
-    display: none;
-}
-.nav__icon {
-    display: none;
-}
-.nav__name {
-    font-size: var(--normal-font-size);
-    display: block;
-}
-.nav__link:hover {
-    color: var(--first-color);
-}
+    }
 
-  /* First design, remove if you choose the minimalist design */
-.active-link::before {
-    content: '';
-    position: absolute;
-    bottom: -.75rem;
-    width: 4px;
-    height: 4px;
-    background-color: var(--first-color);
-    border-radius: 50%;
-}
+    .nav__icon {
+        display: none;
+    }
+
+    .nav__name {
+        font-size: var(--normal-font-size);
+        display: block;
+    }
+
+    .nav__link:hover {
+        color: var(--first-color);
+    }
+
+    /* First design, remove if you choose the minimalist design */
+    .active-link::before {
+        content: '';
+        position: absolute;
+        bottom: -.75rem;
+        width: 4px;
+        height: 4px;
+        background-color: var(--first-color);
+        border-radius: 50%;
+    }
 
     .active-link::before{
         bottom: -.75rem;
