@@ -1,5 +1,11 @@
-/**generic*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
+/** ===== FONTS ==== */
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
+*/
+
+/*DM SANS*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/** ====== GENERAL ===== */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +13,7 @@
     user-select: none;
 }
 body{
-    font-family: "Inter", serif;
+    font-family: "DM Sans", serif;
     font-weight: 300;
 
     background-color: var(--main);
@@ -45,11 +51,17 @@ body{
     --offset-left-small: 1.5%;
 }
 
-/*------MAIN------*/
 
 
 
-/*common headings*/
+
+
+
+
+
+/** ===== HEADINGS ====== */
+
+/*заглавие V1 и V2*/
 .headingV1{
     font-size: 4em;
     margin-left: var(--offset-left);
@@ -61,24 +73,6 @@ body{
     background-color: none;
 }
 
-#main-header{
-    font-size: 5em;
-    margin-left: var(--offset-left);
-    color: var(--accent);
-    font-weight: 500;
-    margin-top: 3vh;
-}
-
-#welcoming-header{
-    font-size: 4em;
-    margin-left: var(--offset-left);
-    margin-bottom: 5vh;
-}
-
-#user_username_welcoming{
-    color: var(--accent);
-}
-
 .headingV2{
     font-size: 3em;
     margin-bottom: 50px;
@@ -88,44 +82,94 @@ body{
     font-family: 'Onest';
 }
 
-/*--------*/
-@media (max-width: 480px){
-    #main-header{
-        font-size: 3em;
-        margin-left: 5%;
+/*главно заглавие*/
+#main-header{
+    font-size: 5em;
+    margin-left: var(--offset-left);
+    color: var(--accent);
+    font-weight: 500;
+    margin-top: 3vh;
+}
+
+/*поздрав*/
+#welcoming-header{
+    font-size: 4em;
+    margin-left: var(--offset-left);
+    margin-bottom: 5vh;
+}
+
+/*user_username*/
+#user_username_welcoming{
+    color: var(--accent);
+}
+
+
+/*responsive*/
+
+@media (max-width: 480px) {
+    .headingV1{
+        font-size: 2.6em;
+        margin-bottom: 80px;
     }
+    
+    .headingV2{
+        font-size: 1.8em;
+    }
+    
+    /*главно заглавие*/
+    #main-header{
+        font-size: 3.4em;
+    }
+    /*поздрав*/
     #welcoming-header{
         font-size: 2.6em;
-        margin-left: 5%;
-    }
-    .headingV1{
-        font-size: 2em;
     }
 }
-@media (min-width: 769px){
-    #main-header{
-        font-size: 4em;
-    }
-    #welcoming-header{
-        font-size: 3.6em;
-    }
+
+@media (min-width: 481px) and (max-width: 767px) {
     .headingV1{
         font-size: 3em;
+        margin-bottom: 80px;
     }
-
+    
+    .headingV2{
+        font-size: 2.2em;
+    }
+    
+    /*главно заглавие*/
+    #main-header{
+        font-size: 3.6em;
+    }
+    /*поздрав*/
+    #welcoming-header{
+        font-size: 3em;
+    }
 }
-/*--------------*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .headingV1{
+        font-size: 3.4em;
+    }
+    
+    .headingV2{
+        font-size: 2.6em;
+    }
+    
+    /*главно заглавие*/
+    #main-header{
+        font-size: 4.5em;
+    }
+    /*поздрав*/
+    #welcoming-header{
+        font-size: 3.8em;
+    }
+}
 
 
 
 
 
-
-
-
-
-
-/**--DASHBOARD-BENTO-GRID--*/
+/** ======  DASHBOARD BENTO GRID ====== */
 
 #wrapper{
     margin-top: 5vh;
@@ -143,7 +187,8 @@ body{
     margin-bottom: 10vh;
 }
 
-/*--rows--*/
+/*--colomns--*/
+/*
 .row{
     border-radius: 0;
 }
@@ -165,25 +210,49 @@ body{
     flex-direction: column;
     gap: 1em;
 }
+*/
 
-/*--colomns--*/
 .col{
+    border-radius: 0;
+}
+.col-1{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.col-2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.col-3{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/*rows*/
+.row{
     flex: 3;
     display: flex;
     gap:1em;
 }
-.col.col-2{
+.row.row-2{
     flex: 1;
     display: flex;
     flex-direction: column;
 }
-.col-box{
+
+/*boxes*/
+.row-box{
     flex: 1;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 20px;
 }
-
 .box{
     flex: 1;
     padding: 20px;
@@ -192,6 +261,13 @@ body{
 }
 
 /*--responsive--*/
+
+/*for laptops etc*/
+@media(max-width: 1600px){
+    .container{
+        width: 95%;
+    }
+}
 @media(max-width: 1024px){
     .container{
         flex-direction: column;
@@ -228,6 +304,19 @@ body{
         flex-direction: column;
     }
 }
+/*
+@media (max-width: 480px) {
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
 
 /**-- ===== DASHBOARD COMMON ===== -*/
 

@@ -9,12 +9,6 @@
     <link rel="stylesheet" href="styles/dashboard.css">
     <link rel="stylesheet" href="styles/dark-mode.css">
 
-    <!--other css
-    Missing file?????
-
-    <link rel="stylesheet" href="styles/card">
-    -->
-
     <!--nav and footer as elements-->
     <script src = "nav-bar/nav.js" defer></script>
     <script src= "footer/footer.js" defer></script>
@@ -30,10 +24,9 @@
 
     <!---MAIN---->
     <section>
-
-        <p id="main-header">
+        <span id="main-header">
             Табло за управление
-        </p>
+        </span>
 
         <br><p id="welcoming-header">
             Здравей, <span id="user_username_welcoming">[user]</span>!
@@ -42,19 +35,18 @@
         <div id="wrapper">
             <div class="container">
                 
-                <div class="row row-1">
+                <div class="col col-1">
                     
                     <div class="col">
-                        <div class="col-box">
-                            
-                            
+                        <div class="row-box">
                             <!--*calendar-->
                             <div class="calendar">
+                                
                                 <div class="header">
                                         <span id="month-year"></span>
                                 </div>
+                                
                                 <div class="controls">
-                                        
                                     <button id="prev-month">
                                         <i class='bx bx-left-arrow-alt' ></i>
                                     </button>
@@ -64,8 +56,9 @@
                                     </button>
                                     
                                 </div>
+                                
                                 <div class="days">
-                                            <!-- Days of the week header -->
+                                    <!--days of the week -->
                                     <div class="day-header">Пон.</div>
                                     <div class="day-header">Вт.</div>
                                     <div class="day-header">Ср.</div>
@@ -74,16 +67,16 @@
                                     <div class="day-header">Съб.</div>
                                     <div class="day-header">Нед.</div>
                                 </div>
+                                
                                 <div id="calendar-days" class="days"></div>
+                            
                             </div>
                             <!--*calendar-->
-                        
-                        
                         </div>
                     </div>
                     
                     <div class="col col-2">
-                        <div class="col-box">
+                        <div class="row-box">
                             <span class="box-header-type2">Прогрес на преговор</span>
     
                         <div id="progress-wrapper">
@@ -91,10 +84,13 @@
                             <div class="skill-box">
 
                                 <span class="title">Биология</span>
+                                
                                 <div class="skill-bar">
+                                    
                                     <span class="skill-per css">
                                         <span class="tooltip">70%</span>
                                     </span>
+                                
                                 </div>
 
                             </div>
@@ -102,10 +98,13 @@
                             <div class="skill-box">
 
                                 <span class="title">Химия</span>
+                                
                                 <div class="skill-bar">
+
                                     <span class="skill-per css">
                                         <span class="tooltip">50%</span>
                                     </span>
+                                
                                 </div>
 
                             </div>
@@ -113,6 +112,7 @@
                             <div class="skill-box">
 
                                 <span class="title">БЕЛ</span>
+                                
                                 <div class="skill-bar">
                                     <span class="skill-per css">
                                         <span class="tooltip">35%</span>
@@ -126,7 +126,7 @@
                 
                 </div>
                 
-                <div class="row row-2">
+                <div class="col col-2">
                     <div class="box">
                         
                         <span class="box-header-type2">Предстоящи събития</span>
@@ -152,7 +152,7 @@
                 
                 </div>
                 
-                <div class="row row-3">
+                <div class="col col-3">
                     
                     <div class="box">
                         <div class="solved-container">
