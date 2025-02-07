@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revisal | Revise-mode </title>
+    <title>Revisal | Revise mode </title>
 
     <!--CSS-->
     <link rel="stylesheet" href="styles/questions.css">
     <link rel="stylesheet" href="styles/dark-mode.css">
+
+    <!--top-bar-logo-->
+    <link rel="icon" href="/frontend/images/logos/revisal_logo_main_white.svg">
 
     <!--top-bar-logo-->
     <link rel="icon" href="/frontend/images/logos/revisal_logo_main_white.svg">
@@ -22,7 +25,6 @@
 <body>
 
     <!--navigation-->
-    <nav-bar></nav-bar>
     <!--navigation-->
 
 
@@ -76,28 +78,6 @@
     <!--JavaScript-->
 
     <!--hint reveal button-->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const toggleButton = document.getElementById("toggle-button"); // Fix: Correct ID
-            const hint = document.getElementById("hint");
-            const icon = document.getElementById("icon");
-        
-            // Initialize the hint to be hidden
-            hint.style.display = "none";
-        
-            toggleButton.addEventListener("click", () => {
-                if (hint.style.display === "none") {
-                    hint.style.display = "block"; // Show the hint
-                    icon.classList.remove("bx-down-arrow-alt");
-                    icon.classList.add("bx-up-arrow-alt");
-                } else {
-                    hint.style.display = "none"; // Hide the hint
-                    icon.classList.remove("bx-up-arrow-alt");
-                    icon.classList.add("bx-down-arrow-alt");
-                }
-            });
-        });
-    </script>
         
     
 </body>
