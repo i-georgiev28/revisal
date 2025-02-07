@@ -330,7 +330,6 @@ body{
     flex-direction: column;
     gap: 20px;
     margin-top: 50px;
-    overflow: hidden;
 }
 .list li{
     display: flex;
@@ -342,28 +341,6 @@ body{
     margin-left: auto;
     color: var(--accent);
     font-weight: 600;
-}
-
-@media (max-width: 480px) {
-    .list{
-        margin-top: 30px;
-        gap: 40px;
-    }
-    .list li{
-        font-size: 1.6em;
-        padding: 0 10px;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .list{
-        margin-top: 40px;
-        gap: 40px;
-    }
-    .list li{
-        font-size: 1.2em;
-        padding: 0 10px;
-    }
 }
 
 
@@ -380,15 +357,9 @@ body{
 #progress-wrapper{
     display: flex;
     flex-direction: column;
-
-    justify-content: center;
-
     width: 80%;
-
     align-self: center;
-
     margin-left: var(--offset-left);
-
     gap: 30px;
     margin-bottom: 50px;
     margin-top: 50px;
@@ -773,5 +744,6 @@ body{
         font-size: 4em;
     }
 }
+
 
 /** ====== CARDS FOR TODAY ===== */
