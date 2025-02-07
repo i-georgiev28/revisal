@@ -1,287 +1,183 @@
-/*GENERAL*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
 }
 body{
-    /*default assigned fonts*/
-    font-family: "Inter", serif;
-    font-weight: 300;
-    font-style: normal;
-
-    /*--colors--*/
-    --background-main:#F3F4F6;
-    --background-alt: #F2F2F2;
-    --background-main-dark:#181818 ;
-
-    --text-main:#222222;
-    --text-white: #F3F4F6;;
-    /*----------*/
-
-    --accent: rgb(47, 216, 56);
-
-    /*fonts*/
-    --font-extrasmall: 0.75em;
-    --font-small: 1em;
-    --font-normal: 1.2em;
-    --font--meduim: 1.5em;
-    --font--big: 2em;
-    --font--large: 3em;
-    --font--mega: 6em;
-
-    color: var(--text-main);
-
-    /* common  margins and paddings*/
-    --offset-extrasmall: 10px;
-    --offset-small: 20px;
-    --offset-normal: 40px;
-    --offset-medium: 50px;
-
-    --offset-left: 3%;
-    /*-----------------*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: url("bg.png"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
 }
-
-/*-----------------------*/
-
-/*----------MAIN---------*/
-#section-flex{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
+::selection{
+  color: #fff;
+  background: #d43f8d;
 }
-
-/*progress-bar*/
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    max-width: 400px;
-    width: 100%;
+.container{
+  width: 330px;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 35px 10px 35px;
 }
-.container .steps {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+.container header{
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
 }
-.steps .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 50px;
-    color: #999;
-    font-size: 22px;
-    font-weight: 500;
-    border-radius: 50%;
-    background: #fff;
-    border: 4px solid #e0e0e0;
-    transition: all 200ms ease;
-    transition-delay: 0s;
+.container .form-outer{
+  width: 100%;
+  overflow: hidden;
 }
-
-/*animation*/
-.steps .circle.active {
-    transition-delay: 100ms;
-    border-color: var(--accent);
-    color: var(--accent);
+.container .form-outer form{
+  display: flex;
+  width: 400%;
 }
-
-.steps .progress-bar {
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: #e0e0e0;
-    z-index: -1;
+.form-outer form .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
 }
-.progress-bar .indicator {
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    background: var(--accent);
-    transition: all 300ms ease;
+.form-outer form .page .title{
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
 }
-.container .buttons {
-    display: flex;
-    gap: 20px;
+.form-outer form .page .field{
+  width: 330px;
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
 }
-.buttons #prev, .buttons #next {
-    padding: 8px 25px;
-    border: none;
-    border-radius: 8px;
-    color: var(--text-white);
-    background-color: var(--accent);
-    font-size: 16px;
-    font-weight: 400;
-    cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-    transition: all 200ms linear;
+form .page .field .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
 }
-
-.buttons button:active {
-    transform: scale(0.97);
+form .page .field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
 }
-.buttons button:disabled {
-    background: var(--accent-light);
-    cursor: not-allowed;
+form .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
 }
-
-
-
-/*------------*/
-
-/*--heading--*/
-#mainheading{
-    color: var(--accent);
-    font-size: 6em;
-    margin: 100px 0px;
-    margin-left: var(--offset-left);
-    text-align: center;
+form .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #d33f8d;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
 }
-/*resposnive*/
-@media (max-width: 768px){
-    #mainheading{
-        font-size: 4em;
-        margin: 80px 0px;
-    }
+form .page .field button:hover{
+  background: #000;
 }
-/*----------*/
-
-
-
-/*--forms--*/
-#linkcolored{
-    color: var(--accent);
+form .page .btns button{
+  margin-top: -20px!important;
 }
-
-#create-pack-form{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 20px;
-    gap: 50px;
-    padding-left: var(--offset-left);
-    align-items: center; /* Centers the entire form */
-    justify-content: center; /* Vertically centers the form */
+form .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
 }
-
-.step{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly; /* Fix typo: was 'justify-items' */
+form .page .btns button.next{
+  margin-left: 3px;
 }
-
-#create-pack-form input[type="text"],
-#create-pack-form input[type="number"] {
-    border: none;
-    background-color: #dfdfdf;
-    height: 70px;
-    border-radius: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 20px;
-    font-size: 1.4em;
-    font-family: "Rubik", sans-serif;
-    color: var(--text);
-    font-weight: 200;
-    width: 30vw;
-    align-self: center; 
+.container .progress-bar{
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
 }
-
-#create-pack-form input[type="submit"] {
-    background-color: var(--accent);
-    color: var(--main);
-    font-size: 2em;
-    padding: 10px 20px;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    align-self: center;
+.container .progress-bar .step{
+  text-align: center;
+  width: 100%;
+  position: relative;
 }
-
-#notice {
-    margin-left: 10px;
-    color: #D22B2B;
-    opacity: .7;
-    display: none;
-    align-self: center;
-    text-align: center;
+.container .progress-bar .step p{
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
 }
-
-#create-pack-form div:nth-of-type(1){
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+.progress-bar .step .bullet{
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
 }
-
-#create-pack-form select{
-    border: none;
-    background-color: #dfdfdf;
-    height: 70px;
-    border-radius: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 20px;
-    font-size: 1.4em;
-    font-family: "Rubik", sans-serif;
-    font-weight: 200;
-    width: 30vw;
-    align-self: center;
+.progress-bar .step .bullet.active{
+  border-color: #d43f8d;
+  background: #d43f8d;
 }
-
-#create-pack-form input[type="submit"] {
-    background-color: var(--accent);
-    color: var(--main);
-    font-size: 2em;
-    padding: 10px 20px;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    align-self: center;
+.progress-bar .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-#notice{
-    margin-left: 10px;
-    color: #D22B2B;
-    opacity: .7;
-    display: none;
-    align-self: center;
+.progress-bar .step .bullet.active span{
+  display: none;
 }
-
-/* Responsive styles */
-@media (max-width: 480px) {
-    #mainheading{
-        font-size: 2.8em;
-    }
-    #create-pack-form input{
-        width: 80%;
-    }
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+  position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -51px;
+  height: 3px;
+  width: 44px;
+  background: #262626;
 }
-
-@media (min-width: 481px) and (max-width: 767px) {
-    #mainheading{
-        font-size: 4em;
-    }
-    #create-pack-form input{
-        width: 70%;
-    }
+.progress-bar .step .bullet.active:after{
+  background: #d43f8d;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
 }
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    #mainheading{
-        font-size: 5em;
-    }
-    #create-pack-form input{
-        width: 70%;
-    }
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
 }
-
-
-/*----------MAIN---------*/
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar .step p.active{
+  color: #d43f8d;
+  transition: 0.2s linear;
+}
+.progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active{
+  display: block;
+  color: #fff;
+}
