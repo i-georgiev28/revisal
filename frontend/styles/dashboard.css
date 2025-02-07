@@ -1,10 +1,5 @@
 /** ===== FONTS ==== */
-/*@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
-*/
-
-/*DM SANS*/
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
 /** ====== GENERAL ===== */
 *{
     box-sizing: border-box;
@@ -57,8 +52,6 @@ body{
 
 
 
-
-
 /** ===== HEADINGS ====== */
 
 /*заглавие V1 и V2*/
@@ -104,7 +97,7 @@ body{
 }
 
 
-/*responsive*/
+/*--responsive--*/
 
 /*телефони*/
 @media (max-width: 480px) {
@@ -272,7 +265,7 @@ body{
 /*лаптопи, големи таблети*/
 @media (min-width: 768px) and (max-width: 1500px) {
     .container{
-        width: 92%;
+        width: 98%;
         flex-direction: column;
     }
     .col-1{
@@ -329,62 +322,31 @@ body{
 }
 
 
-/**-- ====== UPCOMING TASKS WINDOW ===== --*/
+/** ===== REMINDERS ======*/
 
-.list-events{
+.list{
     list-style: none;
-    font-family: "Onest", sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin-left: 1em;
-    font-size: 2em;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    gap: 20px;
+    margin-top: 50px;
 }
-.list-events li{
+.list li{
     display: flex;
-    flex-direction: row;
-    gap: 5px;
-    align-items: center;
+    font-size: 1.8em;
+    font-family: "Onest", serif;
+    padding: 0 10px;
 }
-.list-events li i{
+.list li .value{
     margin-left: auto;
     color: var(--accent);
-    font-size: 0.8em;
-    margin-right: 1em;
-}
-.date{
-    color: var(--accent);
-}
-
-/*responsive*/
-@media (max-width: 480px) {
-    .list-events{
-        margin-left: 0.5em;
-        font-size: 1.4em;
-        gap: 40px;
-    }
-    .list-events li i{
-        font-size: 0.6em;
-        margin-right: 1em;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .list-events{
-        font-size: 1.2em;
-        gap: 40px;
-    }
-    .list-events li i{
-        font-size: 0.7em;
-    }
+    font-weight: 600;
 }
 
 
 
+/**-- ===== PROGRESS BAR WINDOW ====== --*/
 
-/**-- ===== PROGRESS WINDOW ====== --*/
 
 .col.col-2 .col-box{
     display: flex;
@@ -485,6 +447,7 @@ body{
     font-weight: 500;
     margin-bottom: 10px;
     color: var(--accent);
+    margin-left: var(--offset-left);
 }
 
 .calendar{
@@ -604,9 +567,48 @@ body{
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+    #month-year{
+        font-size: 1.8em;
+    }
+    .calendar{
+        padding: 5px;
+    }
+    .header{
+        margin-bottom: 10px;
+    }
+    .controls button {
+        padding: 2.5px 5px;
+        font-size: 0.6em;
+        margin-bottom: 5px;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .controls button i{
+        font-size: 2em;
+    }
+
+    .days{
+        width: 100%;
+        row-gap: 10px;
+        column-gap: 5px;
+        font-size: 0.8em;
+        padding: 2px;
+    }
+
+    .day-header{
+        margin-bottom: 20px;
+    }
+
+    .day, .day-header{
+        width: 30px;
+        height: 30px;
+    }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+/*laptops*/
+@media (min-width: 768px) and (max-width: 1100px) {
+
 }
 
 /*--current-day--*/
@@ -632,90 +634,75 @@ body{
 
 /** ===== ROUND PROGRESS BAR ======*/
 
-.container-progress{
+
+.progress-container {
     display: flex;
-    width: 420px;
-    padding: 50px 0;
-    border-radius: 8px;
-    row-gap: 30px;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-top: 20px;
 }
-.circular-progress{
+
+.circular-progress {
+    --size: 250px;
+    --half-size: calc(var(--size) / 2);
+    --stroke-width: 20px;
+    --radius: calc((var(--size) - var(--stroke-width)) / 2);
+    --circumference: calc(var(--radius) * pi * 2);
+    --dash: calc((var(--progress) * var(--circumference)) / 100);
+    animation: progress-animation 1s linear 0s 1 forwards;
     position: relative;
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    background: conic-gradient(#4070f4 3.6deg, #ededed 0deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 50px;
 }
-.circular-progress::before{
-    content: "";
-    position: absolute;
-    height: 210px;
-    width: 210px;
-    border-radius: 50%;
-    background-color: var(--main);
+
+.circular-progress circle {
+    cx: var(--half-size);
+    cy: var(--half-size);
+    r: var(--radius);
+    stroke-width: var(--stroke-width);
+    fill: none;
+    stroke-linecap: round;
 }
-.progress-value{
-    position: relative;
-    font-size: 40px;
+
+.circular-progress circle.bg {
+    stroke: #ddd;
+}
+
+.circular-progress circle.fg {
+    transform: rotate(-90deg);
+    transform-origin: var(--half-size) var(--half-size);
+    stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+    transition: stroke-dasharray 0.3s linear 0s;
+    stroke: var(--accent);
+}
+
+/* % проценти текст*/
+.circular-progress text {
+    font-size: 3em; 
     font-weight: 600;
-    color: #4070f4;
+    fill: var(--accent);
 }
-.text{
-    font-size: 2.4em;
+
+/*текст отдолу*/
+#right-text{
+    font-size: 2em;
+    color: var(--accent);
+    font-weight: 600;
     text-align: center;
-    align-self: center;
-    font-weight: 500;
-    color: var(--text);
 }
 
-/*resposnive*/
-@media (max-width: 480px) {
-    .container-progress{
-        width: auto;
-        padding: 40px 0;
-        row-gap: 20px;
-    }
-    .circular-progress{
-        height: 250px;
-        width: 250px;
-    }
-    .circular-progress::before{
-        height: 210px;
-        width: 210px;
-    }
-    .progress-value{
-        font-size: 2em;
-    }
-    .text{
-        font-size: 1.8em;
-    }
+@property --progress {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .container-progress{
-        width: auto;
-        padding: 40px 0;
-        row-gap: 20px;
+@keyframes progress-animation {
+    from {
+        --progress: 2;
     }
-    .circular-progress{
-        height: 250px;
-        width: 250px;
-    }
-    .circular-progress::before{
-        height: 210px;
-        width: 210px;
-    }
-    .progress-value{
-        font-size: 3em;
-    }
-    .text{
-        font-size: 2em;
+    to {
+        --progress: 64;
     }
 }
 
@@ -737,7 +724,7 @@ body{
     aspect-ratio: 1/1;
     color: var(--text-white);
     font-size: 6em;
-    font-weight: 600;
+    font-weight: 500;
     font-family: "Onest", serif;
     margin-top: 50px;
 }
@@ -758,7 +745,7 @@ body{
     }
 }
 
-/** ====== cards for today ===== */
+/** ====== CARDS FOR TODAY ===== */
 
 .cards-for-today-container{
     display: flex;
@@ -793,9 +780,9 @@ body{
 }
 
 .card:nth-last-child(n + 4) {
-  --y: calc(-50% + -60px);
-  transform: translate(-50%, var(--y)) scale(0.9);
-  box-shadow: 0 0 1px 1px #00000003;
+    --y: calc(-50% + -60px);
+    transform: translate(-50%, var(--y)) scale(0.9);
+    box-shadow: 0 0 1px 1px #00000003;
 }
 .card:nth-last-child(3) {
   --y: calc(-50% + -30px);
