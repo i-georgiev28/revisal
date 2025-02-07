@@ -258,7 +258,6 @@ body{
         padding: 0.5em;
         flex-direction: column;
     }
-
     .col-1{
         flex-direction: column;
     }
@@ -293,15 +292,18 @@ body{
 
 .box-header,.box-header-type2{
     margin-left: var(--offset-left);
-    font-family: 'Onest';
     font-weight: 500;
+    
     color: var(--accent);
+
     text-align: center;
     align-self: center;
 }
+/*по-голям*/
 .box-header{
     font-size: 3em;
 }
+/*по-малък*/
 .box-header-type2{
     font-size: 2.4em;
 }
@@ -311,14 +313,16 @@ body{
     .box-header{
         font-size: 2em;
     }
+
     .box-header-type2{
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 }
 @media (min-width: 481px) and (max-width: 767px) {
     .box-header{
         font-size: 2.4em;
     }
+
     .box-header-type2{
         font-size: 1.6em;
     }
@@ -336,6 +340,7 @@ body{
     margin-left: 1em;
     font-size: 2em;
     margin-top: 40px;
+    margin-bottom: 20px;
 }
 .list-events li{
     display: flex;
@@ -356,19 +361,23 @@ body{
 /*responsive*/
 @media (max-width: 480px) {
     .list-events{
+        margin-left: 0.5em;
         font-size: 1.4em;
+        gap: 40px;
     }
-    .list-events i{
-        margin-left: 0.25em;
+    .list-events li i{
+        font-size: 0.6em;
+        margin-right: 1em;
     }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
     .list-events{
-        font-size: 1.4em;
+        font-size: 1.2em;
+        gap: 40px;
     }
-    .list-events i{
-        margin-left: 0.5em;
+    .list-events li i{
+        font-size: 0.7em;
     }
 }
 
@@ -381,6 +390,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 #progress-wrapper{
     display: flex;
@@ -440,6 +450,7 @@ body{
     width: 30%;
     animation-delay: 0.3s;
 }
+
 @keyframes progress {
     0%{
         width: 0;
@@ -449,6 +460,7 @@ body{
         opacity: 1;
     }
 }
+
 .skill-per .tooltip{
     position: absolute;
     right: -14px;
@@ -478,10 +490,7 @@ body{
 .calendar{
     padding: 10px;
     margin-left: var(--offset-left);
-
     height: auto;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
 }
 
 .header{
@@ -555,51 +564,51 @@ body{
 
 /*resposnsive*/
 @media (max-width: 480px) {
-    .calendar{
-        margin-left: 0;
-        padding: 0%;
-        width: 90%;
-        align-self: center;
-    }
     #month-year{
+        font-size: 1.6em;
+    }
+    .calendar{
+        padding: 5px;
+    }
+    .header{
+        margin-bottom: 20px;
+    }
+    .controls {
+        margin-bottom: 5px;
+        display: flex;
+    }
+    .controls button {
+        padding: 2.5px 5px;
+        font-size: 0.6em;
+        margin-bottom: 5px;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .controls button i{
         font-size: 2em;
     }
     .days{
-        font-size: 1em;
-        row-gap: 2px;
-        column-gap: 2px;
-        align-items: center;
-    }
-    .day{
+        width: 100%;
+        row-gap: 10px;
+        column-gap: 5px;
         font-size: 0.8em;
+        padding: 2px;
     }
-
-    .controls button i{
-        font-size: 1.4em;
+    .day-header{
+        margin-bottom: 20px;
+    }
+    .day, .day-header{
+        width: 20px;
+        height: 20px;
     }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-    .calendar{
-        width: 90%;
-    }
-    #month-year{
-        font-size: 4em;
-    }
-
-    .controls button i{
-        font-size: 1.8em;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .calendar{
-        width: 90%;
-    }
-    #month-year{
-        font-size: 5em;
-    }
 }
+
 /*--current-day--*/
 .selected-day-section{
     display: none;
