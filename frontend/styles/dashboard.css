@@ -106,6 +106,7 @@ body{
 
 /*responsive*/
 
+/*телефони*/
 @media (max-width: 480px) {
     .headingV1{
         font-size: 2.6em;
@@ -118,7 +119,7 @@ body{
     
     /*главно заглавие*/
     #main-header{
-        font-size: 3.4em;
+        font-size: 2.4em;
     }
     /*поздрав*/
     #welcoming-header{
@@ -126,6 +127,7 @@ body{
     }
 }
 
+/*таблети*/
 @media (min-width: 481px) and (max-width: 767px) {
     .headingV1{
         font-size: 3em;
@@ -146,6 +148,7 @@ body{
     }
 }
 
+/*таблети и лаптопи*/
 @media (min-width: 768px) and (max-width: 1024px) {
     .headingV1{
         font-size: 3.4em;
@@ -180,37 +183,14 @@ body{
 .container{
     width: 92%;
     height: auto;
-    border-radius: 1em;
+    border-radius: 20px;
     padding: 1em;
     display: flex;
     gap: 1em;
     margin-bottom: 10vh;
 }
 
-/*--colomns--*/
-/*
-.row{
-    border-radius: 0;
-}
-.row-1{
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-.row-2{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-.row-3{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-*/
+/*kолонки*/
 
 .col{
     border-radius: 0;
@@ -234,7 +214,7 @@ body{
     gap: 1em;
 }
 
-/*rows*/
+/*редове*/
 .row{
     flex: 3;
     display: flex;
@@ -246,7 +226,7 @@ body{
     flex-direction: column;
 }
 
-/*boxes*/
+/*кутийки*/
 .row-box{
     flex: 1;
     border-radius: 20px;
@@ -262,63 +242,54 @@ body{
 
 /*--responsive--*/
 
-/*for laptops etc*/
-@media(max-width: 1600px){
-    .container{
-        width: 95%;
-    }
-}
-@media(max-width: 1024px){
-    .container{
-        flex-direction: column;
-    }
-    .row-1{
-        flex-direction: column;
-    }
-    .row-2{
-        flex-direction: column;
-    }
-    .row-3{
-        flex-direction: column;
-    }
-    .col{
-        flex: 2;
-        flex-direction: column;
-    }
-}
-@media(max-width: 768px){
-    .container{
-        padding: 0;
-        width: 90%;
-        height: auto;
-        gap: 0.5em;
-        margin-left: 20px;
-        margin-right: 20px;
-        align-items: center;
-    }
-    .row{
-        gap: 2em;
-    }
-    .col{
-        gap: 2em;
-        flex-direction: column;
-    }
-}
-/*
+/*телефони*/
 @media (max-width: 480px) {
-
+    .container{
+        width: 96%;
+        padding: 0.5em;
+        flex-direction: column; /*едно под друго*/
+    }
 }
 
+/*таблети и малки у-ва*/
 @media (min-width: 481px) and (max-width: 767px) {
+    .container{
+        width: 96%;
+        padding: 0.5em;
+        flex-direction: column;
+    }
+
+    .col-1{
+        flex-direction: column;
+    }
+    .col-2{
+        flex-direction: row;
+    }
+    .col-3{
+        flex-direction: row;
+    }
+}
+
+/*лаптопи, големи таблети*/
+@media (min-width: 768px) and (max-width: 1500px) {
+    .container{
+        width: 92%;
+        flex-direction: column;
+    }
+    .col-1{
+        flex-direction: row;
+    }
+    .col-2{
+        flex-direction: row;
+    }
+    .col-3{
+        flex-direction: row;
+    }
 
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
 
-}
-
-
-/**-- ===== DASHBOARD COMMON ===== -*/
+/**-- ===== DASHBOARD COMMON ===== */
 
 .box-header,.box-header-type2{
     margin-left: var(--offset-left);
@@ -382,6 +353,7 @@ body{
     color: var(--accent);
 }
 
+/*responsive*/
 @media (max-width: 480px) {
     .list-events{
         font-size: 1.4em;

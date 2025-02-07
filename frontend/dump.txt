@@ -940,3 +940,59 @@ body{
     font-weight: 600;
     font-size: 1.6em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1600px){
+    .container{
+        width: 95%;
+    }
+}
+@media(max-width: 1024px){
+    .container{
+        flex-direction: column;
+    }
+    .row-1{
+        flex-direction: column;
+    }
+    .row-2{
+        flex-direction: column;
+    }
+    .row-3{
+        flex-direction: column;
+    }
+    .col{
+        flex: 2;
+        flex-direction: column;
+    }
+}
+@media(max-width: 768px){
+    .container{
+        padding: 0;
+        width: 90%;
+        height: auto;
+        gap: 0.5em;
+        margin-left: 20px;
+        margin-right: 20px;
+        align-items: center;
+    }
+    .row{
+        gap: 2em;
+    }
+    .col{
+        gap: 2em;
+        flex-direction: column;
+    }
+}
