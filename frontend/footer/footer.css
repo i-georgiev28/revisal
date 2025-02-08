@@ -59,25 +59,49 @@ footer{
     background-color: #181818;;
     min-height: 50px;
 }
-.container{
+.footer-container{
     display: flex;
     align-items: center;
     flex-direction: row;
     padding: 5vh 10vh;
 }
 
+@media (max-width: 480px) {
+    .footer-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .footer-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+*/
+
+
 /**graphic seciton*/
-#graphic{
+
+#footer-graphic a{
     display: flex;
     flex-direction: row;
     gap: 50px;
     align-items: center;
 }
-#graphic div:nth-of-type(2){
+#footer-graphic div:nth-of-type(2){
     display: flex;
     flex-direction: column;
 }
-#graphic img{
+#footer-graphic img{
     aspect-ratio: 1/1;
     width: 100px;
 }
@@ -87,10 +111,52 @@ footer{
     font-family: "Onest", serif;
     font-size: 3em;
 }
-#subheading{
+#footer-subheading{
     font-weight: 300;
     font-family: "Onest", serif;
     color: var(--text-white);
+}
+
+@media (max-width: 480px) {
+    #footer-graphic{
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #footer-graphic div:nth-of-type(2){
+        display: flex;
+        flex-direction: column;
+    }
+    #footer-graphic img{
+        width: 100px;
+    }
+    #revisal-text{
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #footer-graphic{
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #footer-graphic div:nth-of-type(2){
+        display: flex;
+        flex-direction: column;
+    }
+    #footer-graphic img{
+        width: 100px;
+    }
+    #revisal-text{
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
 }
 
 /**buttons section*/
@@ -108,9 +174,6 @@ footer{
     font-size: 1.6em;
     font-family: "Onest", serif;
 }
-
-
-
 
 /**copyright label*/
 footer hr {
@@ -132,4 +195,66 @@ footer hr {
 #copyright span a{
     color: var(--text-white);
     text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    #info{
+
+        flex-direction: column;
+
+        gap: 80px;
+
+        align-items: center;
+        justify-content: space-evenly;
+        margin-left: auto;
+    }
+
+    .footer-button a{
+        font-size: 1.4em;
+    }
+    
+    #copyright{
+        font-size: 0.7em;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        gap: 15px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1100px) {
+    #info{
+
+        flex-direction: column;
+
+        gap: 80px;
+
+        align-items: center;
+        justify-content: space-evenly;
+        margin-left: auto;
+    }
+
+    .footer-button a{
+        font-size: 1.6em;
+    }
+    
+    #copyright{
+        font-size: 0.7em;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        gap: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
 }
