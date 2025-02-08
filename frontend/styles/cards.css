@@ -28,17 +28,7 @@ body{
     --green:#28A745;
     --purple: #6F42C1;
 
-
-    /*--fonts--*/
-    --font-extrasmall: 0.75em;
-    --font-small: 1em;
-    --font-normal: 1.2em;
-    --font--meduim: 1.5em;
-    --font--big: 2em;
-    --font--large: 3em;
-    --font--mega: 6em;
-
-    /*-------*/
+    --offset-left: 3%;
 
     width: 100%;
 }
@@ -54,9 +44,10 @@ body{
 
 #welcoming p {
     font-size: 4em;
-    margin-left: 3.5%;
+    margin-left: var(--offset-left);
     margin-top: 50px;
     margin-bottom: 50px;
+    font-weight: 500;
     color: var(--text)
 }
 
@@ -66,7 +57,8 @@ body{
 
 /*create cards section*/
 #create_pack{
-    margin-left: 3.5%
+    margin-left: var(--offset-left);
+    margin-bottom: 100px;
 }
 
 #create_pack i {
@@ -125,7 +117,36 @@ body{
 
 
 /*---BOXES AND CONATINERS---*/
+.headingV1{
+    margin-left: calc(var(--offset-left) + 10px);
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-family: "Onest", serif;
+    color: var(--text);
+    font-size: 3em;
+}
 
+@media (max-width: 480px) {
+    .headingV1{
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .headingV1{
+        font-size: 2.6em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .headingV1{
+        font-size: 2.8em;
+    }
+}
+
+.subject-row{
+    margin-bottom: 100px;
+}
 .container{
     width: 100%;
     display: flex;
@@ -137,7 +158,7 @@ body{
 .card-div{
     width: 22%;
     margin: 20px;
-    height: auto;
+    height: 25vh;
     background-color: var(--main);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 20px;
@@ -198,7 +219,7 @@ body{
 #card-div-create {
     width: 22%;
     margin: 20px;
-    height: auto;
+    height: 25vh;
     background-color: #6780ff;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 20px;
@@ -228,6 +249,7 @@ body{
 @media (max-width: 480px) {
     .card-div, #card-div-create{
         width: 90%;
+        height: 30vh;
     }
     .container {
         flex-direction: column;
@@ -249,6 +271,7 @@ body{
 @media (min-width: 481px) and (max-width: 700px) {
     .card-div, #card-div-create{
         width:90%;
+        height: 30vh;
     }
     .container {
         flex-direction: column;
@@ -272,18 +295,19 @@ body{
         flex-direction: row;
     }
     .card-div, #card-div-create{
-        width: 40%;
+        width: 45%;
+        height: 30vh;
     }
     .container {
         justify-content: space-between;
     }
 
     #welcoming p {
-        margin-left: 3%;
+        margin-left: var(--offset-left);
     }
 
     #create_pack{
-        margin-left: 3%
+        margin-left: var(--offset-left);
     }
 }
 
