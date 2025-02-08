@@ -48,10 +48,12 @@ body{
 
 /** ===== MAIN ===== */
 
-/**general*/
 a{
     text-decoration: none;
 }
+
+/**general*/
+
 footer{
     width: 100%;
     height: auto;
@@ -69,16 +71,14 @@ footer{
 @media (max-width: 480px) {
     .footer-container{
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding: 2.5vh 5vh;
     }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
     .footer-container{
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding: 2.5vh 5vh;
     }
 }
 
@@ -155,8 +155,16 @@ footer{
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-
+@media (min-width: 768px) and (max-width: 1200px) {
+    #footer-graphic a{
+        gap: 40px;
+    }
+    #footer-graphic img{
+        width: 80px;
+    }
+    #revisal-text{
+        font-size: 2.6em;
+    }
 }
 
 /**buttons section*/
@@ -174,6 +182,40 @@ footer{
     font-size: 1.6em;
     font-family: "Onest", serif;
 }
+
+@media (max-width: 480px) {
+    #info{
+        gap: 50px;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #info{
+        gap: 60px;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-left: 0;
+    }
+
+    .footer-button a{
+        font-size: 2.2em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #info{
+        gap: 70px;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-left: 0;
+    }
+
+    .footer-button a{
+        font-size: 1.6em;
+    }
+}
+
 
 /**copyright label*/
 footer hr {
@@ -209,12 +251,10 @@ footer hr {
         margin-left: auto;
     }
 
-    .footer-button a{
-        font-size: 1.4em;
-    }
+    
     
     #copyright{
-        font-size: 0.7em;
+        font-size: 1.6em;
 
         flex-direction: column;
         justify-content: center;
@@ -238,12 +278,10 @@ footer hr {
         margin-left: auto;
     }
 
-    .footer-button a{
-        font-size: 1.6em;
-    }
+    
     
     #copyright{
-        font-size: 0.7em;
+        font-size: 1.8em;
 
         flex-direction: column;
         justify-content: center;
@@ -255,6 +293,57 @@ footer hr {
     }
 }
 
+/*
 @media (min-width: 768px) and (max-width: 1024px) {
 
+}
+*/
+
+@media (max-width: 768px) {
+    /* Graphic section */
+    #footer-graphic {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    #footer-graphic a {
+        gap: 40px;
+        align-items: center;
+    }
+
+    #footer-graphic img {
+        width: 80px;
+    }
+
+    #revisal-text {
+        font-size: 2.6em;
+        text-align: center;
+    }
+
+    /* Info section */
+    #info {
+        display: flex;
+        flex-direction: column;
+        gap: 40px; /* Keep the gap between buttons */
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .footer-button a {
+        font-size: 2.2em;
+    }
+
+    /* Copyright section */
+    #copyright {
+        font-size: 1.6em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
 }
