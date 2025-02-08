@@ -143,6 +143,9 @@ footer{
         justify-content: center;
         align-items: center;
     }
+    #footer-graphic a{
+        gap: 20px;
+    }
     #footer-graphic div:nth-of-type(2){
         display: flex;
         flex-direction: column;
@@ -157,7 +160,7 @@ footer{
 
 @media (min-width: 768px) and (max-width: 1200px) {
     #footer-graphic a{
-        gap: 40px;
+        gap: 20px;
     }
     #footer-graphic img{
         width: 80px;
@@ -199,7 +202,7 @@ footer{
     }
 
     .footer-button a{
-        font-size: 2.2em;
+        font-size: 1.4em;
     }
 }
 
@@ -212,7 +215,7 @@ footer{
     }
 
     .footer-button a{
-        font-size: 1.6em;
+        font-size: 1.4em;
     }
 }
 
@@ -300,7 +303,6 @@ footer hr {
 */
 
 @media (max-width: 768px) {
-    /* Graphic section */
     #footer-graphic {
         display: flex;
         flex-direction: column;
@@ -319,27 +321,21 @@ footer hr {
     }
 
     #revisal-text {
-        font-size: 2.6em;
+        font-size: 2.2em;
         text-align: center;
     }
 
-    /* Info section */
     #info {
         display: flex;
         flex-direction: column;
-        gap: 40px; /* Keep the gap between buttons */
+        gap: 40px;
         align-items: center;
         justify-content: center;
         margin: 0;
     }
 
-    .footer-button a {
-        font-size: 2.2em;
-    }
-
-    /* Copyright section */
     #copyright {
-        font-size: 1.6em;
+        font-size: 1.2em;
         flex-direction: column;
         justify-content: center;
         align-items: center;
