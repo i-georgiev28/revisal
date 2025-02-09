@@ -12,7 +12,7 @@
     <!--top-bar-logo-->
     <link rel="icon" href="/frontend/images/logos/revisal_logo_main_white.svg">
 
-    
+
     <!--nav and footer as elements-->
     <script src = "nav-bar/nav.js" defer></script>
     <script src= "footer/footer.js" defer></script>
@@ -42,42 +42,41 @@
                 <div class="col col-1">
                     
                     <div class="col">
-                        <div class="row-box row-box-calendar" >
+                        <div class="row-box row-box-calendar">
                             <!--calendar-->
-
+        
                             <div class="header">
                                 <span id="month-year"></span>
                             </div>
-
+        
                             <div class="calendar">
-
-                            <center>
-                            
-                            <div class="controls">
-                                <button id="prev-month">
-                                    <i class='bx bx-left-arrow-alt' ></i>
-                                </button>
+                                <center>
+                                
+                                <div class="controls">
+                                    <button id="prev-month">
+                                        <i class='bx bx-left-arrow-alt'></i>
+                                    </button>
+                                        
+                                    <button id="next-month">
+                                        <i class='bx bx-right-arrow-alt'></i>
+                                    </button>
                                     
-                                <button id="next-month">
-                                    <i class='bx bx-right-arrow-alt'></i>
-                                </button>
+                                </div>
                                 
-                            </div>
-                            
-                            <div class="days">
-                                <!--days of the week -->
-                                <div class="day-header">Пон.</div>
-                                <div class="day-header">Вт.</div>
-                                <div class="day-header">Ср.</div>
-                                <div class="day-header">Четв.</div>
-                                <div class="day-header">Пет.</div>
-                                <div class="day-header">Съб.</div>
-                                <div class="day-header">Нед.</div>
-                            </div>
-                            
-                            <div id="calendar-days" class="days"></div>
-                            </center>
+                                <div class="days">
+                                    <!--days of the week -->
+                                    <div class="day-header">Пон.</div>
+                                    <div class="day-header">Вт.</div>
+                                    <div class="day-header">Ср.</div>
+                                    <div class="day-header">Четв.</div>
+                                    <div class="day-header">Пет.</div>
+                                    <div class="day-header">Съб.</div>
+                                    <div class="day-header">Нед.</div>
+                                </div>
                                 
+                                <div id="calendar-days" class="days"></div>
+                                </center>
+                                        
                             </div>
                             <!--calendar-->
                         </div>
@@ -85,120 +84,49 @@
                     
                     <div class="col col-2">
                         <div class="row-box row-box-skillbar">
-                            <span class="box-header-type2">Прогрес на преговор</span>
-    
-                        <div id="progress-wrapper">
-
-                            <div class="skill-box">
-
-                                <span class="title">Биология</span>
-                                
-                                <div class="skill-bar">
-                                    
-                                    <span class="skill-per css">
-                                        <span class="tooltip">70%</span>
-                                    </span>
-                                
-                                </div>
-
-                            </div>
-    
-                            <div class="skill-box">
-
-                                <span class="title">Химия</span>
-                                
-                                <div class="skill-bar">
-
-                                    <span class="skill-per css">
-                                        <span class="tooltip">50%</span>
-                                    </span>
-                                
-                                </div>
-
-                            </div>
-    
-                            <div class="skill-box">
-
-                                <span class="title">БЕЛ</span>
-                                
-                                <div class="skill-bar">
-                                    <span class="skill-per css">
-                                        <span class="tooltip">35%</span>
-                                    </span>
-                                </div>
-
-                            </div>
-                        </div>
+                            <span class="box-header-type2">###</span>
                         </div>
                     </div>
                 
                 </div>
                 
                 <div class="col col-2">
-                    <div class="box">
+                    
+                    <div class="row">
                         
-                        <span class="box-header-type2">
-                            Предстоящи събития
-                        </span>
-
-                        <ul class="list">
-                            <li>
-                                <span class="property">Тест</span>
-                                <span class="value">20.02.25</span>
-                            </li>
-                            <li>
-                                <span class="property">Тест</span>
-                                <span class="value">20.02.25</span>
-                            </li>
-                            <li>
-                                <span class="property">Тест</span>
-                                <span class="value">20.02.25</span>
-                            </li>
-                            <li>
-                                <span class="property">Тест</span>
-                                <span class="value">20.02.25</span>
-                            </li>
-                        </ul>
-                    
-                    </div>
-                    
-                    <div class="box">
-                        <div class="progress-container">
-                            <svg width="250" height="250" viewBox="0 0 250 250" class="circular-progress">
-                                <circle class="bg"></circle>
-                                <circle class="fg"></circle>
-                                <text class="progress-text" x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">64%</text>
-                            </svg>
-                            <span id="right-text">Правилни отговори</span>
+                        <div class="box">
+                            <div id="schedule-wrapper">
+                                <span class="headingV2">Учебна програма</span>
+                                
+                                <ol id="daily-schedule-list">
+                                    <li id="hour-1">Hell</li>
+                                    <li id="hour-2">Hell</li>
+                                    <li id="hour-3">Hell</li>
+                                    <li id="hour-4">Hell</li>
+                                    <li id="hour-5">Hell</li>
+                                    <li id="hour-6">Hell</li>
+                                    <li id="hour-7">Hell</li>
+                                    <li id="hour-8">Hell</li>
+                                </ol>
+                            
+                            </div>
                         </div>
-                    </div>
-                    
-                
-                </div>
-                
-                <div class="col col-3">
-                    
-                    <div class="box">
-                        <div class="solved-container">
-                            
-                            <span class="box-header-type2">Решени пакети</span>
-
-                            <span class="cards-solved">
-                                24
-                            </span>
-                            
-                            <span class="placement">weekly top 10 🔥</span>
                         
+                        <div class="box">
+                            <!-- Box 2 of the split -->
                         </div>
-                    </div>
                     
+                    </div>
+
                     <div class="box">
-                    
+                        <!-- Box content -->
                     </div>
+                    
                 </div>
-            
+        
             </div>
         </div>
+        
     </section>
     <!--MAIN END-->
 

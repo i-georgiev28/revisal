@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     user-select: none;
-    
+
 }
 body{
     font-family: "DM Sans", serif;
@@ -68,12 +68,16 @@ body{
 }
 
 .headingV2{
-    font-size: 3em;
-    margin-bottom: 50px;
+    font-size: 2em;
+    margin-bottom: 25px;
     margin-top: 25px;
+
+    justify-self: center;
+    text-align: center;
     
     font-weight: 600;
     font-family: 'Onest';
+    color: var(--accent);
 }
 
 /*главно заглавие*/
@@ -190,18 +194,12 @@ body{
     border-radius: 0;
 }
 .col-1{
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-.col-2{
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
-.col-3{
+.col-2{
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -256,10 +254,7 @@ body{
         flex-direction: column;
     }
     .col-2{
-        flex-direction: row;
-    }
-    .col-3{
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 
@@ -377,101 +372,11 @@ body{
 /**-- ===== PROGRESS BAR WINDOW ====== --*/
 
 
-.col.col-2 .col-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-#progress-wrapper{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    align-self: center;
-    margin-left: var(--offset-left);
-    gap: 30px;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-.skills-container{
-    position: relative;
-    max-width: 500px;
-    width: 10%;
-    background: #fff;
-    margin: 0 15px;
-    padding: 10px 20px;
-    border-radius: 7px;
-}
-.skills-container .skill-box{
-    width: 70%;
-    margin: 25px 0;
-}
-.skill-box .title{
-    font-size: 1.4em;
-    font-weight: 400;
-    color: var(--text);
-    font-family: "Onest",sans-serif;
-}
-.skill-box .skill-bar{
-    height: 8px;
-    width: 100%;
-    border-radius: 6px;
-    margin-top: 6px;
-    background: rgba(0,0,0,0.1);
-}
-.skill-bar .skill-per{
-    position: relative;
-    display: block;
-    height: 100%;
-    width: 90%;
-    border-radius: 6px;
-    background: #4070f4;
-    animation: progress 1s ease-in-out forwards;
-    opacity: 0;
-}
-.skill-per.css{
-    width: 70%;
-    animation-delay: 0.1s;
-}
-.skill-per.javascript{
-    width: 50%;
-    animation-delay: 0.2s;
-}
-.skill-per.nodejs{
-    width: 30%;
-    animation-delay: 0.3s;
-}
-
-@keyframes progress {
-    0%{
-        width: 0;
-        opacity: 1;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-.skill-per .tooltip{
-    position: absolute;
-    right: -14px;
-    top: -28px;
-    font-size: 9px;
-    font-weight: 500;
-    color: #FFF;
-    padding: 2px 6px;
-    border-radius: 3px;
-    background: #4070f4;
-    z-index: 1;
-}
-
-
-
 
 /**-- ===== CALENDAR ===== --*/
 
 #month-year{
-    font-size: 3em;
+    font-size: 2em;
     font-family: 'Onest';
     font-weight: 500;
     margin-bottom: 10px;
@@ -637,139 +542,47 @@ body{
 
 /*laptops*/
 
-/*--current-day--*/
-.selected-day-section{
-    display: none;
+/*--current-day--*
 
-}
-.current-day-section .window, .selected-day-section .window{
-    margin-left: var(--offset-left);
-    display: flex;
-    flex-wrap: wrap;
-}
+/** ====== CARDS FOR TODAY ===== */
 
-.current-day-section .window ul, .selected-day-section .window ul{
-    list-style: none;
+
+/** ====== DAILY SCHEDULE ===== */
+
+#schedule-wrapper{
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    font-size: 1.4em;
+    justify-items: center;
 }
 
-
-
-/** ===== ROUND PROGRESS BAR ======*/
-
-
-.progress-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
+#daily-schedule-list{
+    justify-self: center;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, auto);
+    font-size: 1.6em;
+    row-gap: 30px;
+    margin-bottom: 20px;
 }
 
-.circular-progress {
-    --size: 250px;
-    --half-size: calc(var(--size) / 2);
-    --stroke-width: 20px;
-    --radius: calc((var(--size) - var(--stroke-width)) / 2);
-    --circumference: calc(var(--radius) * pi * 2);
-    --dash: calc((var(--progress) * var(--circumference)) / 100);
-    animation: progress-animation 1s linear 0s 1 forwards;
-    position: relative;
-    margin-bottom: 50px;
-}
-
-.circular-progress circle {
-    cx: var(--half-size);
-    cy: var(--half-size);
-    r: var(--radius);
-    stroke-width: var(--stroke-width);
-    fill: none;
-    stroke-linecap: round;
-}
-
-.circular-progress circle.bg {
-    stroke: #ddd;
-}
-
-.circular-progress circle.fg {
-    transform: rotate(-90deg);
-    transform-origin: var(--half-size) var(--half-size);
-    stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
-    transition: stroke-dasharray 0.3s linear 0s;
-    stroke: var(--accent);
-}
-
-/* % проценти текст*/
-.circular-progress text {
-    font-size: 3em; 
-    font-weight: 600;
-    fill: var(--accent);
-}
-
-/*текст отдолу*/
-#right-text{
-    font-size: 2em;
+#daily-schedule-list li::marker{
     color: var(--accent);
-    font-weight: 600;
-    text-align: center;
-}
-
-@property --progress {
-    syntax: "<number>";
-    inherits: false;
-    initial-value: 0;
-}
-
-@keyframes progress-animation {
-    from {
-        --progress: 2;
-    }
-    to {
-        --progress: 64;
-    }
-}
-
-
-
-/** ===== SOLVED CARDS SECTION ===== */
-
-.solved-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-}
-.solved-container .cards-solved{
-    background-color: var(--accent);
-    padding: 50px;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    color: var(--text-white);
-    font-size: 6em;
-    font-weight: 500;
-    font-family: "Onest", serif;
-    margin-top: 50px;
-}
-.solved-container .placement{
-    font-size: 2em;
-    font-family: "Onest", serif;
 }
 
 @media (max-width: 480px) {
-    .solved-container .cards-solved{
-        font-size: 3em;
+    #daily-schedule-list{
+        font-size: 1em;
     }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-    .solved-container .cards-solved{
-        font-size: 4em;
+    #daily-schedule-list{
+        font-size: 1.2em;
     }
 }
 
-
-/** ====== CARDS FOR TODAY ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #daily-schedule-list{
+        font-size: 1.2em;
+    }
+}
