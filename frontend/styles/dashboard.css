@@ -467,8 +467,9 @@ body{
 .day-header{
     font-weight: 600;
 }
+
 .day:hover {
-    background-color: #f0f0f0;
+    filter: brightness(130%);
 }
 
 .current-day {
@@ -480,11 +481,7 @@ body{
     background-color: var(--accent);
     color: var(--text-white);
 }
-
-.next-month-day {
-    color: #888;
-}
-.prev-month-day {
+.next-month-day, .prev-month-day {
     color: #888;
 }
 
@@ -671,6 +668,22 @@ body{
     border-radius: 50%;
     font-size: 1.2em;
     margin-left: auto;
+}
+
+/** ===== REMINDERS SECTION ===== */
+
+.reminders-list{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    column-gap: max-content;
+    row-gap: 40px;
+    gap: 20px;
+    font-size: 1.4em;
+    font-family: "Onest", serif;
+    justify-content: center;
+    margin: 20px 40px;
+    overflow: hidden;
 }
 
 /** ====== DAILY SCHEDULE SECTION ===== */
