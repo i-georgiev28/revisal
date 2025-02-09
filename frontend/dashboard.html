@@ -50,8 +50,8 @@
                             </div>
         
                             <div class="calendar">
-                                <center>
                                 
+                                <center>
                                 <div class="controls">
                                     <button id="prev-month">
                                         <i class='bx bx-left-arrow-alt'></i>
@@ -84,7 +84,7 @@
                     
                     <div class="col col-2">
                         <div class="row-box row-box-skillbar">
-                            <span class="box-header-type2">###</span>
+                            <span class="headingV2">Напомняния <i class='bx bxs-bell-ring'></i></span>
                         </div>
                     </div>
                 
@@ -153,7 +153,7 @@
 
                                 </ul>
 
-                                <!--colors script-->
+                                <!--colors-script-->
                                 <script>
                                     window.addEventListener('DOMContentLoaded', () => {
                                         const checkboxes = document.querySelectorAll('.checkbox');
@@ -168,6 +168,7 @@
                                                     span.style.color = "#6780ff";
                                                 } else {
                                                     span.style.textDecoration = 'none';
+                                                    span.style.color = "var(--text-black)";
                                                 }
                                             });
                                         });
@@ -181,14 +182,15 @@
 
                     <!--cards for today section-->
                     <div class="box">
-                        <div id="cards-for-today">
-                            <span class="headingV2">За преговор днес</span>
-                            <div class="stack">
-                                <div class="card">1</div>
-                                <div class="card">2</div>
-                                <div class="card">3</div>
-                                <div class="card">4</div>
-                                <div class="card">5</div>
+                            <div id="cards-for-today">
+                                <span class="headingV2">За преговор днес <i class='bx bx-card' ></i></span>
+                                <div class="stack">
+                                    <div class="card">Subject #1</div>
+                                    <div class="card">Subject #2</div>
+                                    <div class="card">Subject #3</div>
+                                    <div class="card">Subject #4</div>
+                                    <div class="card">Subject #5</div>
+                                </div>
                             </div>
                         </div>
                 
@@ -215,7 +217,7 @@
     <script src="/frontend/JavaScriptFiles/calendar.js"></script>
     <script src = "/frontend/JavaScriptFiles/progress-bar-normal.js"></script>
     <script src = "/frontend/JavaScriptFiles/circular-progress-2.js"></script>
-    <script src = "/frontend/JavaScriptFiles/card-stack.js"></script>
+    <script src = "/frontend/JavaScriptFiles/stack.js"></script>
     <!--JAVASCRIPT-->
 
 

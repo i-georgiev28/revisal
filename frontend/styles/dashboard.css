@@ -76,7 +76,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     
     font-weight: 600;
     font-family: 'Onest';
@@ -405,7 +405,7 @@ body{
 /**-- ===== CALENDAR ===== --*/
 
 #month-year{
-    font-size: 2em;
+    font-size: 2.4em;
     font-family: 'Onest';
     font-weight: 500;
     margin-bottom: 10px;
@@ -447,7 +447,7 @@ body{
 .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    row-gap: 20px;
+    row-gap: 30px;
     column-gap: 40px;
     font-size: 1.2em;
     padding: 5px;
@@ -569,11 +569,74 @@ body{
     }
 }
 
-/*laptops*/
-
-/*--current-day--*
-
 /** ====== CARDS FOR TODAY ===== */
+.stack {
+    width: 600px;
+    min-height: 300px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 80%;
+    height: 80%;
+    background-color: var(--main);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+    font-size: 3em;
+    font-family: "Onest", serif;
+    font-weight: 600;
+
+    color: var(--text);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: transform 200ms;
+}
+
+.card:nth-last-child(n + 4) {
+    --y: calc(-50% + -40px);
+    transform: translate(-50%, var(--y)) scale(0.9);
+    box-shadow: 0 0 1px 1px #00000003;
+}
+
+.card:nth-last-child(3) {
+    --y: calc(-50% + -20px);
+    transform: translate(-50%, var(--y)) scale(0.95);
+}
+
+.card:nth-last-child(2) {
+    --y: calc(-50%);
+    transform: translate(-50%, var(--y)) scale(1);
+}
+
+.card:nth-last-child(1) {
+    --y: calc(-50% + 20px);
+    transform: translate(-50%, var(--y)) scale(1.05);
+}
+
+/* Animation for card swapping */
+@keyframes swap {
+    50% {
+        transform: translate(-50%, calc(var(--y) - 250px)) scale(0.85) rotate(-5deg);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: translate(-50%, calc(var(--y) - 15px)) scale(0.85);
+        z-index: -1;
+    }
+}
 
 
 /** ====== HOMEWORK FOR TODAY ====== */
@@ -610,7 +673,7 @@ body{
     margin-left: auto;
 }
 
-/** ====== DAILY SCHEDULE ===== */
+/** ====== DAILY SCHEDULE SECTION ===== */
 
 #schedule-wrapper{
     display: flex;
