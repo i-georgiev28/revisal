@@ -113,13 +113,47 @@
                         </div>
                         
                         <div class="box">
-                            <!-- Box 2 of the split -->
+                            <div id="homework-wrapper">
+                                
+                                <span class="headingV2">Домашни</span>
+                                
+                                <ol class="homework-by-hours">
+                                    <li id="hour-1-homework"><span>учебна тетрадка</span></li>
+                                    <li id="hour-2-homework"><span>empty</span></li>
+                                    <li id="hour-3-homework"><span>лист</span></li>
+                                    <li id="hour-4-homework"><span>empty</span></li>
+                                    <li id="hour-5-homework"><span>empty</span></li>
+                                    <li id="hour-6-homework"><span>думи</span></li>
+                                    <li id="hour-7-homework"><span>empty</span></li>
+                                    <li id="hour-8-homework"><span>empty</span></li>
+                                </ol>
+
+                                <script>
+                                    window.addEventListener('DOMContentLoaded', () => {
+                                        const listItems = document.querySelectorAll('.homework-by-hours li');
+                                        
+                                        listItems.forEach(item => {
+                                            const span = item.querySelector('span');
+                                            
+                                            if (span && span.textContent.toLowerCase() === 'empty') {
+                                                span.style.opacity = '0.5';
+                                                span.style.color = "#6780ff";
+                                            }
+                                        });
+                                    });
+                                </script>
+                            
+                            </div>
                         </div>
                     
                     </div>
 
+                    <!--cards for today section-->
                     <div class="box">
-                        <!-- Box content -->
+                        <div id="cards-for-today">
+                            
+                        </div>
+                
                     </div>
                     
                 </div>

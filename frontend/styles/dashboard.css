@@ -241,6 +241,10 @@ body{
         padding: 0.5em;
         flex-direction: column; /*едно под друго*/
     }
+    .col-2 .row{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /*таблети и малки у-ва*/
@@ -268,12 +272,8 @@ body{
         flex-direction: row;
     }
     .col-2{
-        flex-direction: row;
+        flex-direction: column;
     }
-    .col-3{
-        flex-direction: row;
-    }
-
 }
 
 
@@ -547,6 +547,27 @@ body{
 /** ====== CARDS FOR TODAY ===== */
 
 
+/** ====== HOMEWORK FOR TODAY ====== */
+#homework-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.homework-by-hours{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 40px;
+
+    gap: 10px;
+}
+.homework-by-hours li{
+    font-size: 1.6em;
+}
+.homework-by-hours li::marker{
+    color: var(--accent);
+}
+
+
 /** ====== DAILY SCHEDULE ===== */
 
 #schedule-wrapper{
@@ -555,14 +576,52 @@ body{
     justify-items: center;
 }
 
-#daily-schedule-list{
+#daily-schedule-list {
     justify-self: center;
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 30px;
     font-size: 1.6em;
-    row-gap: 30px;
+    margin-top: 40px;
     margin-bottom: 20px;
+}
+
+
+#daily-schedule-list li:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#daily-schedule-list li:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#daily-schedule-list li:nth-child(4) {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+#daily-schedule-list li:nth-child(5) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#daily-schedule-list li:nth-child(6) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#daily-schedule-list li:nth-child(7) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#daily-schedule-list li:nth-child(8) {
+    grid-column: 2;
+    grid-row: 4;
 }
 
 #daily-schedule-list li::marker{
@@ -571,18 +630,18 @@ body{
 
 @media (max-width: 480px) {
     #daily-schedule-list{
-        font-size: 1em;
+        font-size: 1.4em;
     }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
     #daily-schedule-list{
-        font-size: 1.2em;
+        font-size: 1.6em;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     #daily-schedule-list{
-        font-size: 1.2em;
+        font-size: 1.7em;
     }
 }
