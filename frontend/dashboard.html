@@ -96,7 +96,9 @@
                         
                         <div class="box">
                             <div id="schedule-wrapper">
-                                <span class="headingV2">Учебна програма</span>
+                                <span class="headingV2">
+                                    Учебна програма <i class='bx bx-notepad' ></i>
+                                </span>
                                 
                                 <ol id="daily-schedule-list">
                                     <li id="hour-1">Hell</li>
@@ -107,6 +109,9 @@
                                     <li id="hour-6">Hell</li>
                                     <li id="hour-7">Hell</li>
                                     <li id="hour-8">Hell</li>
+                                    <li id="hour-9">Hell</li>
+                                    <li id="hour-10">Hell</li>
+
                                 </ol>
                             
                             </div>
@@ -115,33 +120,59 @@
                         <div class="box">
                             <div id="homework-wrapper">
                                 
-                                <span class="headingV2">Домашни</span>
+                                <span class="headingV2">
+                                    Домашни <i class='bx bx-book-content'></i>
+                                </span>
                                 
-                                <ol class="homework-by-hours">
-                                    <li id="hour-1-homework"><span>учебна тетрадка</span></li>
-                                    <li id="hour-2-homework"><span>empty</span></li>
-                                    <li id="hour-3-homework"><span>лист</span></li>
-                                    <li id="hour-4-homework"><span>empty</span></li>
-                                    <li id="hour-5-homework"><span>empty</span></li>
-                                    <li id="hour-6-homework"><span>думи</span></li>
-                                    <li id="hour-7-homework"><span>empty</span></li>
-                                    <li id="hour-8-homework"><span>empty</span></li>
-                                </ol>
+                                <ul class="homework-by-hours">
+                                    
+                                    <li id="homework-1">
+                                        <span>учебна тетрадка</span>
+                                        <input type="checkbox" class="checkbox">
+                                    </li>
+                                    
+                                    <li id="homework-2">
+                                        <span>стр. 42-44</span>
+                                        <input type="checkbox" class="checkbox">
+                                    </li>
+                                    
+                                    <li id="homework-3">
+                                        <span>лист</span>
+                                        <input type="checkbox" class="checkbox">
+                                    </li>
+                                    
+                                    <li id="homework-4">
+                                        <span>задача 1,2,3</span>
+                                        <input type="checkbox" class="checkbox">
+                                    </li>
 
+                                    <li id="homework-4">
+                                        <span>задача 7/20</span>
+                                        <input type="checkbox" class="checkbox">
+                                    </li>
+
+                                </ul>
+
+                                <!--colors script-->
                                 <script>
                                     window.addEventListener('DOMContentLoaded', () => {
-                                        const listItems = document.querySelectorAll('.homework-by-hours li');
-                                        
-                                        listItems.forEach(item => {
-                                            const span = item.querySelector('span');
-                                            
-                                            if (span && span.textContent.toLowerCase() === 'empty') {
-                                                span.style.opacity = '0.5';
-                                                span.style.color = "#6780ff";
-                                            }
+                                        const checkboxes = document.querySelectorAll('.checkbox');
+                                
+                                        checkboxes.forEach(checkbox => {
+                                            checkbox.addEventListener('change', () => {
+
+                                                const span = checkbox.closest('li').querySelector('span');
+                                
+                                                if (checkbox.checked) {
+                                                    span.style.textDecoration = 'line-through';
+                                                    span.style.color = "#6780ff";
+                                                } else {
+                                                    span.style.textDecoration = 'none';
+                                                }
+                                            });
                                         });
                                     });
-                                </script>
+                                </script>                                
                             
                             </div>
                         </div>
@@ -151,7 +182,14 @@
                     <!--cards for today section-->
                     <div class="box">
                         <div id="cards-for-today">
-                            
+                            <span class="headingV2">За преговор днес</span>
+                            <div class="stack">
+                                <div class="card">1</div>
+                                <div class="card">2</div>
+                                <div class="card">3</div>
+                                <div class="card">4</div>
+                                <div class="card">5</div>
+                            </div>
                         </div>
                 
                     </div>

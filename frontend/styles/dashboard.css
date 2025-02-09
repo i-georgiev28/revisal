@@ -67,18 +67,26 @@ body{
     background-color: none;
 }
 
-.headingV2{
-    font-size: 2em;
+.headingV2 {
+    font-size: 2.4em;
     margin-bottom: 25px;
     margin-top: 25px;
-
-    justify-self: center;
-    text-align: center;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     
     font-weight: 600;
     font-family: 'Onest';
     color: var(--accent);
 }
+
+.headingV2 i {
+    align-self: center;
+}
+
 
 /*главно заглавие*/
 #main-header{
@@ -150,10 +158,6 @@ body{
 @media (min-width: 768px) and (max-width: 1024px) {
     .headingV1{
         font-size: 3.4em;
-    }
-    
-    .headingV2{
-        font-size: 2.6em;
     }
     
     /*главно заглавие*/
@@ -241,11 +245,36 @@ body{
         padding: 0.5em;
         flex-direction: column; /*едно под друго*/
     }
+}
+
+/*!=========ВАЖНО===========*/
+
+/*специално за колона 2*/
+@media (max-width: 740px){
     .col-2 .row{
         display: flex;
         flex-direction: column;
     }
 }
+
+@media (min-width: 480px) and (max-width: 740px){
+    .homework-by-hours{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+    }
+}
+
+/* For laptops and etc. */
+@media(min-width: 740px) and (max-width: 1500px) {
+    #daily-schedule-list {
+        font-size: 2.4em;
+    }
+    .homework-by-hours li{
+        font-size: 2.4em;
+    }
+}
+
+/*!=========ВАЖНО===========*/
 
 /*таблети и малки у-ва*/
 @media (min-width: 481px) and (max-width: 767px) {
@@ -558,15 +587,28 @@ body{
     justify-content: center;
     margin: 20px 40px;
 
-    gap: 10px;
+    list-style: none;
+
+    gap: 30px;
+    font-family: "Onest", serif;
 }
+
 .homework-by-hours li{
     font-size: 1.6em;
+    display: flex;
+    align-items: center;
 }
 .homework-by-hours li::marker{
     color: var(--accent);
 }
 
+.checkbox{
+    aspect-ratio: 1/1;
+    width: 20px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    margin-left: auto;
+}
 
 /** ====== DAILY SCHEDULE ===== */
 
@@ -584,8 +626,9 @@ body{
     grid-template-rows: repeat(4, auto);
     gap: 30px;
     font-size: 1.6em;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 20px;
+    font-family: "Onest", serif;
 }
 
 
