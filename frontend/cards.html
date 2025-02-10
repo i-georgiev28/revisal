@@ -190,21 +190,22 @@
 
     <!--auto-window-resizing-->
     <script>
-    window.addEventListener('load', setCardCreateHeight);
-    window.addEventListener('resize', setCardCreateHeight);
-
-    function setCardCreateHeight() {
-        const cardDiv = document.querySelector('.card-div');
-        const cardCreateDiv = document.getElementById('card-div-create');
+    window.addEventListener('load', function() {
+    const cards = document.querySelectorAll('.card');
     
-        if (cardDiv && cardCreateDiv) {
-        // Get the height of the first .card-div (you can change this if you want to calculate based on multiple)
-        const cardDivHeight = cardDiv.offsetHeight;
-
-        // Set the height of the #card-div-create element
-        cardCreateDiv.style.height = `${cardDivHeight}px`;
+    let maxHeight = 0;
+    cards.forEach(card => {
+        const cardHeight = card.offsetHeight;
+        if (cardHeight > maxHeight) {
+            maxHeight = cardHeight;
         }
-    }
+    });
+    
+    cards.forEach(card => {
+        card.style.height = `${maxHeight}px`;
+    });
+    });
+
 
     </script>
 
