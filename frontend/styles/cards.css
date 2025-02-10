@@ -6,6 +6,7 @@
     padding: 0;
 
     user-select: none;
+    -webkit-user-select: none;
 }
 body{
 
@@ -54,6 +55,7 @@ body{
     font-size: 5em;
     margin-left: var(--offset-left);
     font-weight: 300;
+    margin-top: 40px;
 }
 
 .create-pack{
@@ -71,6 +73,7 @@ body{
     font-weight: 300;
 }
 
+/*phones**/
 @media (max-width: 480px) {
     .heading-main{
         font-size: 3em;
@@ -80,6 +83,7 @@ body{
     }
 }
 
+/*tablets*/
 @media (min-width: 481px) and (max-width: 767px) {
     .heading-main{
         font-size: 4em;
@@ -89,6 +93,7 @@ body{
     }
 }
 
+/*pc and laptop and etc*/
 @media (min-width: 768px) and (max-width: 1024px) {
     .heading-main{
         font-size: 5em;
@@ -118,7 +123,7 @@ body{
     justify-content: space-evenly;
     align-items: center;
 }
-.card{
+.card {
     aspect-ratio: 5/3;
     width: 30%;
     border-radius: 20px;
@@ -130,71 +135,139 @@ body{
     gap: 15px;
     font-family: "Onest", serif;
 }
-/*pack name*/
-.card-heading{
+
+.card-heading {
     font-size: 3em;
     color: var(--accent);
     font-weight: 500;
     font-family: "Inter", serif;
 }
 
-.card-questions-info-field{
-    display:flex;
+/*info-field*/
+.card-questions-info-field {
+    display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 70px;
     
-    width: 80%;
-    height: max-content;
+    width: 100%;
+    height: 50%;
     
     padding: 20px;
     
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 
-    justify-self: center;
     align-self: center;
+    justify-self: center;
 }
 
+/*the elemnts thmeselves*/
 .all-questions-number, .right-questions-number, .wrong-questions-number{
     font-size: 2em;
     font-weight: 300;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
 }
+
+/*select text*/
 .all-questions-number span:nth-of-type(1){
     font-size: 0.8em;
     color: var(--accent);
     text-align: center;
 }
 
+/*vertical line*/
 .vertical{
     border: 1px solid var(--alt);
     opacity: 0.1;
-    height: 100%;
+    height: 80%;
 }
 
 /*colors*/
 .correct{
     color: var(--green);
 }
-
 .wrong{
     color: var(--red);
 }
-/*
-/*number of questions
-.card-questions-number{
+
+
+/*buttons*/
+.buttons{
+    display: flex;
+    width: auto;
+}
+/*edit button*/
+.edit{
+    background-color: var(--accent);
+    border-radius: 20px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    
+    font-family: "Onest",serif;
     font-size: 1.4em;
-    font-weight: 300;
+    font-weight: 500;
+
+    min-height: 44px;
+    min-width: 10px;
+
+    overflow: hidden;
+    padding: 9px 20px;
+
+    position: relative;
+    text-align: center;
+    touch-action: manipulation;
+    width: fit-content;
 }
-/*the number itself
-.card-questions-value{
-    color: var(--accent);
+
+.edit:hover,.edit:focus, 
+.quiz:hover,.quiz:focus{
+    opacity: .75;
 }
-*/
+/*start quiz button*/
+.quiz{
+    margin-left: auto;
+
+    background-color: var(--main);
+    border: 3px solid var(--accent);
+    border-radius: 20px;
+    box-sizing: border-box;
+    color: var(--text);
+    display: flex;
+    
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    align-items: center;
+    
+    font-family: "Onest",serif;
+    font-size: 1.4em;
+    font-weight: 500;
+
+    min-height: 44px;
+    min-width: 10px;
+
+    overflow: hidden;
+    padding: 9px 15px;
+
+    position: relative;
+    text-align: center;
+    touch-action: manipulation;
+    width: fit-content;
+}
 
 /*phone*/
 @media (max-width: 480px) {
