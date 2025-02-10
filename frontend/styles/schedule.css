@@ -1,0 +1,110 @@
+/*GENERAL*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+body{
+
+    /*white mode*/
+    --main:#F5F5F5;
+    --alt:#757575;
+    --text: #333333;
+
+    --text-white: #F3F4F6;
+    
+    /*main color pallette*/
+    --main: #FFF ;
+    --alt: #181818 ;
+    
+
+    --accent:#4070f4;
+
+    /*common colors*/
+    --blue:#4070f4;
+    --red:#FF4136;
+    --yellow:#FFDC00;
+    --orange:#FF851B;
+    --green:#28A745;
+    --purple: #6F42C1;
+
+    --offset-left: 3%;
+
+    width: 100%;
+}
+
+/*----------MAIN---------*/
+
+/**top section*/
+
+.welcoming-section{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 20px;
+    margin-bottom: 5vh;
+}
+
+.heading-main{
+    color: var(--accent);
+    font-family: "Inter", serif;
+    font-size: 5em;
+    margin-left: var(--offset-left);
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+/*phones**/
+@media (max-width: 480px) {
+    .heading-main{
+        font-size: 3em;
+    }
+}
+
+/*tablets*/
+@media (min-width: 481px) and (max-width: 767px) {
+    .heading-main{
+        font-size: 4em;
+    }
+}
+
+/*pc and laptop and etc*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .heading-main{
+        font-size: 5em;
+    }
+}
+
+/**schedule*/
+.schedule-wrapper{
+    display: flex;
+    gap: 1%;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
+}
+.day{
+    min-height: 250px;
+    width: 15%;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    text-align: center;
+    font-family: "Onest", serif;
+    font-weight: 500;
+}
+.week-day-heading{
+    font-size: 2em;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+.day hr{
+    width: 40%;
+    border: 2px solid var(--accent);
+    margin: 0 auto;
+}
