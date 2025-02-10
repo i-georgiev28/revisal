@@ -25,232 +25,91 @@
     <!--navigation-->
 
     <!---MAIN---->
-
-    
-    <!--welcoming-->
     <section>
-        <div id="welcoming">
-            <p>Моите <span>карти за преговор</span></p>
-        </div>
-
-        <div id="create_pack">
-            <p>
-                <a href = "create-card.html">
-                    Нов пакет <i class='bx bx-add-to-queue'></i>
+        
+        <div class="welcoming-section">
+            
+            <span class="heading-main">Моите карти</span>
+            
+            <span class="create-pack">
+                <a href="/frontend/create-card.html">
+                    Създай <i class='bx bx-message-square-add' ></i>
                 </a>
-            </p> 
+            </span>
+        
         </div>
-
-    </section>
-
-
-    <!--cards-->
-    <section>
-        
-        <div class="subject-row" id="subject-row_1">
-
-        <h1 class="headingV1" id="packs_subject_heading">Биология</h1>
-
-            <div class="container">
-
-                <div class="card-div">
-                    <a href = "#" class="card_link">
-                        <div class="color-band"></div>
-                    <div class="box">
-        
-                        <div class="box-text-area">
-                            <h3 class="headingV3">Пакет #1</h3>
-                            <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
-                            <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
-                            <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
-                        </div>
-                    
-                    </div>
-                    </a>
-                </div>
     
-                <div class="card-div">
-                    <a href = "#" class="card_link">
-                        <div class="color-band"></div>
-                    <div class="box">
-        
-                        <div class="box-text-area">
-                            <h3 class="headingV3">Пакет #2</h3>
-                            <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
-                            <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
-                            <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
-                        </div>
-                    
-                    </div>
-                    </a>
-                </div>
-    
-                <div class="card-div">
-                    <a href = "" class="card_link">
-                        <div class="color-band"></div>
-                    <div class="box">
-        
-                        <div class="box-text-area">
-                            <h3 class="headingV3">Пакет #3</h3>
-                            <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
-                            <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
-                            <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
-                        </div>
-                    
-                    </div>
-                    </a>
-                </div>
-                <!--for phones to create cards, even if you have scrolled down-->
-                <div id="card-div-create">
-                    <a href = "create-card.html" class="card_link">
-                    <div class="box">
-                            <i class='bx bx-plus' ></i>
-                    </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
     </section>
 
     <section>
-        
-        <div class="subject-row" id="subject_row_2">
+        <div class="cards-container">
+            
+            <div class="card" id="card-1">
+                
+                <span class="card-heading">
+                    Dimoff
+                </span>
 
-        <h1 class="headingV1" id="packs_subject_heading">История</h1>
+                <!--
+                <span class="card-questions-number">
+                    Въпроси:
+                    <span class="card-questions-value">10</span>
+                </span>
+                -->
 
-            <div class="container">
+                <div class="card-questions-info-field">
+                    <span class="all-questions-number">
+                        <span>общо</span>
+                        10
+                    </span>
+                    
+                    <div class="vertical"></div>
+                    
+                    <span class="right-questions-number">
+                        <i class='bx bxs-check-circle correct'></i>
+                        8
+                    </span>
 
-                <div class="card-div">
-                    <a href = "#" class="card_link">
-                        <div class="color-band"></div>
-                    <div class="box">
-        
-                        <div class="box-text-area">
-                            <h3 class="headingV3">Пакет #1</h3>
-                            <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
-                            <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
-                            <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
-                        </div>
+                    <div class="vertical"></div>
                     
-                    </div>
-                    </a>
+                    <span class="wrong-questions-number">
+                        <i class='bx bxs-x-circle wrong'></i>
+                        2
+                    </span>
                 </div>
-    
-                <div class="card-div">
-                    <a href = "#" class="card_link">
-                        <div class="color-band"></div>
-                    <div class="box">
-        
-                        <div class="box-text-area">
-                            <h3 class="headingV3">Пакет #2</h3>
-                            <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
-                            <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
-                            <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
-                        </div>
-                    
-                    </div>
-                    </a>
-                </div>
-    
-                <div class="card-div">
-                    <a href = "" class="card_link">
-                        <div class="color-band"></div>
-                    <div class="box">
-        
-                        <div class="box-text-area">
-                            <h3 class="headingV3">Пакет #3</h3>
-                            <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
-                            <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
-                            <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
-                        </div>
-                    
-                    </div>
-                    </a>
-                </div>
-                <!--for phones to create cards, even if you have scrolled down-->
-                <div id="card-div-create">
-                    <a href = "create-card.html" class="card_link">
-                    <div class="box">
-                            <i class='bx bx-plus' ></i>
-                    </div>
-                    </a>
-                </div>
+
+
             </div>
-        </div>
 
-    </section>
-
-    <section>
-        
-        <div class="subject-row" id="subject_row_3">
-
-        <h1 class="headingV1" id="packs_subject_heading">Химия</h1>
-
-            <div class="container">
-
-                <div class="card-div">
-                    <a href = "#" class="card_link">
-                        <div class="color-band"></div>
-                    <div class="box">
-        
-                        <div class="box-text-area">
-                            <h3 class="headingV3">Пакет #1</h3>
-                            <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
-                            <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
-                            <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
-                        </div>
-                    
-                    </div>
-                    </a>
-                </div>
-    
-                <div class="card-div">
-                    <a href = "#" class="card_link">
-                        <div class="color-band"></div>
-                    <div class="box">
-        
-                        <div class="box-text-area">
-                            <h3 class="headingV3">Пакет #2</h3>
-                            <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
-                            <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
-                            <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
-                        </div>
-                    
-                    </div>
-                    </a>
-                </div>
-    
-                <div class="card-div">
-                    <a href = "" class="card_link">
-                        <div class="color-band"></div>
-                    <div class="box">
-        
-                        <div class="box-text-area">
-                            <h3 class="headingV3">Пакет #3</h3>
-                            <p class="box-property-label">Предмет: <span class="property-value">История</span></p>
-                            <p class="box-property-label">Трудност: <span class="property-difficulty-value">7/10</span></p>
-                            <p class="box-property-label">Брой въпроси: <span class="property-value">10</span></p>
-                        </div>
-                    
-                    </div>
-                    </a>
-                </div>
-                <!--for phones to create cards, even if you have scrolled down-->
-                <div id="card-div-create">
-                    <a href = "create-card.html" class="card_link">
-                    <div class="box">
-                            <i class='bx bx-plus' ></i>
-                    </div>
-                    </a>
-                </div>
+            <div class="card" id="card-1">
+                <span class="card-heading">
+                    Мразя Асеновград
+                </span>
+                <span class="card-questions">
+                    Въпроси:
+                    <span class="card-questions-value">10</span>
+                </span>
             </div>
+
+            <div class="card" id="card-1">
+                <span class="card-heading">
+                    Velin
+                </span>
+                <span class="card-questions">
+                    Въпроси:
+                    <span class="card-questions-value">10</span>
+                </span>
+            </div>
+        
+
         </div>
-
     </section>
-
 
     <!--MAIN END-->
+    
+
+
+
 
     <!----FOOOTER---->
     <footer-bar></footer-bar>
