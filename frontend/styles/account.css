@@ -12,8 +12,6 @@ body{
 
     background-color: var(--main);
 
-    padding-left: 250px;
-    margin-left: 0;
     width: 100%;
     
     --main:#FFF ;
@@ -48,22 +46,13 @@ body{
     --offset-left-small: 1.5%;
 }
 
-@media (min-width: 769px) {
-    body:not(footer-bar) {
-        padding-left: 250px;
-    }
-}
-@media (max-width: 768px){
-    body{
-        width: 100%;
-        padding-left: 0;
-    }
-    footer-bar{
-        display: none;
-    }
-}
-
 /**------MAIN------*/
+
+.vertical{
+    border: 1px solid var(--alt);
+    opacity: 0.1;
+    height: 80%;
+}
 
 #heading-main{
     font-size: 5em;
@@ -159,7 +148,7 @@ body{
     opacity: 0.7;
 }
 .window ul li .value{
-    color: #959cff;;
+    color: var(--accent);
 }
 @media (max-width: 480px) {
     #account_wrapper{
