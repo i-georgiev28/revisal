@@ -119,16 +119,19 @@ body{
 
 .schedule-box{
     margin-top: 20px;
-    font-size: .9em;
-    opacity: .5;
     border-radius: 20px;
     padding: 5px 15px;
     min-height: fit-content;
-    background-color: #e2e2e2;
+    background-color: #e0e0e1;
     width: fit-content;
-
     align-self: center;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.note{
+    font-size: .9em;
+    opacity: .7;
+    color: #6780ff;
 }
 
 /*phone*/
@@ -196,9 +199,9 @@ body{
     max-height: 50vh;
     padding: 15px;
     flex-wrap: wrap;
-    box-shadow: rgba(200, 200, 200, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 20px;
-    background-color: #eeeeee;
+    background-color: var(--main);
     gap: 10px;
     justify-content: space-evenly;
 }
@@ -210,7 +213,7 @@ body{
     border-radius: 20px;
 
     /**fix*/
-    background-color: var(--main);
+    background-color: #f7f7f7;
     color: var(--accent);
 
     height: fit-content;
