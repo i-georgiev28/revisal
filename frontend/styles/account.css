@@ -27,215 +27,40 @@ body{
 }
 
 /**------MAIN------*/
-
-.vertical{
-    border: 1px solid var(--alt);
-    opacity: 0.1;
-    height: 80%;
-}
-
-#heading-main{
-    font-size: 5em;
-    margin-left: var(--offset-left);
-    font-weight: 500;
-    margin-top: 3vh;
-    margin-bottom: 5vh;
-}
-.section-heading{
-    font-weight: 600;
-    margin-left: var(--offset-left);
-    font-size: 2.8em;
-    margin-bottom: 50px;
-    display: flex;
-    gap: 10px;
-    color: var(--accent);
-}
-
-.section-heading i{
-    transform: translateY(3px);
-}
-
-
-/*common*/
-#flex{
-    display: flex;
-}
-
-#grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 150px;
-    row-gap: 30px;
-}
-
-.vertical-line {
-    width: 1px;          /* Set the width of the line */
-    height: 100px;       /* Set the height of the line */
-    background-color: black; /* Set the color of the line */
-}
-
-
-/*responsive grid*/
-@media (max-width: 1415px) {
-    #grid {
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 100px;
-    }
-}
-
-@media (max-width: 1000px) {
-    #grid {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 50px;
-    }
-}
-
-@media (max-width: 480px) {
-    #grid {
-        grid-template-columns: 1fr;
-        column-gap: 30px;
-    }
-}
-
-/*common*/
-
-#account_wrapper{
-    display: flex;
-    flex-direction: row;
-    margin-left: var(--offset-left);
-    margin-bottom: 10VH;
-}
-#user_pfp_wrapper img{
-    aspect-ratio: 1/1;
-    width: 150px;
-    border-radius: 50%;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-#user_username_wrapper{
+.account-wrapper{
     display: flex;
     flex-direction: column;
-    width: auto;
-    height: auto;
-    gap: 5px;
-    justify-content: center;
-    margin-left: 30px;
-}
-
-#user_username_heading{
-    font-weight: 600;
-    font-size: 3.4em;
-    color: var(--accent);
-}
-#user_email{
-    font-size: 1.6em;
-}
-.window ul li .property{
-    color:var(--text);
-    opacity: 0.7;
-}
-.window ul li .value{
-    color: var(--accent);
-}
-@media (max-width: 480px) {
-    #account_wrapper{
-        margin-bottom: 5vh;
-    }
-    #heading-main{
-        font-size: 3.2em;
-    }
-    #user_pfp_wrapper img{
-        width: 70px;
-    }
-    #user_username_heading{
-        font-size: 1.6em;
-    }
-    #user_email{
-        font-size: 1em;
-    }
-
-    .section-heading{
-        font-size: 1.6em;
-        margin-bottom: 20px;
-    }
-
-    #flex{
-        align-items: center;
-    }
-
-    /*info sizes*/
-    .window ul li .property{
-        font-size: 1em;
-    }
-    .window ul li .value{
-        font-size: 1em;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    #account_wrapper{
-        margin-bottom: 5vh;
-    }
-    #heading-main{
-        font-size: 3.6em;
-    }
-    #user_pfp_wrapper img{
-        width: 80px;
-    }
-    #user_username_heading{
-        font-size: 1.8em;
-    }
-    #user_email{
-        font-size: 1.2em;
-    }
-
-    .section-heading{
-        font-size: 1.6em;
-        margin-bottom: 20px;
-    }
-
-    /*info sizes*/
-    .window ul li .property{
-        font-size: 1.2em;
-    }
-    .window ul li .value{
-        font-size: 1.2em;
-    }
-
-}
-
-
-
-.window{
-    width: 94%;
-    height: auto;
-    min-height: 50px;
-    margin-bottom: 15vh;
-    margin-left: var(--offset-left);
-    padding: 30px;
-    border-radius: 20px;
-    
-    display: grid;
+    gap: 20px;
     align-items: center;
+    width: 20%;
+    margin-bottom: 50px;
+}
+.user-picture{
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 200px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 30px var(--offset-left);
+}
+.user-username{
+    font-size: 2em;
+    font-weight: 600;
+    font-family: "Onest", serif;
+    color: var(--accent);
+}
+.user-email{
+    font-weight: 300;
+    font-size: 1.4em;
+}
 
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    flex-wrap: wrap;
-}
-.window ul{
-    list-style: none;
-}
-.window ul li{
+.tab-selector{
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
-
-}
-.window ul li .property{
-    opacity: 0.7;
-    font-weight: 300;
-    font-size: 1.6em;
-    margin-bottom: 10px;
-}
-.window ul li .value{
-    font-weight: 600;
-    font-size: 1.6em;
+    gap: 40px;
+    font-weight: 500;
+    font-size: 2em;
+    text-align: center;
+    align-items: center;
+    color: var(--accent);
 }
