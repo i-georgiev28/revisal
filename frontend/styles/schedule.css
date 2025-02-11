@@ -79,7 +79,8 @@ body{
     }
 }
 
-/**schedule*/
+/** ===== SCHEDULE ===== */
+
 .schedule-wrapper{
     display: flex;
     gap: 1%;
@@ -87,24 +88,132 @@ body{
     padding: 20px;
     margin-bottom: 20px;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
+
 .day{
-    min-height: 250px;
-    width: 15%;
+    min-height: 150px;
+    width: 16%;
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 20px;
     text-align: center;
     font-family: "Onest", serif;
     font-weight: 500;
+
+    display: flex;
+    flex-direction: column;
 }
+
 .week-day-heading{
-    font-size: 2em;
+    font-size: 2rem;
     color: var(--accent);
     margin-bottom: 10px;
 }
+
 .day hr{
     width: 40%;
-    border: 2px solid var(--accent);
+    border: 1px solid var(--accent);
     margin: 0 auto;
+}
+
+.schedule-box{
+    margin-top: 20px;
+    font-size: .9em;
+    opacity: .5;
+    border-radius: 20px;
+    padding: 5px 15px;
+    min-height: fit-content;
+    background-color: #e2e2e2;
+    width: fit-content;
+
+    align-self: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/*phone*/
+@media (max-width: 480px) {
+    .schedule-wrapper{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .week-day-heading{
+        font-size: 1.6em;
+    }
+    .day{
+        width: 90%;
+        align-self: center;
+    }
+    .schedule-box{
+        width: 70%;
+    }
+}
+
+/*tablet*/
+@media (min-width: 481px) and (max-width: 1200px) {
+    .schedule-wrapper{
+        gap: 20px;
+    }
+    .week-day-heading{
+        font-size: 1.6em;
+    }
+    .day{
+        width: 40%;
+        align-self: center;
+    }
+    .schedule-box{
+        width: 80%;
+    }
+}
+
+
+/** ===== DRAGABLE SUBJECTS BOX ===== */
+.headingV1{
+    font-size: 2em;
+    margin-left: var(--offset-left);
+    color: var(--accent);
+    
+    /*for icons*/
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.headingV1 i{
+    transform: translateY(2px);
+}
+
+.draggable-subject-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.subject-box{
+    justify-self: center;
+    margin: 20px 0;
+    display: flex;
+    width: 94%;
+    min-height: fit-content;
+    max-height: 50vh;
+    padding: 15px;
+    flex-wrap: wrap;
+    box-shadow: rgba(200, 200, 200, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    background-color: #eeeeee;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.subject{
+    font-size: 1.2em;
+    font-family: "Onest", serif;
+    padding: 5px 10px;
+    border-radius: 20px;
+
+    /**fix*/
+    background-color: var(--main);
+    color: var(--accent);
+
+    height: fit-content;
+    width: fit-content;
+
 }
