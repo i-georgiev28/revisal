@@ -21,26 +21,6 @@ body{
     --main-dark:#181818;
     
     --accent: #4070f4;
-    
-    --blue:#007BFF;
-    --red:#FF4136;
-    --yellow:#FFDC00;
-    --orange:#FF851B;
-    --green:#28A745;
-    --purple: #6F42C1;
-
-    --font-extrasmall: 0.75em;
-    --font-small: 1em;
-    --font-normal: 1.2em;
-    --font--meduim: 1.5em;
-    --font--big: 2em;
-    --font--large: 3em;
-    --font--mega: 6em;
-
-    --offset-extrasmall: 10px;
-    --offset-small: 20px;
-    --offset-normal: 40px;
-    --offset-medium: 50px;
 
     --offset-left: 3%;
     --offset-left-small: 1.5%;
@@ -75,7 +55,7 @@ body{
     transform: translateY(3px);
 }
 
-/**------MAIN------*/
+
 /*common*/
 #flex{
     display: flex;
@@ -87,6 +67,13 @@ body{
     column-gap: 150px;
     row-gap: 30px;
 }
+
+.vertical-line {
+    width: 1px;          /* Set the width of the line */
+    height: 100px;       /* Set the height of the line */
+    background-color: black; /* Set the color of the line */
+}
+
 
 /*responsive grid*/
 @media (max-width: 1415px) {

@@ -30,19 +30,6 @@ body{
     --green:#28A745;
     --purple: #6F42C1;
 
-    --font-extrasmall: 0.75em;
-    --font-small: 1em;
-    --font-normal: 1.2em;
-    --font--meduim: 1.5em;
-    --font--big: 2em;
-    --font--large: 3em;
-    --font--mega: 6em;
-
-    --offset-extrasmall: 10px;
-    --offset-small: 20px;
-    --offset-normal: 40px;
-    --offset-medium: 50px;
-
     --offset-left: 3%;
     --offset-left-small: 1.5%;
 }
@@ -63,6 +50,8 @@ body.dark input:focus{
     margin: 50px 4%;
     font-size: 4em;
     text-align: center;
+    font-weight: 500;
+    font-family: "Onest", serif;
 }
 #heading{
     text-align: center;
