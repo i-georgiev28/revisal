@@ -37,18 +37,18 @@
                 <span class="logout" id="leavout_button"><i class='bx bx-log-out'></i></span>
     
                 <div class="tab-selector">
-                    <a href="#personal-data-header" class="tab">Лични данни</a>
-                    <a href="#details-header" class="tab">Детайли</a>
-                    <a href="#settings-header" class="tab">Настройки</a>
+                    <a href="#personal-data-section" class="tab">Лични данни</a>
+                    <a href="#details-section" class="tab">Детайли</a>
+                    <a href="#settings-section" class="tab">Настройки</a>
                 </div>
             </div>
     
             <div class="info-wrapper">
                 <div class="row">
                     
-                    <span class="row-heading" id="personal-data-header">Лични данни</span>
+                    <span class="row-heading" id="personal-data-section">Лични данни</span>
                     <span class="subheading">
-                        Разгледаждайте и редактирай лични данни
+                        Разгледаждайте и редактирайте лични данни
                         <br>обвързани с вашия акаунт
                     </span>
 
@@ -60,39 +60,66 @@
                         </div>
 
                         <div class="box">
-                            <span class="box-heading">Пълно име</span>
-                            <span class="box-value" id="user_username">Иван Иванов</span>
+                            <span class="box-heading">Дата на раждане</span>
+                            <span class="box-value" id="user_birthdate">02/05/1999</span>
                         </div>
 
                         <div class="box">
-                            <span class="box-heading">Пълно име</span>
-                            <span class="box-value" id="user_username">Иван Иванов</span>
+                            <span class="box-heading">Парола</span>
+                            <a class="box-redact" id="user_password" href="#">промени <i class='bx bx-edit-alt' ></i></a>
                         </div>
 
                     </div>
 
 
-                    <span class="row-heading" id="personal-data-header">Лични данни</span>
+                    <span class="row-heading" id="settings-section">Детайли</span>
                     <span class="subheading">
-                        Разгледаждайте и редактирай лични данни
-                        <br>обвързани с вашия акаунт
+                        Вижте детайли на вашия акаунт
                     </span>
 
                     <div class="boxes-wrapper">
 
                         <div class="box">
-                            <span class="box-heading">Пълно име</span>
-                            <span class="box-value" id="user_username">Иван Иванов</span>
+                            <span class="box-heading">Тип потребител</span>
+                            <span class="box-value" id="user_type">Ученик</span>
                         </div>
 
                         <div class="box">
-                            <span class="box-heading">Пълно име</span>
-                            <span class="box-value" id="user_username">Иван Иванов</span>
+                            <span class="box-heading">Учебно заведение</span>
+                            <span class="box-value" id="user_school">ПГКМКС "Акад. Благовест Сендов"</span>
                         </div>
 
                         <div class="box">
-                            <span class="box-heading">Пълно име</span>
-                            <span class="box-value" id="user_username">Иван Иванов</span>
+                            <span class="box-heading">Емайл</span>
+                            <span class="box-value" id="user_email">example@mail.com</span>
+                        </div>
+
+                    </div>
+
+                    <span class="row-heading" id="setting-section">Настройки</span>
+                    <span class="subheading">
+                        променяйте настройки
+                    </span>
+
+                    <div class="boxes-wrapper">
+
+                        <div class="box">
+                            <span class="box-heading">Време на известяване</span>
+                            <span class="box-value">
+                                <input type="number" min="1" max="10" placeholder="*в дни" id="user_notifications_time">
+                            </span>
+                        </div>
+
+                        <div class="box">
+                            <span class="box-heading">Известия</span>
+                            <span class="box-value">
+                                <input type="checkbox" id="user_notifications_state">
+                            </span>
+                        </div>
+
+                        <div class="box">
+                            <span class="box-heading">Език</span>
+                            <span class="box-value" id="user_language">BG/EN</span>
                         </div>
 
                     </div>
