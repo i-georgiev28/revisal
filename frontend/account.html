@@ -23,26 +23,83 @@
 <body>
 
     <!--*MAIN-->
-    <section>
-        <h1 id="heading-main">Settings</h1>
-    </section>
-
     <!--account-->
+
     <section>
 
-        <div class="account-wrapper">
-            <img src = "https://bitly.cx/mazna" alt = "user_pfp" class="user-picture" id="user_pfp">
-            <span class="user-username" id="user_username">Cool username</span>
-            <span class="user-email" id="user_email">example@mail.com</span>
+        <div class="page-wrapper">
+            <div class="account-wrapper">
+                <img src = "https://bitly.cx/mazna" alt = "user_pfp" class="user-picture" id="user_pfp">
+                <span class="user-username" id="user_username">Cool username</span>
+                <span class="user-email" id="user_email">example@mail.com</span>
 
-            <div class="tab-selector">
-                <span class="tab">Лични данни</span>
-                <span class="tab">Детайли</span>
-                <span class="tab">Настройки</span>
+                <!--logout button-->
+                <span class="logout" id="leavout_button"><i class='bx bx-log-out'></i></span>
+    
+                <div class="tab-selector">
+                    <a href="#personal-data-header" class="tab">Лични данни</a>
+                    <a href="#details-header" class="tab">Детайли</a>
+                    <a href="#settings-header" class="tab">Настройки</a>
+                </div>
             </div>
-        </div>
+    
+            <div class="info-wrapper">
+                <div class="row">
+                    
+                    <span class="row-heading" id="personal-data-header">Лични данни</span>
+                    <span class="subheading">
+                        Разгледаждайте и редактирай лични данни
+                        <br>обвързани с вашия акаунт
+                    </span>
 
-        <div>
+                    <div class="boxes-wrapper">
+
+                        <div class="box">
+                            <span class="box-heading">Пълно име</span>
+                            <span class="box-value" id="user_username">Иван Иванов</span>
+                        </div>
+
+                        <div class="box">
+                            <span class="box-heading">Пълно име</span>
+                            <span class="box-value" id="user_username">Иван Иванов</span>
+                        </div>
+
+                        <div class="box">
+                            <span class="box-heading">Пълно име</span>
+                            <span class="box-value" id="user_username">Иван Иванов</span>
+                        </div>
+
+                    </div>
+
+
+                    <span class="row-heading" id="personal-data-header">Лични данни</span>
+                    <span class="subheading">
+                        Разгледаждайте и редактирай лични данни
+                        <br>обвързани с вашия акаунт
+                    </span>
+
+                    <div class="boxes-wrapper">
+
+                        <div class="box">
+                            <span class="box-heading">Пълно име</span>
+                            <span class="box-value" id="user_username">Иван Иванов</span>
+                        </div>
+
+                        <div class="box">
+                            <span class="box-heading">Пълно име</span>
+                            <span class="box-value" id="user_username">Иван Иванов</span>
+                        </div>
+
+                        <div class="box">
+                            <span class="box-heading">Пълно име</span>
+                            <span class="box-value" id="user_username">Иван Иванов</span>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+
             
         </div>
 
