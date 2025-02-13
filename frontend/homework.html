@@ -41,6 +41,7 @@
 
             <div class="box-wrapper">
 
+                <!--!HAS AUTO-WINDOWS RESIZE JS-->
                 <div class="box">
                     <span class="box-heading">Утре</span>
                     <span class="text"></span>
@@ -85,6 +86,26 @@
 
         <div class="wrapper">
             <span class="headingV1">Завършено <i class='bx bx-task' ></i></span>
+
+            <!--!HAS JS-->
+            <ul class="list-done" id="list_done">
+                <li id="task_1">nestho</li>
+                <li id="task_2">nestho</li>
+                <li id="task_3">nestho</li>
+                <li id="task_4">nestho</li>
+                <li id="task_5">nestho</li>
+                <li id="task_6">nestho</li>
+                <li id="task_7">nestho</li>
+                <li id="task_8">nestho</li>
+                <li id="task_9">nestho</li>
+                <li id="task_10">nestho</li>
+                <li id="task_11">nestho</li>
+                <li id="task_12">nestho</li>
+                <li id="task_13">nestho</li>
+                <li id="task_14">nestho</li>
+                <li id="task_15">nestho</li>
+                <li id="task_16">nestho</li>
+            </ul>
         </div>
 
     </section>
@@ -94,6 +115,26 @@
     <!----FOOOTER---->
     <footer-bar></footer-bar>
     <!--FOOTER--END-->
+
+    <!--Javascript-->
+    <script>
+    window.onload = function() {
+    let boxes = document.querySelectorAll('.box');
+    
+    let maxWidth = 0;
+    boxes.forEach(function(box) {
+        let boxWidth = box.offsetWidth;
+        if (boxWidth > maxWidth) {
+            maxWidth = boxWidth;
+        }
+    });
+
+    boxes.forEach(function(box) {
+        box.style.width = maxWidth + 'px';
+    });
+    };
+
+    </script>
 
 
 </body>

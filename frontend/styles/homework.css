@@ -97,20 +97,115 @@ body{
     font-size: 1.6em;
     margin-bottom: 20px;
 }
-.list li::marker{
+.list li::marker, .list-done li::marker{
     color: var(--accent);
 }
 
 @media (max-width: 480px) {
+    .heading-main{
+        font-size: 2.6em;
+    }
+    
+    .wrapper{
+        flex-direction: column;
+    }
+    
+    .headingV1{
+        font-size:2.4em;
+    }
 
+    .box-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .box{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 300;
+        width: 90%;
+    }
+    .list{
+        width: 100%;
+        align-self: center;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-
+    .heading-main{
+        font-size: 3.4em;
+    }
+    .box-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .box{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 300;
+        width: 90%;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+    .box-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .box{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 300;
+        width: 40%;
+    }
 }
 
+
+/**done list*/
+
+.list-done{
+    font-size: 1.6em;
+    margin-left: 120px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.list-done li{
+    margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+    .list-done{
+        display: flex;
+        flex-direction: column;
+        margin-left: 80px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .list-done{
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 80px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .list{
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 80px;
+    }
+}
 /*--MAIN--*/
