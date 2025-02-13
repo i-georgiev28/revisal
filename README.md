@@ -47,7 +47,17 @@ for a little demo
 
 Explain how to run the automated tests for this system
 
+## Тестови профили
 
+Профил 1:
+
+    username: ***
+    password: ***
+
+Профил 2:
+
+    username: ***
+    password: ***
 
 ### Примерни тестове
 
@@ -82,7 +92,8 @@ Add additional notes to deploy this on a live system
 
 ## Използвани материали
 
-За да разгледате използваните материали и източници, отворете [USED_CONTENT.txt](USED_CONTENT.txt).
+За да разгледате използваните материали и източници, отворете [USED_CONTENT.txt](USED_CONTENT.txt)
+или дирекотно отворете [materials.html](MATERIALS.html) във вашия уеб браузър.
 
 ## Файлово разпределение
 
@@ -100,7 +111,7 @@ repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
 
 ## Автори
 
-  - **Billie Thompson** - *Provided README Template* -
+  - **Billie Thompson** - *Предоставен README.md шаблон* -
     [PurpleBooth](https://github.com/PurpleBooth)
 
 ### Учебно заведение
@@ -108,10 +119,16 @@ repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
 
 ### Разработчици
   - **Иван Георгиев** - *backend разработчик*
+    [Ivan Georrgiev GitHub]([https://github.com/IliyanGeorgiev87](https://github.com/i-georgiev28))
+    email: ivangeorgiev28@itpg-varna.bg
   - **Илиян Георгиев** - *frontend разработчик*
+    [Iliyan Georrgiev GitHub](https://github.com/IliyanGeorgiev87)
+    email: iliyangeorgiev28@itpg-varna.bg
+    
 
 ### Ръководител(и):
   - **г-жа Моника Желязкова** - *учител по Информационни технологии*
+    email: m.zhelqzkova@itpg-varna.bg
 
 Проверете също, други участници и учители, помогнали с разработката:
  - [участници](https://github.com/PurpleBooth/a-good-readme-template/contributors)
@@ -120,8 +137,7 @@ repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
 
 ## Лиценз
 
-Този проект е лицензиран под [CC0 1.0 Universal](LICENSE.md)
-Creative Commons License - отворете [LICENSE.md](LICENSE.md) за повече информация..
+Този проект е лицензиран под [GNU GPL-3](LICENSE.md)
 
 
 
