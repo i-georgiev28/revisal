@@ -1,5 +1,6 @@
-menu.png (burger menu), <a href="https://www.flaticon.com/free-icons/navigation" title="navigation icons">Navigation icons created by Andy Horvath - Flaticon</a>
-
-close.png ("X" sign), <a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Pixel perfect - Flaticon</a>
-
-Boxicons - free web friendly minimalistic icons - https://boxicons.com/
+Използвани материали / Used content:
+  - Boxicons: https://boxicons.com/ ;
+  - Flaticon: https://www.flaticon.com/ ;
+  - Freepik: https://www.freepik.com/ ;
+  - Logo: "R and a flag" by Andrii Kovalchu (UA), uploaded in Dribble: https://dribbble.com/shots/24088047-R-and-flag ;
+  - Dribble: https://dribbble.com/ (Dribble);
