@@ -19,13 +19,6 @@ body{
     --alt:#757575;
     --text: #0A0A0A;
     
-    /*--dark-theme--*/
-    /*
-    --main: #;
-    --alt: #;
-    --text: #;
-    */
-    
     /*--main-color-pallette--*/
     --main: #FFF ;
     --alt: #181818 ;
@@ -128,7 +121,7 @@ input[type="checkbox"] {
         flex-direction: column;
         align-items: center;
         font-weight: 300;
-        width: 90%; /* Increased width for smaller screens */
+        width: 90%;
     }
     .list{
         width: 100%;
@@ -152,7 +145,7 @@ input[type="checkbox"] {
         flex-direction: column;
         align-items: center;
         font-weight: 300;
-        width: 80%; /* Slightly smaller width for medium screens */
+        width: 80%;
     }
 }
 
@@ -169,7 +162,7 @@ input[type="checkbox"] {
         flex-direction: column;
         align-items: center;
         font-weight: 300;
-        width: 45%; /* Adjusted width for larger tablets and smaller desktops */
+        width: 45%;
     }
 }
 
