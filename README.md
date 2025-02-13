@@ -1,3 +1,5 @@
+![UI Image](https://raw.githubusercontent.com/i-georgiev28/revisal/main/frontend/images/ui.png)
+
 # Revisal
 
 Уеб-базирано приложение за бърз преговор чрез "flash" карти и следене 
