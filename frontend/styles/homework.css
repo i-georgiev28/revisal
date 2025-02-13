@@ -5,16 +5,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
     user-select: none;
 }
 body{
     font-family: "Inter", serif;
     font-weight: 300;
-
     background-color: var(--main);
-
-    
     min-height: 100vh;
     min-width: 100vw;
     
@@ -22,7 +18,7 @@ body{
     --main:#F5F5F5;
     --alt:#757575;
     --text: #0A0A0A;
-
+    
     /*--dark-theme--*/
     /*
     --main: #;
@@ -38,12 +34,8 @@ body{
     /*--offsets--*/
     --offset-left: 3%;
     --offset-left-small: 1.5%;
-
     /*-----------------*/
-
 }
-/*--generic--*/
-
 
 /*--MAIN--*/
 .welcoming{
@@ -101,6 +93,16 @@ body{
     color: var(--accent);
 }
 
+/*for checkboxes*/
+li{
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-left: auto;
+}
+
 @media (max-width: 480px) {
     .heading-main{
         font-size: 2.6em;
@@ -127,7 +129,7 @@ body{
         flex-direction: column;
         align-items: center;
         font-weight: 300;
-        width: 90%;
+        width: 90%; /* Increased width for smaller screens */
     }
     .list{
         width: 100%;
@@ -137,7 +139,7 @@ body{
 
 @media (min-width: 481px) and (max-width: 767px) {
     .heading-main{
-        font-size: 3.4em;
+        font-size: 3em;
     }
     .box-wrapper{
         display: flex;
@@ -151,7 +153,7 @@ body{
         flex-direction: column;
         align-items: center;
         font-weight: 300;
-        width: 90%;
+        width: 80%; /* Slightly smaller width for medium screens */
     }
 }
 
@@ -168,10 +170,11 @@ body{
         flex-direction: column;
         align-items: center;
         font-weight: 300;
-        width: 40%;
+        width: 45%; /* Adjusted width for larger tablets and smaller desktops */
     }
 }
 
+/*--MAIN--*/
 
 /**done list*/
 
@@ -208,4 +211,3 @@ body{
         margin-left: 80px;
     }
 }
-/*--MAIN--*/
