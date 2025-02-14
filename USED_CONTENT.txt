@@ -1,5 +1,18 @@
-menu.png (burger menu), <a href="https://www.flaticon.com/free-icons/navigation" title="navigation icons">Navigation icons created by Andy Horvath - Flaticon</a>
+Използвани материали / Used content:
 
-close.png ("X" sign), <a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Pixel perfect - Flaticon</a>
+  - Boxicons: https://boxicons.com/ ;
+  - Flaticon: https://www.flaticon.com/ ;
+  - Freepik: https://www.freepik.com/ ;
+  - Logo: "R and a flag" by Andrii Kovalchu (UA), uploaded in Dribble: https://dribbble.com/shots/24088047-R-and-flag ;
+  - Dribble: https://dribbble.com/ (Dribble);
 
-Boxicons - free web friendly minimalistic icons - https://boxicons.com/
+Freepik icons: 
+
+  - https://www.flaticon.com/free-icon/effort_5696432?term=hard&page=1&position=5&origin=search&related_id=5696432
+  - https://www.flaticon.com/free-icon/clock_992700?term=time&page=1&position=4&origin=search&related_id=992700
+  - https://www.flaticon.com/free-icons/software-development
+  - https://www.flaticon.com/free-icon/human-brain_2732589?term=mind&page=1&position=2&origin=search&related_id=2732589
+
+Slides.go:
+
+  - https://slidesgo.com/theme/company-technical-report#search-company+technical+report&position-1&results-2&rs=search
