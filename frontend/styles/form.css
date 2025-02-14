@@ -1,5 +1,3 @@
-/*fonts - Poppins, Raleway*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
 /*---------------------GENERAL---------------------*/
 /**generic*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
@@ -22,18 +20,10 @@ body{
     --main-dark:#181818;
     
     --accent: #4070f4;
-    
-    --blue:#007BFF;
-    --red:#FF4136;
-    --yellow:#FFDC00;
-    --orange:#FF851B;
-    --green:#28A745;
-    --purple: #6F42C1;
 
     --offset-left: 3%;
     --offset-left-small: 1.5%;
 }
-
 
 body.dark input {
     background-color: var(--alt);
@@ -50,7 +40,7 @@ body.dark input:focus{
     margin: 50px 4%;
     font-size: 4em;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     font-family: "Onest", serif;
 }
 #heading{
@@ -200,6 +190,10 @@ form{
     .container p{
         font-size: 1em;
     }
+
+    #registerButton{
+        font-size: 1em;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -219,6 +213,10 @@ form{
         font-size: 1.2em;
     }
 
+    #registerButton{
+        font-size: 1.2em;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -234,76 +232,3 @@ form{
         width: 40%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*responsive
-@media(max-width: 764px){
-    #message{
-        font-size: 2.5em;
-    }
-    #heading{
-        margin-top: 25px;
-        font-size: 1em;
-    }
-    form{
-        width: 80%;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        margin-top: 20px;
-        padding: 0 10px;
-    }
-
-    .input-wrapper {
-        width: 90%;
-    }
-
-    .input-wrapper input {
-        padding: 18px 30px 18px 15px;
-        font-size: 1em;
-    }
-
-    .input-wrapper i {
-        font-size: 1.2em;
-    }
-
-    #registerButton {
-        width: 70%;
-        padding: 12px;
-        font-size: 1.1em;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 5px;
-    }
-    .input-wrapper {
-        width: 80%;
-    }
-    .input-wrapper input {
-        padding: 15px 30px 15px 15px;
-        font-size: 0.9em;
-    }
-}
-*/
