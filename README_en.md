@@ -4,17 +4,16 @@ Web-based app for fast revision via flash cards and task mangment with dynamic c
 
 ## Начало
 
-
-Инструкциите ще ви помгонат да създадете копие на проекта и успешно да стартирате решението за тестване, оценяване и преглеждане.
+The following instructions will help you get an impression of our product and copy it onto your computer and run a few test.
 
 ### Required software and toolkits
 
-- [Visual Studio Code](https://code.visualstudio.com/download) 
+- Any text/code editor of choice, VS Code recommended:[Visual Studio Code](https://code.visualstudio.com/download) 
 - [Android Studio](https://developer.android.com/studio)
 
 ## Opening the solution
 
-Няколко лесни стъпки, с който ще отворите проекта: 
+Here are a few steps so you can open the solution:
 
 ### Web verison
 
@@ -46,9 +45,19 @@ for a little demo
 
 Explain how to run the automated tests for this system
 
+## Testing profiles
 
+Profile 1:
 
-### Примерни тестове
+    username: ***
+    password: ***
+
+Profile 2:
+
+    username: ***
+    password: ***
+
+### Example test
 
 Explain what these tests test and why
 
@@ -68,64 +77,33 @@ Checks if the best practices and the right coding style has been used.
 
 Add additional notes to deploy this on a live system
 
-
-
-## Developed with 
-
-  - [Contributor Covenant](https://www.contributor-covenant.org/) - Used
-    for the Code of Conduct
-  - [Creative Commons](https://creativecommons.org/) - Used to choose
-    the license
-
-
-
 ## Used materials
 
-За да разгледате използваните материали и източници, отворете [USED_CONTENT.txt](USED_CONTENT.txt).
+To look up used content, materials and their source, check:[USED_CONTENT.txt](USED_CONTENT.txt).
 
 ## Fail 
 
-
-
-
-
-## Versioning
-
-We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
-available, see the [tags on this
-repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
-
-
-
-## Authors
-
-  - **Billie Thompson** - *Provided README Template* -
-    [PurpleBooth](https://github.com/PurpleBooth)
-
 ### School
-  - **ПГКМКС Акад. Благовест Сендов** - гр. Варна
+  - **PGCMCS Acad. Blagovest Sendov** - Varna city, Bulgaria
 
 ### Developers
-  - **Иван Георгиев** - *backend разработчик*
-  - **Илиян Георгиев** - *frontend разработчик*
+  - **Ivan Georgiev** - *backend developer*
+  - **Iliyan Georgiev** - *frontend developer*
 
 ### Ръководител(и):
-  - **г-жа Моника Желязкова** - *учител по Информационни технологии*
+  - **Mrs. Monika Zhelyazkova** - *Informational Technologies teacher*
 
 Take a look at people who also helped:
- - [участници](https://github.com/PurpleBooth/a-good-readme-template/contributors)
-
+ - [participants](#)
 
 
 ## License
 
-This project is licensed under the [CC0 1.0 Universal](LICENSE.md) license.
-Creative Commons License - отворете [LICENSE.md](LICENSE.md) за повече информация..
-
-
+This project is licensed under the [GNU GPL-3](LICENSE.md) license.
 
 ## Other
 
-  - Hat tip to anyone whose code is used
-  - Inspiration
-  - etc
+  - Inspiration: Dribble
+  - Created for National Olympiad of Informational Technologies (Bulgaria)
+  - **Billie Thompson** - *Provided README Template* -
+  [PurpleBooth](https://github.com/PurpleBooth)
