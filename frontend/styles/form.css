@@ -1,5 +1,4 @@
-/*---------------------GENERAL---------------------*/
-/**generic*/
+/** ===== ШРИФТОВЕ*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
 *{
     box-sizing: border-box;
@@ -34,7 +33,7 @@ body.dark input:focus{
     border-bottom: none;
 }
 
-/*--MAIN--*/
+/** ===== ГЛАВНИ КОМПОНЕНИТИ ===== */
 
 #message{
     margin: 50px 4%;
@@ -58,8 +57,6 @@ body.dark input:focus{
     font-weight: 400;
 
 }
-
-/*already-have? button*/
 #linkcolored{
     color: var(--accent);
     text-decoration: none;
@@ -84,7 +81,6 @@ body.dark input:focus{
     align-items: center;
     margin-top: 50px;
 }
-/*----------*/
 
 form{
     background-color:var(--altmisc);
@@ -128,18 +124,13 @@ form{
     color: var(--text-white);
 }
 
-/*for icons wrapping*/
 .input-wrapper {
     position: relative;
     width: 70%;
     margin: 0 auto;
     border-radius: 20px;
-
-    /*box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;*/
-
 }
 
-/*input field + animation elements*/
 .input-wrapper {
     position: relative;
 }
@@ -173,7 +164,7 @@ form{
 
 
 
-/*responsive*/
+/*отзивчивост за различни у-ва*/
 @media (max-width: 480px) {
 
     #message{
@@ -218,16 +209,12 @@ form{
     }
 
 }
-
 @media (min-width: 768px) and (max-width: 1024px) {
-    
     form{
         width: 50%;
     }
 }
-
 @media (min-width: 1024px) and (max-width: 1250px) {
-    
     form{
         width: 40%;
     }

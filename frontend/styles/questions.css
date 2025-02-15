@@ -1,32 +1,27 @@
-/*Mulish and Nunito Sans*/
+/** ===== ШРИФТОВЕ ===== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
-/*---GENERAL---*/
+/** ===== ОБЩИ =====*/
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 body{
-    /*default assigned fonts*/
     font-family: "Inter", serif;
     font-weight: 300;
     font-style: normal;
 
-    /*--colors--*/
-    --background-main:#F3F4F6;
-    --background-alt: #F2F2F2;
-    --background-main-dark:#181818 ;
-
-    --text-main:#222222;
-    --text-white: #F3F4F6;;
-    /*----------*/
-
+    /*--цветова палитра--*/
+    --main:#FFF ;
+    --alt: #2d2d2d;
+    --text: #181818;
+    --text-white: #F3F4F6;
+    --main-dark:#181818;   
     --accent: #4070f4;
-
-    user-select: none;
 }
 
-/*------MAIN*------*/
+/** ===== ГЛАВНА ПАЛИТРА =====*/
 #question{
     display: flex;
     align-items: center;
@@ -118,13 +113,13 @@ body{
     border-radius: 50%;
     margin-left: auto;
     margin-right: 5%;
-    transition: transform 0.3s ease-in-out; /* Apply transition to transform */
+    transition: transform 0.3s ease-in-out;
     position: static;
-    transform-origin: center; /* Ensure rotation happens around the center */
+    transform-origin: center;
 }
 
 #flip-icon:hover {
-    transform: scale(1.1); /* Hover to scale the icon */
+    transform: scale(1.1);
 }
 
 
@@ -140,40 +135,28 @@ body{
     color: var(--accent);
 }
 
-/*resposnive*/
+/*отзивчивост за различни у-ва*/
 @media (max-width: 480px) {
-
-    /*general*/
     #question{
         margin-top: 50px;
         margin-bottom: 50px;
     }
-
-    /*top*/
     #question_info{
         font-size: 1.4em;
     }
-    /*---*/
-
-
-    /*middle (question)*/
     #flip{
         margin-top: 30px;
     }
-
     #question_text{
         font-size: 2.8em;
     }
-
     #need_a{
         font-size: 1.5em;
         transform: translateY(5px);
     }
-
     #icon{
         font-size: 1em;
     }
-    /*buttons*/
     #flip-icon {
         font-size: 1.4em;
         padding: 10px;
@@ -181,13 +164,11 @@ body{
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-
     #question{
         margin-top: 50px;
         margin-bottom: 50px;
         height: 70vh;
     }
-
     #flip{
         margin-top: 50px;
     }
@@ -209,7 +190,6 @@ body{
         margin-bottom: 50px;
         height: 70vh;
     }
-
     #question_text{
         font-size: 3.4em;
     }
@@ -221,17 +201,7 @@ body{
         margin-bottom: 50px;
         height: 70vh;
     }
-
     #question_text{
         font-size: 4.2em;
     }
 }
-
-
-
-
-
-
-
-
-/*---END-OF-MAIN---*/

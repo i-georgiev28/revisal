@@ -1,6 +1,7 @@
-/** ===== FONTS ==== */
+/** ===== ШРИФТОВЕ ==== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
-/** ====== GENERAL ===== */
+
+/** ====== ОБЩО ===== */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -23,37 +24,11 @@ body{
 
     --accent: #4070f4;
 
-    --blue:#007BFF;
-    --red:#FF4136;
-    --yellow:#FFDC00;
-    --orange:#FF851B;
-    --green:#28A745;
-    --purple: #6F42C1;
-
-    --font-extrasmall: 0.75em;
-    --font-small: 1em;
-    --font-normal: 1.2em;
-    --font--meduim: 1.5em;
-    --font--big: 2em;
-    --font--large: 3em;
-    --font--mega: 6em;
-
-    --offset-extrasmall: 10px;
-    --offset-small: 20px;
-    --offset-normal: 40px;
-    --offset-medium: 50px;
-
     --offset-left: 3%;
     --offset-left-small: 1.5%;
 }
 
-
-
-
-
-
-
-/** ===== HEADINGS ====== */
+/** ===== ЗАГЛАВИЯ ====== */
 
 /*заглавие V1 и V2*/
 .headingV1{
@@ -71,13 +46,10 @@ body{
     font-size: 2.4em;
     margin-bottom: 25px;
     margin-top: 25px;
-    
-    
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
-    
     font-weight: 600;
     font-family: 'Onest';
     color: var(--accent);
@@ -110,7 +82,7 @@ body{
 }
 
 
-/*--responsive--*/
+/*отзивчивост на различни у-ва*/
 
 /*телефони*/
 @media (max-width: 480px) {
@@ -118,11 +90,9 @@ body{
         font-size: 2.6em;
         margin-bottom: 80px;
     }
-    
     .headingV2{
         font-size: 1.8em;
     }
-    
     /*главно заглавие*/
     #main-header{
         font-size: 2.4em;
@@ -138,12 +108,10 @@ body{
     .headingV1{
         font-size: 3em;
         margin-bottom: 80px;
-    }
-    
+    } 
     .headingV2{
         font-size: 2.2em;
     }
-    
     /*главно заглавие*/
     #main-header{
         font-size: 3.6em;
@@ -159,7 +127,6 @@ body{
     .headingV1{
         font-size: 3.4em;
     }
-    
     /*главно заглавие*/
     #main-header{
         font-size: 4.5em;
@@ -174,7 +141,7 @@ body{
 
 
 
-/** ======  DASHBOARD BENTO GRID ====== */
+/** ======  BENTO GRID ТАБЛО ====== */
 
 #wrapper{
     margin-top: 5vh;
@@ -193,7 +160,6 @@ body{
 }
 
 /*kолонки*/
-
 .col{
     border-radius: 0;
 }
@@ -236,7 +202,7 @@ body{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-/*--responsive--*/
+/*--отзивчивост на различни у-ва--*/
 
 /*телефони*/
 @media (max-width: 480px) {
@@ -305,8 +271,7 @@ body{
     }
 }
 
-
-/**-- ===== DASHBOARD COMMON ===== */
+/**-- ===== ТАБЛО - ОБЩИ ===== */
 
 .box-header,.box-header-type2{
     margin-left: var(--offset-left);
@@ -326,7 +291,7 @@ body{
     font-size: 2.4em;
 }
 
-/*responsive*/
+/*отзивчивост на различни у-ва*/
 @media (max-width: 480px) {
     .box-header{
         font-size: 2em;
@@ -347,7 +312,7 @@ body{
 }
 
 
-/** ===== REMINDERS ======*/
+/** ===== НАПОМНЯНИЯ ======*/
 .list{
     list-style: none;
     display: flex;
@@ -398,11 +363,8 @@ body{
     }
 }
 
-/**-- ===== PROGRESS BAR WINDOW ====== --*/
 
-
-
-/**-- ===== CALENDAR ===== --*/
+/**-- ===== КАЛЕНДАР ===== --*/
 
 #month-year{
     font-size: 2.4em;
@@ -566,7 +528,7 @@ body{
     }
 }
 
-/** ====== CARDS FOR TODAY ===== */
+/** ====== КАРТИ ЗА ДНЕС ===== */
 .stack {
     width: 600px;
     min-height: 300px;
@@ -623,7 +585,7 @@ body{
     transform: translate(-50%, var(--y)) scale(1.05);
 }
 
-/* Animation for card swapping */
+/*анимации*/
 @keyframes swap {
     50% {
         transform: translate(-50%, calc(var(--y) - 250px)) scale(0.85) rotate(-5deg);
@@ -636,7 +598,7 @@ body{
 }
 
 
-/** ====== HOMEWORK FOR TODAY ====== */
+/** ====== СЕКЦИЯ С ДОМАШНИ ====== */
 #homework-wrapper{
     display: flex;
     flex-direction: column;
@@ -646,9 +608,7 @@ body{
     flex-direction: column;
     justify-content: center;
     margin: 20px 40px;
-
     list-style: none;
-
     gap: 30px;
     font-family: "Onest", serif;
 }
@@ -670,7 +630,7 @@ body{
     margin-left: auto;
 }
 
-/** ===== REMINDERS SECTION ===== */
+/** ===== СЕКЦИЯ С НАПОМНЯНИЯ  ===== */
 
 .reminders-list{
     list-style: none;
@@ -686,7 +646,7 @@ body{
     overflow: hidden;
 }
 
-/** ====== DAILY SCHEDULE SECTION ===== */
+/** ====== СЕКЦИЯ С ДНЕВЕН РЕЖИМ ===== */
 
 #schedule-wrapper{
     display: flex;
@@ -707,6 +667,7 @@ body{
     font-family: "Onest", serif;
 }
 
+/* за правилно нагласяне на поредността*/
 
 #daily-schedule-list li:nth-child(2) {
     grid-column: 1;
@@ -747,6 +708,7 @@ body{
     color: var(--accent);
 }
 
+/*отзивчивост на различни у-ва*/
 @media (max-width: 480px) {
     #daily-schedule-list{
         font-size: 1.4em;

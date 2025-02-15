@@ -1,6 +1,6 @@
-/*--fonts--*/
+/** ===== ШРИФТОВЕ ===== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
-/*--generic--*/
+/** ===== ОБЩИ =====*/
 *{
     box-sizing: border-box;
     margin: 0;
@@ -14,62 +14,30 @@ body{
 
     background-color: var(--main);
     
-    /*--light-theme--*/
-    --main:#F5F5F5;
-    --alt:#757575;
-    --text: #0A0A0A;
-
-    /*--dark-theme--*/
-    /*
-    --main: #;
-    --alt: #;
-    --text: #;
-    */
-    
-    /*--main-color-pallette--*/
-    --main: #FFF ;
-    --alt: #181818 ;
+    /*--палитра--*/
+    --main:#FFF ;
+    --alt: #2d2d2d;
+    --text: #181818;
+    --text-white: #F3F4F6;
+    --main-dark:#181818;
     --accent: #4070f4;
 
-    /*--font-sizes--*/
-    --font-extrasmall: 0.75em;
-    --font-small: 1em;
-    --font-normal: 1.2em;
-    --font--meduim: 1.5em;
-    --font--big: 2em;
-    --font--large: 3em;
-    --font--mega: 6em;
-
-    /*--common-margins-and-paddings*/
-    --offset-extrasmall: 10px;
-    --offset-small: 20px;
-    --offset-normal: 40px;
-    --offset-medium: 50px;
-
-    /*--offsets--*/
     --offset-left: 3%;
     --offset-left-small: 1.5%;
 
-    /*-----------------*/
-
 }
-/*--generic--*/
 
-
-
-/*--MAIN--*/
+/** ===== ГЛАВНИ КОМПОНЕНТИ =====*/
 #header{
     text-align: center;
     color: var(--accent);
     font-size: 6em;
     margin-bottom: 10vh;
     margin-top: 5vh;
-
     display: flex;
     margin-left: var(--offset-left);
     font-weight: 400;
-    
-    /*allignment of icons*/
+    /*за икони в текста*/
     display: flex;
     gap: 15px;
     align-items: center;
@@ -101,6 +69,7 @@ body{
     font-weight: 500;
     font-family: "Onest", sans-serif;
 }
+
 .section-text{
     font-size: 2em;
     color: var(--accent);
@@ -108,12 +77,14 @@ body{
     display: flex;
     margin-left: 1em;
 }
+
 .section-text a{
     text-decoration: none;
     color: var(--accent);
     display: flex;
     align-items: center;
 }
+
 .section-text i{
     color: var(--accent);
     font-size: 1.2em;
@@ -134,17 +105,19 @@ body{
     font-style: normal;
     font-weight: 300;
 }
+
 .point li{
     margin-bottom: 20px;
     list-style: none;
 }
+
 .colored{
     color: var(--accent);
     text-decoration: none;
 }
 
-/*--responsive--*/
-
+/*--отзивчивост на различни у-ва--*/
+/*телефони*/
 @media (max-width: 480px) {
     #header{
         font-size: 2.8em;
@@ -154,7 +127,7 @@ body{
         font-size: 2.2em;
     }
 }
-
+/*таблети*/
 @media (min-width: 481px) and (max-width: 767px) {
     #header{
         font-size: 3.4em;
@@ -163,4 +136,3 @@ body{
         font-size: 2.8em;
     }
 }
-/*--responsive--*/

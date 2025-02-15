@@ -4,12 +4,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
     user-select: none;
     -webkit-user-select: none;
 }
 body{
-
     /*white mode*/
     --main:#F5F5F5;
     --alt:#757575;
@@ -21,16 +19,7 @@ body{
     --main: #FFF ;
     --alt: #181818 ;
     
-
     --accent:#4070f4;
-
-    /*common colors*/
-    --blue:#4070f4;
-    --red:#FF4136;
-    --yellow:#FFDC00;
-    --orange:#FF851B;
-    --green:#28A745;
-    --purple: #6F42C1;
 
     --offset-left: 3%;
 
@@ -122,10 +111,9 @@ body{
     border-radius: 20px;
     padding: 5px 15px;
     min-height: fit-content;
-    background-color: #e0e0e1;
+    background-color: #f4f4f4;
     width: fit-content;
     align-self: center;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .note{
@@ -134,6 +122,7 @@ body{
     color: #6780ff;
 }
 
+/*responsive*/
 /*phone*/
 @media (max-width: 480px) {
     .schedule-wrapper{
@@ -171,11 +160,11 @@ body{
 
 
 /** ===== DRAGABLE SUBJECTS BOX ===== */
+
 .headingV1{
     font-size: 2em;
     margin-left: var(--offset-left);
     color: var(--accent);
-    
     /*for icons*/
     display: flex;
     align-items: center;
@@ -197,26 +186,30 @@ body{
     width: 94%;
     min-height: fit-content;
     max-height: 50vh;
-    padding: 15px;
+    padding: 20px;
     flex-wrap: wrap;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 20px;
     background-color: var(--main);
-    gap: 10px;
+    gap: 15px;
     justify-content: space-evenly;
 }
 
 .subject{
     font-size: 1.2em;
     font-family: "Onest", serif;
-    padding: 5px 10px;
+    padding: 8px 15px;
     border-radius: 20px;
 
-    /**fix*/
     background-color: #f7f7f7;
     color: var(--accent);
 
     height: fit-content;
     width: fit-content;
+}
 
+@media (max-width: 768px) {
+    .subject-box{
+        justify-content: none;
+    }
 }

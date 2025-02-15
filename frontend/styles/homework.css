@@ -1,6 +1,6 @@
-/*--fonts--*/
+/** ===== ШРИФТОВЕ =====*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
-/*--generic--*/
+/** ===== ОБЩИ =====*/
 *{
     box-sizing: border-box;
     margin: 0;
@@ -12,25 +12,22 @@ body{
     font-weight: 300;
     background-color: var(--main);
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 100%;
     
-    /*--light-theme--*/
-    --main:#F5F5F5;
-    --alt:#757575;
-    --text: #0A0A0A;
-    
-    /*--main-color-pallette--*/
-    --main: #FFF ;
-    --alt: #181818 ;
+    /*--главна палитра--*/
+    --main:#FFF ;
+    --alt: #2d2d2d;
+    --text: #181818;
+    --text-white: #F3F4F6;
+    --main-dark:#181818;   
     --accent: #4070f4;
 
-    /*--offsets--*/
+    /*--отстъпи--*/
     --offset-left: 3%;
     --offset-left-small: 1.5%;
-    /*-----------------*/
 }
 
-/*--MAIN--*/
+/** ===== ГЛАВНИ КОМПОНЕНТИ ===== */
 .welcoming{
     display: block;
     padding-top: 3vh;
@@ -85,7 +82,7 @@ body{
     color: var(--accent);
 }
 
-/*for checkboxes*/
+/*за кутииките с отемтки*/
 li{
     display: flex;
     align-items: center;
@@ -166,9 +163,7 @@ input[type="checkbox"] {
     }
 }
 
-/*--MAIN--*/
-
-/**done list*/
+/** ==== ЛИСТ С ИЗПЪЛНЕНИ ЗАДАЧИ ===== */
 
 .list-done{
     font-size: 1.6em;

@@ -4,33 +4,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
     user-select: none;
     -webkit-user-select: none;
 }
 body{
-
-    /*white mode*/
-    --main:#F5F5F5;
-    --alt:#757575;
-    --text: #333333;
-
+    /*colors*/
+    --main:#FFF ;
+    --alt: #2d2d2d;
+    --text: #181818;
     --text-white: #F3F4F6;
-    
-    /*main color pallette*/
-    --main: #FFF ;
-    --alt: #181818 ;
-    
-
+    --main-dark:#181818;
     --accent:#4070f4;
-
-    /*common colors*/
-    --blue:#4070f4;
-    --red:#FF4136;
-    --yellow:#FFDC00;
-    --orange:#FF851B;
-    --green:#28A745;
-    --purple: #6F42C1;
 
     --offset-left: 3%;
 
@@ -235,10 +219,10 @@ body{
 }
 /*colors*/
 .correct{
-    color: var(--green);
+    color: #28A745;
 }
 .wrong{
-    color: var(--red);
+    color: #FF4136;
 }
 
 @media (max-width: 480px) {

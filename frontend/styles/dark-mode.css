@@ -1,30 +1,13 @@
-/*--general--*/
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    user-select: none;
-}
-body{
-
-    /*white mode*/
+:root{
+    /*--светъл режим*/
     --main:#F5F5F5;
-    --alt: #2d2d2d; /*for dark and light mode*/
+    --alt: #2d2d2d; /*и за двата*/
     --text: #181818;
     --text-white: #F3F4F6;
-    /*--dark-mode--*/
+    /*--тъмен режим--*/
     --main-dark:#181818;
-    /*main color pallette*/
+    /*главна палитра*/
     --main: #FFF ;
-
-    /*common colors*/
-    --blue:#007BFF;
-    --red:#FF4136;
-    --yellow:#FFDC00;
-    --orange:#FF851B;
-    --green:#28A745;
-    --purple: #6F42C1;
-
 }
 .dark{
     background-color: var(--main-dark);

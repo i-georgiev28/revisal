@@ -1,5 +1,6 @@
-/**generic*/
+/** ===== ШРИФТОВЕ =====*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Onest:wght@100..900&display=swap');
+/** ===== ОБЩО ===== */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -9,46 +10,24 @@
 body{
     font-family: "Inter", serif;
     font-weight: 300;
-
     background-color: var(--main);
-    margin-left: 0;
     width: 100%;
     
     --main:#FFF ;
     --alt: #2d2d2d;
     --text: #181818;
     --text-white: #F3F4F6;
-    --main-dark:#181818;
-    
+    --main-dark:#181818;   
     --accent: #4070f4;
 
-    --blue:#007BFF;
-    --red:#FF4136;
-    --yellow:#FFDC00;
-    --orange:#FF851B;
-    --green:#28A745;
-    --purple: #6F42C1;
-
-    --font-extrasmall: 0.75em;
-    --font-small: 1em;
-    --font-normal: 1.2em;
-    --font--meduim: 1.5em;
-    --font--big: 2em;
-    --font--large: 3em;
-    --font--mega: 6em;
-
-    --offset-extrasmall: 10px;
-    --offset-small: 20px;
-    --offset-normal: 40px;
-    --offset-medium: 50px;
-
+    /*отстъпи*/
     --offset-left: 3%;
     --offset-left-small: 1.5%;
 }
 
-/*----MAIN----*/
+/** ===== ГЛАВНИ КОМПОНЕНТИ ===== */
 
-/**welcoming-section*/
+/**приветставача секция*/
 #welcoming-section{
     display: flex;
     align-items: center;
@@ -124,8 +103,7 @@ body{
     margin-bottom: 10vh;
 }
 
-/*responsive*/ 
-/*!might make it so the graphic goes under the text - future*/
+/*отзивчивост на у-ва*/ 
 @media (max-width: 480px) {
     #heading-main{
         font-size: 2em;
@@ -180,7 +158,7 @@ body{
 
 
 
-/**first-section*/
+/**секция 1-ва*/
 
 .heading-mockup{
     color: var(--accent);
@@ -259,17 +237,14 @@ body{
         margin-left: 5vh;
         font-size: 1em;
     }
-    
     .heading-mockup-right{
         margin-left: 5vh;
         font-size: 1em;
     }
-
     .headingV1{
         margin-left: 5vh;
         font-size: 2em;
     }
-    
     .wrapper-simple{
         display: flex;
         flex-direction: column;
@@ -297,22 +272,18 @@ body{
 }
 
 @media (min-width: 481px) and (max-width: 1024px){
-
     .heading-mockup{
         margin-left: 5vh;
         font-size: 1em;
-    }
-    
+    } 
     .heading-mockup-right{
         margin-left: 5vh;
         font-size: 1em;
     }
-
     .headingV1{
         margin-left: 5vh;
         font-size: 2em;
     }
-    
     .wrapper-simple{
         flex-direction: row;
         padding-left: 2.5vh;
@@ -327,10 +298,9 @@ body{
     .box-heading{
         font-size: 2.4em;
     }
-
 }
 
-/**section-2*/
+/**секция 2*/
 .text-box{
     font-size: 1.4em;
     margin-left: 10vh;
@@ -352,7 +322,7 @@ body{
     margin-right: 10vh;
 }
 
-/*responsive*/
+/*отзивчивост на у-ва*/
 @media (max-width: 480px) {
     .text-box{
         font-size: 1.2em;
@@ -404,7 +374,7 @@ body{
 
 
 
-/**calendar section*/
+/**функция с календар*/
 #calendar-block{
     width: 100%;
     background-color: #f1f1ff;
@@ -454,15 +424,8 @@ body{
     }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
 
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-/**--stats-section--*/
+/** ====== СЕКЦИЯ С АНКЕТИРАЛИ ===== */
 #progress-wrapper {
     display: flex;
     flex-direction: row;
@@ -609,7 +572,8 @@ body{
 
 
 
-/**download app section*/
+/** ===== СЕКЦИЯ С ЛИНК ЗА ИЗТЕГЛЯНЕ ===== */
+
 #app-download-wrappper{
     display: flex;
     margin-bottom: 10vh;
@@ -649,26 +613,26 @@ body{
     }
 }
 
-/* Ensure there's 10vh space at the bottom of every section or element */
+
 #welcoming-section, .wrapper-simple, #calendar-block, #progress-wrapper, #app-download-wrappper, .ui-wrapper {
-    margin-bottom: 15vh; /* Applies 10vh margin to each section */
+    margin-bottom: 15vh;
 }
 
-/* Section-specific responsive margin */
+/*отзивчивост на у-ва*/
 @media (max-width: 480px) {
     #welcoming-section, .wrapper-simple, #calendar-block, #progress-wrapper, #app-download-wrappper, .ui-wrapper {
-        margin-bottom: 15vh; /* Ensures 10vh space in small viewports */
+        margin-bottom: 15vh;
     }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
     #welcoming-section, .wrapper-simple, #calendar-block, #progress-wrapper, #app-download-wrappper, .ui-wrapper {
-        margin-bottom: 15vh; /* Ensures 10vh space in medium viewports */
+        margin-bottom: 15vh;
     }
 }
 
 @media (min-width: 1025px) {
     #welcoming-section, .wrapper-simple, #calendar-block, #progress-wrapper, #app-download-wrappper, .ui-wrapper {
-        margin-bottom: 15vh; /* Ensures 10vh space in larger viewports */
+        margin-bottom: 15vh;
     }
 }
