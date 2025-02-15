@@ -95,7 +95,6 @@ body{
     outline-offset: 2px;
 }
 
-
 #note{
     color: #959cff;
     margin-left: calc(10vh + 2px);
@@ -312,14 +311,25 @@ body{
 .ui-wrapper{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .ui-wrapper div:nth-of-type(1){
     display: flex;
     flex-direction: column;
 }
+/*контеинер със снимка*/
 .ui-wrapper div:nth-of-type(2){
     margin-left: auto;
     margin-right: 10vh;
+    display: flex;
+    width: 100%;
+}
+#ui_design_graphic{
+    width: 50vw;
+    height: auto;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 
 /*отзивчивост на у-ва*/
@@ -336,13 +346,15 @@ body{
     .ui-wrapper{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 20vh;
     }
     .ui-wrapper div:nth-of-type(1){
         display: flex;
         flex-direction: column;
-        width: 100%;
-        margin-bottom: 5vh;
+        margin-bottom: 10vh;
+        width: 90vw;
     }
     .ui-wrapper div:nth-of-type(2){
         margin-right: 20vh;
@@ -360,19 +372,19 @@ body{
     }
     .ui-wrapper{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
     .ui-wrapper div:nth-of-type(1){
         display: flex;
         flex-direction: column;
+        margin-bottom: 10vh;
+        width: 90vw;
     }
     .ui-wrapper div:nth-of-type(2){
         margin-left: auto;
         margin-right: 20vh;
     }
 }
-
-
 
 /**функция с календар*/
 #calendar-block{
@@ -407,6 +419,7 @@ body{
     #calendar-block{
         width: 100%;
         margin-bottom: 10vh;
+        width: fit-content;
     }
     #calendar-block div:nth-of-type(1){
         display: flex;
@@ -424,6 +437,26 @@ body{
     }
 }
 
+@media (min-width: 480px) and (max-width:1100px){
+    #calendar-block{
+        width: 100%;
+        margin-bottom: 10vh;
+    }
+    #calendar-block div:nth-of-type(1){
+        display: flex;
+        flex-direction: column;
+        padding-left: auto;
+    }
+    #calendar-block div:nth-of-type(1) .headingV1{
+        margin-left: auto;
+        margin-right: 5vh;
+    }
+    
+    #calendar-block div:nth-of-type(1) .text-box{
+        margin-right: 5vh;
+        width: 60%;
+    }
+}
 
 /** ====== СЕКЦИЯ С АНКЕТИРАЛИ ===== */
 #progress-wrapper {
@@ -577,41 +610,54 @@ body{
 #app-download-wrappper{
     display: flex;
     margin-bottom: 10vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 #app-download-wrappper div:nth-of-type(1){
     display: flex;
     flex-direction: column;
 }
 #app-download-wrappper div:nth-of-type(2){
-    margin-left: auto;
-    display: block;
-    margin-right: 10vh;
+    display: flex;
+    justify-content: center;
+    padding-right: 10vh;
+    width: 100%;
+}
+#app_on_phone_graphic{
+    width: 50vw;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 0 auto;
 }
 
 @media (max-width: 480px) {
     #app-download-wrappper{
-        display: flex;
         flex-direction: column;
-    }
-    #app-download-wrappper{
         margin-bottom: 5vh;
+    }
+
+    #app_on_phone_graphic{
+        width: 90vw;
+        height: auto;
+        margin: 0 auto;
     }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
     #app-download-wrappper{
-        display: flex;
         flex-direction: column;
+        align-items: center;
         margin-bottom: 5vh;
     }
-    #app-download-wrappper div:nth-of-type(1){
-        display: flex;
-        flex-direction: column;
-    }
-    #app-download-wrappper div:nth-of-type(2){
-        margin-right: 5dvh;
+    #app-on_phone_graphic{
+        width: 90vw;
+        height: auto;
+        margin: 0 auto;
     }
 }
+
 
 
 #welcoming-section, .wrapper-simple, #calendar-block, #progress-wrapper, #app-download-wrappper, .ui-wrapper {
