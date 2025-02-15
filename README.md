@@ -77,19 +77,9 @@ Checks if the best practices and the right coding style has been used.
 
 
 
-## Deployment
+## Пускане
 
-Add additional notes to deploy this on a live system
-
-
-
-## Разработено с 
-
-  - [Contributor Covenant](https://www.contributor-covenant.org/) - Used
-    for the Code of Conduct
-  - [Creative Commons](https://creativecommons.org/) - Used to choose
-    the license
-
+*допълнителни ин
 
 
 ## Използвани материали
@@ -105,16 +95,10 @@ Add additional notes to deploy this on a live system
 
 ## Версии
 
-We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
-available, see the [tags on this
-repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
 
 
 
 ## Автори
-
-  - **Billie Thompson** - *Предоставен README.md шаблон* -
-    [PurpleBooth](https://github.com/PurpleBooth)
 
 ### Учебно заведение
   - **ПГКМКС Акад. Благовест Сендов** - гр. Варна
@@ -140,11 +124,3 @@ repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
 ## Лиценз
 
 Този проект е лицензиран под [GNU GPL-3](LICENSE.md)
-
-
-
-## Други
-
-  - Hat tip to anyone whose code is used
-  - Inspiration
-  - etc
