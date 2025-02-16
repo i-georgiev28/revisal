@@ -20,35 +20,38 @@
 
 </head>
 <body>
-    <!--main-->
     <section>
 
-        <p id = "message">Изкарвай отлични резултати от днес</p>
-        <p id = "heading">Регистрация</p>
-
-        <div class="container">
-            <form action="#" method="#">
-                <div class="input-wrapper">
-                    <input type="text" placeholder="Потребителско име" id="usernameInput"  class = "input" required>
-                    <i class='bx bx-user' ></i>
-                </div>
-                <div class="input-wrapper">
-                    <input type="email" placeholder="Емайл" id="emailInput" class = "input" required>
-                    <i class='bx bx-envelope'></i>
-                </div>
-                <div class="input-wrapper">
-                    <input type="password" placeholder="Парола" id="passwordInput" class = "input" required>
-                    <i class='bx bx-lock-alt' ></i>
-                </div>
-                
-        
-                <input type="submit" id="registerButton" value="Регистирай се">
-            </form>
+        <div class="container-main">
             
-            <br>
-            <p>Имате регистрация? <a id="linkcolored" href="login.html">Влезте сега</a></p>
-        </div>
+            <div class="colored-field">
+                <span id="message">Чакаме те с нетърпение!</span>
+                <span id="subheading">Започни скоростния преговор с нас</span>
+            </div>
+
+            <div class="form-container">
+                <span id="message-2">Регистрация</span>
+                <form action="#" method="#">
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="Потребителско име" id="">
+                        <i class='bx bx-user'></i>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="email" placeholder="Електронна поща" id="">
+                        <i class='bx bx-envelope' ></i>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="password" placeholder="Парола" id="">
+                        <i class='bx bx-lock-alt' ></i>
+                    </div>
+    
+                    <a href = "/frontend/reigster.html">Нямаш <span>акаунт</span>?</a>
+                    <input type="submit" value="Влез">
+                </form>
+            </div>
         
+        </div>
+
     </section>
 
     <!----FOOOTER---->
