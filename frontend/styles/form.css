@@ -29,193 +29,185 @@ body.dark input {
     border-radius: 20px;
     color: var(--text-white);
 }
+
 body.dark input:focus{
     border-bottom: none;
 }
 
 /** ===== ГЛАВНИ КОМПОНЕНИТИ ===== */
 
-#message{
-    margin: 50px 4%;
-    font-size: 4em;
-    text-align: center;
-    font-weight: 600;
-    font-family: "Onest", serif;
-}
-#heading{
-    text-align: center;
-    margin-top: 50px;
-    font-size: 3em;
-    color: var(--accent);
-    font-family: "Onest", serif;
-}
-#forgotten{
-    text-align: center;
-    font-size: 1.2em;
-    text-decoration: none;
-    color: var(--accent);
-    font-weight: 400;
-
-}
-#linkcolored{
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
-}
-.container p {
-    font-family: "Onest", serif;
-
-    font-size: 1.4em;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: 20px;
-
-    margin-bottom: 10vh;
+/*общи*/
+.container-main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
 }
 
-.container{
+/*цветно поле*/
+.colored-field{
+    width: 40vw;
+    height: 100vh;
+    background-color: var(--accent);
     display: flex;
     flex-direction: column;
-    justify-items: center;
     align-items: center;
-    margin-top: 50px;
+    justify-content: center;
+    padding: 40px;
+}
+
+#message{
+    color: var(--main);
+    font-weight: 600;
+    font-family: "Onest", serif;
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 50px;
+}
+#subheading{
+    color: var(--main);
+    font-family: "Onest", serif;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+
+/*форма*/
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+}
+
+#message-2{
+    font-size: 5em;
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
 }
 
 form{
-    background-color:var(--altmisc);
-    border-radius: 50px;
-    padding: 50px 0px;
-    width: 25%;
-
     display: flex;
     flex-direction: column;
-
-    justify-content: space-around;
-    gap: 2em;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    gap: 20px;
+    width: 60%;
     align-self: center;
-    justify-self: center;
-
-    aspect-ratio: 2/1;
 }
 
-
-#registerButton{
-    border: none;
-    
-    font-family: "Onest", serif;
-
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-
+form a{
+    text-decoration: none;
+    color: var(--text);
     align-self: center;
-    justify-self: center;
-    width: 50%;
+    font-size: 1.6em;
+    margin-bottom: 30px;
+}
 
-    font-size: 1.4em;
-    font-weight: 400;
+form a span{
+    color: var(--accent);
+    margin-right: 3px;
+}
 
-    border-radius: 50px;
-    padding: 20px 15px;
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    position: relative;
+}
 
+input {
+    font-family: "Onest", serif;
+    padding: 25px 20px;
+    font-weight: 300;
+    border: none;
+    background-color: #f6f6f6;
+    color: var(--text);
+    font-size: 1.6em;
+    width: 100%;
+    padding-right: 40px;
+}
+
+i{
+    position: absolute;
+    right: 20px;
+    font-size: 1.6em;
+    color: var(--text);
+}
+
+input[type="submit"]{
+    width: 30%;
+    align-self: center;
+    border-radius: 40px;
     background-color: var(--accent);
     color: var(--text-white);
+    font-size: 1.6em;
+    padding: 10px 15px;
+    text-transform: capitalize;
 }
 
-.input-wrapper {
-    position: relative;
-    width: 70%;
-    margin: 0 auto;
-    border-radius: 20px;
-}
-
-.input-wrapper {
-    position: relative;
-}
-
-.input-wrapper input {
-    width: 100%;
-    padding: 20px 40px 20px 15px;
-    font-size: 1.1em;
-    font-family: "Onest", serif;
-    border: none;
-    
-    outline: none;
-    position: relative;
-    background-color: var(--main);
-}
-
-.input-wrapper input:focus {
-    border-bottom: 1px solid #000;
-}
-
-.input-wrapper i {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2em;
-    color: var(--accent);
-}
-
-
-
-
-
-/*отзивчивост за различни у-ва*/
+/*отзивчивост на различни у-ва*/
 @media (max-width: 480px) {
-
+    .container-main{
+        flex-direction: column;
+    }
+    .colored-field{
+        width: 100%;
+        height: 20vh;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
     #message{
-        font-size: 2.2em;
+        font-size: 2em;
+        margin-bottom: 20px;
     }
-    #heading{
-        font-size: 1.4em;
-    }
-    
-    form{
-        width: 80%;
-    }
-
-    .container p{
+    #subheading{
         font-size: 1em;
     }
 
-    #registerButton{
-        font-size: 1em;
+    /*форма*/
+    #message-2{
+        font-size: 1.8em;
     }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-
+    .container-main{
+        flex-direction: column;
+    }
+    .colored-field{
+        width: 100%;
+        height: 20vh;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin-bottom: 50px;
+    }
     #message{
         font-size: 3em;
     }
-    #heading{
-        font-size: 2.2em;
-    }
-
-    form{
-        width: 70%;
-    }
-
-    .container p{
+    #subheading{
         font-size: 1.2em;
     }
 
-    #registerButton{
-        font-size: 1.2em;
+    /*форма*/
+    #message-2{
+        font-size: 2.4em;
     }
-
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
-    form{
-        width: 50%;
+    #message{
+        font-size: 4em;
     }
-}
-@media (min-width: 1024px) and (max-width: 1250px) {
-    form{
-        width: 40%;
+    #subheading{
+        font-size: 1.4em;
+    }
+
+    /*форма*/
+    #message-2{
+        font-size: 2.6em;
     }
 }
