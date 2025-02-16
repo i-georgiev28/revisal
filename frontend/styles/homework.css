@@ -39,11 +39,6 @@ body{
     margin-left: var(--offset-left);
 }
 
-.wrapper{
-    display: flex;
-    flex-direction: column;
-}
-
 .headingV1{
     margin-top: 150px;
     font-size:3em;
@@ -54,10 +49,64 @@ body{
 .headingV1 i{
     transform: translateY(3px);
 }
+/* Default wrapper and box styles */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-wrapper {
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allow wrapping when screen size reduces */
+}
+
+.box {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+    width: 25%; /* Default width for larger screens */
+}
+
+.list {
+    width: 100%;
+    align-self: center;
+}
+
+.list li {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.list li::marker,
+.list-done li::marker {
+    color: var(--accent);
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-left: auto;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
 .box-wrapper{
     display: flex;
     gap: 50px;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .box{
@@ -68,21 +117,23 @@ body{
     flex-direction: column;
     align-items: center;
     font-weight: 300;
-    width: 28%;
+    width: 25%;
 }
+
 .list{
     width: 100%;
     align-self: center;
 }
+
 .list li{
     font-size: 1.6em;
     margin-bottom: 20px;
 }
+
 .list li::marker, .list-done li::marker{
     color: var(--accent);
 }
 
-/*за кутииките с отемтки*/
 li{
     display: flex;
     align-items: center;
@@ -96,29 +147,20 @@ input[type="checkbox"] {
     .heading-main{
         font-size: 2.6em;
     }
-    
     .wrapper{
         flex-direction: column;
     }
-    
     .headingV1{
-        font-size:2.4em;
+        font-size: 2.4em;
     }
-
     .box-wrapper{
-        display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
-    
     .box{
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-weight: 300;
         width: 90%;
+        padding: 20px;
     }
     .list{
         width: 100%;
@@ -131,37 +173,40 @@ input[type="checkbox"] {
         font-size: 3em;
     }
     .box-wrapper{
-        display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
     .box{
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-weight: 300;
         width: 80%;
+        padding: 30px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .box-wrapper{
-        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+    }
+    .box{
+        width: 45%;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .box-wrapper{
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
     }
     .box{
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-weight: 300;
-        width: 45%;
+        width: 25%;
     }
 }
+
 
 /** ==== ЛИСТ С ИЗПЪЛНЕНИ ЗАДАЧИ ===== */
 
@@ -181,20 +226,17 @@ input[type="checkbox"] {
     .list-done{
         display: flex;
         flex-direction: column;
-        margin-left: 80px;
     }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
     .list-done{
         grid-template-columns: repeat(2, 1fr);
-        margin-left: 80px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .list{
         grid-template-columns: repeat(3, 1fr);
-        margin-left: 80px;
     }
 }

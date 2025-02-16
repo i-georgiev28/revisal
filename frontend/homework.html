@@ -22,10 +22,6 @@
 
 </head>
 <body>
-    
-    <!--navigation--element-->
-    <!--<nav-bar></nav-bar>-->
-    <!--navigation-->
 
     <!--MAIN-->
     <section>
@@ -41,7 +37,6 @@
 
             <div class="box-wrapper">
 
-                <!--!HAS AUTO-WINDOWS RESIZE JS-->
                 <div class="box">
                     <span class="box-heading">Утре</span>
                     <span class="text"></span>
@@ -82,12 +77,33 @@
                 </div>
 
             </div>
+
+            <script>
+            function setMaxHeight() {
+            const boxes = document.querySelectorAll('.box');
+            let maxHeight = 0;
+
+            boxes.forEach(box => {
+                const boxHeight = box.offsetHeight;
+                if (boxHeight > maxHeight) {
+                    maxHeight = boxHeight;
+                }
+            });
+
+            boxes.forEach(box => {
+                box.style.height = `${maxHeight}px`;
+            });
+            }
+
+        window.onload = setMaxHeight;
+        window.onresize = setMaxHeight;
+
+            </script>
         </div>
 
         <div class="wrapper">
             <span class="headingV1">Завършено <i class='bx bx-task' ></i></span>
 
-            <!--!HAS JS-->
             <ul class="list-done" id="list_done">
                 <li id="task_1">nestho</li>
                 <li id="task_2">nestho</li>
@@ -114,28 +130,5 @@
 
     <!----FOOOTER---->
     <footer-bar></footer-bar>
-    <!--FOOTER--END-->
-
-    <!--Javascript-->
-    <script>
-    window.onload = function() {
-    let boxes = document.querySelectorAll('.box');
-    
-    let maxWidth = 0;
-    boxes.forEach(function(box) {
-        let boxWidth = box.offsetWidth;
-        if (boxWidth > maxWidth) {
-            maxWidth = boxWidth;
-        }
-    });
-
-    boxes.forEach(function(box) {
-        box.style.width = maxWidth + 'px';
-    });
-    };
-
-    </script>
-
-
 </body>
 </html>
