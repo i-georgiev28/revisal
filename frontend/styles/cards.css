@@ -234,6 +234,9 @@ body{
     .all-questions-number span:nth-of-type(1){
         font-size: 0.7em;
     }
+    .vertical{
+        height: 50%;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -275,6 +278,8 @@ body{
 
     overflow: hidden;
     padding: 9px 20px;
+
+    margin-right: 10px;
 
     position: relative;
     text-align: center;

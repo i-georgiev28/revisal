@@ -48,7 +48,7 @@
                 
                 <!--heading-->
                 <span class="card-heading">
-                    Dimoff
+                    Пакет #1
                 </span>
 
                 <!--right-wrong-->
@@ -77,7 +77,7 @@
                 <div class="buttons">
                     
                     <button class="edit">
-                        Edit <i class='bx bxs-edit-alt' ></i>
+                        Промени <i class='bx bxs-edit-alt' ></i>
                     </button>
                     
                     <button class="quiz">
@@ -90,7 +90,7 @@
             <div class="card" id="card-2">
                 <!--heading-->
                 <span class="card-heading">
-                    Велин
+                    Пакет #2
                 </span>
 
                 <!--right-wrong-->
@@ -119,7 +119,7 @@
                 <div class="buttons">
                     
                     <button class="edit">
-                        Edit <i class='bx bxs-edit-alt' ></i>
+                        Промени <i class='bx bxs-edit-alt' ></i>
                     </button>
                     
                     <button class="quiz">
@@ -132,7 +132,7 @@
             <div class="card" id="card-3">
                 <!--heading-->
                 <span class="card-heading">
-                    Мразя Асеновград
+                    Палет #3
                 </span>
 
                 <!--right-wrong-->
@@ -161,7 +161,7 @@
                 <div class="buttons">
                     
                     <button class="edit">
-                        Edit <i class='bx bxs-edit-alt' ></i>
+                        Промени <i class='bx bxs-edit-alt' ></i>
                     </button>
                     
                     <button class="quiz">
@@ -171,6 +171,47 @@
                 </div>
             </div>
         
+            <div class="card" id="card-3">
+                <!--heading-->
+                <span class="card-heading">
+                    Пакет #4
+                </span>
+
+                <!--right-wrong-->
+                <div class="card-questions-info-field">
+                    <span class="all-questions-number">
+                        <span>общо</span>
+                        10
+                    </span>
+                    
+                    <div class="vertical"></div>
+                    
+                    <span class="right-questions-number">
+                        <i class='bx bxs-check-circle correct'></i>
+                        8
+                    </span>
+
+                    <div class="vertical"></div>
+                    
+                    <span class="wrong-questions-number">
+                        <i class='bx bxs-x-circle wrong'></i>
+                        2
+                    </span>
+                </div>
+
+                <!--bottom buttons-->
+                <div class="buttons">
+                    
+                    <button class="edit">
+                        Промени <i class='bx bxs-edit-alt' ></i>
+                    </button>
+                    
+                    <button class="quiz">
+                        Quiz <i class='bx bxs-right-arrow-alt'></i>
+                    </button>
+                
+                </div>
+            </div>
 
         </div>
     </section>
@@ -183,6 +224,7 @@
 
     <!----FOOOTER---->
     <footer-bar></footer-bar>
+    <!----FOOOTER---->
 
     <!--auto-window-resizing-->
     <script>
@@ -204,47 +246,6 @@
 
 
     </script>
-
-    
-    <!--looks ugly
-    
-    <script>
-    window.addEventListener('load', () => {
-    // Array of color variables
-    const colors = [
-    'var(--blue)',
-    'var(--red)',
-    'var(--orange)',
-    'var(--yellow)',
-    'var(--green)',
-    'var(--purple)'
-    ];
-
-    // Select all elements with the .color-band class
-    const colorBands = document.querySelectorAll('.color-band');
-
-    // Function to shuffle an array randomly
-    function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]]; // Swap elements
-    }
-    }
-
-    // Shuffle the colors initially
-    shuffleArray(colors);
-
-    // Loop through each .color-band element and assign a random color
-    colorBands.forEach((colorBand, index) => {
-    // Re-shuffle the colors when all have been used
-    if (index >= colors.length) {
-        shuffleArray(colors);
-    }
-    colorBand.style.backgroundColor = colors[index % colors.length];
-    });
-    });
-    </script>
-    javascript-->
 
 </body>
 </html>
