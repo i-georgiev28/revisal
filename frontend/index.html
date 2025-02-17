@@ -43,7 +43,11 @@
                     Преговаряйте лесно и бързо с помощта на Revisal
                 </span>
 
-                <button class="try-button" role="button">Изпробвайте сега</button>
+                <button class="try-button" role="button">
+                    <a href="/frontend/login.html">
+                        Изпробвайте сега
+                    </a>
+                </button>
                 <span id="note">Напълно безплатно</span>
                 
             </div>
@@ -85,17 +89,14 @@
     </section>
 
     <script>
-    // Function to set all .box-card elements to the same height (max height)
-function resizeBoxCardsHeight() {
+    function resizeBoxCardsHeight() {
     const boxCards = document.querySelectorAll('.box-card');
     let maxHeight = 0;
 
-    // Reset the height for all .box-card elements before measuring
     boxCards.forEach(card => {
-        card.style.height = 'auto';  // Reset the height to auto before calculating
+        card.style.height = 'auto';
     });
 
-    // Find the maximum height of all the .box-card elements
     boxCards.forEach(card => {
         const cardHeight = card.offsetHeight;
         if (cardHeight > maxHeight) {
@@ -103,19 +104,12 @@ function resizeBoxCardsHeight() {
         }
     });
 
-    // Set the maximum height to all the .box-card elements
     boxCards.forEach(card => {
         card.style.height = `${maxHeight}px`;
     });
-}
-
-// Call the resize function on page load
-window.addEventListener('load', resizeBoxCardsHeight);
-
-// Call the resize function when the window is resized
-window.addEventListener('resize', resizeBoxCardsHeight);
-
-
+    }
+    window.addEventListener('load', resizeBoxCardsHeight);
+    window.addEventListener('resize', resizeBoxCardsHeight);
     </script>
 
     <!--*ui design section-->
@@ -221,7 +215,7 @@ window.addEventListener('resize', resizeBoxCardsHeight);
     <!-------->
 
     <!----FOOOTER---->
-    <footer-bar></footre-bar>
+    <footer-bar></footer-bar>
     <!--FOOTER--END-->
 
     <!--JavaScript-->

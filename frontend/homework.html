@@ -6,7 +6,7 @@
     <title>Revisal</title>
 
     <!--css-->
-    <link rel="stylesheet" href="styles/index.css">
+
     <link rel="stylesheet" href="styles/homework.css">
 
     <!--top-bar-logo-->
@@ -26,105 +26,96 @@
     <!--MAIN-->
     <section>
         <div class="welcoming">
-            <span class="heading-main">Табло за домашни </span>
+            <span class="heading-main">Домашни</span>
         </div>
     </section>
 
+    <!--за-правене-->
     <section>
-        
-        <div class="wrapper">
-            <span class="headingV1">За правене <i class='bx bx-clipboard' ></i></span>
 
-            <div class="box-wrapper">
+        <span class="heading">Възложени <i class='bx bx-clipboard'></i></span>
 
-                <div class="box">
-                    <span class="box-heading">Утре</span>
-                    <span class="text"></span>
-
-                    <ul class="list">
-                        <li>nestho <input type="checkbox" id="#"></li>
-                        <li>nestho <input type="checkbox" id="#"></li>
-                        <li>nestho <input type="checkbox" id="#"></li>
-                        <li>nestho <input type="checkbox" id="#"></li>
-                        <li>nestho <input type="checkbox" id="#"></li>
-                    </ul>
+            <div class="wrapper-simple">
+                <div class="box-card">
+                    <div>
+                        <div class="box-mini"><i class='bx bx-math' ></i></div>
+                        <span class="box-heading">Математика</span>
+                    </div>
+                    <span class="box-text">Стр. 50/зад. 1 - 10</span>
                 </div>
 
-                <div class="box">
-                    <span class="box-heading">До 2 дена</span>
-                    <span class="text"></span>
-
-                    <ul class="list">
-                        <li>nestho <input type="checkbox" id="#"></li>
-                        <li>nestho <input type="checkbox" id="#"></li>
-                        <li>nestho <input type="checkbox" id="#"></li>
-                        <li>nestho <input type="checkbox" id="#"></li>
-                        <li>nestho <input type="checkbox" id="#"></li>
-                    </ul>
+                <div class="box-card">
+                    <div>
+                        <div class="box-mini"><i class='bx bx-math' ></i></div>
+                        <span class="box-heading">Математика</span>
+                    </div>
+                    <span class="box-text">Стр. 50/зад. 1 - 10</span>
                 </div>
 
-                <div class="box">
-                    <span class="box-heading">След 5 дена</span>
-                    
-                    <ul class="list">
-                        <li>nestho <input type="checkbox" id="#"></li>
-                        <li>nestho <input type="checkbox" id="#"></li>
-                        <li>nestho <input type="checkbox" id="#"></li>
-                        <li>nestho <input type="checkbox" id="#"></li>
-                        <li>nestho <input type="checkbox" id="#"></li>
-                    </ul>
-                
+                <div class="box-card">
+                    <div>
+                        <div class="box-mini"><i class='bx bx-math' ></i></div>
+                        <span class="box-heading">Математика</span>
+                    </div>
+                    <span class="box-text">Стр. 50/зад. 1 - 10</span>
                 </div>
 
+                <div class="box-card">
+                    <div>
+                        <div class="box-mini"><i class='bx bx-math' ></i></div>
+                        <span class="box-heading">Математика</span>
+                    </div>
+                    <span class="box-text">Стр. 50/зад. 1 - 10</span>
+                </div>
+
+                <div class="box-card">
+                    <div>
+                        <div class="box-mini"><i class='bx bx-math' ></i></div>
+                        <span class="box-heading">Математика</span>
+                    </div>
+                    <span class="box-text">Стр. 50/зад. 1 - 10</span>
+                </div>
+
+                <div class="box-card">
+                    <div>
+                        <div class="box-mini"><i class='bx bx-math' ></i></div>
+                        <span class="box-heading">Математика</span>
+                    </div>
+                    <span class="box-text">Стр. 50/зад. 1 - 10</span>
+                </div>
             </div>
+    </section>
 
-            <script>
-            function setMaxHeight() {
-            const boxes = document.querySelectorAll('.box');
-            let maxHeight = 0;
-
-            boxes.forEach(box => {
-                const boxHeight = box.offsetHeight;
-                if (boxHeight > maxHeight) {
-                    maxHeight = boxHeight;
-                }
-            });
-
-            boxes.forEach(box => {
-                box.style.height = `${maxHeight}px`;
-            });
+    <!--!auto window resize-->
+    <script>
+        function resizeBoxCardsHeight() {
+        const boxCards = document.querySelectorAll('.box-card');
+        let maxHeight = 0;
+    
+        boxCards.forEach(card => {
+            card.style.height = 'auto';
+        });
+    
+        boxCards.forEach(card => {
+            const cardHeight = card.offsetHeight;
+            if (cardHeight > maxHeight) {
+                maxHeight = cardHeight;
             }
+        });
+    
+        boxCards.forEach(card => {
+            card.style.height = `${maxHeight}px`;
+        });
+        }
+        window.addEventListener('load', resizeBoxCardsHeight);
+        window.addEventListener('resize', resizeBoxCardsHeight);
+    </script>
 
-        window.onload = setMaxHeight;
-        window.onresize = setMaxHeight;
-
-            </script>
-        </div>
-
-        <div class="wrapper">
-            <span class="headingV1">Завършено <i class='bx bx-task' ></i></span>
-
-            <ul class="list-done" id="list_done">
-                <li id="task_1">nestho</li>
-                <li id="task_2">nestho</li>
-                <li id="task_3">nestho</li>
-                <li id="task_4">nestho</li>
-                <li id="task_5">nestho</li>
-                <li id="task_6">nestho</li>
-                <li id="task_7">nestho</li>
-                <li id="task_8">nestho</li>
-                <li id="task_9">nestho</li>
-                <li id="task_10">nestho</li>
-                <li id="task_11">nestho</li>
-                <li id="task_12">nestho</li>
-                <li id="task_13">nestho</li>
-                <li id="task_14">nestho</li>
-                <li id="task_15">nestho</li>
-                <li id="task_16">nestho</li>
-            </ul>
-        </div>
+    <!--готово-->
+    <section>
 
     </section>
+    
     <!-------->
 
 

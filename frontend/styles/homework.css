@@ -28,215 +28,128 @@ body{
 }
 
 /** ===== ГЛАВНИ КОМПОНЕНТИ ===== */
+/*welcoming*/
 .welcoming{
-    display: block;
-    padding-top: 3vh;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    width: 100%;
+    height: auto;
 }
 .heading-main{
     font-size: 5em;
     color: var(--accent);
     font-weight: 600;
+    text-align: center;
+}
+
+/*to do*/
+.heading{
+    font-size: 3em;
     margin-left: var(--offset-left);
-}
-
-.headingV1{
-    margin-top: 150px;
-    font-size:3em;
     color: var(--accent);
-    font-weight: 500;
+    font-family: "Onest", serif;
 }
 
-.headingV1 i{
-    transform: translateY(3px);
-}
-/* Default wrapper and box styles */
-.wrapper {
+/*boxes*/
+.wrapper-simple{
     display: flex;
-    flex-direction: column;
-}
-
-.box-wrapper {
-    display: flex;
-    gap: 50px;
-    justify-content: space-evenly;
-    flex-wrap: wrap; /* Allow wrapping when screen size reduces */
-}
-
-.box {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 20px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
+    padding-left: 5vh;
+    padding-right: 5vh;
     align-items: center;
-    font-weight: 300;
-    width: 25%; /* Default width for larger screens */
-}
-
-.list {
-    width: 100%;
-    align-self: center;
-}
-
-.list li {
-    font-size: 1.6em;
-    margin-bottom: 20px;
-}
-
-.list li::marker,
-.list-done li::marker {
-    color: var(--accent);
-}
-
-li {
-    display: flex;
-    align-items: center;
-}
-
-input[type="checkbox"] {
-    margin-left: auto;
-}
-
-.wrapper{
-    display: flex;
-    flex-direction: column;
-}
-
-.box-wrapper{
-    display: flex;
-    gap: 50px;
     justify-content: space-evenly;
+    flex-direction: row;
+    row-gap: 20px;
     flex-wrap: wrap;
+    margin-bottom: 20vh;
+    /*! attention below*/
+    margin-top: 10vh;
 }
-
-.box{
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+.box-card{
+    width: 30vw;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     border-radius: 20px;
-    padding: 40px;
+    padding: 30px;
+
     display: flex;
     flex-direction: column;
+}
+
+.box-card div:nth-of-type(1){
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    font-weight: 300;
-    width: 25%;
+    width: auto;
+    gap: 20px;
 }
 
-.list{
-    width: 100%;
-    align-self: center;
-}
-
-.list li{
-    font-size: 1.6em;
-    margin-bottom: 20px;
-}
-
-.list li::marker, .list-done li::marker{
-    color: var(--accent);
-}
-
-li{
+.box-mini {
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    color: var(--accent);
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: auto;
+    box-sizing: border-box;
 }
 
-input[type="checkbox"] {
-    margin-left: auto;
-}
-
-@media (max-width: 480px) {
-    .heading-main{
-        font-size: 2.6em;
-    }
-    .wrapper{
-        flex-direction: column;
-    }
-    .headingV1{
-        font-size: 2.4em;
-    }
-    .box-wrapper{
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .box{
-        width: 90%;
-        padding: 20px;
-    }
-    .list{
-        width: 100%;
-        align-self: center;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .heading-main{
-        font-size: 3em;
-    }
-    .box-wrapper{
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .box{
-        width: 80%;
-        padding: 30px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .box-wrapper{
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: 20px;
-    }
-    .box{
-        width: 45%;
-        padding: 30px;
-    }
-}
-
-@media (min-width: 1025px) {
-    .box-wrapper{
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .box{
-        width: 25%;
-    }
-}
-
-
-/** ==== ЛИСТ С ИЗПЪЛНЕНИ ЗАДАЧИ ===== */
-
-.list-done{
-    font-size: 1.6em;
-    margin-left: 120px;
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-}
-
-.list-done li{
+.box-heading{
+    font-size: 3em;
+    font-family: "Onest", sans-serif;
+    font-weight: 500;
     margin-bottom: 20px;
 }
+.box-text{
+    font-size: 1.4em;
+    font-family: "Onest", sans-serif;
+}
 
-@media (max-width: 480px) {
-    .list-done{
+@media(max-width: 480px){
+    .wrapper-simple{
         display: flex;
         flex-direction: column;
+        padding-left: 2.5vh;
+        padding-right: 2.5vh;
+        width: 100%;
+    }
+    .box-card{
+        width: 80vw;
+        padding: 20px;
+        margin-bottom: 5vh;
+    }
+    .box-mini {
+        width: 80px;
+        font-size: 3em;
+        margin-bottom: 15px;
+    }
+    .box-heading{
+        font-size: 2.4em;
+        margin-bottom: 15px;
+    }
+    .box-text{
+        font-size: 1.4em;
     }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-    .list-done{
-        grid-template-columns: repeat(2, 1fr);
+@media (min-width: 481px) and (max-width: 1024px){
+    .wrapper-simple{
+        flex-direction: row;
+        padding-left: 2.5vh;
+        padding-right: 2.5vh;
+        width: 100%;
+        flex-wrap: wrap;
     }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .list{
-        grid-template-columns: repeat(3, 1fr);
+    .box-card{
+        width: 40vw;
+        margin-bottom: 5vh;
+    }
+    .box-heading{
+        font-size: 2.6em;
     }
 }
