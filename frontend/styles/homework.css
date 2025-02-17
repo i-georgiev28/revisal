@@ -51,6 +51,34 @@ body{
     font-family: "Onest", serif;
 }
 
+/*resposnive*/
+@media (max-width: 480px) {
+    .heading-main{
+        font-size: 3em;
+    }
+    .heading{
+        font-size: 2.4em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .heading-main{
+        font-size: 3.5em;
+    }
+    .heading{
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .heading-main{
+        font-size: 4em;
+    }
+    .heading{
+        font-size: 2.6em;
+    }
+}
+
 /*boxes*/
 .wrapper-simple{
     display: flex;
@@ -119,9 +147,9 @@ body{
         width: 100%;
     }
     .box-card{
-        width: 80vw;
+        width: 100%;
         padding: 20px;
-        margin-bottom: 5vh;
+        margin-bottom: 20px;
     }
     .box-mini {
         width: 80px;
@@ -129,7 +157,7 @@ body{
         margin-bottom: 15px;
     }
     .box-heading{
-        font-size: 2.4em;
+        font-size: 1.8em;
         margin-bottom: 15px;
     }
     .box-text{
@@ -139,17 +167,22 @@ body{
 
 @media (min-width: 481px) and (max-width: 1024px){
     .wrapper-simple{
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
         padding-left: 2.5vh;
         padding-right: 2.5vh;
         width: 100%;
-        flex-wrap: wrap;
     }
     .box-card{
-        width: 40vw;
-        margin-bottom: 5vh;
+        width: 100%;
+        padding: 20px;
+    }
+    .box-mini {
+        width: 80px;
+        font-size: 3em;
+        margin-bottom: 15px;
     }
     .box-heading{
-        font-size: 2.6em;
+        font-size: 2.2em;
     }
 }
