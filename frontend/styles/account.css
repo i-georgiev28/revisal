@@ -134,7 +134,7 @@ body{
     margin-bottom: 15vh;
 }
 .box{
-    width: 30%;
+    width: 31%;
     aspect-ratio: 5/3;
     height: auto;
     display: flex;
@@ -147,8 +147,13 @@ body{
 
 .box-heading{
     color: var(--accent);
-    font-size: 2.4em;
+    font-size: 2.2em;
     font-weight: 500;
+}
+
+.box-heading i{
+    font-size: .9;
+    transform: translateY(4px);
 }
 
 .box-value{
@@ -174,36 +179,48 @@ body{
         overflow: visible;
         width: 100%;
     }
+    
     .row{
         flex-direction: column;
     }
+
     .row-heading{
-        font-size: 4em;
+        font-size: 2.8em;
         margin-bottom: 20px;
     }
     
     .subheading{
         margin-bottom: 50px;
+        font-size: 1em;
     }
+
     .boxes-wrapper{
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         gap: 20px;
     }
+
     .box{
-        width: 90%;
+        width: 98%;
         flex-direction: column;
-        padding: 40px;
+        padding: 25px;
     }
+
     .box-heading{
         font-size: 2.4em;
     }
+
     .box-value{
         font-size: 1.4em;
     }
+
     .box-redact{
         font-size: 1.6em;
+    }
+
+    .tab-selector{
+        margin-top: 0;
     }
 }
 
@@ -212,32 +229,39 @@ body{
         overflow: visible;
         width: 100%;
     }
+
     .row{
         flex-direction: column;
     }
+
     .row-heading{
         font-size: 4em;
     }
-    
+
     .subheading{
         margin-bottom: 50px;
     }
+
     .boxes-wrapper{
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         gap: 40px;
     }
+
     .box{
         width: 90%;
         flex-direction: column;
     }
+
     .box-heading{
         font-size: 3em;
     }
+
     .box-value{
         font-size: 2em;
     }
+
     .box-redact{
         font-size: 2em;
     }
