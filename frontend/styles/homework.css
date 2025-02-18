@@ -28,7 +28,51 @@ body{
 }
 
 /** ===== ГЛАВНИ КОМПОНЕНТИ ===== */
-/*welcoming*/
+.welcoming{
+    display: flex;
+    justify-content: center;
+    padding-top: 1vw; /*(100-98)/2*/
+    align-items: center;
+}
+.colored-field{
+    background-color: var(--accent);
+    border-radius: 20px;
+    width: 98%;
+    height: 50vh;
+    padding-left: 75px;
+    padding-top: 50px;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 10vh;
+}
+.heading-main{
+    color: var(--text-white);
+    font-weight: 600;
+    font-family: "Onest", serif;
+    font-size: 5em;
+}
+.add{
+    color: var(--text-white);
+    font-weight: 400;
+    font-family: "Onest", serif;
+    font-size: 2em;
+    cursor: pointer;
+}
+.add i, .heading i{
+    transform: translateY(3px);
+}
+
+
+
+
+
+
+
+
+/*!old
+welcoming
 .welcoming{
     display: flex;
     justify-content: center;
@@ -42,38 +86,30 @@ body{
     font-weight: 600;
     text-align: center;
 }
+*/
 
-/*to do*/
 .heading{
-    font-size: 3em;
+    font-size: 4em;
     margin-left: var(--offset-left);
     color: var(--accent);
+    font-weight: 500;
     font-family: "Onest", serif;
 }
 
 /*resposnive*/
 @media (max-width: 480px) {
-    .heading-main{
-        font-size: 3em;
-    }
     .heading{
         font-size: 2.4em;
     }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-    .heading-main{
-        font-size: 3.5em;
-    }
     .heading{
         font-size: 2em;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .heading-main{
-        font-size: 4em;
-    }
     .heading{
         font-size: 2.6em;
     }
@@ -136,8 +172,11 @@ body{
 .box-text{
     font-size: 1.4em;
     font-family: "Onest", sans-serif;
+    color: #6780ff;
+    opacity: .85;
 }
 
+/*!needs responsive fixes*/
 @media(max-width: 480px){
     .wrapper-simple{
         display: flex;
