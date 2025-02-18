@@ -21,16 +21,14 @@
 
 </head>
 <body>
-
-    <!--navigation-->
-
-    <!---MAIN---->
+    <!---ГЛАВНИ КОМПОНЕНТИ---->
     <section>
-        
-        <div class="welcoming-section">
-            <span class="heading-main">Разписание</span>
+        <div class="welcoming">
+            <div class="colored-field">
+                <span class="heading-main">Програма</span>
+            
+            </div>
         </div>
-    
     </section>
 
     <section>
@@ -88,25 +86,93 @@
     </section>
 
     <section>
+        <!--!auto-width-script-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            function setAutoWidth() {
+                let maxWidth = 0;
+                const subjects = document.querySelectorAll(".subject");
+        
+                subjects.forEach(subject => {
+                    const width = subject.getBoundingClientRect().width;
+                    if (width > maxWidth) {
+                        maxWidth = width;
+                    }
+                });
+        
+                subjects.forEach(subject => {
+                    subject.style.width = `${maxWidth}px`;
+                });
+            }
+        
+            setAutoWidth();
+            window.addEventListener("resize", setAutoWidth);
+        });
+        </script>
+        
         <div class="draggable-subjects-wrapper">
             <span class="headingV1">Предмети <i class='bx bxs-school'></i></span>
 
             <div class="subject-box" id="subject-box">
-                <div class="subject" id="english">Английски</div>
-                <div class="subject" id="bel">БЕЛ</div>
-                <div class="subject" id="maths">Математика</div>
-                <div class="subject" id="physics">Физика</div>
-                <div class="subject" id="biology">Биолгия</div>
-                <div class="subject" id="chemistry">Химия</div>
-                <div class="subject" id="history">История</div>
-                <div class="subject" id="geography">Георграфия</div>
-                <div class="subject" id="phylosophy">Философия</div>
-                <div class="subject" id="pe">ФВС</div>
-                <div class="subject" id="it">ИТ</div>
-                <div class="subject" id="finances">Финанси</div>
-                <div class="subject" id="finances">Програмиране</div>
-                <div class="subject" id="finances">ИИ</div>
+
+                <div class="subject" id="english">
+                    <div class="subject-box-mini">
+                        <i class='bx bx-pyramid'></i>
+                    </div>
+                    <span class="subject-name">Английски език</span>
+                </div>
+                
+                <div class="subject" id="maths">
+                    <div class="subject-box-mini">
+                        <i class='bx bx-math' ></i>
+                    </div>
+                    <span class="subject-name">Математика</span>
+                </div>
+                
+                <div class="subject" id="bulgarian">
+                    <div class="subject-box-mini">
+                        <i class='bx bx-book-open' ></i>
+                    </div>
+                    <span class="subject-name">БЕЛ</span>
+                </div>
+                
+                <div class="subject" id="history">
+                    <div class="subject-box-mini">
+                        <i class='bx bxs-landmark' ></i>
+                    </div>
+                    <span class="subject-name">История</span>
+                </div>
+
+                <div class="subject" id="i_technologies">
+                    <div class="subject-box-mini">
+                        <i class='bx bx-desktop' ></i>
+                    </div>
+                    <span class="subject-name">ИТ</span>
+                </div>
+
+                <div class="subject" id="programming">
+                    <div class="subject-box-mini">
+                        <i class='bx bx-code-block' ></i>
+                    </div>
+                    <span class="subject-name">Програмиране</span>
+                </div>
+
+                <div class="subject" id="geography">
+                    <div class="subject-box-mini">
+                        <i class='bx bxs-landscape' ></i>
+                    </div>
+                    <span class="subject-name">География</span>
+                </div>
+
+                <div class="subject" id="sports">
+                    <div class="subject-box-mini">
+                        <i class='bx bxs-landscape' ></i>
+                    </div>
+                    <span class="subject-name">ФВС</span>
+                </div>
+            
             </div>
+        
         </div>
     </section>
     <!--MAIN END-->

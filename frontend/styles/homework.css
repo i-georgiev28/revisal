@@ -34,6 +34,7 @@ body{
     padding-top: 1vw; /*(100-98)/2*/
     align-items: center;
 }
+
 .colored-field{
     background-color: var(--accent);
     border-radius: 20px;
@@ -48,12 +49,14 @@ body{
     margin-bottom: 10vh;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 .heading-main{
     color: var(--text-white);
     font-weight: 600;
     font-family: "Onest", serif;
     font-size: 5em;
 }
+
 .add{
     color: var(--text-white);
     font-weight: 400;

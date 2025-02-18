@@ -220,12 +220,16 @@ body{
     color: var(--accent);
     margin-bottom: 30px;
 }
-.box-heading{
+
+.box-heading {
     font-size: 2.4em;
     font-family: "Onest", sans-serif;
     font-weight: 500;
     margin-bottom: 20px;
+    overflow-wrap: break-word;
 }
+
+
 .box-text{
     font-size: 1.2em;
     font-family: "Onest", sans-serif;
