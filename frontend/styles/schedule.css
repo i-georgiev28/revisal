@@ -236,6 +236,7 @@ body{
 
 .subject:hover{
     background-color: #f6f6f6;
+    cursor: pointer;
 }
 
 .subject-box-mini{
@@ -283,40 +284,3 @@ body{
         gap: 20px;
     }
 }
-
-
-/*
-.subject-box{
-    justify-self: center;
-    margin: 20px 0;
-    display: flex;
-    width: 94%;
-    min-height: fit-content;
-    max-height: 50vh;
-    padding: 20px;
-    flex-wrap: wrap;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 20px;
-    background-color: var(--main);
-    gap: 15px;
-    justify-content: space-evenly;
-}
-
-.subject{
-    font-size: 1.2em;
-    font-family: "Onest", serif;
-    padding: 8px 15px;
-    border-radius: 20px;
-
-    background-color: #f7f7f7;
-    color: var(--accent);
-
-    height: fit-content;
-    width: fit-content;
-}
-
-@media (max-width: 768px) {
-    .subject-box{
-        justify-content: none;
-    }
-}*/
