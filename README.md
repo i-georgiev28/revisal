@@ -5,15 +5,31 @@
 Уеб-базирано приложение за бърз преговор чрез "flash" карти и следене 
 на прогреса и задълженията чрез динамичен календар.
 
-## Начало
+## Резюме
+### Цели
+### Арихектура
+Приложението е изградено с фокус върху клиентско рендиране (CSR) с Islands архитектура и хидратация, което осигурява динамични взаимодействия. Мобилното приложение използва WebView wrapper за вграждане на уеб версията, като предоставя интеграция с native функционалности.
+ #### Технологии:
+ ##### Front-end:
+ - HTML5
+ - CSS3
+ - JavaScript;
+ - Leptos;
+ #### Back-end:
+ - Език: Rust;
+ - Рамка: Leptos със Axum;
+ - База данни: SQLite;
+ #### Мобилно приложение:
+WebView компонент: За вграждане на уеб приложението директно;
+Език за разработка: Kotlin за Android;
 
-
-Инструкциите ще ви помгонат да създадете копие на проекта и успешно да стартирате решението за тестване, оценяване и преглеждане.
+###
+###
 
 ### Нужен софтуер и инструмени за правилно стартиране
 
-- [Visual Studio Code](https://code.visualstudio.com/download) 
-- [Android Studio](https://developer.android.com/studio)
+- [Visual Studio Code](https://code.visualstudio.com/download);
+- [Android Studio](https://developer.android.com/studio);
 
 ## Отваряне на проекта
 
@@ -76,48 +92,32 @@ Checks if the best practices and the right coding style has been used.
     Give an example
 
 
-
-## Пускане
-
-*допълнителни ин
-
-
 ## Използвани материали
 
 За да разгледате използваните материали и източници, отворете [USED_CONTENT.txt](USED_CONTENT.txt)
 или дирекотно отворете [materials.html](MATERIALS.html) във вашия уеб браузър.
 
-## Файлово разпределение
+## Автори и допълнителна информация
 
-
-
-
-
-## Версии
-
-
-
-
-## Автори
+### Олимпиада по информационни технологии, 2024-2025г.
+ - *Това е неофициална документация. Тя служи само за посетителите на GitHub страницата на проекта*;
 
 ### Учебно заведение
-  - **ПГКМКС Акад. Благовест Сендов** - гр. Варна
+  - **ПГКМКС Акад. Благовест Сендов** - гр. Варна;
 
 ### Разработчици
   - **Иван Георгиев** - *backend разработчик*
-    [Ivan Georrgiev GitHub]([https://github.com/IliyanGeorgiev87](https://github.com/i-georgiev28))
-    email: ivangeorgiev28@itpg-varna.bg
+    [Ivan Georrgiev GitHub]([https://github.com/IliyanGeorgiev87](https://github.com/i-georgiev28));
+    имейл: ivangeorgiev28@itpg-varna.bg;
+    
   - **Илиян Георгиев** - *frontend разработчик*
-    [Iliyan Georrgiev GitHub](https://github.com/IliyanGeorgiev87)
-    email: iliyangeorgiev28@itpg-varna.bg
+    [Iliyan Georrgiev GitHub](https://github.com/IliyanGeorgiev87);
+    имейл: iliyangeorgiev28@itpg-varna.bg;
     
 
 ### Ръководител(и):
   - **г-жа Моника Желязкова** - *учител по Информационни технологии*
-    email: m.zhelqzkova@itpg-varna.bg
-
-Проверете също, други участници и учители, помогнали с разработката:
- - [участници](https://github.com/PurpleBooth/a-good-readme-template/contributors)
+    имейл: m.zhelqzkova@itpg-varna.bg
 
 
 
