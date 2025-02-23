@@ -1,51 +1,72 @@
+![UI Image](https://raw.githubusercontent.com/i-georgiev28/revisal/main/frontend/images/ui.png)
+
 # Revisal
 
-Web-based app for fast revision via flash cards and task mangment with dynamic calendar.
+A web-based application for quick review using "flash" cards and tracking progress and responsibilities through a dynamic calendar.
 
-## Начало
+## Summary
 
-The following instructions will help you get an impression of our product and copy it onto your computer and run a few test.
+### Objectives
+The project is an application designed to assist users in managing their personal tasks and effectively reviewing study material using flashcards. The app allows the creation and categorization of cards, which makes it easier to structure information and encourages systematic learning.
 
-### Required software and toolkits
+### Architecture
+The application is built with a focus on client-side rendering (CSR) using Islands architecture and hydration, which ensures dynamic interactions. The mobile app uses a WebView wrapper to embed the web version, offering integration with native functionalities.
 
-- Any text/code editor of choice, VS Code recommended:[Visual Studio Code](https://code.visualstudio.com/download) 
+#### Technologies:
+
+##### Front-end:
+- HTML5
+- CSS3
+- JavaScript
+- Leptos
+
+##### Back-end:
+- Language: Rust
+- Framework: Leptos with Axum
+- Database: SQLite
+
+##### Mobile App:
+- WebView component: For embedding the web app directly
+- Language: Kotlin for Android
+
+### Required Software and Tools for Proper Setup
+
+- [Visual Studio Code](https://code.visualstudio.com/download)
 - [Android Studio](https://developer.android.com/studio)
+- Preferred browser
 
-## Opening the solution
+## Downloading the build artifact
+*from the build artifact download function on the page*
 
-Here are a few steps so you can open the solution:
+## Opening the Project
 
-### Web verison
+A few easy steps to open the project:
 
-Say what the step will be
+### Web Version
 
-    Give the example
+Step 1
 
-And repeat
+    .
 
-    until finished
+Step 2
 
-### Android мобилна версия
+    .
 
-Say what the step will be
+### Android Mobile Version
 
-    Give the example
+Step 1
 
-And repeat
+    .
 
-    until finished
+Step 2
 
-End with an example of getting some data out of the system or using it
-for a little demo
+    .
 
-
-
-
-## Testing
+## Testing the Application
 
 Explain how to run the automated tests for this system
 
-## Testing profiles
+## Test Profiles
 
 Profile 1:
 
@@ -57,53 +78,40 @@ Profile 2:
     username: ***
     password: ***
 
-### Example test
+### Sample Tests
 
-Explain what these tests test and why
+Test #1
 
-    Give an example
+    .
 
+## Materials Used
 
+To view the materials and sources used, open [USED_CONTENT.txt](USED_CONTENT.txt) or directly open [materials.html](MATERIALS.html) in your web browser.
 
-### Style test
+## Authors and Additional Information
 
-Checks if the best practices and the right coding style has been used.
+### IT Olympiad, 2024-2025
+ - *This is unofficial documentation. It is only intended for visitors of the project's GitHub page.*
 
-    Give an example
+### Educational Institution
+  - **PGKMKS "Acad. Blagovest Sendov"** - Varna, Bulgaria
 
-
-
-## Deployment
-
-Add additional notes to deploy this on a live system
-
-## Used materials
-
-To look up used content, materials and their source, check:[USED_CONTENT.txt](USED_CONTENT.txt).
-
-## Fail 
-
-### School
-  - **PGCMCS Acad. Blagovest Sendov** - Varna city, Bulgaria
+### Period
+  - 11.12.2024 - present
 
 ### Developers
-  - **Ivan Georgiev** - *backend developer*
-  - **Iliyan Georgiev** - *frontend developer*
+  - **Ivan Georgiev** - *Backend Developer*
+    [Ivan Georgiev GitHub](https://github.com/i-georgiev28)
+    Email: ivangeorgiev28@itpg-varna.bg
+    
+  - **Iliyan Georgiev** - *Frontend Developer*
+    [Iliyan Georgiev GitHub](https://github.com/IliyanGeorgiev87)
+    Email: iliyangeorgiev28@itpg-varna.bg
 
-### Ръководител(и):
-  - **Mrs. Monika Zhelyazkova** - *Informational Technologies teacher*
-
-Take a look at people who also helped:
- - [participants](#)
-
+### Supervisor:
+  - **Ms. Monika Zhelyazkova** - *Information Technology Teacher*
+    Email: m.zhelqzkova@itpg-varna.bg
 
 ## License
 
-This project is licensed under the [GNU GPL-3](LICENSE.md) license.
-
-## Other
-
-  - Inspiration: Dribble
-  - Created for National Olympiad of Informational Technologies (Bulgaria)
-  - **Billie Thompson** - *Provided README Template* -
-  [PurpleBooth](https://github.com/PurpleBooth)
+ - This project is licensed under [GNU GPL-3](LICENSE.md).

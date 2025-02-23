@@ -6,57 +6,63 @@
 на прогреса и задълженията чрез динамичен календар.
 
 ## Резюме
+
 ### Цели
+Проектът представлява приложение, разработено за подпомагане на потребителите при управлението на личните им задачи и ефективното преговаряне на учебния материал чрез използване на карти за преговор. Приложението предоставя възможност за създаване и категоризация на картите, което улеснява структурираното организиране на информацията и насърчава систематичното усвояване на знания.
+
 ### Арихектура
 Приложението е изградено с фокус върху клиентско рендиране (CSR) с Islands архитектура и хидратация, което осигурява динамични взаимодействия. Мобилното приложение използва WebView wrapper за вграждане на уеб версията, като предоставя интеграция с native функционалности.
+ 
  #### Технологии:
+ 
  ##### Front-end:
  - HTML5
  - CSS3
  - JavaScript;
  - Leptos;
+ 
  #### Back-end:
  - Език: Rust;
  - Рамка: Leptos със Axum;
  - База данни: SQLite;
+ 
  #### Мобилно приложение:
-WebView компонент: За вграждане на уеб приложението директно;
-Език за разработка: Kotlin за Android;
-
-###
-###
+ - WebView компонент: За вграждане на уеб приложението директно;
+ - Език: Kotlin за Android;
 
 ### Нужен софтуер и инструмени за правилно стартиране
 
 - [Visual Studio Code](https://code.visualstudio.com/download);
 - [Android Studio](https://developer.android.com/studio);
+- Браузър по избор;
+
+## Изтегляне на build artifact
+*от функцията за изтегляне на build artifact на страницата*
 
 ## Отваряне на проекта
 
-Няколко лесни стъпки, с който ще отворите проекта: 
+Няколко лесни стъпки, с който ще отворите проекта:
 
 ### Уебсайт версия
 
-Say what the step will be
+Стъпка 1
 
-    Give the example
+    .
 
-And repeat
+Стъпка 2
 
-    until finished
+    .
 
 ### Android мобилна версия
 
-Say what the step will be
+Стъпка 1
 
-    Give the example
+    .
 
-And repeat
+Стъпка 2
 
-    until finished
+    .
 
-End with an example of getting some data out of the system or using it
-for a little demo
 
 
 
@@ -79,17 +85,9 @@ Explain how to run the automated tests for this system
 
 ### Примерни тестове
 
-Explain what these tests test and why
+Тест №1
 
-    Give an example
-
-
-
-### Style test
-
-Checks if the best practices and the right coding style has been used.
-
-    Give an example
+    .
 
 
 ## Използвани материали
@@ -103,7 +101,10 @@ Checks if the best practices and the right coding style has been used.
  - *Това е неофициална документация. Тя служи само за посетителите на GitHub страницата на проекта*;
 
 ### Учебно заведение
-  - **ПГКМКС Акад. Благовест Сендов** - гр. Варна;
+  - **ПГКМКС "Акад. Благовест Сендов"** - гр. Варна;
+
+### Период
+  - 11.12.2024 - сега ;
 
 ### Разработчици
   - **Иван Георгиев** - *backend разработчик*
@@ -115,12 +116,12 @@ Checks if the best practices and the right coding style has been used.
     имейл: iliyangeorgiev28@itpg-varna.bg;
     
 
-### Ръководител(и):
+### Ръководител:
   - **г-жа Моника Желязкова** - *учител по Информационни технологии*
-    имейл: m.zhelqzkova@itpg-varna.bg
+    имейл: m.zhelqzkova@itpg-varna.bg;
 
 
 
 ## Лиценз
 
-Този проект е лицензиран под [GNU GPL-3](LICENSE.md)
+ - Този проект е лицензиран под [GNU GPL-3](LICENSE.md).
