@@ -1,4 +1,4 @@
-![UI Image](https://raw.github.com/i-georgiev28/revisal/blob/main/frontend/images/pictures/ui_2.png)
+![UI Image](https://github.com/i-georgiev28/revisal/blob/main/frontend/images/pictures/ui_2.png)
 
 # Revisal
 
