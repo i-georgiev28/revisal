@@ -1,12 +1,12 @@
 Използвани материали / Used content:
 
   - Boxicons: https://boxicons.com/ ;
-  - Flaticon: https://www.flaticon.com/ ;
-  - Freepik: https://www.freepik.com/ ;
-  - Logo: "R and a flag" by Andrii Kovalchu (UA), uploaded in Dribble: https://dribbble.com/shots/24088047-R-and-flag ;
-  - Dribble: https://dribbble.com/ (Dribble);
 
-Freepik icons: 
+  - Logo: "R and a flag" by Andrii Kovalchu (UA), uploaded in Dribble: https://dribbble.com/shots/24088047-R-and-flag ;
+  
+  - Dribble: https://dribbble.com/ - идеи и вдъхновение;
+
+Flaticon icons (https://www.flaticon.com/) by Freepik (https://www.freepik.com/): 
 
   - https://www.flaticon.com/free-icon/effort_5696432?term=hard&page=1&position=5&origin=search&related_id=5696432
   - https://www.flaticon.com/free-icon/clock_992700?term=time&page=1&position=4&origin=search&related_id=992700
@@ -17,3 +17,10 @@ Freepik icons:
 Slides.go:
 
   - https://slidesgo.com/theme/company-technical-report#search-company+technical+report&position-1&results-2&rs=search
+
+Програми / Software:
+  - VS Code
+  - Figma
+  - PowerPoint
+  - Android studio
+  
