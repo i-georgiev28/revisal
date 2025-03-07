@@ -1,0 +1,11 @@
+[build]
+rustflags = [
+  "-Ccode-model=large",
+  "-Clink-arg=-fuse-ld=C:/Program Files/LLVM/lld-link.exe",
+  "-Zshare-generics=y"
+]
+
+[target.wasm32-unknown-unknown]
+rustflags = [
+  "--cfg", "getrandom_backend=\"wasm_js\"",
+]

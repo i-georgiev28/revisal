@@ -1,0 +1,111 @@
+@use '../components/calendar';
+@use '../components/schedule';
+@use '../components/events';
+@use '../components/daily';
+@use '../components/homework';
+
+main#dashboard {
+    // padding-bottom: 5rem;
+    display: grid;
+    gap: 1rem;
+    // grid-auto-rows: minmax(150px, auto);
+    grid-auto-flow: row dense;
+    grid-template-rows: 350px repeat(6, minmax(150px, auto));
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "schedule"
+      "calendar"
+      "calendar"
+      "calendar"
+      "homework"
+      "events"
+      "cards";
+}
+
+@media (max-width: 500px){
+  main#dashboard {
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 500px){
+    main#dashboard {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: minmax(150px, auto);
+    grid-template-areas: 
+    "calendar calendar"
+    "calendar calendar"
+      "schedule homework"
+      "schedule homework"
+      "events cards"
+      "events cards";
+    }
+  }
+
+
+  @media (min-width: 750px){
+    main#dashboard{
+      grid-template-columns: repeat(4, 1fr);
+      // grid-auto-rows: minmax(150px, auto);
+      grid-template-rows: repeat(5, minmax(150px, auto));
+      grid-template-areas:
+      "calendar calendar schedule schedule" 
+      "calendar calendar schedule schedule"
+      "calendar calendar events events"
+      "homework homework cards cards"
+      "homework homework cards cards"
+      ;
+     }
+  }
+
+  @media (min-width: 900px){
+    main#dashboard{
+      // grid-auto-rows: minmax(min-content, auto);
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(5, minmax(150px, auto));
+      row-gap: 2rem;
+      grid-template-areas: 
+      "calendar calendar calendar calendar homework homework"
+      "events events schedule schedule schedule schedule"
+      "events events schedule schedule schedule schedule"
+      "cards cards cards cards cards cards"
+      "cards cards cards cards cards cards"
+      ;
+    }
+  }
+
+  main#dashboard > *{
+    grid-area: var(--grid-area);
+    position: relative;
+    color: black;
+    overflow: hidden;
+    // border: black solid 1px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: white;
+  }
+// main#dashboard > * > p{
+//   position: absolute;
+//   /*max-width: 12ch;*/
+//   text-wrap: balance;
+//   // top: .75rem; 
+//   // left: .75rem;
+// //   font-size: .9rem;
+//   z-index: 2;
+  
+// }
+// main#dashboard > * > p.align-right{
+//   left: auto;
+//   right: .75rem;
+//   text-align: right;
+// }f
+
+.banner{
+  background-color: black !important;
+  border-radius: 10px;
+  display: grid;
+  place-content: center;
+}
+
+// 
+

@@ -1,0 +1,95 @@
+@use 'reset';
+
+@use "root";
+@use "components/navigation";
+@use "components/tabs";
+
+@use "components/modal";
+
+@use "pages/dashboard";
+@use "pages/cards";
+@use "pages/auth";
+@use "pages/events";
+
+
+main#dashboard, main#cards, main#events, main#schedule {
+    margin: 1rem auto;
+    width: min(calc(100%), 85vw);  
+}
+main {
+    justify-content: center;
+      view-transition-name: slide;
+      contain: layout;
+}
+
+main#dashboard {
+    view-transition-name: dashboard;
+    contain: layout;
+}
+
+main#cards {
+    view-transition-name: cards;
+    contain: layout;
+}
+
+main#events {
+    view-transition-name: events;
+    contain: layout;
+}
+
+main#schedule {
+    view-transition-name: schedule;
+    contain: layout;
+}
+
+::view-transition-old(dashboard) {
+    animation-duration: 200ms;
+    animation-name: slide-out;
+}
+
+::view-transition-new(dashboard) {
+    animation-duration: 200ms;
+    animation-name: slide-in;
+}
+
+::view-transition-old(cards) {
+    animation-duration: 400ms;
+    animation-name: slide-out;
+}
+
+::view-transition-new(cards) {
+    animation-duration: 200ms;
+    animation-name: slide-in;
+}
+
+// ::view-transition-old(events) {
+//     animation-duration: 400ms;
+//     animation-name: slide-out;
+// }
+
+// ::view-transition-new(events) {
+//     animation-duration: 200ms;
+//     animation-name: slide-in;
+// }
+
+::view-transition-old(schedule) {
+    animation-duration: 400ms;
+    animation-name: slide-out;
+}
+
+::view-transition-new(schedule) {
+    animation-duration: 200ms;
+    animation-name: slide-in;
+}
+
+@keyframes slide-out {
+    to {
+        transform: translateX(-1000%);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(500%);
+    }
+}

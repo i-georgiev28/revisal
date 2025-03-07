@@ -1,0 +1,15 @@
+#schedule {
+    padding: 1em 0.75em 0.75em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+        "title"
+        "content"
+        "content"
+        "content";
+
+    & > a {
+        grid-area: title;
+    }
+}

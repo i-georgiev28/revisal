@@ -1,0 +1,98 @@
+[package]
+name = "revisal"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+tokio = { version = "1.43.0", features = ["full"], optional = true }
+axum = { version = "0.7.9", default-features = false, features = ["http1", "form", "json", "query", "tokio", "macros"], optional = true }
+leptos_axum = { version = "0.7.7", optional = true }
+
+axum_session = { version = "0.14.4", optional = true }
+axum_session_auth = { version = "0.14.1", optional = true }
+axum_session_surreal = { version = "0.2.1", optional = true }
+
+surrealdb = { version = "2.2.0", default-features = false, features = ["kv-mem"], optional = true }
+
+leptos = { version = "0.7.7", features = ["nightly", "islands"] }
+leptos_meta = "0.7.7"
+leptos_router = { version = "0.7.7", features = ["nightly"] }
+leptos_router_macro = { version = "0.7.7"}
+
+getrandom = { version = "0.3", features = ["std"]}
+wasm-bindgen = { version = "0.2.100", default-features = false, optional = true, features = ["msrv", "serde", "std"] }
+web-time = { version = "1.1.0", default-features = false, features = ["serde"] }
+console_error_panic_hook = { version = "0.1.7", optional = true }
+
+chrono = { version = "0.4.39", default-features = false, features = ["now", "winapi", "serde", "std", "wasmbind", "js-sys", "wasm-bindgen", "clock"] }
+chrono-tz = { version = "0.10.1", features = ["serde", "std"] }
+
+serde = { version = "1.0.217", features = ["std", "derive"] }
+cfg-if = "1.0.0"
+bcrypt = { version = "0.17.0", features = ["std", "zeroize"]}
+async-trait = "0.1.86"
+anyhow = "1.0.95"
+serde_json = "1.0.138"
+
+[features]
+hydrate = [
+    "leptos/hydrate",
+    "leptos/hydration",
+    "getrandom/wasm_js",
+    "dep:wasm-bindgen",
+    "dep:console_error_panic_hook"
+]
+
+ssr = [
+    "dep:tokio",
+    "dep:axum",
+    "dep:leptos_axum",
+    "dep:surrealdb",
+    "dep:axum_session",
+    "dep:axum_session_auth",
+    "dep:axum_session_surreal",
+    "leptos/ssr",
+    "leptos_meta/ssr",
+    "leptos_router/ssr",
+]
+
+[profile.dev.build-override]
+opt-level = 3
+
+[profile.dev.package."*"]
+opt-level = 3
+strip = "debuginfo"
+codegen-units = 1
+incremental = true
+
+[profile.dev]
+lto = false
+opt-level = 0
+panic = "abort"
+strip = "debuginfo"
+incremental = true
+
+[profile.wasm-release]
+inherits = "release"
+opt-level = 'z'
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[package.metadata.leptos]
+site-addr = "127.0.0.1:8080"
+site-pkg-dir = "pkg"
+
+assets-dir = "assets"
+style-file = "css/main.scss"
+js-dir = "js"
+
+# watch-additional-files = ["css", "js"]
+
+bin-features = ["ssr"]
+lib-features = ["hydrate"]
+
+lib-profile-release = "wasm-release"

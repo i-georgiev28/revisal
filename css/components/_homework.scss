@@ -1,0 +1,129 @@
+    #homework {
+		grid-template-columns: min-content auto 1fr;
+		grid-template-rows: 3em 1fr 1fr 6em;
+		grid-template-areas: 
+		"title subtitle subtitle"
+		"content subtitle subtitle"
+		"content subtitle subtitle"
+		"content subtitle subtitle";	
+  }
+
+
+
+@media (min-width: 500px){
+	#homework {
+		grid-template-columns: min-content auto;
+		grid-template-rows: 3em 1fr 1fr 6em;
+		grid-template-areas: 
+		"title title"
+		"subtitle subtitle"
+		"subtitle subtitle"
+		"content content";
+		
+  }
+}
+
+  @media (min-width: 750px){
+    #homework {
+		grid-template-columns: min-content auto 1fr;
+		grid-template-rows: 3em 1fr 6em;
+		grid-template-areas: 
+		"title title title"
+		"subtitle subtitle subtitle"
+		"content _ _";
+     }
+  }
+
+
+
+#homework {
+	// background-color: hsla(223,10%,95%,0.8);
+	// backdrop-filter: blur(16px);
+	border-radius: 1.5em;
+	display: grid;
+	padding: 1em 0.75em 0.75em;
+	// width: 12em;
+	// height: 12em;
+
+	.widget__bar {
+        align-self: center;
+        justify-self: center;
+
+		background-color: rgba(255,255,255,0.1);
+		// background-color: hsla(223,10%,5%,0.1);
+		border-radius: 0.75em;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-between;
+		overflow: hidden;
+		padding: 0.375em 0;
+		position: relative;
+		width: 3.25em;
+		height: 100%;
+
+		&-fill {
+			$colors: (
+				// "green": hsl(123,90%,45%),
+				// "yellow": hsl(48,90%,50%),
+				// "red": hsl(13,90%,50%)
+				"green": #B56BFF,
+				"yellow": #5bb6ff,
+				"red": #f26500
+			);
+
+			filter: blur(6px);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			@each $name, $value in $colors {
+				&--#{$name} {
+					background-color: $value;
+				}
+			}
+		}
+		&-icon,
+		&-percent {
+			position: relative;
+		}
+		&-icon {
+			background-color: hsla(223,10%,95%,0.9);
+			border-radius: 50%;
+			display: grid;
+			place-items: center;
+			width: 2.25em;
+			height: 2.25em;
+		}
+	}
+	.widget__bars {
+        grid-area: content;
+		display: grid;
+        grid-template-columns: repeat(3, min-content);
+        column-gap: 0.75em;
+		// gap: 0.375em;
+		height: 100%;
+	}
+
+    .subtitle {
+        grid-area: subtitle;
+        // color: gray;
+        // font-weight: 300;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
+    }
+    .title {
+        grid-area: title;
+        // display: -webkit-box;
+        // font-weight: 600;
+        // flex: 1;
+        // overflow: hidden;
+        // -webkit-box-orient: vertical;
+        // -webkit-line-clamp: 2;
+        // line-clamp: 2;
+    }
+}
+
