@@ -75,7 +75,11 @@ pub fn EventList() -> impl IntoView {
                                               <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" stroke-width="2"/>
                                               <path d="M13 2v7h7" stroke-width="2"/>
                                           </svg>
-                                          <button class="w-full h-full outline-none bg-red-400 text-white">X</button>
+                                          <button on:click=move |_| {
+                                            unschedule_event.dispatch(model::event::DeleteEvent { event_id: event.id.clone() });
+                                          }
+                                          type="button"
+                                          class="w-full h-full outline-none bg-red-400 text-white">X</button>
                                       </div>
                                       <div class="content">
                                           <div class="title">{event.name}</div>

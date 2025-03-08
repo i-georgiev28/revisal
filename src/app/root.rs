@@ -15,22 +15,33 @@ pub fn App() -> impl IntoView {
     let is_logged = Resource::new(
         || (), // Runs on mount
         |_| async {
-            dbg!("Getting is_logged");
-            is_auth().await.unwrap_or(false) // Defaults to false on error
+            let a = is_auth().await;
+            dbg!(format!("Checking is_logged: {:?}", a.clone()));
+            a.unwrap_or(false) // Defaults to false on error
         }
     );
     
     // Use `is_logged.get()` wherever needed
-    let condition = move || Some(is_logged.get().unwrap_or(false));
+    let condition = move || {
+        let is_logged = is_logged.get();
+        dbg!(format!("condition is_logged: {:?}", is_logged.clone()));
+        Some(is_logged.unwrap_or(false))
+    };
+
+    let not_auth = move || {
+        let is_logged = is_logged.get();
+        dbg!(format!("condition is_logged: {:?}", is_logged.clone()));
+        Some(!is_logged.unwrap_or(true))
+    };
     view! {
         <Router>
             <NavBar />
             <main>
                 <Routes transition=true fallback=|| "Page not found.".into_view()>
-                    <Route path=path!("") view=Authenticate/>
-                    <ProtectedRoute path=path!("/app/dashboard") view=Dashboard condition=condition redirect_path=|| "/"/>
-                    <ProtectedRoute path=path!("/app/cards") view=Cards condition=condition redirect_path=|| "/"/>
-                    <ProtectedParentRoute path=path!("/app/calendar") view=Events condition=condition redirect_path=|| "/">
+                    <ProtectedRoute path=path!("") view=Authenticate condition=not_auth redirect_path=|| "/app/dashboard"/>
+                    <Route path=path!("/app/dashboard") view=Dashboard/>
+                    <Route path=path!("/app/cards") view=Cards/>
+                    <ParentRoute path=path!("/app/calendar") view=Events>
                         <Route path=path!("") view=|| {
                             let navigate = leptos_router::hooks::use_navigate();
                             let current_day = Local::now().day();
@@ -40,8 +51,8 @@ pub fn App() -> impl IntoView {
                             }
                         }/>
                         <Route path=path!(":day") view=EventList/>
-                    </ProtectedParentRoute>
-                    <ProtectedRoute path=path!("/app/schedule") view=Schedule condition=condition redirect_path=|| "/"/>
+                    </ParentRoute>
+                    <Route path=path!("/app/schedule") view=Schedule/>
 
                 </Routes>
             </main>

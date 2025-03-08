@@ -15,11 +15,17 @@ pub struct StudentRecord {
 #[server(CurrentStudent, "/api")]
 pub async fn current_student() -> Result<Option<StudentRecord>, ServerFnError> {
     use crate::auth::*;
-    let auth = auth();
-    if auth.is_err() {
-        return Ok(None);
-    }
-    Ok(auth.unwrap().current_user)
+
+    // TODO: Implement
+    
+    // let auth = auth();
+    // if auth.is_err() {
+        // return Ok(None);
+    // }
+    // Ok(auth.unwrap().current_user)
+    let db = db()?;
+    let user = get_user().await?;
+    Ok(user)
 }
 
 cfg_if::cfg_if!{
@@ -31,7 +37,6 @@ if #[cfg(feature = "ssr")] {
         pub async fn get_student(db: &Surreal<Db>, user_id: String) -> Option<Self> {
 
             let student: Option<StudentRecord> = db.select(("students", user_id.clone())).await.unwrap().map(SurrealStudentRecord::into_user);
-            dbg!("Student {} found by id: {:?}", user_id.clone(), student.clone());
             return student
         }
 
@@ -85,19 +90,27 @@ if #[cfg(feature = "ssr")] {
                 .unwrap()
                 .take(0)
                 .unwrap();
-    
+            
+            dbg!("Verifying password.");
+            dbg!(format!("Student validated: {:?}", student.clone()));
             if let Some(student) = student {
 
-                dbg!("Verifying password for user: {}", student.id);
-                match bcrypt::verify(password, &student.password) {
-                    Ok(matches) => {
-                        dbg!("Password verification result: {}", matches);
-                        return matches;
-                    },
-                    Err(e) => {
-                        dbg!("Password verification error: {:?}", e);
-                        return false;
-                    }
+                // match bcrypt::verify(password, &student.password) {
+                //     Ok(matches) => {
+                //         dbg!(format!("Password matches: {:?}", matches));
+                //         return matches;
+                //     },
+                //     Err(e) => {
+                //         dbg!(format!("Password does not match: {:?}", e));
+                //         return false;
+                //     }
+                // }
+                if student.password == password {
+                    dbg!("Password matches.");
+                    return true;
+                } else {
+                    dbg!("Password does not match.");
+                    return false;
                 }
             }
 

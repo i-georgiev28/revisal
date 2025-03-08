@@ -5,7 +5,7 @@ use chrono::{DateTime, Datelike, Duration, NaiveDate, NaiveDateTime, TimeZone, U
 
 use super::StudentRecord;
 
-#[derive(Serialize, Deserialize, Clone)]
+#[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct EventRecord {
     pub id: String,
     pub owner_id: String,
@@ -26,7 +26,7 @@ pub async fn get_events() -> Result<Vec<EventRecord>, ServerFnError> {
     use crate::model::*;
     use crate::auth::*;
     let db = db()?;
-    let user = auth()?;
+    let user = get_user().await?.unwrap();
 
     Ok(EventRecord::get_events_for_user(&db, user.id).await?)
 }
@@ -40,7 +40,8 @@ pub async fn create_event(input: (String, String, String, NaiveDateTime)) -> Res
     let (name, description,label, timestamp) = input;
 
     let db = db()?;
-    let user = auth()?;
+    let user = get_user().await?.unwrap();
+
     EventRecord::create_event(&db, user.id, name, description, label, timestamp).await?;
     Ok(())
 }
@@ -51,9 +52,9 @@ pub async fn delete_event(event_id: String) -> Result<(), ServerFnError> {
     use crate::model::*;
     use crate::auth::*;
 
-    let db = db()?;
-    let user = auth()?;
-
+    let db: Surreal<Db> = db()?;
+    let user = get_user().await?.unwrap();
+    dbg!(format!("Deleting event: {}", event_id.clone()));
     EventRecord::delete_event(&db, event_id).await?;
     Ok(())
 }
@@ -63,12 +64,13 @@ cfg_if::cfg_if! {
         use surrealdb::{Response, Value};
         use surrealdb::{engine::local::Db, RecordId, Surreal};
         use serde_json::json;
-
+        use surrealdb::sql::Thing;
+        
         impl EventRecord {
             pub async fn create_event_table(db: &Surreal<Db>) {
                 db.query("
                     DEFINE TABLE events SCHEMAFULL;
-                    DEFINE FIELD owner_id ON TABLE events TYPE record<students>;
+                    DEFINE FIELD owner_id ON TABLE events TYPE string;
                     DEFINE FIELD name ON TABLE events TYPE string;
                     DEFINE FIELD description ON TABLE events TYPE string;
                     DEFINE FIELD label ON TABLE events TYPE string;
@@ -94,6 +96,8 @@ cfg_if::cfg_if! {
                         timestamp: $timestamp
                     }
                 "#;
+
+                dbg!(format!("Creating event for user: {}", owner_id.clone()));
         
                 // Build the parameters object.
                 let params = json!({
@@ -106,6 +110,7 @@ cfg_if::cfg_if! {
         
                 // Execute the query with the provided parameters.
                 let response = db.query(query).bind(params).await?;
+                dbg!(format!("Response: {:?}", response));
                 Ok(response)
             }
 
@@ -117,16 +122,18 @@ cfg_if::cfg_if! {
                 let query = r#"
                     SELECT * FROM events WHERE owner_id = $owner_id
                 "#;
-        
+
+                // let thing = Thing::from((String::from("events"), owner_id.clone()));
+
+                let params = json!({
+                    "owner_id": owner_id.clone(),
+                });
+                dbg!(format!("Getting events for user: {}", owner_id.clone()));
+
                 let mut events: Vec<SurrealEventRecord> = Vec::new();
-                events = db.query("SELECT * FROM events WHERE owner_id = $owner_id")
-                            .bind(("owner_id", owner_id.clone()))
-                            .await
-                            .unwrap()
-                            .take(0)
-                            .unwrap();
-                let events = events.into_iter().map(SurrealEventRecord::into_event).collect();
-        
+                events = db.query(query).bind(params).await?.take(0).unwrap();
+                let events: Vec<EventRecord> = events.into_iter().map(SurrealEventRecord::into_event).collect();
+                dbg!(format!("Events: {:?}", events.clone()));
                 Ok(events)
             }
 
@@ -140,6 +147,7 @@ cfg_if::cfg_if! {
                 });
 
                 let response = db.query(query).bind(params).await?;
+                dbg!(format!("Delete EventResponse: {:?}", response));
                 Ok(response)
             }
 
@@ -149,8 +157,8 @@ cfg_if::cfg_if! {
 
         #[derive(Debug, Serialize, Deserialize, Clone)]
         pub struct SurrealEventRecord {
-            pub id: RecordId,
-            pub owner_id: RecordId,
+            pub id: Thing,
+            pub owner_id: String,
 
             pub name: String,
             pub description: String,
@@ -162,19 +170,19 @@ cfg_if::cfg_if! {
 
         impl SurrealEventRecord {
             pub fn into_event(self) -> EventRecord {
-                let id = self.id.key().to_string();
-                let mut id = id.chars();
+                // let id = self.id.id.to_string();
+                // let mut id = id.chars();
                 // id.next();
                 // id.next_back();
 
-                let owner_id = self.owner_id.key().to_string();
-                let mut owner_id = owner_id.chars();
+                // let owner_id = self.owner_id.key().to_string();
+                // let mut owner_id = owner_id.chars();
                 // owner_id.next();
                 // owner_id.next_back();
 
                 EventRecord {
-                    id: id.as_str().to_string(),
-                    owner_id: owner_id.as_str().to_string(),
+                    id: self.id.id.to_string(),
+                    owner_id: self.owner_id,
                     name: self.name,
                     description: self.description,
 

@@ -32,13 +32,13 @@ pub fn Daily() -> impl IntoView {
           </div>
           <section class="card-header">
             <div class="date">
-              Март 1, 2025
+              Март 5, 2025
             </div>
             <img src="/threedots.svg" clas="hover:cursor-pointer" />
           </section>
           <section class="card-body">
             <h3 class="tracking-tighter bg-gradient-to-b from-[#8d8d8d] to-[#111] text-transparent bg-clip-text">Български Език</h3>
-            <p>Представки</p>
+            <p>Части на речта</p>
           </section>
           <section class="card-footer">
             <a href="#" class="btn-countdown">{"→"}</a>
@@ -53,13 +53,13 @@ pub fn Daily() -> impl IntoView {
         </div>
         <section class="card-header">
           <div class="date">
-            Март 1, 2025
+            Март 4, 2025
           </div>
           <img src="/threedots.svg" clas="hover:cursor-pointer" />
         </section>
         <section class="card-body">
           <h3 class="tracking-tighter bg-gradient-to-b from-[#8d8d8d] to-[#111] text-transparent bg-clip-text">Български Език</h3>
-          <p>Представки</p>
+          <p>Упражнение</p>
         </section>
         <section class="card-footer">
           <a href="#" class="btn-countdown">{"→"}</a>
@@ -74,13 +74,13 @@ pub fn Daily() -> impl IntoView {
       </div>
       <section class="card-header">
         <div class="date">
-          Март 1, 2025
+          Март 8, 2025
         </div>
         <img src="/threedots.svg" clas="hover:cursor-pointer" />
       </section>
       <section class="card-body">
         <h3 class="tracking-tighter bg-gradient-to-b from-[#8d8d8d] to-[#111] text-transparent bg-clip-text">Български Език</h3>
-        <p>Представки</p>
+        <p>Граматика</p>
       </section>
       <section class="card-footer">
         <a href="#" class="btn-countdown">{"→"}</a>

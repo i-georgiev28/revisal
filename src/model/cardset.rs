@@ -26,7 +26,7 @@ pub async fn get_cardsets() -> Result<Vec<CardsetRecord>, ServerFnError> {
     use crate::model::*;
     use crate::auth::*;
     let db = db()?;
-    let user = auth()?;
+    let user = get_user().await?.unwrap();
 
     Ok(CardsetRecord::get_cardsets_for_user(&db, user.id).await?)
 }
@@ -38,7 +38,7 @@ pub async fn create_cardset(name: String) -> Result<(), ServerFnError> {
     use crate::auth::*;
 
     let db = db()?;
-    let user = auth()?;
+    let user = get_user().await?.unwrap();
     CardsetRecord::create_cardset(&db, user.id, name).await?;
     Ok(())
 }
@@ -47,6 +47,7 @@ cfg_if::cfg_if! {
     if #[cfg(feature = "ssr")] {
         use surrealdb::{Response, Value};
         use surrealdb::{engine::local::Db, RecordId, Surreal};
+        use surrealdb::sql::Thing;
 
         impl CardsetRecord {
             pub async fn create_cardset_table(db: &Surreal<Db>) {
@@ -119,15 +120,15 @@ cfg_if::cfg_if! {
 
         #[derive(Debug, Serialize, Deserialize, Clone)]
         pub struct SurrealCardsetRecord {
-            pub id: RecordId,
+            pub id: Thing,
             pub owner_id: RecordId,
             pub name: String,
             pub cards: Vec<Flashcard>,
         }
         impl SurrealCardsetRecord {
             pub fn into_cardset(self) -> CardsetRecord {
-                let id = self.id.key().to_string();
-                let mut id = id.chars();
+                let id = self.id.id.to_string();
+                // let mut id = id.chars();
                 // id.next();
                 // id.next_back();
 
@@ -137,7 +138,7 @@ cfg_if::cfg_if! {
                 // owner_id.next_back();
 
                 CardsetRecord {
-                    id: id.as_str().to_string(),
+                    id: id,
                     owner_id:  owner_id.as_str().to_string(),
                     name: self.name,
                     cards: self.cards
